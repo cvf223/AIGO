@@ -1,0 +1,39 @@
+{
+  "projectId": "project_003",
+  "projectName": "Retail Building project_003",
+  "projectType": "mixed_use",
+  "buildingType": "retail",
+  "location": {
+    "city": "Berlin",
+    "district": "Mitte",
+    "address": "Test Street project_003",
+    "coordinates": {
+      "lat": 52.525972644585146,
+      "lng": 13.391143437158265
+    }
+  },
+  "dimensions": {
+    "floors": 10,
+    "unitsPerFloor": 9,
+    "totalUnits": 90,
+    "grossFloorArea": 4692.44,
+    "netFloorArea": 3988.5739999999996,
+    "height": 30
+  },
+  "costs": {
+    "estimated": 8476745.63,
+    "currency": "EUR",
+    "costPerSqm": 1706.13
+  },
+  "timeline": {
+    "planningStart": "2024-01-01",
+    "constructionStart": "2024-06-01",
+    "completionTarget": "2025-12-31",
+    "duration": "18 months"
+  },
+  "hoaiPhases": [
+    "lp6",
+    "lp7"
+  ],
+  "generatedAt": "2025-10-11T17:21:14.954Z"
+}

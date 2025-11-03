@@ -1,0 +1,297 @@
+{
+  "project": "temp_1761173471469-1.png",
+  "scale": {
+    "notation": "1:100",
+    "pixelsPerMeter": 300
+  },
+  "buildingArea": {
+    "x": 943,
+    "y": 943,
+    "width": 8040,
+    "height": 12150
+  },
+  "totalArea": 17325.833333333332,
+  "positions": [
+    {
+      "position": 331,
+      "patternId": "pattern_1",
+      "description": "Wall Type pattern_1",
+      "quantity": 150.58333333333334,
+      "unit": "m²",
+      "matches": 5421,
+      "confidence": 0.8840012153174155
+    },
+    {
+      "position": 332,
+      "patternId": "pattern_2",
+      "description": "Wall Type pattern_2",
+      "quantity": 0.05555555555555555,
+      "unit": "m²",
+      "matches": 2,
+      "confidence": 0.8911764705882352
+    },
+    {
+      "position": 333,
+      "patternId": "pattern_3",
+      "description": "Wall Type pattern_3",
+      "quantity": 0.2777777777777778,
+      "unit": "m²",
+      "matches": 10,
+      "confidence": 0.8823529411764708
+    },
+    {
+      "position": 334,
+      "patternId": "pattern_4",
+      "description": "Wall Type pattern_4",
+      "quantity": 0.05555555555555555,
+      "unit": "m²",
+      "matches": 2,
+      "confidence": 0.8823529411764706
+    },
+    {
+      "position": 335,
+      "patternId": "pattern_5",
+      "description": "Wall Type pattern_5",
+      "quantity": 0.05555555555555555,
+      "unit": "m²",
+      "matches": 2,
+      "confidence": 0.8823529411764706
+    },
+    {
+      "position": 336,
+      "patternId": "pattern_6",
+      "description": "Wall Type pattern_6",
+      "quantity": 0.19444444444444445,
+      "unit": "m²",
+      "matches": 7,
+      "confidence": 0.8873949579831935
+    },
+    {
+      "position": 337,
+      "patternId": "pattern_8",
+      "description": "Wall Type pattern_8",
+      "quantity": 1.6944444444444444,
+      "unit": "m²",
+      "matches": 61,
+      "confidence": 0.8857280617164901
+    },
+    {
+      "position": 338,
+      "patternId": "pattern_9",
+      "description": "Wall Type pattern_9",
+      "quantity": 0.3611111111111111,
+      "unit": "m²",
+      "matches": 13,
+      "confidence": 0.8837104072398193
+    },
+    {
+      "position": 339,
+      "patternId": "pattern_10",
+      "description": "Wall Type pattern_10",
+      "quantity": 1.7222222222222223,
+      "unit": "m²",
+      "matches": 62,
+      "confidence": 0.8834914611005695
+    },
+    {
+      "position": 340,
+      "patternId": "pattern_11",
+      "description": "Wall Type pattern_11",
+      "quantity": 0.16666666666666666,
+      "unit": "m²",
+      "matches": 6,
+      "confidence": 0.8882352941176471
+    },
+    {
+      "position": 341,
+      "patternId": "pattern_12",
+      "description": "Wall Type pattern_12",
+      "quantity": 0.16666666666666666,
+      "unit": "m²",
+      "matches": 6,
+      "confidence": 0.8882352941176471
+    },
+    {
+      "position": 342,
+      "patternId": "pattern_13",
+      "description": "Wall Type pattern_13",
+      "quantity": 0.5555555555555556,
+      "unit": "m²",
+      "matches": 20,
+      "confidence": 0.8894117647058826
+    },
+    {
+      "position": 343,
+      "patternId": "pattern_14",
+      "description": "Wall Type pattern_14",
+      "quantity": 0.7777777777777778,
+      "unit": "m²",
+      "matches": 28,
+      "confidence": 0.8823529411764709
+    },
+    {
+      "position": 344,
+      "patternId": "pattern_15",
+      "description": "Wall Type pattern_15",
+      "quantity": 9.63888888888889,
+      "unit": "m²",
+      "matches": 347,
+      "confidence": 0.8854043058145401
+    },
+    {
+      "position": 345,
+      "patternId": "pattern_16",
+      "description": "Wall Type pattern_16",
+      "quantity": 3132.5,
+      "unit": "m²",
+      "matches": 112770,
+      "confidence": 0.8829503570501588
+    },
+    {
+      "position": 346,
+      "patternId": "pattern_17",
+      "description": "Wall Type pattern_17",
+      "quantity": 23.166666666666668,
+      "unit": "m²",
+      "matches": 834,
+      "confidence": 0.8843701509380665
+    },
+    {
+      "position": 347,
+      "patternId": "pattern_18",
+      "description": "Wall Type pattern_18",
+      "quantity": 1.0555555555555556,
+      "unit": "m²",
+      "matches": 38,
+      "confidence": 0.8842105263157897
+    },
+    {
+      "position": 348,
+      "patternId": "pattern_19",
+      "description": "Wall Type pattern_19",
+      "quantity": 23.75,
+      "unit": "m²",
+      "matches": 855,
+      "confidence": 0.8863226694186368
+    },
+    {
+      "position": 349,
+      "patternId": "pattern_20",
+      "description": "Wall Type pattern_20",
+      "quantity": 159.05555555555554,
+      "unit": "m²",
+      "matches": 5726,
+      "confidence": 0.8840675145364548
+    },
+    {
+      "position": 350,
+      "patternId": "pattern_21",
+      "description": "Wall Type pattern_21",
+      "quantity": 3697.4444444444443,
+      "unit": "m²",
+      "matches": 133108,
+      "confidence": 0.8985481051193263
+    },
+    {
+      "position": 351,
+      "patternId": "pattern_22",
+      "description": "Wall Type pattern_22",
+      "quantity": 174.11111111111111,
+      "unit": "m²",
+      "matches": 6268,
+      "confidence": 0.8855944292203884
+    },
+    {
+      "position": 352,
+      "patternId": "pattern_23",
+      "description": "Wall Type pattern_23",
+      "quantity": 136.58333333333334,
+      "unit": "m²",
+      "matches": 4917,
+      "confidence": 0.8841043677996683
+    },
+    {
+      "position": 353,
+      "patternId": "pattern_24",
+      "description": "Wall Type pattern_24",
+      "quantity": 136.58333333333334,
+      "unit": "m²",
+      "matches": 4917,
+      "confidence": 0.8841043677996683
+    },
+    {
+      "position": 354,
+      "patternId": "pattern_25",
+      "description": "Wall Type pattern_25",
+      "quantity": 25.75,
+      "unit": "m²",
+      "matches": 927,
+      "confidence": 0.8846690779871752
+    },
+    {
+      "position": 355,
+      "patternId": "pattern_26",
+      "description": "Wall Type pattern_26",
+      "quantity": 3147.277777777778,
+      "unit": "m²",
+      "matches": 113302,
+      "confidence": 0.8831427616133009
+    },
+    {
+      "position": 356,
+      "patternId": "pattern_27",
+      "description": "Wall Type pattern_27",
+      "quantity": 16.61111111111111,
+      "unit": "m²",
+      "matches": 598,
+      "confidence": 0.8833366122368621
+    },
+    {
+      "position": 357,
+      "patternId": "pattern_28",
+      "description": "Wall Type pattern_28",
+      "quantity": 166.25,
+      "unit": "m²",
+      "matches": 5985,
+      "confidence": 0.8833859157698988
+    },
+    {
+      "position": 358,
+      "patternId": "pattern_29",
+      "description": "Wall Type pattern_29",
+      "quantity": 3139.3888888888887,
+      "unit": "m²",
+      "matches": 113018,
+      "confidence": 0.8829117797983672
+    },
+    {
+      "position": 359,
+      "patternId": "pattern_30",
+      "description": "Wall Type pattern_30",
+      "quantity": 0.6666666666666666,
+      "unit": "m²",
+      "matches": 24,
+      "confidence": 0.8823529411764709
+    },
+    {
+      "position": 360,
+      "patternId": "pattern_32",
+      "description": "Wall Type pattern_32",
+      "quantity": 30.11111111111111,
+      "unit": "m²",
+      "matches": 1084,
+      "confidence": 0.8852235728239567
+    },
+    {
+      "position": 361,
+      "patternId": "pattern_34",
+      "description": "Wall Type pattern_34",
+      "quantity": 3149.222222222222,
+      "unit": "m²",
+      "matches": 113372,
+      "confidence": 0.8829794575262211
+    }
+  ],
+  "patternCount": 34,
+  "timestamp": "2025-10-23T03:28:45.010Z"
+}

@@ -1,0 +1,1045 @@
+openapi: 3.0.3
+info:
+  title: Elite Construction AI Syndicate API
+  description: |
+    🏗️ **Elite Construction AI Syndicate - Production API Documentation**
+    
+    This API provides comprehensive endpoints for:
+    - Multi-agent AI orchestration
+    - Construction plan analysis with VLM
+    - Real-time WebSocket communication
+    - LLM chat interfaces
+    - Authentication and authorization
+    - System monitoring and metrics
+    
+    **Key Features:**
+    - JWT-based authentication
+    - WebSocket support for real-time updates
+    - VLM (Visual Language Model) plan annotation
+    - Multi-target chat routing (agents, LLMs, coordinators)
+    - HOAI LP 6/7 compliance checking
+    - DIN 276 standard verification
+    
+  version: 1.0.0
+  contact:
+    name: Elite Construction AI Syndicate
+    email: support@construction-syndicate.ai
+  license:
+    name: Proprietary
+    url: https://construction-syndicate.ai/license
+
+servers:
+  - url: https://api.construction-syndicate.ai
+    description: Production server
+  - url: https://staging.construction-syndicate.ai
+    description: Staging server
+  - url: http://localhost:3001
+    description: Development server
+
+tags:
+  - name: Authentication
+    description: User authentication and authorization
+  - name: Chat
+    description: LLM and agent chat interfaces
+  - name: Systems
+    description: System monitoring and status
+  - name: Construction
+    description: Construction plan analysis and annotation
+  - name: Agents
+    description: AI agent management
+  - name: WebSocket
+    description: Real-time WebSocket events
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT token obtained from login endpoint
+    
+    apiKey:
+      type: apiKey
+      in: header
+      name: X-API-Key
+      description: API key for service-to-service communication
+
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        username:
+          type: string
+          example: "john_doe"
+        email:
+          type: string
+          format: email
+          example: "john@example.com"
+        role:
+          type: string
+          enum: [admin, developer, user, viewer]
+          example: "user"
+        isActive:
+          type: boolean
+          example: true
+        createdAt:
+          type: string
+          format: date-time
+        lastLogin:
+          type: string
+          format: date-time
+
+    AuthCredentials:
+      type: object
+      required:
+        - username
+        - password
+      properties:
+        username:
+          type: string
+          description: Username or email
+          example: "john_doe"
+        password:
+          type: string
+          format: password
+          minLength: 8
+          example: "SecurePassword123!"
+
+    RegisterRequest:
+      type: object
+      required:
+        - username
+        - email
+        - password
+      properties:
+        username:
+          type: string
+          minLength: 3
+          maxLength: 50
+          pattern: "^[a-zA-Z0-9_]+$"
+          example: "john_doe"
+        email:
+          type: string
+          format: email
+          example: "john@example.com"
+        password:
+          type: string
+          format: password
+          minLength: 8
+          description: Must contain uppercase, lowercase, and numbers
+          example: "SecurePassword123!"
+        role:
+          type: string
+          enum: [user, developer]
+          default: user
+
+    AuthResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: true
+        user:
+          $ref: '#/components/schemas/User'
+        accessToken:
+          type: string
+          example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+        refreshToken:
+          type: string
+          example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+        expiresIn:
+          type: string
+          example: "24h"
+
+    SystemInfo:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "agent-001"
+        name:
+          type: string
+          example: "Arbitrage Agent Alpha"
+        type:
+          type: string
+          enum: [agent, service, coordinator, llm]
+        status:
+          type: string
+          enum: [active, idle, processing, error, offline]
+        metrics:
+          type: object
+          properties:
+            cpu:
+              type: number
+              format: float
+              example: 45.2
+            memory:
+              type: number
+              format: float
+              example: 2048.5
+            uptime:
+              type: integer
+              example: 3600000
+        capabilities:
+          type: array
+          items:
+            type: string
+          example: ["arbitrage", "analysis", "trading"]
+
+    ChatMessage:
+      type: object
+      required:
+        - target
+        - message
+      properties:
+        target:
+          type: object
+          required:
+            - type
+            - id
+          properties:
+            type:
+              type: string
+              enum: [agent, llm, coordinator, broadcast]
+            id:
+              type: string
+              example: "centralNervousSystem"
+            name:
+              type: string
+              example: "Central Nervous System"
+        message:
+          type: string
+          example: "Analyze the latest arbitrage opportunities"
+        reasoningConfig:
+          type: object
+          properties:
+            enableCoT:
+              type: boolean
+              default: true
+            enableCoA:
+              type: boolean
+              default: false
+            enableToT:
+              type: boolean
+              default: false
+            enableGoT:
+              type: boolean
+              default: false
+            temperature:
+              type: number
+              format: float
+              minimum: 0
+              maximum: 2
+              default: 0.7
+            maxTokens:
+              type: integer
+              minimum: 1
+              maximum: 4000
+              default: 1000
+
+    ChatResponse:
+      type: object
+      properties:
+        from:
+          type: string
+          example: "Central Nervous System"
+        response:
+          type: string
+          example: "I have analyzed the current market conditions..."
+        reasoning:
+          type: object
+          properties:
+            steps:
+              type: array
+              items:
+                type: string
+            confidence:
+              type: number
+              format: float
+              example: 0.92
+        tokensUsed:
+          type: integer
+          example: 512
+        timestamp:
+          type: integer
+          example: 1634567890123
+
+    ConstructionPlan:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        planId:
+          type: string
+          format: uuid
+        projectId:
+          type: integer
+        filename:
+          type: string
+          example: "floor-plan-level-1.pdf"
+        fileSize:
+          type: integer
+          example: 2048576
+        planType:
+          type: string
+          enum: [floor_plan, elevation, section, detail]
+        phase:
+          type: string
+          pattern: "^LP [1-9]$"
+          example: "LP 6"
+        uploadedAt:
+          type: string
+          format: date-time
+
+    AnalysisRequest:
+      type: object
+      required:
+        - planId
+        - analysisType
+      properties:
+        planId:
+          type: integer
+          example: 1
+        analysisType:
+          type: string
+          enum: [quick, comprehensive, compliance_only, measurements_only, vlm_comprehensive]
+        dinStandard:
+          type: string
+          example: "DIN 276"
+        hoaiPhase:
+          type: string
+          pattern: "^LP [1-9]$"
+          example: "LP 6"
+        options:
+          type: object
+          properties:
+            extractMeasurements:
+              type: boolean
+              default: true
+            checkCompliance:
+              type: boolean
+              default: true
+            generateQuantities:
+              type: boolean
+              default: true
+            useVisionModel:
+              type: boolean
+              default: false
+
+    AnalysisResult:
+      type: object
+      properties:
+        analysisId:
+          type: string
+          format: uuid
+        status:
+          type: string
+          enum: [pending, processing, completed, failed]
+        results:
+          type: object
+          properties:
+            measurements:
+              type: array
+              items:
+                type: object
+                properties:
+                  type:
+                    type: string
+                    enum: [length, area, volume]
+                  value:
+                    type: string
+                  unit:
+                    type: string
+                  confidence:
+                    type: number
+                    format: float
+            materials:
+              type: array
+              items:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  content:
+                    type: string
+                  confidence:
+                    type: number
+                    format: float
+            compliance:
+              type: array
+              items:
+                type: object
+                properties:
+                  rule:
+                    type: string
+                  status:
+                    type: string
+                    enum: [compliant, non_compliant, warning]
+                  severity:
+                    type: string
+                    enum: [critical, high, medium, low]
+                  details:
+                    type: string
+
+    AnnotationRequest:
+      type: object
+      required:
+        - analysisId
+        - planId
+      properties:
+        analysisId:
+          type: string
+          format: uuid
+        planId:
+          type: integer
+        template:
+          type: string
+          enum: [monitoring, investor, detailed]
+          default: detailed
+        layers:
+          type: object
+          properties:
+            detections:
+              type: boolean
+              default: true
+            quantities:
+              type: boolean
+              default: true
+            reasoning:
+              type: boolean
+              default: true
+            thinking:
+              type: boolean
+              default: false
+            errors:
+              type: boolean
+              default: true
+            compliance:
+              type: boolean
+              default: true
+            planning:
+              type: boolean
+              default: true
+            conclusions:
+              type: boolean
+              default: true
+            legend:
+              type: boolean
+              default: true
+
+    Error:
+      type: object
+      properties:
+        success:
+          type: boolean
+          example: false
+        error:
+          type: string
+          example: "Invalid credentials"
+        code:
+          type: string
+          example: "AUTH_001"
+        timestamp:
+          type: integer
+          example: 1634567890123
+
+paths:
+  # Authentication Endpoints
+  /api/auth/register:
+    post:
+      tags:
+        - Authentication
+      summary: Register new user
+      description: Create a new user account
+      operationId: registerUser
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RegisterRequest'
+      responses:
+        '200':
+          description: Registration successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  user:
+                    $ref: '#/components/schemas/User'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /api/auth/login:
+    post:
+      tags:
+        - Authentication
+      summary: Login user
+      description: Authenticate user and receive JWT tokens
+      operationId: loginUser
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AuthCredentials'
+      responses:
+        '200':
+          description: Login successful
+          headers:
+            Set-Cookie:
+              description: HTTP-only cookie containing access token
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthResponse'
+        '401':
+          description: Invalid credentials
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+  /api/auth/logout:
+    post:
+      tags:
+        - Authentication
+      summary: Logout user
+      description: Invalidate user session and tokens
+      operationId: logoutUser
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Logout successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+
+  /api/auth/refresh:
+    post:
+      tags:
+        - Authentication
+      summary: Refresh access token
+      description: Use refresh token to get new access token
+      operationId: refreshToken
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - refreshToken
+              properties:
+                refreshToken:
+                  type: string
+      responses:
+        '200':
+          description: Token refreshed
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  accessToken:
+                    type: string
+                  expiresIn:
+                    type: string
+
+  /api/auth/me:
+    get:
+      tags:
+        - Authentication
+      summary: Get current user
+      description: Retrieve current authenticated user information
+      operationId: getCurrentUser
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: User information
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  user:
+                    $ref: '#/components/schemas/User'
+                  stats:
+                    type: object
+                    properties:
+                      successfulLogins:
+                        type: integer
+                      failedLogins:
+                        type: integer
+                      lastLogin:
+                        type: string
+                        format: date-time
+
+  # System Monitoring Endpoints
+  /api/systems:
+    get:
+      tags:
+        - Systems
+      summary: List all systems
+      description: Get list of all agents, services, and coordinators
+      operationId: listSystems
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: query
+          name: type
+          schema:
+            type: string
+            enum: [agent, service, coordinator, llm]
+          description: Filter by system type
+        - in: query
+          name: status
+          schema:
+            type: string
+            enum: [active, idle, processing, error, offline]
+          description: Filter by status
+      responses:
+        '200':
+          description: List of systems
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  systems:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/SystemInfo'
+                  totalCount:
+                    type: integer
+
+  /api/systems/{systemId}/status:
+    get:
+      tags:
+        - Systems
+      summary: Get system status
+      description: Get detailed status of a specific system
+      operationId: getSystemStatus
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: systemId
+          required: true
+          schema:
+            type: string
+          description: System identifier
+      responses:
+        '200':
+          description: System status
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  status:
+                    $ref: '#/components/schemas/SystemInfo'
+
+  /api/systems/{systemId}/metrics:
+    get:
+      tags:
+        - Systems
+      summary: Get system metrics
+      description: Get performance metrics for a specific system
+      operationId: getSystemMetrics
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: systemId
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: period
+          schema:
+            type: string
+            enum: [1h, 6h, 24h, 7d]
+            default: 1h
+      responses:
+        '200':
+          description: System metrics
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  metrics:
+                    type: object
+                    properties:
+                      cpu:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            timestamp:
+                              type: integer
+                            value:
+                              type: number
+                      memory:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            timestamp:
+                              type: integer
+                            value:
+                              type: number
+
+  # Chat Endpoints
+  /api/chat/send:
+    post:
+      tags:
+        - Chat
+      summary: Send chat message
+      description: Send message to agent, LLM, or coordinator
+      operationId: sendChatMessage
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChatMessage'
+      responses:
+        '200':
+          description: Message sent
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  messageId:
+                    type: string
+                    format: uuid
+
+  /api/chat/history/{targetId}:
+    get:
+      tags:
+        - Chat
+      summary: Get chat history
+      description: Retrieve chat history with specific target
+      operationId: getChatHistory
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: targetId
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: limit
+          schema:
+            type: integer
+            default: 50
+            minimum: 1
+            maximum: 200
+      responses:
+        '200':
+          description: Chat history
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  history:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        from:
+                          type: string
+                        message:
+                          type: string
+                        timestamp:
+                          type: integer
+
+  # Construction Plan Endpoints
+  /api/construction/upload-plan:
+    post:
+      tags:
+        - Construction
+      summary: Upload construction plan
+      description: Upload PDF or image file for analysis
+      operationId: uploadPlan
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required:
+                - plan
+                - projectName
+              properties:
+                plan:
+                  type: string
+                  format: binary
+                  description: PDF or image file (max 100MB)
+                projectName:
+                  type: string
+                  example: "Office Building Project"
+                planType:
+                  type: string
+                  enum: [floor_plan, elevation, section, detail]
+                phase:
+                  type: string
+                  pattern: "^LP [1-9]$"
+                description:
+                  type: string
+      responses:
+        '200':
+          description: Plan uploaded
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  plan:
+                    $ref: '#/components/schemas/ConstructionPlan'
+
+  /api/construction/analyze-plan:
+    post:
+      tags:
+        - Construction
+      summary: Analyze construction plan
+      description: Start AI analysis of uploaded plan
+      operationId: analyzePlan
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AnalysisRequest'
+      responses:
+        '200':
+          description: Analysis started
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  analysisId:
+                    type: string
+                    format: uuid
+                  status:
+                    type: string
+                    example: "started"
+
+  /api/construction/analysis/{analysisId}/progress:
+    get:
+      tags:
+        - Construction
+      summary: Get analysis progress
+      description: Check progress of plan analysis
+      operationId: getAnalysisProgress
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: analysisId
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Analysis progress
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  progress:
+                    type: object
+                    properties:
+                      status:
+                        type: string
+                        enum: [pending, processing, completed, failed]
+                      percentage:
+                        type: integer
+                        minimum: 0
+                        maximum: 100
+                      currentStep:
+                        type: string
+                      estimatedTimeRemaining:
+                        type: integer
+
+  /api/construction/analysis/{analysisId}/results:
+    get:
+      tags:
+        - Construction
+      summary: Get analysis results
+      description: Retrieve completed analysis results
+      operationId: getAnalysisResults
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: analysisId
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Analysis results
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  results:
+                    $ref: '#/components/schemas/AnalysisResult'
+
+  /api/construction/annotate-plan:
+    post:
+      tags:
+        - Construction
+      summary: Generate annotated plan
+      description: Create visual annotations on construction plan
+      operationId: annotatePlan
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AnnotationRequest'
+      responses:
+        '200':
+          description: Annotation generated
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  annotatedPlanUrl:
+                    type: string
+                  downloadUrl:
+                    type: string
+                  stats:
+                    type: object
+                    properties:
+                      elementsAnnotated:
+                        type: integer
+                      calculationsShown:
+                        type: integer
+                      reasoningSteps:
+                        type: integer
+                      errorsHighlighted:
+                        type: integer
+
+  # WebSocket Events
+  /socket.io:
+    get:
+      tags:
+        - WebSocket
+      summary: WebSocket connection
+      description: |
+        Establish WebSocket connection for real-time updates.
+        
+        **Connection URL:** `wss://api.construction-syndicate.ai/socket.io/`
+        
+        **Authentication:** Pass JWT token as query parameter or in handshake auth
+        
+        **Events:**
+        
+        **Emitted by Client:**
+        - `chat:message` - Send chat message
+        - `subscribeToSystem` - Subscribe to system updates
+        - `unsubscribeFromSystem` - Unsubscribe from system
+        - `configureLLM` - Configure LLM settings
+        
+        **Received by Client:**
+        - `systemUpdate` - System status updates
+        - `chat:streaming` - Streaming chat response chunks
+        - `chat:response` - Final chat response
+        - `escalation` - Escalation notifications
+        - `notificationNew` - New notifications
+        - `planPresentation` - Plan presentation updates
+        
+      responses:
+        '101':
+          description: Switching Protocols - WebSocket connection established
+
+# Health Check
+/health:
+  get:
+    summary: Health check
+    description: Check if API is running
+    operationId: healthCheck
+    responses:
+      '200':
+        description: API is healthy
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                status:
+                  type: string
+                  example: "healthy"
+                uptime:
+                  type: integer
+                memory:
+                  type: object
+                timestamp:
+                  type: integer

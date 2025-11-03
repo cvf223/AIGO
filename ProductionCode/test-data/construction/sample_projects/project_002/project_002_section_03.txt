@@ -1,0 +1,32 @@
+SYNTHETIC CONSTRUCTION PLAN
+Project: Warehouse Building project_002
+Plan Type: section
+Plan ID: project_002_section_03
+
+{
+  "planId": "project_002_section_03",
+  "projectId": "project_002",
+  "planType": "section",
+  "fileName": "project_002_section_03.txt",
+  "dimensions": {
+    "width": 18.99,
+    "height": 23.6,
+    "unit": "m",
+    "area": 448.2
+  },
+  "elements": {
+    "elementCount": 21
+  },
+  "hasIntentionalError": false,
+  "errorDetails": null,
+  "metadata": {
+    "scale": "1:100",
+    "format": "A1",
+    "revision": "R01",
+    "date": "2024-01-15",
+    "drawnBy": "Synthetic Generator"
+  }
+}
+
+Note: This is a synthetic test plan generated for testing purposes.
+In production, this would be an actual PDF/DWG file with visual content.

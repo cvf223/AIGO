@@ -1,0 +1,47 @@
+{
+  "projectId": "project_005",
+  "totalErrors": 2,
+  "knownErrors": [
+    {
+      "errorId": "err_project_005_001",
+      "planId": "project_005_site_plan_05",
+      "type": "dimension_mismatch",
+      "description": "Intentional dimension_mismatch for testing error detection",
+      "severity": "high",
+      "affectedPlans": [
+        "project_005_site_plan_05"
+      ],
+      "location": {
+        "page": 1,
+        "coordinates": [
+          295,
+          187
+        ]
+      },
+      "correctSolution": "Apply standard correction for dimension_mismatch",
+      "detectedBy": "synthetic_generator",
+      "date": "2025-10-11T17:21:14.960Z"
+    },
+    {
+      "errorId": "err_project_005_002",
+      "planId": "project_005_site_plan_10",
+      "type": "missing_element",
+      "description": "Intentional missing_element for testing error detection",
+      "severity": "critical",
+      "affectedPlans": [
+        "project_005_site_plan_10"
+      ],
+      "location": {
+        "page": 1,
+        "coordinates": [
+          238,
+          231
+        ]
+      },
+      "correctSolution": "Apply standard correction for missing_element",
+      "detectedBy": "synthetic_generator",
+      "date": "2025-10-11T17:21:14.960Z"
+    }
+  ],
+  "generatedAt": "2025-10-11T17:21:14.960Z"
+}

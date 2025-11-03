@@ -1,0 +1,752 @@
+[
+  {
+    "address": "0x3797927e7fc20F13F46b295F8889EA8050cb5e21",
+    "pair": "USD₮0/DIA",
+    "token0": {
+      "symbol": "USD₮0",
+      "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+      "decimals": 18
+    },
+    "token1": {
+      "symbol": "DIA",
+      "address": "0x6eFa9b8883DFb78fD75CD89d8474C44c3CBDa469",
+      "decimals": 18
+    },
+    "dex": "arbswap",
+    "chain": "arbitrum",
+    "price": null,
+    "liquidity": "2979531.6",
+    "volume_24h": "513278.23",
+    "fee": 3000,
+    "lastupdate": "1749393604"
+  },
+  {
+    "address": "0x6ad17E1133af65A8e3a9074E72004FAEf1E2341E",
+    "pair": "ePendle/PENDLE",
+    "token0": {
+      "symbol": "ePendle",
+      "address": "0x3EaBE18eAE267D1B57f917aBa085bb5906114600",
+      "decimals": null
+    },
+    "token1": {
+      "symbol": "PENDLE",
+      "address": "0x0c880f6761F1af8d9Aa9C466984b80DAb9a8c9e8",
+      "decimals": null
+    },
+    "dex": "camelot",
+    "chain": "arbitrum",
+    "price": null,
+    "liquidity": "1178096.13",
+    "volume_24h": "15125.24",
+    "fee": 3000,
+    "lastupdate": null
+  },
+  {
+    "address": "0x7652A9AB5EA96881fc3afD2e65cf71fa5abf3188",
+    "pair": "PENDLE/USDC",
+    "token0": {
+      "symbol": "PENDLE",
+      "address": "0x0c880f6761F1af8d9Aa9C466984b80DAb9a8c9e8",
+      "decimals": null
+    },
+    "token1": {
+      "symbol": "USDC",
+      "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      "decimals": null
+    },
+    "dex": "deltaswap",
+    "chain": "arbitrum",
+    "price": "3.690933806252982",
+    "liquidity": "974015",
+    "volume_24h": "97401",
+    "fee": 3000,
+    "lastupdate": "1750348475"
+  },
+  {
+    "address": "0xBF6CBb1F40a542aF50839CaD01b0dc1747F11e18",
+    "pair": "ARB/WETH",
+    "token0": {
+      "symbol": "ARB",
+      "address": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+      "decimals": null
+    },
+    "token1": {
+      "symbol": "WETH",
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "decimals": null
+    },
+    "dex": "sushiswap",
+    "chain": "arbitrum",
+    "price": "0.00012012677781068166",
+    "liquidity": "956431",
+    "volume_24h": "95643",
+    "fee": 3000,
+    "lastupdate": "1750348472"
+  },
+  {
+    "address": "0x8dca5a5DBA32cA529594d43F86ED4210EaD2Ed83",
+    "pair": "WETH/DAI",
+    "token0": {
+      "symbol": "WETH",
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "decimals": 18
+    },
+    "token1": {
+      "symbol": "DAI",
+      "address": "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
+      "decimals": 18
+    },
+    "dex": "uniswap",
+    "chain": "arbitrum",
+    "price": "2498.9724537604193",
+    "liquidity": "951845",
+    "volume_24h": "95184",
+    "fee": 3000,
+    "lastupdate": "1750348469"
+  },
+  {
+    "address": "0xC524cDd23FacB0Eec7eF26421a3227287a94648d",
+    "pair": "AI/WETH",
+    "token0": {
+      "symbol": "AI",
+      "address": "0x2598c30330D5771AE9F983979209486aE26dE875",
+      "decimals": null
+    },
+    "token1": {
+      "symbol": "WETH",
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "decimals": null
+    },
+    "dex": "sushiswap",
+    "chain": "arbitrum",
+    "price": "0.0000000008124939963497807",
+    "liquidity": "911031",
+    "volume_24h": "91103",
+    "fee": 3000,
+    "lastupdate": "1750348468"
+  },
+  {
+    "address": "0x540F6Ae41EA8e62b92F3Ab205ca13fee9290C678",
+    "pair": "PNK/WETH",
+    "token0": {
+      "symbol": "PNK",
+      "address": "0x330bD769382cFc6d50175903434CCC8D206DCAE5",
+      "decimals": null
+    },
+    "token1": {
+      "symbol": "WETH",
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "decimals": null
+    },
+    "dex": "uniswap",
+    "chain": "arbitrum",
+    "price": "0.000005628186453022578",
+    "liquidity": "908450",
+    "volume_24h": "90845",
+    "fee": 3000,
+    "lastupdate": "1750348477"
+  },
+  {
+    "address": "0x103B03051Bf073c44DECfAF8dFd12275254AB97E",
+    "pair": "ARB/WETH",
+    "token0": {
+      "symbol": "ARB",
+      "address": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+      "decimals": null
+    },
+    "token1": {
+      "symbol": "WETH",
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "decimals": null
+    },
+    "dex": "uniswap",
+    "chain": "arbitrum",
+    "price": "0.00012012677781068166",
+    "liquidity": "883613",
+    "volume_24h": "88361",
+    "fee": 3000,
+    "lastupdate": "1750348473"
+  },
+  {
+    "address": "0xbE3aD6a5669Dc0B8b12FeBC03608860C31E2eef6",
+    "pair": "USDC/USD₮0",
+    "token0": {
+      "symbol": "USDC",
+      "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      "decimals": 18
+    },
+    "token1": {
+      "symbol": "USD₮0",
+      "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+      "decimals": 18
+    },
+    "dex": "uniswap",
+    "chain": "arbitrum",
+    "price": "0.999747",
+    "liquidity": "863301",
+    "volume_24h": "86330",
+    "fee": 3000,
+    "lastupdate": "1750348469"
+  },
+  {
+    "address": "0x3dA7FE3f0eD5c8e82A6E5b046C635274912a5db0",
+    "pair": "DAI/USD₮0",
+    "token0": {
+      "symbol": "DAI",
+      "address": "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
+      "decimals": 18
+    },
+    "token1": {
+      "symbol": "USD₮0",
+      "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+      "decimals": 18
+    },
+    "dex": "uniswap",
+    "chain": "arbitrum",
+    "price": "0.999955",
+    "liquidity": "843500",
+    "volume_24h": "84350",
+    "fee": 3000,
+    "lastupdate": "1750348471"
+  },
+  {
+    "address": "0xB7E50106A5bd3Cf21AF210A755F9C8740890A8c9",
+    "pair": "MAGIC/WETH",
+    "token0": {
+      "symbol": "MAGIC",
+      "address": "0x539bdE0d7Dbd336b79148AA742883198BBF60342",
+      "decimals": null
+    },
+    "token1": {
+      "symbol": "WETH",
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "decimals": null
+    },
+    "dex": "sushiswap",
+    "chain": "arbitrum",
+    "price": "0.000055857471006779095",
+    "liquidity": "823615",
+    "volume_24h": "82361",
+    "fee": 3000,
+    "lastupdate": "1750348474"
+  },
+  {
+    "address": "0x87425D8812f44726091831a9A109f4bDc3eA34b4",
+    "pair": "GRAIL/USDC",
+    "token0": {
+      "symbol": "GRAIL",
+      "address": "0x3d9907F9a368ad0a51Be60f7Da3b97cf940982D8",
+      "decimals": null
+    },
+    "token1": {
+      "symbol": "USDC",
+      "address": "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
+      "decimals": null
+    },
+    "dex": "camelot",
+    "chain": "arbitrum",
+    "price": "310.7969303364808",
+    "liquidity": "823214",
+    "volume_24h": "82321",
+    "fee": 3000,
+    "lastupdate": "1750348476"
+  },
+  {
+    "address": "0x3C6bd88cdD2AECf466E22d4ED86dB6B8953FDb72",
+    "pair": "BADGER/WETH",
+    "token0": {
+      "symbol": "BADGER",
+      "address": "0xBfa641051Ba0a0Ad1b0AcF549a89536A0D76472E",
+      "decimals": null
+    },
+    "token1": {
+      "symbol": "WETH",
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "decimals": null
+    },
+    "dex": "swapr",
+    "chain": "arbitrum",
+    "price": "0.0003751502685224462",
+    "liquidity": "782426",
+    "volume_24h": "78243",
+    "fee": 3000,
+    "lastupdate": "1750348474"
+  },
+  {
+    "address": "0x17F74f88D2283C7c6DDB0f7CC6CF581E134812A5",
+    "pair": "USD₮0/USDC",
+    "token0": {
+      "symbol": "USD₮0",
+      "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+      "decimals": 18
+    },
+    "token1": {
+      "symbol": "USDC",
+      "address": "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
+      "decimals": 18
+    },
+    "dex": "arbswap",
+    "chain": "arbitrum",
+    "price": "1.0001510228044435",
+    "liquidity": "752284",
+    "volume_24h": "75228",
+    "fee": 3000,
+    "lastupdate": "1750348471"
+  },
+  {
+    "address": "0x011f31D20C8778c8Beb1093b73E3A5690Ee6271b",
+    "pair": "ARB/USDC",
+    "token0": {
+      "symbol": "ARB",
+      "address": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+      "decimals": null
+    },
+    "token1": {
+      "symbol": "USDC",
+      "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      "decimals": null
+    },
+    "dex": "uniswap",
+    "chain": "arbitrum",
+    "price": "0.30025596475908406",
+    "liquidity": "730429",
+    "volume_24h": "73043",
+    "fee": 3000,
+    "lastupdate": "1750348473"
+  },
+  {
+    "address": "0xA5A04565E9BA0d11231EEe7721045ACA2445d210",
+    "pair": "CADAI/WETH",
+    "token0": {
+      "symbol": "CADAI",
+      "address": "0x4dEbFb9Ed639144CF1e401674Af361FFFfcefb58",
+      "decimals": null
+    },
+    "token1": {
+      "symbol": "WETH",
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "decimals": null
+    },
+    "dex": "uniswap",
+    "chain": "arbitrum",
+    "price": "0.000008104187509504333",
+    "liquidity": "726794",
+    "volume_24h": "72679",
+    "fee": 3000,
+    "lastupdate": "1750348478"
+  },
+  {
+    "address": "0x0BB5A573886bbcecf18590b6Cb59E980FAC7d278",
+    "pair": "FRAX/WETH",
+    "token0": {
+      "symbol": "FRAX",
+      "address": "0x17FC002b466eEc40DaE837Fc4bE5c67993ddBd6F",
+      "decimals": null
+    },
+    "token1": {
+      "symbol": "WETH",
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "decimals": null
+    },
+    "dex": "fraxswap",
+    "chain": "arbitrum",
+    "price": "0.00039979910839342737",
+    "liquidity": "715483",
+    "volume_24h": "71548",
+    "fee": 3000,
+    "lastupdate": "1750348476"
+  },
+  {
+    "address": "0xC9da32C3b444F15412F7FeAC6104d1E258D23B1b",
+    "pair": "GRAIL/ARB",
+    "token0": {
+      "symbol": "GRAIL",
+      "address": "0x3d9907F9a368ad0a51Be60f7Da3b97cf940982D8",
+      "decimals": null
+    },
+    "token1": {
+      "symbol": "ARB",
+      "address": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+      "decimals": null
+    },
+    "dex": "camelot",
+    "chain": "arbitrum",
+    "price": "1035.2122060097274",
+    "liquidity": "585959",
+    "volume_24h": "58596",
+    "fee": 3000,
+    "lastupdate": "1750348477"
+  },
+  {
+    "address": "0xa6c5C7D189fA4eB5Af8ba34E63dCDD3a635D433f",
+    "pair": "ARB/WETH",
+    "token0": {
+      "symbol": "ARB",
+      "address": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+      "decimals": null
+    },
+    "token1": {
+      "symbol": "WETH",
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "decimals": null
+    },
+    "dex": "camelot",
+    "chain": "arbitrum",
+    "price": "0.00012012677781068166",
+    "liquidity": "566642",
+    "volume_24h": "56664",
+    "fee": 3000,
+    "lastupdate": "1750348473"
+  },
+  {
+    "address": "0x7e928afb59f5dE9D2f4d162f754C6eB40c88aA8E",
+    "pair": "USDC/USD₮0",
+    "token0": {
+      "symbol": "USDC",
+      "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      "decimals": 18
+    },
+    "token1": {
+      "symbol": "USD₮0",
+      "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+      "decimals": 18
+    },
+    "dex": "pancakeswap",
+    "chain": "arbitrum",
+    "price": "0.999747",
+    "liquidity": "498406",
+    "volume_24h": "49841",
+    "fee": 3000,
+    "lastupdate": "1750348470"
+  },
+  {
+    "address": "0xbe3B9c3700171183b2B3F827D8833212d0197a96",
+    "pair": "CRV/WETH",
+    "token0": {
+      "symbol": "CRV",
+      "address": "0x11cDb42B0EB46D95f990BeDD4695A6e3fA034978",
+      "decimals": null
+    },
+    "token1": {
+      "symbol": "WETH",
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "decimals": null
+    },
+    "dex": "sushiswap",
+    "chain": "arbitrum",
+    "price": "0.0002315487862465284",
+    "liquidity": "392048",
+    "volume_24h": "39205",
+    "fee": 3000,
+    "lastupdate": "1750348474"
+  },
+  {
+    "address": "0xfbcBBBB551A5FC5Ad7796ab6BBfF01Fb0DD2E180",
+    "pair": "DAI/USD₮0",
+    "token0": {
+      "symbol": "DAI",
+      "address": "0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
+      "decimals": 18
+    },
+    "token1": {
+      "symbol": "USD₮0",
+      "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+      "decimals": 18
+    },
+    "dex": "sushiswap",
+    "chain": "arbitrum",
+    "price": "0.999955",
+    "liquidity": "352424",
+    "volume_24h": "35242",
+    "fee": 3000,
+    "lastupdate": "1750348472"
+  },
+  {
+    "address": "0xa17aFCAb059F3C6751F5B64347b5a503C3291868",
+    "pair": "USDC/USD₮0",
+    "token0": {
+      "symbol": "USDC",
+      "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      "decimals": 18
+    },
+    "token1": {
+      "symbol": "USD₮0",
+      "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+      "decimals": 18
+    },
+    "dex": "camelot",
+    "chain": "arbitrum",
+    "price": "0.999747",
+    "liquidity": "351987",
+    "volume_24h": "35199",
+    "fee": 3000,
+    "lastupdate": "1750348470"
+  },
+  {
+    "address": "0x9A17D97Fb5f76F44604270448Ac77D55Ac40C15c",
+    "pair": "WBTC/WETH",
+    "token0": {
+      "symbol": "WBTC",
+      "address": "0x2f2a2543B76A4166549F7aaB2e75Bef0aefC5B0f",
+      "decimals": 18
+    },
+    "token1": {
+      "symbol": "WETH",
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "decimals": 18
+    },
+    "dex": "swapr",
+    "chain": "arbitrum",
+    "price": "41.65979686737152",
+    "liquidity": "268037",
+    "volume_24h": "26804",
+    "fee": 3000,
+    "lastupdate": "1750348472"
+  },
+  {
+    "address": "0x0C1Cf6883efA1B496B01f654E247B9b419873054",
+    "pair": "DPX/WETH",
+    "token0": {
+      "symbol": "DPX",
+      "address": "0x6C2C06790b3E3E3c38e12Ee22F8183b37a13EE55",
+      "decimals": null
+    },
+    "token1": {
+      "symbol": "WETH",
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "decimals": null
+    },
+    "dex": "sushiswap",
+    "chain": "arbitrum",
+    "price": "0.0014768979539560051",
+    "liquidity": "213246",
+    "volume_24h": "21325",
+    "fee": 3000,
+    "lastupdate": "1750348468"
+  },
+  {
+    "address": "0x2af377fC46be2e14Ec770EdCd026679B4030aFcd",
+    "pair": "WETH/USDC",
+    "token0": {
+      "symbol": "WETH",
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "decimals": 18
+    },
+    "token1": {
+      "symbol": "USDC",
+      "address": "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
+      "decimals": 18
+    },
+    "dex": "spartadex",
+    "chain": "arbitrum",
+    "price": "2499.2373848451116",
+    "liquidity": "208972",
+    "volume_24h": "20897",
+    "fee": 3000,
+    "lastupdate": "1750348471"
+  },
+  {
+    "address": "0x6A78E84FA0edAD4D99eB90edc041CdbF85925961",
+    "pair": "AIDOGE/WETH",
+    "token0": {
+      "symbol": "AIDOGE",
+      "address": "0x09E18590E8f76b6Cf471b3cd75fE1A1a9D2B2c2b",
+      "decimals": null
+    },
+    "token1": {
+      "symbol": "WETH",
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "decimals": null
+    },
+    "dex": "camelot",
+    "chain": "arbitrum",
+    "price": "0.00000000000004268546457184476",
+    "liquidity": "201042",
+    "volume_24h": "20104",
+    "fee": 3000,
+    "lastupdate": "1750348478"
+  },
+  {
+    "address": "0xBfCa4230115DE8341F3A3d5e8845fFb3337B2Be3",
+    "pair": "PENDLE/WETH",
+    "token0": {
+      "symbol": "PENDLE",
+      "address": "0x0c880f6761F1af8d9Aa9C466984b80DAb9a8c9e8",
+      "decimals": null
+    },
+    "token1": {
+      "symbol": "WETH",
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "decimals": null
+    },
+    "dex": "camelot",
+    "chain": "arbitrum",
+    "price": "0.0014766733630535522",
+    "liquidity": "188909",
+    "volume_24h": "18891",
+    "fee": 3000,
+    "lastupdate": "1750348475"
+  },
+  {
+    "address": "0x8f93Eaae544e8f5EB077A1e09C1554067d9e2CA8",
+    "pair": "SPELL/WETH",
+    "token0": {
+      "symbol": "SPELL",
+      "address": "0x3E6648C5a70A150A88bCE65F4aD4d506Fe15d2AF",
+      "decimals": null
+    },
+    "token1": {
+      "symbol": "WETH",
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "decimals": null
+    },
+    "dex": "sushiswap",
+    "chain": "arbitrum",
+    "price": "0.00000018469221965216137",
+    "liquidity": "142127",
+    "volume_24h": "14213",
+    "fee": 3000,
+    "lastupdate": "1750348477"
+  },
+  {
+    "address": "0xDeae1ff5282D83AAdd42f85c57F6e69a037bf7Cd",
+    "pair": "USDC/USD₮0",
+    "token0": {
+      "symbol": "USDC",
+      "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      "decimals": 18
+    },
+    "token1": {
+      "symbol": "USD₮0",
+      "address": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+      "decimals": 18
+    },
+    "dex": "uniswap",
+    "chain": "arbitrum",
+    "price": "0.999747",
+    "liquidity": "123626",
+    "volume_24h": "12363",
+    "fee": 3000,
+    "lastupdate": "1750348470"
+  },
+  {
+    "address": "0xB737586E9aB03c2Aa1e1a4f164DcEC2FE1dFbEb7",
+    "pair": "USDC/WETH",
+    "token0": {
+      "symbol": "USDC",
+      "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      "decimals": 18
+    },
+    "token1": {
+      "symbol": "WETH",
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "decimals": 18
+    },
+    "dex": "deltaswap",
+    "chain": "arbitrum",
+    "price": "0.0004000812370440921",
+    "liquidity": "117714",
+    "volume_24h": "11771",
+    "fee": 3000,
+    "lastupdate": "1750348470"
+  },
+  {
+    "address": "0xeb843B96fcF79Ef31373e08EE7bc9506f292ABA9",
+    "pair": "SMT/ARB",
+    "token0": {
+      "symbol": "SMT",
+      "address": "0xf0157af31dcBc774Dc64580624fA502c024D4661",
+      "decimals": null
+    },
+    "token1": {
+      "symbol": "ARB",
+      "address": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+      "decimals": null
+    },
+    "dex": "uniswap",
+    "chain": "arbitrum",
+    "price": null,
+    "liquidity": "109119.13",
+    "volume_24h": "1227.6",
+    "fee": 3000,
+    "lastupdate": null
+  },
+  {
+    "address": "0xA3d3C170a79b2c8EB773EdffA3976716a42800A9",
+    "pair": "FUN/WETH",
+    "token0": {
+      "symbol": "FUN",
+      "address": "0xCbD34BE8b8deB2fB6f5CC5bc14a37c2398Db5320",
+      "decimals": null
+    },
+    "token1": {
+      "symbol": "WETH",
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "decimals": null
+    },
+    "dex": "sushiswap",
+    "chain": "arbitrum",
+    "price": null,
+    "liquidity": "37822.69",
+    "volume_24h": "490.04",
+    "fee": 3000,
+    "lastupdate": null
+  },
+  {
+    "address": "0x000000000000000000000000000000007d50f41a",
+    "pair": "GMX/USDC",
+    "token0": {
+      "symbol": "GMX",
+      "address": "0xfc5A1A6EB076a2C7aD06eD22C90d7E710E35ad0a",
+      "decimals": 18
+    },
+    "token1": {
+      "symbol": "USDC",
+      "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      "decimals": 18
+    },
+    "dex": "sushiswap v3",
+    "chain": "arbitrum",
+    "liquidity": "950000",
+    "volume_24h": "45000",
+    "fee": 2500
+  },
+  {
+    "address": "0x000000000000000000000000000000000a9400f8",
+    "pair": "WETH/USDC",
+    "token0": {
+      "symbol": "WETH",
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "decimals": 18
+    },
+    "token1": {
+      "symbol": "USDC",
+      "address": "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
+      "decimals": 18
+    },
+    "dex": "uniswap v4",
+    "chain": "arbitrum",
+    "liquidity": "2500000",
+    "volume_24h": "150000",
+    "fee": 500
+  },
+  {
+    "address": "0x00000000000000000000000000000000305e7f18",
+    "pair": "ARB/WETH",
+    "token0": {
+      "symbol": "ARB",
+      "address": "0x912CE59144191C1204E64559FE8253a0e49E6548",
+      "decimals": 18
+    },
+    "token1": {
+      "symbol": "WETH",
+      "address": "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1",
+      "decimals": 18
+    },
+    "dex": "camelot v2",
+    "chain": "arbitrum",
+    "liquidity": "1800000",
+    "volume_24h": "80000",
+    "fee": 3000
+  }
+]

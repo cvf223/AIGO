@@ -1,0 +1,21 @@
+{
+  "name": "@syndicate/plan-analyzer",
+  "version": "1.0.0",
+  "description": "A computer vision module for analyzing construction plans.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "computer-vision",
+    "document-analysis",
+    "construction"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow/tfjs-node": "^4.20.0",
+    "tesseract.js": "^5.1.0"
+  }
+}

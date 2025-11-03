@@ -1,0 +1,338 @@
+{
+  "screenshot_1752699606018_1": {
+    "visionAnalysis": {
+      "textExtracted": [
+        "Transaction Hash: 0x...",
+        "Gas Used: 250000",
+        "Success: true"
+      ],
+      "transactionHashes": [
+        "0x1234567890abcdef"
+      ],
+      "confidence": 0.92
+    },
+    "transactionChains": [
+      {
+        "sequence": [
+          "approve",
+          "flashloan",
+          "swap",
+          "swap",
+          "repay"
+        ],
+        "profit": 0.025,
+        "gasUsed": 250000
+      }
+    ],
+    "processedAt": "2025-07-16T21:00:06.019Z",
+    "agentId": "enhanced_logging_test_agent"
+  },
+  "screenshot_1752699641016_1": {
+    "visionAnalysis": {
+      "textExtracted": [
+        "Transaction Hash: 0x...",
+        "Gas Used: 250000",
+        "Success: true"
+      ],
+      "transactionHashes": [
+        "0x1234567890abcdef"
+      ],
+      "confidence": 0.92
+    },
+    "transactionChains": [
+      {
+        "sequence": [
+          "approve",
+          "flashloan",
+          "swap",
+          "swap",
+          "repay"
+        ],
+        "profit": 0.025,
+        "gasUsed": 250000
+      }
+    ],
+    "processedAt": "2025-07-16T21:00:41.016Z",
+    "agentId": "enhanced_logging_test_agent"
+  },
+  "screenshot_1752699676015_1": {
+    "visionAnalysis": {
+      "textExtracted": [
+        "Transaction Hash: 0x...",
+        "Gas Used: 250000",
+        "Success: true"
+      ],
+      "transactionHashes": [
+        "0x1234567890abcdef"
+      ],
+      "confidence": 0.92
+    },
+    "transactionChains": [
+      {
+        "sequence": [
+          "approve",
+          "flashloan",
+          "swap",
+          "swap",
+          "repay"
+        ],
+        "profit": 0.025,
+        "gasUsed": 250000
+      }
+    ],
+    "processedAt": "2025-07-16T21:01:16.015Z",
+    "agentId": "enhanced_logging_test_agent"
+  },
+  "screenshot_1752699780871_1": {
+    "visionAnalysis": {
+      "textExtracted": [
+        "Transaction Hash: 0x...",
+        "Gas Used: 250000",
+        "Success: true"
+      ],
+      "transactionHashes": [
+        "0x1234567890abcdef"
+      ],
+      "confidence": 0.92
+    },
+    "transactionChains": [
+      {
+        "sequence": [
+          "approve",
+          "flashloan",
+          "swap",
+          "swap",
+          "repay"
+        ],
+        "profit": 0.025,
+        "gasUsed": 250000
+      }
+    ],
+    "processedAt": "2025-07-16T21:03:00.871Z",
+    "agentId": "enhanced_logging_test_agent"
+  },
+  "screenshot_1752699815871_1": {
+    "visionAnalysis": {
+      "textExtracted": [
+        "Transaction Hash: 0x...",
+        "Gas Used: 250000",
+        "Success: true"
+      ],
+      "transactionHashes": [
+        "0x1234567890abcdef"
+      ],
+      "confidence": 0.92
+    },
+    "transactionChains": [
+      {
+        "sequence": [
+          "approve",
+          "flashloan",
+          "swap",
+          "swap",
+          "repay"
+        ],
+        "profit": 0.025,
+        "gasUsed": 250000
+      }
+    ],
+    "processedAt": "2025-07-16T21:03:35.871Z",
+    "agentId": "enhanced_logging_test_agent"
+  },
+  "screenshot_1752699850871_1": {
+    "visionAnalysis": {
+      "textExtracted": [
+        "Transaction Hash: 0x...",
+        "Gas Used: 250000",
+        "Success: true"
+      ],
+      "transactionHashes": [
+        "0x1234567890abcdef"
+      ],
+      "confidence": 0.92
+    },
+    "transactionChains": [
+      {
+        "sequence": [
+          "approve",
+          "flashloan",
+          "swap",
+          "swap",
+          "repay"
+        ],
+        "profit": 0.025,
+        "gasUsed": 250000
+      }
+    ],
+    "processedAt": "2025-07-16T21:04:10.871Z",
+    "agentId": "enhanced_logging_test_agent"
+  },
+  "screenshot_1752700080238_1": {
+    "visionAnalysis": {
+      "textExtracted": [
+        "Transaction Hash: 0x...",
+        "Gas Used: 250000",
+        "Success: true"
+      ],
+      "transactionHashes": [
+        "0x1234567890abcdef"
+      ],
+      "confidence": 0.92
+    },
+    "transactionChains": [
+      {
+        "sequence": [
+          "approve",
+          "flashloan",
+          "swap",
+          "swap",
+          "repay"
+        ],
+        "profit": 0.025,
+        "gasUsed": 250000
+      }
+    ],
+    "processedAt": "2025-07-16T21:08:00.238Z",
+    "agentId": "enhanced_logging_test_agent"
+  },
+  "screenshot_1752700115236_1": {
+    "visionAnalysis": {
+      "textExtracted": [
+        "Transaction Hash: 0x...",
+        "Gas Used: 250000",
+        "Success: true"
+      ],
+      "transactionHashes": [
+        "0x1234567890abcdef"
+      ],
+      "confidence": 0.92
+    },
+    "transactionChains": [
+      {
+        "sequence": [
+          "approve",
+          "flashloan",
+          "swap",
+          "swap",
+          "repay"
+        ],
+        "profit": 0.025,
+        "gasUsed": 250000
+      }
+    ],
+    "processedAt": "2025-07-16T21:08:35.236Z",
+    "agentId": "enhanced_logging_test_agent"
+  },
+  "screenshot_1752700150236_1": {
+    "visionAnalysis": {
+      "textExtracted": [
+        "Transaction Hash: 0x...",
+        "Gas Used: 250000",
+        "Success: true"
+      ],
+      "transactionHashes": [
+        "0x1234567890abcdef"
+      ],
+      "confidence": 0.92
+    },
+    "transactionChains": [
+      {
+        "sequence": [
+          "approve",
+          "flashloan",
+          "swap",
+          "swap",
+          "repay"
+        ],
+        "profit": 0.025,
+        "gasUsed": 250000
+      }
+    ],
+    "processedAt": "2025-07-16T21:09:10.237Z",
+    "agentId": "enhanced_logging_test_agent"
+  },
+  "screenshot_1752700604423_1": {
+    "visionAnalysis": {
+      "textExtracted": [
+        "Transaction Hash: 0x...",
+        "Gas Used: 250000",
+        "Success: true"
+      ],
+      "transactionHashes": [
+        "0x1234567890abcdef"
+      ],
+      "confidence": 0.92
+    },
+    "transactionChains": [
+      {
+        "sequence": [
+          "approve",
+          "flashloan",
+          "swap",
+          "swap",
+          "repay"
+        ],
+        "profit": 0.025,
+        "gasUsed": 250000
+      }
+    ],
+    "processedAt": "2025-07-16T21:16:44.424Z",
+    "agentId": "enhanced_logging_test_agent"
+  },
+  "screenshot_1752700639423_1": {
+    "visionAnalysis": {
+      "textExtracted": [
+        "Transaction Hash: 0x...",
+        "Gas Used: 250000",
+        "Success: true"
+      ],
+      "transactionHashes": [
+        "0x1234567890abcdef"
+      ],
+      "confidence": 0.92
+    },
+    "transactionChains": [
+      {
+        "sequence": [
+          "approve",
+          "flashloan",
+          "swap",
+          "swap",
+          "repay"
+        ],
+        "profit": 0.025,
+        "gasUsed": 250000
+      }
+    ],
+    "processedAt": "2025-07-16T21:17:19.423Z",
+    "agentId": "enhanced_logging_test_agent"
+  },
+  "screenshot_1752700674423_1": {
+    "visionAnalysis": {
+      "textExtracted": [
+        "Transaction Hash: 0x...",
+        "Gas Used: 250000",
+        "Success: true"
+      ],
+      "transactionHashes": [
+        "0x1234567890abcdef"
+      ],
+      "confidence": 0.92
+    },
+    "transactionChains": [
+      {
+        "sequence": [
+          "approve",
+          "flashloan",
+          "swap",
+          "swap",
+          "repay"
+        ],
+        "profit": 0.025,
+        "gasUsed": 250000
+      }
+    ],
+    "processedAt": "2025-07-16T21:17:54.424Z",
+    "agentId": "enhanced_logging_test_agent"
+  }
+}

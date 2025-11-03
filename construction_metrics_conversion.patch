@@ -1,0 +1,124 @@
+--- src/creativity/CreativitySystemIntegrator.js.backup
++++ src/creativity/CreativitySystemIntegrator.js
+@@ -3208,7 +3208,12 @@
+             console.log(`📊 Baseline performance established:`);
+-            console.log(`   🎯 Average success rate: ${(baselinePerformance.averageSuccessRate * 100).toFixed(1)}%`);
+-            console.log(`   💰 Average profit: $${baselinePerformance.averageProfit.toFixed(2)}`);
+-            console.log(`   ⚡ Average execution time: ${baselinePerformance.averageExecutionTime.toFixed(1)}ms`);
+-            console.log(`   🎨 Average creativity score: ${(baselinePerformance.averageCreativityScore * 100).toFixed(1)}%`);
++            console.log(`   🎯 Average success rate: ${(baselinePerformance.averageSuccessRate * 100).toFixed(1)}%`);
++            console.log(`   🏗️ HOAI compliance score: ${(baselinePerformance.averageHoaiCompliance * 100).toFixed(1)}%`);
++            console.log(`   🔧 Structural integrity rating: ${(baselinePerformance.averageStructuralIntegrity * 100).toFixed(1)}%`);
++            console.log(`   ⚖️ Safety compliance score: ${(baselinePerformance.averageSafetyCompliance * 100).toFixed(1)}%`);
++            console.log(`   💰 Cost accuracy: ${(baselinePerformance.averageCostAccuracy * 100).toFixed(1)}%`);
++            console.log(`   ⚡ Average execution time: ${baselinePerformance.averageExecutionTime.toFixed(1)}ms`);
++            console.log(`   🎨 Average creativity score: ${(baselinePerformance.averageCreativityScore * 100).toFixed(1)}%`);
+             
+@@ -4641,7 +4646,12 @@
+                         round: round,
+                         scenario: scenario,
+                         success: roundResult.success,
+-                        profit: roundResult.profit || 0,
++                        hoaiCompliance: roundResult.hoaiCompliance || 0.85,
++                        structuralIntegrity: roundResult.structuralIntegrity || 0.90,
++                        safetyCompliance: roundResult.safetyCompliance || 0.92,
++                        costAccuracy: roundResult.costAccuracy || 0.88,
++                        qualityScore: roundResult.qualityScore || 0.87,
+                         executionTime: roundResult.executionTime || 1000,
+                         creativityScore: roundResult.creativityScore || 0.5,
+                         adaptabilityScore: roundResult.adaptabilityScore || 0.6,
+@@ -4676,9 +4686,15 @@
+                 simulationRounds: simulationRounds,
+                 successfulRounds: successfulRounds.length,
+                 averageSuccessRate: successfulRounds.length / simulationRounds,
+-                averageProfit: successfulRounds.length > 0 ? 
+-                    successfulRounds.reduce((sum, r) => sum + r.profit, 0) / successfulRounds.length : 0,
++                averageHoaiCompliance: successfulRounds.length > 0 ? 
++                    successfulRounds.reduce((sum, r) => sum + r.hoaiCompliance, 0) / successfulRounds.length : 0.85,
++                averageStructuralIntegrity: successfulRounds.length > 0 ? 
++                    successfulRounds.reduce((sum, r) => sum + r.structuralIntegrity, 0) / successfulRounds.length : 0.90,
++                averageSafetyCompliance: successfulRounds.length > 0 ? 
++                    successfulRounds.reduce((sum, r) => sum + r.safetyCompliance, 0) / successfulRounds.length : 0.92,
++                averageCostAccuracy: successfulRounds.length > 0 ? 
++                    successfulRounds.reduce((sum, r) => sum + r.costAccuracy, 0) / successfulRounds.length : 0.88,
+                 averageExecutionTime: baselineResults.reduce((sum, r) => sum + r.executionTime, 0) / baselineResults.length,
+                 averageCreativityScore: baselineResults.reduce((sum, r) => sum + r.creativityScore, 0) / baselineResults.length,
+                 averageAdaptabilityScore: baselineResults.reduce((sum, r) => sum + r.adaptabilityScore, 0) / baselineResults.length,
+@@ -4686,7 +4702,10 @@
+                 // Statistical measures
+-                profitStandardDeviation: this.calculateStandardDeviation(successfulRounds.map(r => r.profit)),
++                hoaiComplianceStandardDeviation: this.calculateStandardDeviation(successfulRounds.map(r => r.hoaiCompliance)),
++                structuralIntegrityStandardDeviation: this.calculateStandardDeviation(successfulRounds.map(r => r.structuralIntegrity)),
++                safetyComplianceStandardDeviation: this.calculateStandardDeviation(successfulRounds.map(r => r.safetyCompliance)),
++                costAccuracyStandardDeviation: this.calculateStandardDeviation(successfulRounds.map(r => r.costAccuracy)),
+                 executionTimeStandardDeviation: this.calculateStandardDeviation(baselineResults.map(r => r.executionTime)),
+                 creativityStandardDeviation: this.calculateStandardDeviation(baselineResults.map(r => r.creativityScore)),
+@@ -4696,7 +4715,11 @@
+             console.log(`✅ Baseline performance established for ${agentId}:`);
+             console.log(`   🎯 Success rate: ${(baselineStats.averageSuccessRate * 100).toFixed(1)}% (${successfulRounds.length}/${simulationRounds})`);
+-            console.log(`   💰 Average profit: $${baselineStats.averageProfit.toFixed(2)} ±${baselineStats.profitStandardDeviation.toFixed(2)}`);
++            console.log(`   🏗️ HOAI compliance: ${(baselineStats.averageHoaiCompliance * 100).toFixed(1)}% ±${(baselineStats.hoaiComplianceStandardDeviation * 100).toFixed(1)}%`);
++            console.log(`   🔧 Structural integrity: ${(baselineStats.averageStructuralIntegrity * 100).toFixed(1)}% ±${(baselineStats.structuralIntegrityStandardDeviation * 100).toFixed(1)}%`);
++            console.log(`   ⚖️ Safety compliance: ${(baselineStats.averageSafetyCompliance * 100).toFixed(1)}% ±${(baselineStats.safetyComplianceStandardDeviation * 100).toFixed(1)}%`);
++            console.log(`   💰 Cost accuracy: ${(baselineStats.averageCostAccuracy * 100).toFixed(1)}% ±${(baselineStats.costAccuracyStandardDeviation * 100).toFixed(1)}%`);
+             console.log(`   ⚡ Average execution time: ${baselineStats.averageExecutionTime.toFixed(1)}ms ±${baselineStats.executionTimeStandardDeviation.toFixed(1)}`);
+@@ -4972,7 +4995,11 @@
+             // Base performance calculation with randomness for creativity
+             let baseSuccessRate = 0.75; // Base 75% success rate
+-            let baseProfit = 150; // Base  profit
++            let baseHoaiCompliance = 0.85; // Base 85% HOAI compliance
++            let baseStructuralIntegrity = 0.90; // Base 90% structural integrity  
++            let baseSafetyCompliance = 0.92; // Base 92% safety compliance
++            let baseCostAccuracy = 0.88; // Base 88% cost accuracy
++            let baseQualityScore = 0.87; // Base 87% quality score
+             let baseExecutionTime = 1200; // Base 1.2s execution
+@@ -4979,7 +5006,11 @@
+             // Apply specialization modifiers for construction agents
+-            if (agentId === 'elite-developer-specialist') {
++            if (agentId === 'head-architect-orchestrator') {
++                baseSuccessRate += 0.10; // +10% for architectural expertise
++                baseHoaiCompliance += 0.08; // +8% HOAI compliance  
++                baseStructuralIntegrity += 0.05; // +5% structural integrity
++            } else if (agentId === 'quantity-surveyor-specialist') {
++                baseSuccessRate += 0.08; // +8% for surveying expertise
++                baseCostAccuracy += 0.10; // +10% cost accuracy
++            } else if (agentId === 'compliance-verification-analyst') {
++                baseSuccessRate += 0.07; // +7% for compliance expertise
++                baseHoaiCompliance += 0.12; // +12% HOAI compliance
++                baseSafetyCompliance += 0.06; // +6% safety compliance  
++            } else if (agentId === 'error-detection-auditor') {
++                baseSuccessRate += 0.09; // +9% for error detection
++                baseQualityScore += 0.11; // +11% quality score
++            } else if (agentId === 'cost-estimation-expert') {
++                baseSuccessRate += 0.06; // +6% for cost expertise
++                baseCostAccuracy += 0.12; // +12% cost accuracy
++            } else if (agentId === 'tender-document-generator') {
++                baseSuccessRate += 0.05; // +5% for documentation
++                baseHoaiCompliance += 0.06; // +6% HOAI compliance
++            } else if (agentId === 'bid-evaluation-judge') {
+                 baseSuccessRate += 0.05;
+-                baseProfit += 25;
++                baseCostAccuracy += 0.08; // +8% cost accuracy for bid evaluation
+             }
+@@ -4995,7 +5026,11 @@
+             // Add scenario-specific variation 
+             const scenarioModifier = (Math.random() - 0.5) * 0.1; // ±5%
+-            const profitModifier = (Math.random() - 0.5) * 50; // ±
++            const hoaiModifier = (Math.random() - 0.5) * 0.1; // ±5%
++            const structuralModifier = (Math.random() - 0.5) * 0.08; // ±4%  
++            const safetyModifier = (Math.random() - 0.5) * 0.06; // ±3%
++            const costModifier = (Math.random() - 0.5) * 0.12; // ±6%
++            const qualityModifier = (Math.random() - 0.5) * 0.10; // ±5%
+             const timeModifier = (Math.random() - 0.5) * 400; // ±200ms
+@@ -5010,7 +5045,11 @@
+             return {
+                 success: finalSuccessRate > 0.5,
+-                profit: Math.max(0, baseProfit + profitModifier),
++                hoaiCompliance: Math.max(0, Math.min(1, baseHoaiCompliance + hoaiModifier)),
++                structuralIntegrity: Math.max(0, Math.min(1, baseStructuralIntegrity + structuralModifier)),
++                safetyCompliance: Math.max(0, Math.min(1, baseSafetyCompliance + safetyModifier)),
++                costAccuracy: Math.max(0, Math.min(1, baseCostAccuracy + costModifier)),
++                qualityScore: Math.max(0, Math.min(1, baseQualityScore + qualityModifier)),
+                 executionTime: Math.max(100, baseExecutionTime + timeModifier),
+                 creativityScore: Math.max(0, Math.min(1, scenario.creativityRequirement || 0.5)),
+                 adaptabilityScore: Math.max(0, Math.min(1, scenario.adaptabilityRequirement || 0.6))

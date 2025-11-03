@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "shortcuts": {
+    "pl": "/plan",
+    "h": "/hoai",
+    "i": "/implement",
+    "a": "/analyze",
+    "t": "/test",
+    "d": "/deploy",
+    "q": "/quantum",
+    "s": "/syndicate",
+    "doc": "/document"
+  }
+}

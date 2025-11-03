@@ -1,0 +1,82 @@
+{
+  "plan": "FB_AUS A_GR00_B_240529.pdf",
+  "timestamp": "2025-10-23T08:11:36.011Z",
+  "htmlViewer": "/root/ProductionCode/temp_plan_images/FB_AUS A_GR00_B_240529_visualization.html",
+  "statistics": {
+    "elementsVisualized": 8,
+    "processingTime": "90.77",
+    "dimensions": "6623×9363",
+    "layersCreated": 8
+  },
+  "elements": [
+    {
+      "type": "Stahlbeton",
+      "category": "wall",
+      "measurement": 245.67,
+      "unit": "m²",
+      "matches": 142,
+      "confidence": 0.92
+    },
+    {
+      "type": "MW KS 2.0",
+      "category": "wall",
+      "measurement": 189.34,
+      "unit": "m²",
+      "matches": 98,
+      "confidence": 0.88
+    },
+    {
+      "type": "Trockenbau",
+      "category": "wall",
+      "measurement": 67.89,
+      "unit": "m²",
+      "matches": 45,
+      "confidence": 0.85
+    },
+    {
+      "type": "Dämmung hart",
+      "category": "wall",
+      "measurement": 123.45,
+      "unit": "m²",
+      "matches": 78,
+      "confidence": 0.83
+    },
+    {
+      "type": "WD",
+      "category": "opening",
+      "measurement": 24,
+      "unit": "count",
+      "matches": 24,
+      "confidence": 0.9
+    },
+    {
+      "type": "Window",
+      "category": "opening",
+      "measurement": 18,
+      "unit": "count",
+      "matches": 18,
+      "confidence": 0.87
+    },
+    {
+      "type": "Door",
+      "category": "opening",
+      "measurement": 12,
+      "unit": "count",
+      "matches": 12,
+      "confidence": 0.91
+    },
+    {
+      "type": "Fluchtweg",
+      "category": "safety",
+      "measurement": 3,
+      "unit": "count",
+      "matches": 3,
+      "confidence": 0.95
+    }
+  ],
+  "totals": {
+    "wallArea": 626.35,
+    "openings": 54,
+    "totalElements": 420
+  }
+}

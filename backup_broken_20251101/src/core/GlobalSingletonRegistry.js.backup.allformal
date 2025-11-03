@@ -1,0 +1,169 @@
+/**
+ * 🏛️ GLOBAL SINGLETON REGISTRY - SOLVE ALL INITIALIZATION PROBLEMS
+ * ================================================================
+ * 
+ * CRITICAL ARCHITECTURAL FIX:
+ * - Import NEVER triggers initialization
+ * - Each system initializes ONLY ONCE
+ * - Multiple systems share the same initialized instance
+ * - Explicit initialization control
+ * 
+ * USAGE:
+ * 
+ * // In your component:
+ * import { globalSingletonRegistry } from './core/GlobalSingletonRegistry.js';
+ * 
+ * class MySystem {
+ *     async initialize() {
+ *         // Check if already initialized
+ *         const existing = globalSingletonRegistry.get('MySystem');
+ *         if (existing) {
+ *             console.log('✅ MySystem already initialized - returning existing instance');
+ *             return existing;
+ *         }
+ *         
+ *         // First initialization
+ *         console.log('🚀 Initializing MySystem for the first time...');
+ *         // ... do initialization ...
+ *         
+ *         // Register this instance
+ *         globalSingletonRegistry.register('MySystem', this);
+ *         return this;
+ *     }
+ * }
+ * 
+ * // NEVER export auto-executing instances:
+ * // ❌ BAD: export const mySystem = new MySystem(); // Auto-executes!
+ * // ✅ GOOD: export { MySystem }; // Only export the class
+ */
+
+class GlobalSingletonRegistry {
+    constructor() {
+        this.singletons = new Map();
+        this.initializationInProgress = new Set();
+        this.initializationOrder = [];
+        
+        console.log('🏛️ Global Singleton Registry initialized');
+    }
+    
+    /**
+     * Register a singleton instance
+     */
+    register(name, instance) {
+        if (this.singletons.has(name)) {
+            console.warn(`⚠️ [Registry] ${name} already registered - ignoring duplicate registration`);
+            return false;
+        }
+        
+        this.singletons.set(name, instance);
+        this.initializationOrder.push({
+            name,
+            timestamp: Date.now()
+        });
+        
+        console.log(`✅ [Registry] ${name} registered (${this.singletons.size} total singletons)`);
+        return true;
+    }
+    
+    /**
+     * Get a singleton instance
+     */
+    get(name) {
+        return this.singletons.get(name) || null;
+    }
+    
+    /**
+     * Check if a singleton is registered
+     */
+    has(name) {
+        return this.singletons.has(name);
+    }
+    
+    /**
+     * Mark initialization as in progress (prevents circular loops)
+     */
+    markInitializing(name) {
+        if (this.initializationInProgress.has(name)) {
+            console.error(`🔴 [Registry] CIRCULAR INITIALIZATION DETECTED: ${name} is already initializing!`);
+            console.error(`🔴 [Registry] Current initialization chain:`, Array.from(this.initializationInProgress));
+            return false;
+        }
+        
+        this.initializationInProgress.add(name);
+        return true;
+    }
+    
+    /**
+     * Mark initialization as complete
+     */
+    markInitialized(name) {
+        this.initializationInProgress.delete(name);
+    }
+    
+    /**
+     * Get initialization status
+     */
+    getStatus() {
+        return {
+            totalRegistered: this.singletons.size,
+            currentlyInitializing: Array.from(this.initializationInProgress),
+            initializationOrder: this.initializationOrder,
+            registeredSystems: Array.from(this.singletons.keys())
+        };
+    }
+    
+    /**
+     * Clear all singletons (for testing only!)
+     */
+    clearAll() {
+        console.warn('⚠️ [Registry] Clearing all singletons - only use for testing!');
+        this.singletons.clear();
+        this.initializationInProgress.clear();
+        this.initializationOrder = [];
+    }
+    
+    /**
+     * Get or create a singleton with lazy initialization
+     */
+    async getOrCreate(name, createFunction) {
+        // Return existing instance if available
+        if (this.singletons.has(name)) {
+            console.log(`✅ [Registry] ${name} already initialized - returning existing instance`);
+            return this.singletons.get(name);
+        }
+        
+        // Check for circular initialization
+        if (!this.markInitializing(name)) {
+            throw new Error(`Circular initialization detected for ${name}`);
+        }
+        
+        try {
+            console.log(`🚀 [Registry] Initializing ${name} for the first time...`);
+            
+            // Create and initialize the instance
+            const instance = await createFunction();
+            
+            // Register the instance
+            this.register(name, instance);
+            this.markInitialized(name);
+            
+            return instance;
+            
+        } catch (error) {
+            this.markInitialized(name);
+            console.error(`❌ [Registry] Failed to initialize ${name}:`, error);
+            throw error;
+        }
+    }
+}
+
+// Create the global singleton registry
+export const globalSingletonRegistry = new GlobalSingletonRegistry();
+
+// Make it globally accessible for all modules
+if (typeof global !== 'undefined') {
+    global.globalSingletonRegistry = globalSingletonRegistry;
+}
+
+export default globalSingletonRegistry;
+

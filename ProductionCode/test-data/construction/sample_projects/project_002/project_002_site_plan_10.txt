@@ -1,0 +1,32 @@
+SYNTHETIC CONSTRUCTION PLAN
+Project: Warehouse Building project_002
+Plan Type: site_plan
+Plan ID: project_002_site_plan_10
+
+{
+  "planId": "project_002_site_plan_10",
+  "projectId": "project_002",
+  "planType": "site_plan",
+  "fileName": "project_002_site_plan_10.txt",
+  "dimensions": {
+    "width": 28.99,
+    "height": 16.2,
+    "unit": "m",
+    "area": 469.73
+  },
+  "elements": {
+    "elementCount": 17
+  },
+  "hasIntentionalError": false,
+  "errorDetails": null,
+  "metadata": {
+    "scale": "1:100",
+    "format": "A1",
+    "revision": "R01",
+    "date": "2024-01-15",
+    "drawnBy": "Synthetic Generator"
+  }
+}
+
+Note: This is a synthetic test plan generated for testing purposes.
+In production, this would be an actual PDF/DWG file with visual content.

@@ -1,0 +1,17 @@
+{
+  "totalEndpoints": 16,
+  "endpointsByMethod": {
+    "post": 8,
+    "get": 8
+  },
+  "endpointsByTag": {
+    "Authentication": 5,
+    "Systems": 3,
+    "Chat": 2,
+    "Construction": 5,
+    "WebSocket": 1
+  },
+  "authRequired": 12,
+  "parametersCount": 9,
+  "schemasCount": 12
+}

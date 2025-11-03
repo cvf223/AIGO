@@ -1,0 +1,124 @@
+{
+  "name": "postgres-mcp",
+  "version": "1.0.0",
+  "description": "PostgreSQL MCP server for AIGO-Syndicate database operations",
+  "type": "postgres",
+  "enabled": true,
+  "config": {
+    "server": {
+      "command": "@modelcontextprotocol/server-postgres",
+      "args": ["--config", "postgres-config.json"],
+      "env": {
+        "NODE_ENV": "production",
+        "LOG_LEVEL": "info",
+        "POSTGRES_HOST": "${POSTGRES_HOST}",
+        "POSTGRES_PORT": "${POSTGRES_PORT}",
+        "POSTGRES_DB": "${POSTGRES_DB}",
+        "POSTGRES_USER": "${POSTGRES_USER}",
+        "POSTGRES_PASSWORD": "${POSTGRES_PASSWORD}"
+      }
+    },
+    "connection": {
+      "host": "localhost",
+      "port": 5432,
+      "database": "construction_syndicate",
+      "user": "postgres",
+      "ssl": {
+        "enabled": true,
+        "rejectUnauthorized": true
+      },
+      "pool": {
+        "min": 20,
+        "max": 200,
+        "idleTimeoutMillis": 300000,
+        "connectionTimeoutMillis": 5000,
+        "statementTimeout": 60000
+      }
+    },
+    "permissions": {
+      "allowedSchemas": [
+        "public",
+        "construction",
+        "agent_memory",
+        "quantum_state"
+      ],
+      "allowedOperations": [
+        "SELECT",
+        "INSERT",
+        "UPDATE",
+        "DELETE"
+      ],
+      "deniedTables": [
+        "pg_*",
+        "information_schema.*"
+      ],
+      "rowLevelSecurity": true,
+      "auditLogging": true
+    },
+    "features": {
+      "queryOptimization": {
+        "enabled": true,
+        "autoExplain": true,
+        "cacheQueries": true,
+        "cacheTTL": 300
+      },
+      "schemaManagement": {
+        "migrations": true,
+        "versioning": true,
+        "backups": {
+          "enabled": true,
+          "schedule": "0 2 * * *",
+          "retention": 30
+        }
+      },
+      "monitoring": {
+        "slowQueryLog": true,
+        "slowQueryThreshold": 1000,
+        "queryStats": true,
+        "connectionStats": true
+      }
+    },
+    "security": {
+      "encryption": {
+        "atRest": true,
+        "inTransit": true,
+        "algorithm": "AES-256-GCM"
+      },
+      "authentication": {
+        "method": "scram-sha-256",
+        "requireSSL": true
+      },
+      "accessControl": {
+        "ipWhitelist": ["127.0.0.1", "::1"],
+        "maxConnections": 200,
+        "connectionTimeout": 60000
+      }
+    },
+    "performance": {
+      "queryCache": {
+        "enabled": true,
+        "size": "1GB",
+        "ttl": 3600
+      },
+      "indexes": {
+        "autoCreate": true,
+        "autoAnalyze": true,
+        "maintenanceWindow": "2-5"
+      },
+      "vacuum": {
+        "autoVacuum": true,
+        "vacuumCostDelay": 20,
+        "vacuumCostLimit": 2000
+      }
+    },
+    "knowledgeGraph": {
+      "enabled": true,
+      "schema": "quantum_state",
+      "optimization": {
+        "graphQueries": true,
+        "pathfinding": "bidirectional",
+        "caching": true
+      }
+    }
+  }
+}

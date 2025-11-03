@@ -1,0 +1,47 @@
+{
+  "projectId": "project_005",
+  "projectName": "Apartment Building project_005",
+  "quantities": {
+    "concrete": {
+      "value": 1307.31,
+      "unit": "m³",
+      "category": "structural"
+    },
+    "steel": {
+      "value": 217884.5,
+      "unit": "kg",
+      "category": "structural"
+    },
+    "bricks": {
+      "value": 522922,
+      "unit": "pieces",
+      "category": "masonry"
+    },
+    "windows": {
+      "value": 50,
+      "unit": "pieces",
+      "category": "finishes"
+    },
+    "doors": {
+      "value": 17,
+      "unit": "pieces",
+      "category": "finishes"
+    },
+    "paint": {
+      "value": 10894.22,
+      "unit": "m²",
+      "category": "finishes"
+    },
+    "flooring": {
+      "value": 3148.43,
+      "unit": "m²",
+      "category": "finishes"
+    }
+  },
+  "totalEstimatedCost": 7856280.34,
+  "boqReference": "project_005_boq.xlsx",
+  "validatedBy": "synthetic_generator",
+  "validationMethod": "algorithmic_calculation",
+  "confidenceLevel": 0.95,
+  "date": "2025-10-11T17:21:14.959Z"
+}

@@ -1,0 +1,36 @@
+SYNTHETIC CONSTRUCTION PLAN
+Project: Hotel Building project_004
+Plan Type: floor_plan
+Plan ID: project_004_floor_plan_01
+
+{
+  "planId": "project_004_floor_plan_01",
+  "projectId": "project_004",
+  "planType": "floor_plan",
+  "fileName": "project_004_floor_plan_01.txt",
+  "dimensions": {
+    "width": 33.94,
+    "height": 17.31,
+    "unit": "m",
+    "area": 587.7
+  },
+  "elements": {
+    "rooms": 7,
+    "doors": 5,
+    "windows": 6,
+    "walls": 28,
+    "stairs": 1
+  },
+  "hasIntentionalError": false,
+  "errorDetails": null,
+  "metadata": {
+    "scale": "1:100",
+    "format": "A1",
+    "revision": "R01",
+    "date": "2024-01-15",
+    "drawnBy": "Synthetic Generator"
+  }
+}
+
+Note: This is a synthetic test plan generated for testing purposes.
+In production, this would be an actual PDF/DWG file with visual content.

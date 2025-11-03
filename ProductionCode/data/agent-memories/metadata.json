@@ -1,0 +1,14 @@
+{
+  "test-agent-001": {
+    "last_loaded": 1752857567146,
+    "load_count": 3
+  },
+  "end-to-end-agent": {
+    "last_loaded": 1752857567150,
+    "load_count": 3
+  },
+  "arbitrum-flash-specialist": {
+    "last_loaded": 1753074706657,
+    "load_count": 70
+  }
+}

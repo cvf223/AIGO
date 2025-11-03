@@ -1,0 +1,79 @@
+{
+  "name": "Sequential Thinking MCP",
+  "id": "sequential-thinking",
+  "version": "1.0.0",
+  "description": "Enables step-by-step reasoning chains for complex problem solving",
+  "category": "reasoning",
+  "capabilities": [
+    "chain-of-thought",
+    "step-decomposition",
+    "reasoning-validation",
+    "thought-persistence"
+  ],
+  "configuration": {
+    "endpoint": {
+      "url": "http://localhost:3010",
+      "protocol": "http"
+    },
+    "authentication": {
+      "type": "api-key",
+      "keyEnvVar": "SEQUENTIAL_THINKING_API_KEY"
+    },
+    "settings": {
+      "maxSteps": 20,
+      "stepTimeout": 5000,
+      "parallelChains": 3,
+      "persistenceEnabled": true,
+      "validationStrength": "strong"
+    },
+    "models": {
+      "reasoning": "gpt-4",
+      "validation": "claude-3",
+      "summarization": "gpt-3.5-turbo"
+    }
+  },
+  "methods": [
+    {
+      "name": "startChain",
+      "description": "Begin a new reasoning chain",
+      "parameters": {
+        "problem": "string",
+        "context": "object",
+        "constraints": "array"
+      }
+    },
+    {
+      "name": "addStep",
+      "description": "Add a reasoning step to the chain",
+      "parameters": {
+        "chainId": "string",
+        "step": "object",
+        "validation": "boolean"
+      }
+    },
+    {
+      "name": "validateChain",
+      "description": "Validate the logical consistency of a chain",
+      "parameters": {
+        "chainId": "string"
+      }
+    },
+    {
+      "name": "getChainSummary",
+      "description": "Get a summary of the reasoning chain",
+      "parameters": {
+        "chainId": "string",
+        "format": "string"
+      }
+    }
+  ],
+  "integration": {
+    "agents": ["master-orchestrator", "ml-engineer", "formal-verification"],
+    "priority": "high",
+    "caching": true,
+    "retryPolicy": {
+      "maxRetries": 3,
+      "backoffMultiplier": 2
+    }
+  }
+}

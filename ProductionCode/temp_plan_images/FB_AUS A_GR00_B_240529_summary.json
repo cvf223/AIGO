@@ -1,0 +1,18 @@
+{
+  "plan": "FB_AUS A_GR00_B_240529.pdf",
+  "timestamp": "2025-10-23T07:45:33.324Z",
+  "results": {
+    "success": true,
+    "elements": [],
+    "statistics": {
+      "imageSize": "3537×5000",
+      "totalPixels": 17685000,
+      "meanBrightness": 245.71055532937518
+    },
+    "scale": {
+      "notation": "1:100 (assumed)",
+      "pixelsPerMeter": 59.06
+    }
+  },
+  "status": "completed"
+}

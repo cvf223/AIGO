@@ -1,0 +1,26 @@
+{
+  "plan": "FB_AUS_SN AA_I_240529.pdf",
+  "timestamp": "2025-10-23T08:45:02.945Z",
+  "scale": "1:50",
+  "buildingArea": {
+    "x": 1092.6,
+    "y": 771.5,
+    "width": 2780.8,
+    "height": 1964
+  },
+  "statistics": {
+    "totalDetected": 0,
+    "validElements": 0,
+    "filteredOut": 0,
+    "patternSize": 64
+  },
+  "elements": {},
+  "visualizationPath": "/root/ProductionCode/production_output/FB_AUS_SN AA_I_240529_visualization.html",
+  "improvements": [
+    "Correct scale detection",
+    "Building area isolation",
+    "Human-readable analysis",
+    "No hallucinations",
+    "Context validation"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "projectId": "project_004",
+  "projectName": "Hotel Building project_004",
+  "projectType": "residential",
+  "buildingType": "hotel",
+  "location": {
+    "city": "Berlin",
+    "district": "Mitte",
+    "address": "Test Street project_004",
+    "coordinates": {
+      "lat": 52.555759056326785,
+      "lng": 13.363213105400895
+    }
+  },
+  "dimensions": {
+    "floors": 6,
+    "unitsPerFloor": 2,
+    "totalUnits": 12,
+    "grossFloorArea": 1580.75,
+    "netFloorArea": 1343.6375,
+    "height": 18
+  },
+  "costs": {
+    "estimated": 2921944.83,
+    "currency": "EUR",
+    "costPerSqm": 1875.13
+  },
+  "timeline": {
+    "planningStart": "2024-01-01",
+    "constructionStart": "2024-06-01",
+    "completionTarget": "2025-12-31",
+    "duration": "18 months"
+  },
+  "hoaiPhases": [
+    "lp6",
+    "lp7"
+  ],
+  "generatedAt": "2025-10-11T17:21:14.956Z"
+}

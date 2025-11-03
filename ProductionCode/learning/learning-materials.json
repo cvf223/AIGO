@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Flash Loan Arbitrage 101 (YouTube)",
+    "url": "https://www.youtube.com/watch?v=3x1b_S6Qp2Q",
+    "summary": "Explains how to scan DEX pools, calculate price deltas, and execute atomic arbitrage using flash loans. Covers risks, gas, and slippage."
+  },
+  {
+    "title": "DeFiLlama DEX Analytics",
+    "url": "https://defillama.com/",
+    "summary": "Live analytics for DEX pools, liquidity, and volume. Useful for identifying arbitrage and liquidity mining opportunities."
+  },
+  {
+    "title": "Dune Analytics: Arbitrage Dashboards",
+    "url": "https://dune.com/",
+    "summary": "Community dashboards for tracking arbitrage, MEV, and DeFi trends."
+  },
+  {
+    "title": "AlphaDay: New Protocols",
+    "url": "https://alphaday.com/",
+    "summary": "Aggregates new DeFi protocols and alpha opportunities."
+  },
+  {
+    "title": "Uniswap V3 Whitepaper",
+    "url": "https://uniswap.org/whitepaper-v3.pdf",
+    "summary": "Technical details on Uniswap V3, including concentrated liquidity and fee structure."
+  },
+  {
+    "title": "Flash Loan Arbitrage Gas Wars & Execution Speed (YouTube)",
+    "url": "https://www.youtube.com/watch?v=YOUR_GAS_WARS_VIDEO",
+    "summary": "Deep dive into gas optimization, block timing, and how to win flash loan arbitrage gas wars. Covers real-world examples of frontrunning, block competition, and how to set gas for maximum profitability and win rate."
+  },
+  {
+    "title": "Trading Bot Masterclass V3 Replay | January 16, 2025",
+    "url": "https://www.youtube.com/live/nXIfbwJIiJU?si=TSq3iNuqXE2MFSDw",
+    "summary": "In-depth masterclass on building, tuning, and deploying advanced trading bots. Covers codebase 'trading_bot_v3-master', execution logic, and live Q&A."
+  },
+  {
+    "title": "Flash Loan Masterclass Replay | February 13, 2025",
+    "url": "https://www.youtube.com/live/AKDZVeyFYuU?si=shEa_n35spOl721H",
+    "summary": "Comprehensive session on flash loan strategies, with live code for 'flashloan_masterclass_moonwell-optimism'. Includes risk management, execution, and optimization tips."
+  },
+  {
+    "title": "The Airdrop Hunter Masterclass",
+    "url": "https://www.youtube.com/live/AKDZVeyFYuU?si=shEa_n35spOl721H",
+    "summary": "Masterclass on airdrop hunting, leveraging flash loans and trading bots. Features code walkthroughs and live demos for both 'flashloan_masterclass_moonwell-optimism' and 'trading_bot_v3-master'."
+  },
+  {
+    "title": "Flashloan Arbitrage Masterclass (YouTube Live)",
+    "url": "https://www.youtube.com/live/nXIfbwJIiJU",
+    "summary": "In-depth flashloan arbitrage explanation and live coding. Codebase: flash_loan_arbitrage/Arbitrage.sol. Use as a starting point for advanced flashloan arbitrage contracts. Needs further finetuning and enhancement for production use."
+  }
+] 

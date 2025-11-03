@@ -1,0 +1,53 @@
+{
+   "name": "@elizaos-plugins/client-telegram",
+   "version": "0.25.6-alpha.1",
+   "type": "module",
+   "main": "dist/index.js",
+   "module": "dist/index.js",
+   "types": "dist/index.d.ts",
+   "exports": {
+      "./package.json": "./package.json",
+      ".": {
+         "import": {
+            "@elizaos/source": "./src/index.ts",
+            "types": "./dist/index.d.ts",
+            "default": "./dist/index.js"
+         }
+      }
+   },
+   "files": [
+      "dist"
+   ],
+   "dependencies": {
+      "@elizaos/core": "workspace:^",
+      "@telegraf/types": "7.1.0",
+      "telegraf": "4.16.3",
+      "express": "^4.18.2"
+   },
+   "devDependencies": {
+      "tsup": "8.3.5",
+      "vitest": "1.6.1",
+      "@types/express": "^4.17.21",
+      "@types/node": "^20.11.24",
+      "typescript": "^5.3.3"
+   },
+   "scripts": {
+      "build": "tsup --format esm --dts",
+      "dev": "tsup --format esm --dts --watch",
+      "test": "vitest run",
+      "test:watch": "vitest",
+      "lint": "eslint src --ext .ts",
+      "start-webhook": "tsx scripts/start-webhook.ts"
+   },
+   "publishConfig": {
+      "access": "public"
+   },
+   "agentConfig": {
+      "pluginType": "elizaos:client:1.0.0",
+      "pluginParameters": {
+         "TELEGRAM_BOT_TOKEN": {
+            "type": "string"
+         }
+      }
+   }
+}

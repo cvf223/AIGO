@@ -1,0 +1,2005 @@
+[TAILING] Tailing last 1000 lines for [aigo-syndicate-main] process (change the value with --lines option)
+/root/.pm2/logs/aigo-syndicate-main-out.log last 1000 lines:
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+36|aigo-sy | 🚨 ALERT [CRITICAL]: Unhandled Promise Rejection
+
+/root/.pm2/logs/aigo-syndicate-main-error.log last 1000 lines:
+36|aigo-sy | }
+36|aigo-sy | 💥 CRITICAL UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 💥 UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 📍 Stack trace: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 🔗 Promise: Promise {
+36|aigo-sy |   <rejected> Error: timeout exceeded when trying to connect
+36|aigo-sy |       at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |       at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |       at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |       at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |       at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |       at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | }
+36|aigo-sy | 💥 CRITICAL UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 💥 UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 📍 Stack trace: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 🔗 Promise: Promise {
+36|aigo-sy |   <rejected> Error: timeout exceeded when trying to connect
+36|aigo-sy |       at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |       at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |       at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |       at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |       at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |       at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | }
+36|aigo-sy | 💥 CRITICAL UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 💥 UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 📍 Stack trace: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 🔗 Promise: Promise {
+36|aigo-sy |   <rejected> Error: timeout exceeded when trying to connect
+36|aigo-sy |       at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |       at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |       at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |       at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |       at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |       at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | }
+36|aigo-sy | 💥 CRITICAL UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 💥 UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 📍 Stack trace: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 🔗 Promise: Promise {
+36|aigo-sy |   <rejected> Error: timeout exceeded when trying to connect
+36|aigo-sy |       at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |       at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |       at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |       at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |       at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |       at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | }
+36|aigo-sy | 💥 CRITICAL UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 💥 UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 📍 Stack trace: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 🔗 Promise: Promise {
+36|aigo-sy |   <rejected> Error: timeout exceeded when trying to connect
+36|aigo-sy |       at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |       at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |       at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |       at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |       at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |       at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | }
+36|aigo-sy | 💥 CRITICAL UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 💥 UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 📍 Stack trace: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 🔗 Promise: Promise {
+36|aigo-sy |   <rejected> Error: timeout exceeded when trying to connect
+36|aigo-sy |       at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |       at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |       at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |       at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |       at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |       at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | }
+36|aigo-sy | 💥 CRITICAL UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 💥 UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 📍 Stack trace: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 🔗 Promise: Promise {
+36|aigo-sy |   <rejected> Error: timeout exceeded when trying to connect
+36|aigo-sy |       at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |       at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |       at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |       at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |       at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |       at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | }
+36|aigo-sy | 💥 CRITICAL UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 💥 UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 📍 Stack trace: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 🔗 Promise: Promise {
+36|aigo-sy |   <rejected> Error: timeout exceeded when trying to connect
+36|aigo-sy |       at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |       at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |       at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |       at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |       at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |       at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | }
+36|aigo-sy | 💥 CRITICAL UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 💥 UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 📍 Stack trace: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 🔗 Promise: Promise {
+36|aigo-sy |   <rejected> Error: timeout exceeded when trying to connect
+36|aigo-sy |       at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |       at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |       at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |       at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |       at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |       at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | }
+36|aigo-sy | 💥 CRITICAL UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 💥 UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 📍 Stack trace: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 🔗 Promise: Promise {
+36|aigo-sy |   <rejected> Error: timeout exceeded when trying to connect
+36|aigo-sy |       at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |       at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |       at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |       at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |       at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |       at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | }
+36|aigo-sy | 💥 CRITICAL UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 💥 UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 📍 Stack trace: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 🔗 Promise: Promise {
+36|aigo-sy |   <rejected> Error: timeout exceeded when trying to connect
+36|aigo-sy |       at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |       at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |       at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |       at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |       at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |       at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | }
+36|aigo-sy | 💥 CRITICAL UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 💥 UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 📍 Stack trace: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 🔗 Promise: Promise {
+36|aigo-sy |   <rejected> Error: timeout exceeded when trying to connect
+36|aigo-sy |       at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |       at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |       at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |       at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |       at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |       at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | }
+36|aigo-sy | 💥 CRITICAL UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 💥 UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 📍 Stack trace: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 🔗 Promise: Promise {
+36|aigo-sy |   <rejected> Error: timeout exceeded when trying to connect
+36|aigo-sy |       at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |       at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |       at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |       at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |       at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |       at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | }
+36|aigo-sy | 💥 CRITICAL UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 💥 UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 📍 Stack trace: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 🔗 Promise: Promise {
+36|aigo-sy |   <rejected> Error: timeout exceeded when trying to connect
+36|aigo-sy |       at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |       at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |       at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |       at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |       at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |       at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | }
+36|aigo-sy | 💥 CRITICAL UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 💥 UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 📍 Stack trace: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 🔗 Promise: Promise {
+36|aigo-sy |   <rejected> Error: timeout exceeded when trying to connect
+36|aigo-sy |       at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |       at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |       at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |       at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |       at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |       at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | }
+36|aigo-sy | 💥 CRITICAL UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 💥 UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 📍 Stack trace: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 🔗 Promise: Promise {
+36|aigo-sy |   <rejected> Error: timeout exceeded when trying to connect
+36|aigo-sy |       at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |       at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |       at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |       at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |       at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |       at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | }
+36|aigo-sy | 💥 CRITICAL UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 💥 UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 📍 Stack trace: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 🔗 Promise: Promise {
+36|aigo-sy |   <rejected> Error: timeout exceeded when trying to connect
+36|aigo-sy |       at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |       at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |       at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |       at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |       at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |       at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | }
+36|aigo-sy | 💥 CRITICAL UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 💥 UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 📍 Stack trace: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 🔗 Promise: Promise {
+36|aigo-sy |   <rejected> Error: timeout exceeded when trying to connect
+36|aigo-sy |       at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |       at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |       at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |       at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |       at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |       at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | }
+36|aigo-sy | 💥 CRITICAL UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 💥 UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 📍 Stack trace: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 🔗 Promise: Promise {
+36|aigo-sy |   <rejected> Error: timeout exceeded when trying to connect
+36|aigo-sy |       at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |       at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |       at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |       at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |       at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |       at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | }
+36|aigo-sy | 💥 CRITICAL UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 💥 UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 📍 Stack trace: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 🔗 Promise: Promise {
+36|aigo-sy |   <rejected> Error: timeout exceeded when trying to connect
+36|aigo-sy |       at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |       at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |       at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |       at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |       at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |       at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | }
+36|aigo-sy | 💥 CRITICAL UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 💥 UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 📍 Stack trace: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 🔗 Promise: Promise {
+36|aigo-sy |   <rejected> Error: timeout exceeded when trying to connect
+36|aigo-sy |       at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |       at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |       at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |       at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |       at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |       at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | }
+36|aigo-sy | 💥 CRITICAL UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 💥 UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 📍 Stack trace: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 🔗 Promise: Promise {
+36|aigo-sy |   <rejected> Error: timeout exceeded when trying to connect
+36|aigo-sy |       at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |       at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |       at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |       at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |       at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |       at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | }
+36|aigo-sy | 💥 CRITICAL UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 💥 UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 📍 Stack trace: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 🔗 Promise: Promise {
+36|aigo-sy |   <rejected> Error: timeout exceeded when trying to connect
+36|aigo-sy |       at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |       at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |       at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |       at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |       at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |       at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | }
+36|aigo-sy | 💥 CRITICAL UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 💥 UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 📍 Stack trace: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 🔗 Promise: Promise {
+36|aigo-sy |   <rejected> Error: timeout exceeded when trying to connect
+36|aigo-sy |       at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |       at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |       at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |       at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |       at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |       at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | }
+36|aigo-sy | 💥 CRITICAL UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 💥 UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 📍 Stack trace: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 🔗 Promise: Promise {
+36|aigo-sy |   <rejected> Error: timeout exceeded when trying to connect
+36|aigo-sy |       at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |       at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |       at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |       at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |       at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |       at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | }
+36|aigo-sy | 💥 CRITICAL UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 💥 UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 📍 Stack trace: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 🔗 Promise: Promise {
+36|aigo-sy |   <rejected> Error: timeout exceeded when trying to connect
+36|aigo-sy |       at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |       at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |       at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |       at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |       at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |       at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | }
+36|aigo-sy | 💥 CRITICAL UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 💥 UNHANDLED REJECTION: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 📍 Stack trace: Error: timeout exceeded when trying to connect
+36|aigo-sy |     at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |     at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |     at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |     at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |     at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |     at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | 🔗 Promise: Promise {
+36|aigo-sy |   <rejected> Error: timeout exceeded when trying to connect
+36|aigo-sy |       at /root/LocalBackup/node_modules/pg-pool/index.js:45:11
+36|aigo-sy |       at runNextTicks (node:internal/process/task_queues:60:5)
+36|aigo-sy |       at listOnTimeout (node:internal/timers:545:9)
+36|aigo-sy |       at process.processTimers (node:internal/timers:519:7)
+36|aigo-sy |       at async QuantumKnowledgeGraph.executePruning (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:913:24)
+36|aigo-sy |       at async Timeout._onTimeout (file:///root/LocalBackup/src/memory/KnowledgeGraph.js:1083:13)
+36|aigo-sy | }
+

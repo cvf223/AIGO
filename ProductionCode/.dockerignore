@@ -1,0 +1,37 @@
+# Exclude node modules
+node_modules
+**/node_modules
+
+# Exclude build artifacts
+**/dist
+**/.cache
+**/.build
+
+# Exclude git files
+.git
+.gitignore
+
+# Exclude Docker files
+.dockerignore
+Dockerfile
+docker-compose.yml
+
+# Exclude temporary and backup files
+**/*.log
+**/*.bak
+**/*~
+**/.DS_Store
+
+# Exclude docs
+docs/
+README.md
+
+# Exclude tests
+**/__tests__
+**/test
+**/tests
+
+# Exclude any large or unneeded files
+**/*.mp4
+**/*.mp3
+**/*.zip 

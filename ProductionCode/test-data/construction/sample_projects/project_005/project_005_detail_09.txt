@@ -1,0 +1,32 @@
+SYNTHETIC CONSTRUCTION PLAN
+Project: Apartment Building project_005
+Plan Type: detail
+Plan ID: project_005_detail_09
+
+{
+  "planId": "project_005_detail_09",
+  "projectId": "project_005",
+  "planType": "detail",
+  "fileName": "project_005_detail_09.txt",
+  "dimensions": {
+    "width": 22.36,
+    "height": 14.71,
+    "unit": "m",
+    "area": 328.97
+  },
+  "elements": {
+    "elementCount": 14
+  },
+  "hasIntentionalError": false,
+  "errorDetails": null,
+  "metadata": {
+    "scale": "1:100",
+    "format": "A1",
+    "revision": "R01",
+    "date": "2024-01-15",
+    "drawnBy": "Synthetic Generator"
+  }
+}
+
+Note: This is a synthetic test plan generated for testing purposes.
+In production, this would be an actual PDF/DWG file with visual content.

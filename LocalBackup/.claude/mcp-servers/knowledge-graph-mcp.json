@@ -1,0 +1,208 @@
+{
+  "name": "Knowledge Graph MCP",
+  "id": "knowledge-graph",
+  "version": "2.0.0",
+  "description": "Knowledge Graph and Quantum Knowledge Graph (QKG) operations for advanced knowledge representation",
+  "category": "knowledge",
+  "capabilities": [
+    "graph-construction",
+    "entity-extraction",
+    "relationship-mapping",
+    "quantum-superposition",
+    "graph-querying",
+    "knowledge-inference"
+  ],
+  "configuration": {
+    "endpoint": {
+      "url": "http://localhost:3017",
+      "protocol": "grpc"
+    },
+    "authentication": {
+      "type": "mtls",
+      "certPath": "/certs/kg-client.crt",
+      "keyPath": "/certs/kg-client.key",
+      "caPath": "/certs/kg-ca.crt"
+    },
+    "graph": {
+      "backend": "neo4j",
+      "connectionString": "${NEO4J_CONNECTION}",
+      "maxNodes": 1000000,
+      "maxRelationships": 5000000
+    },
+    "quantum": {
+      "enableQKG": true,
+      "superpositionStates": 5,
+      "entanglementDepth": 3,
+      "coherenceTime": 1000,
+      "classicalFallback": true
+    },
+    "entityExtraction": {
+      "models": ["spacy", "bert-ner", "domain-specific"],
+      "confidence": 0.8,
+      "languages": ["en", "de"],
+      "customEntities": {
+        "construction": ["Material", "Method", "Standard", "Phase"],
+        "ai": ["Algorithm", "Model", "Dataset", "Metric"]
+      }
+    },
+    "inference": {
+      "rules": "datalog",
+      "reasoningDepth": 5,
+      "probabilistic": true,
+      "explainable": true
+    }
+  },
+  "methods": [
+    {
+      "name": "createKnowledgeGraph",
+      "description": "Create a new knowledge graph",
+      "parameters": {
+        "name": "string",
+        "schema": "object",
+        "quantum": "boolean",
+        "importFrom": "string"
+      }
+    },
+    {
+      "name": "addEntity",
+      "description": "Add an entity to the knowledge graph",
+      "parameters": {
+        "graphId": "string",
+        "entity": "object",
+        "superposition": "array",
+        "metadata": "object"
+      }
+    },
+    {
+      "name": "createRelationship",
+      "description": "Create a relationship between entities",
+      "parameters": {
+        "graphId": "string",
+        "source": "string",
+        "target": "string",
+        "type": "string",
+        "properties": "object",
+        "quantum": "boolean"
+      }
+    },
+    {
+      "name": "queryGraph",
+      "description": "Query the knowledge graph",
+      "parameters": {
+        "graphId": "string",
+        "query": "string",
+        "language": "string",
+        "includeInferred": "boolean",
+        "collapseQuantum": "boolean"
+      }
+    },
+    {
+      "name": "inferKnowledge",
+      "description": "Infer new knowledge from existing graph",
+      "parameters": {
+        "graphId": "string",
+        "rules": "array",
+        "confidence": "number",
+        "explain": "boolean"
+      }
+    },
+    {
+      "name": "createQuantumSuperposition",
+      "description": "Create quantum superposition of knowledge states",
+      "parameters": {
+        "entities": "array",
+        "relationships": "array",
+        "amplitudes": "array",
+        "entangle": "boolean"
+      }
+    },
+    {
+      "name": "collapseQuantumState",
+      "description": "Collapse quantum knowledge state to classical",
+      "parameters": {
+        "stateId": "string",
+        "observationContext": "object",
+        "strategy": "string"
+      }
+    },
+    {
+      "name": "findShortestPath",
+      "description": "Find shortest path between entities",
+      "parameters": {
+        "graphId": "string",
+        "start": "string",
+        "end": "string",
+        "constraints": "object",
+        "quantum": "boolean"
+      }
+    },
+    {
+      "name": "detectCommunities",
+      "description": "Detect communities in the knowledge graph",
+      "parameters": {
+        "graphId": "string",
+        "algorithm": "string",
+        "resolution": "number"
+      }
+    },
+    {
+      "name": "exportGraph",
+      "description": "Export knowledge graph in various formats",
+      "parameters": {
+        "graphId": "string",
+        "format": "string",
+        "includeInferred": "boolean",
+        "compress": "boolean"
+      }
+    }
+  ],
+  "schemas": {
+    "construction": {
+      "entities": {
+        "Project": {
+          "properties": ["name", "type", "phase", "location", "budget"],
+          "quantum": false
+        },
+        "Material": {
+          "properties": ["type", "quantity", "cost", "supplier"],
+          "quantum": true
+        },
+        "Regulation": {
+          "properties": ["code", "requirement", "version"],
+          "quantum": false
+        }
+      },
+      "relationships": {
+        "REQUIRES": {
+          "properties": ["quantity", "phase"]
+        },
+        "COMPLIES_WITH": {
+          "properties": ["level", "verified"]
+        },
+        "ALTERNATIVE_TO": {
+          "properties": ["preference", "conditions"],
+          "quantum": true
+        }
+      }
+    }
+  },
+  "integration": {
+    "agents": ["master-orchestrator", "quantum-architect", "construction-lead", "ml-engineer"],
+    "dataSources": {
+      "postgres": true,
+      "mongodb": true,
+      "elasticsearch": true,
+      "notebooklm": true
+    },
+    "realtime": {
+      "updates": true,
+      "subscriptions": true,
+      "webhooks": true
+    },
+    "performance": {
+      "indexing": "automatic",
+      "caching": "redis",
+      "sharding": true
+    }
+  }
+}

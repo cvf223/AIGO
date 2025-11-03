@@ -1,0 +1,77 @@
+{
+  "dune_arbitrum_1752665877639": {
+    "source": "dune",
+    "type": "arbitrage_data",
+    "chain": "arbitrum",
+    "data": [
+      {
+        "id": "arb_arbitrum_1",
+        "chain": "arbitrum",
+        "token_pair": "USDC/ETH",
+        "dex_from": "Uniswap V3",
+        "dex_to": "SushiSwap",
+        "profit_percent": 2.5,
+        "volume_usd": 150000,
+        "gas_cost_usd": 25,
+        "net_profit_usd": 3750,
+        "block_number": 12345678,
+        "timestamp": "2025-07-16T11:37:57.639Z",
+        "confidence": 0.95
+      },
+      {
+        "id": "arb_arbitrum_2",
+        "chain": "arbitrum",
+        "token_pair": "WBTC/USDC",
+        "dex_from": "Curve",
+        "dex_to": "Balancer",
+        "profit_percent": 1.8,
+        "volume_usd": 200000,
+        "gas_cost_usd": 30,
+        "net_profit_usd": 3570,
+        "block_number": 12345679,
+        "timestamp": "2025-07-16T11:37:57.639Z",
+        "confidence": 0.89
+      }
+    ],
+    "timestamp": "2025-07-16T11:37:57.639Z",
+    "accuracy": "HIGH"
+  },
+  "defillama_chains_1752665877641": {
+    "source": "defillama",
+    "type": "chain_data",
+    "data": [
+      {
+        "chain": "Arbitrum",
+        "tvl": 2800000000,
+        "protocols": 156,
+        "change_24h": 2.3,
+        "volume_24h": 85000000,
+        "fees_24h": 125000,
+        "revenue_24h": 85000,
+        "users_24h": 45000
+      },
+      {
+        "chain": "Base",
+        "tvl": 1200000000,
+        "protocols": 89,
+        "change_24h": 5.7,
+        "volume_24h": 45000000,
+        "fees_24h": 75000,
+        "revenue_24h": 52000,
+        "users_24h": 28000
+      },
+      {
+        "chain": "Polygon",
+        "tvl": 950000000,
+        "protocols": 134,
+        "change_24h": -1.2,
+        "volume_24h": 32000000,
+        "fees_24h": 45000,
+        "revenue_24h": 31000,
+        "users_24h": 35000
+      }
+    ],
+    "timestamp": "2025-07-16T11:37:57.641Z",
+    "accuracy": "HIGH"
+  }
+}

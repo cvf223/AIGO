@@ -1,0 +1,201 @@
+# 🚨 ALERT RULES - CONSTRUCTION SYNDICATE
+# =======================================
+# Critical alerts for production monitoring
+
+groups:
+  - name: syndicate_health
+    interval: 30s
+    rules:
+      # High Memory Usage
+      - alert: HighMemoryUsage
+        expr: (node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes) / node_memory_MemTotal_bytes > 0.90
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High memory usage detected (instance {{ $labels.instance }})"
+          description: "Memory usage is above 90% (current value: {{ $value | humanizePercentage }})"
+
+      - alert: CriticalMemoryUsage
+        expr: (node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes) / node_memory_MemTotal_bytes > 0.95
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Critical memory usage detected (instance {{ $labels.instance }})"
+          description: "Memory usage is above 95% (current value: {{ $value | humanizePercentage }})"
+
+      # CPU Usage
+      - alert: HighCPUUsage
+        expr: 100 - (avg by (instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 80
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High CPU usage detected (instance {{ $labels.instance }})"
+          description: "CPU usage is above 80% (current value: {{ $value }}%)"
+
+      # Disk Space
+      - alert: LowDiskSpace
+        expr: (node_filesystem_avail_bytes{mountpoint="/"} / node_filesystem_size_bytes{mountpoint="/"}) < 0.20
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Low disk space on root partition"
+          description: "Less than 20% disk space remaining (current: {{ $value | humanizePercentage }})"
+
+  - name: syndicate_agents
+    interval: 30s
+    rules:
+      # Agent Health
+      - alert: AgentDown
+        expr: syndicate_agent_health == 0
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Agent {{ $labels.agent_id }} is down"
+          description: "Agent {{ $labels.agent_name }} has been unhealthy for more than 2 minutes"
+
+      # Agent Memory Leaks
+      - alert: AgentMemoryLeak
+        expr: rate(syndicate_agent_memory_bytes[5m]) > 10485760  # 10MB/5min
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Potential memory leak in agent {{ $labels.agent_id }}"
+          description: "Agent {{ $labels.agent_name }} memory is growing at {{ $value | humanize }}/5min"
+
+      # Agent Error Rate
+      - alert: HighAgentErrorRate
+        expr: rate(syndicate_agent_errors_total[5m]) > 5
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High error rate for agent {{ $labels.agent_id }}"
+          description: "Agent {{ $labels.agent_name }} has {{ $value }} errors per second"
+
+  - name: syndicate_api
+    interval: 30s
+    rules:
+      # API Response Time
+      - alert: SlowAPIResponse
+        expr: histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[5m])) > 2
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Slow API response times"
+          description: "95th percentile response time is {{ $value }}s (threshold: 2s)"
+
+      # API Error Rate
+      - alert: HighAPIErrorRate
+        expr: rate(http_requests_total{status=~"5.."}[5m]) > 0.05
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High API error rate"
+          description: "API 5xx error rate is {{ $value | humanizePercentage }} (threshold: 5%)"
+
+      # Rate Limiting
+      - alert: RateLimitingActive
+        expr: rate(api_rate_limit_exceeded_total[5m]) > 10
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High rate of rate-limited requests"
+          description: "{{ $value }} requests per second are being rate-limited"
+
+  - name: syndicate_database
+    interval: 30s
+    rules:
+      # Database Connection Pool
+      - alert: DatabaseConnectionPoolExhausted
+        expr: pg_stat_database_numbackends / pg_settings_max_connections > 0.90
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Database connection pool nearly exhausted"
+          description: "{{ $value | humanizePercentage }} of max connections in use"
+
+      # Database Replication Lag
+      - alert: DatabaseReplicationLag
+        expr: pg_replication_lag_seconds > 10
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Database replication lag detected"
+          description: "Replication lag is {{ $value }}s (threshold: 10s)"
+
+      # Long Running Queries
+      - alert: LongRunningQueries
+        expr: pg_stat_activity_max_tx_duration > 300
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Long running database queries detected"
+          description: "Query running for {{ $value }}s (threshold: 300s)"
+
+  - name: syndicate_learning
+    interval: 30s
+    rules:
+      # Learning System Performance
+      - alert: LearningSystemSlow
+        expr: syndicate_learning_iteration_duration_seconds > 60
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Learning system {{ $labels.system }} is slow"
+          description: "Learning iterations taking {{ $value }}s (threshold: 60s)"
+
+      # Memory Distillation Issues
+      - alert: MemoryDistillationFailed
+        expr: increase(syndicate_memory_distillation_failures_total[5m]) > 3
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Memory distillation failures detected"
+          description: "{{ $value }} distillation failures in the last 5 minutes"
+
+  - name: syndicate_llm
+    interval: 30s
+    rules:
+      # LLM Service Availability
+      - alert: LLMServiceDown
+        expr: up{job="ollama"} == 0
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "LLM service is down"
+          description: "Ollama service has been down for more than 2 minutes"
+
+      # LLM Response Time
+      - alert: LLMSlowResponse
+        expr: syndicate_llm_response_time_seconds > 30
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "LLM response times are slow"
+          description: "LLM taking {{ $value }}s to respond (threshold: 30s)"
+
+      # Quantization Issues
+      - alert: QuantizationMemoryUsage
+        expr: syndicate_quantization_memory_saved_bytes < 100000000000  # Less than 100GB saved
+        for: 30m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Quantization not effective"
+          description: "Only {{ $value | humanize }} memory saved by quantization"

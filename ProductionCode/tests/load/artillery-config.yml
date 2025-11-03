@@ -1,0 +1,260 @@
+# 🚀 LOAD TESTING CONFIGURATION
+# Elite Construction AI Syndicate - 10k Concurrent Connections Test
+# Tool: Artillery.io
+# Target: WebSocket & HTTP endpoints
+
+config:
+  target: "http://localhost:3001"
+  phases:
+    # Warm-up phase
+    - duration: 60
+      arrivalRate: 10
+      name: "Warm-up"
+    
+    # Ramp-up phase
+    - duration: 300
+      arrivalRate: 10
+      rampTo: 100
+      name: "Ramp-up to 100 users/sec"
+    
+    # Sustained load phase
+    - duration: 600
+      arrivalRate: 100
+      name: "Sustained load"
+    
+    # Spike test
+    - duration: 60
+      arrivalRate: 200
+      name: "Spike test"
+    
+    # Cool-down
+    - duration: 60
+      arrivalRate: 10
+      name: "Cool-down"
+  
+  processor: "./load-test-processor.js"
+  
+  # WebSocket configuration
+  ws:
+    # Reconnect settings
+    reconnect: true
+    rejectUnauthorized: false
+    
+  # HTTP configuration  
+  http:
+    timeout: 30
+    
+  # Variables for test data
+  variables:
+    testUsers:
+      - username: "loadtest1"
+        email: "loadtest1@test.com"
+        password: "LoadTest123!"
+      - username: "loadtest2"
+        email: "loadtest2@test.com"
+        password: "LoadTest123!"
+      - username: "loadtest3"
+        email: "loadtest3@test.com"
+        password: "LoadTest123!"
+    
+    chatTargets:
+      - type: "coordinator"
+        id: "centralNervousSystem"
+        name: "Central Nervous System"
+      - type: "llm"
+        id: "deepseek-v3"
+        name: "Primary LLM"
+      - type: "agent"
+        id: "test-agent"
+        name: "Test Agent"
+    
+    planTypes:
+      - "floor_plan"
+      - "elevation"
+      - "section"
+      - "detail"
+    
+    analysisTypes:
+      - "quick"
+      - "comprehensive"
+      - "compliance_only"
+
+scenarios:
+  # Scenario 1: WebSocket Connection and Chat
+  - name: "WebSocket Chat User"
+    weight: 40
+    engine: "ws"
+    flow:
+      # Authenticate first via HTTP
+      - post:
+          url: "/api/auth/login"
+          json:
+            username: "{{ testUsers[0].username }}"
+            password: "{{ testUsers[0].password }}"
+          capture:
+            - json: "$.accessToken"
+              as: "token"
+      
+      # Connect to WebSocket
+      - connect:
+          function: "connectWithAuth"
+      
+      # Subscribe to systems
+      - send: 
+          json:
+            type: "subscribeToSystem"
+            systemId: "test-system-{{ $randomNumber(1, 100) }}"
+      
+      # Send chat messages
+      - loop:
+          count: 10
+          actions:
+            - think: 5
+            - send:
+                json:
+                  type: "chat:message"
+                  data:
+                    target: "{{ chatTargets[$loopCount % 3] }}"
+                    message: "Load test message {{ $loopCount }} from {{ $uuid }}"
+                    reasoningConfig:
+                      enableCoT: true
+                      temperature: 0.7
+            
+            # Wait for response
+            - wait:
+                match:
+                  type: "chat:response"
+                timeout: 30
+      
+      # Stay connected for a while
+      - think: 30
+      
+      # Disconnect
+      - disconnect: {}
+  
+  # Scenario 2: HTTP API Load
+  - name: "API User"
+    weight: 30
+    flow:
+      # Register
+      - post:
+          url: "/api/auth/register"
+          json:
+            username: "apiuser{{ $randomNumber(1, 100000) }}"
+            email: "apiuser{{ $randomNumber(1, 100000) }}@loadtest.com"
+            password: "LoadTest123!"
+          capture:
+            - json: "$.success"
+              as: "registered"
+      
+      # Login
+      - post:
+          url: "/api/auth/login"
+          json:
+            username: "apiuser{{ $randomNumber(1, 100000) }}"
+            password: "LoadTest123!"
+          capture:
+            - json: "$.accessToken"
+              as: "token"
+      
+      # Get systems
+      - get:
+          url: "/api/systems"
+          headers:
+            Authorization: "Bearer {{ token }}"
+      
+      # Get system details
+      - loop:
+          count: 5
+          actions:
+            - get:
+                url: "/api/systems/test-system-{{ $randomNumber(1, 60) }}/status"
+                headers:
+                  Authorization: "Bearer {{ token }}"
+            - think: 2
+      
+      # Logout
+      - post:
+          url: "/api/auth/logout"
+          headers:
+            Authorization: "Bearer {{ token }}"
+  
+  # Scenario 3: Plan Upload and Analysis
+  - name: "Plan Analyzer"
+    weight: 20
+    flow:
+      # Login
+      - post:
+          url: "/api/auth/login"
+          json:
+            username: "{{ testUsers[1].username }}"
+            password: "{{ testUsers[1].password }}"
+          capture:
+            - json: "$.accessToken"
+              as: "token"
+      
+      # Upload plan (simulated)
+      - post:
+          url: "/api/construction/upload-plan"
+          headers:
+            Authorization: "Bearer {{ token }}"
+          formData:
+            projectName: "Load Test Project {{ $randomNumber(1, 1000) }}"
+            planType: "{{ planTypes[$randomNumber(0, 3)] }}"
+            phase: "LP {{ $randomNumber(1, 9) }}"
+          capture:
+            - json: "$.plan.id"
+              as: "planId"
+      
+      # Analyze plan
+      - post:
+          url: "/api/construction/analyze-plan"
+          headers:
+            Authorization: "Bearer {{ token }}"
+          json:
+            planId: "{{ planId }}"
+            analysisType: "{{ analysisTypes[$randomNumber(0, 2)] }}"
+          capture:
+            - json: "$.analysisId"
+              as: "analysisId"
+      
+      # Poll for results
+      - loop:
+          count: 10
+          actions:
+            - get:
+                url: "/api/construction/analysis/{{ analysisId }}/progress"
+                headers:
+                  Authorization: "Bearer {{ token }}"
+            - think: 3
+  
+  # Scenario 4: Real-time Monitoring
+  - name: "Monitor"
+    weight: 10
+    engine: "ws"
+    flow:
+      # Connect without auth
+      - connect: {}
+      
+      # Just receive system updates
+      - wait:
+          match:
+            type: "systemUpdate"
+          timeout: 60
+          count: 20
+      
+      # Disconnect
+      - disconnect: {}
+
+# Reporting configuration
+reporting:
+  - type: "html"
+    path: "./reports/load-test-report.html"
+  - type: "json"
+    path: "./reports/load-test-results.json"
+
+# Performance assertions
+ensure:
+  p95: 500  # 95th percentile response time < 500ms
+  p99: 1000 # 99th percentile response time < 1s
+  maxErrorRate: 0.02 # Max 2% error rate

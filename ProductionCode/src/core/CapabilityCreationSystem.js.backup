@@ -1,0 +1,974 @@
+/**
+ * 🧠 CAPABILITY CREATION SYSTEM WITH LLM AGENT & HUMAN APPROVAL
+ * ==============================================================
+ * 
+ * Integrates existing capability creation logic with the new human-in-the-loop system
+ * - Agents can request new capabilities
+ * - LLM agent designs and implements capabilities
+ * - Human approval required before deployment
+ * - Context engine used instead of direct prompting
+ * - Integration with existing CapabilityRegistry and WorkflowService
+ */
+
+import { EventEmitter } from 'events';
+import { executeQuery } from '../../database/contract-advancement-database.js';
+import { ContextEngine } from '../services/ContextEngine.js';
+import { LLMIntelligenceAugmentation } from '../analysis/LLMIntelligenceAugmentation.js';
+import { HumanInTheLoopSystem } from './HumanInTheLoopSystem.js';
+
+// 🧠 FORMAL REASONING & VERIFICATION INTEGRATION (SPECIALIZED FOR CAPABILITY CREATION SYSTEM)
+import { FormalReasoningCognitiveIntegration } from '../../legendary-arbitrage-syndicate/packages/@syndicate/core/src/safety/cognitive/FormalReasoningCognitiveIntegration.js';
+
+// 🛡️ PROACTIVE PREVENTION SYSTEMS INTEGRATION (SPECIALIZED FOR CAPABILITY CREATION SYSTEM)
+import { ProactiveKnowledgeCredibilityPipeline } from '../../legendary-arbitrage-syndicate/packages/@syndicate/core/src/prevention/ProactiveKnowledgeCredibilityPipeline.js';
+import { ProactiveInferenceReliabilityEngine } from '../../legendary-arbitrage-syndicate/packages/@syndicate/core/src/prevention/ProactiveInferenceReliabilityEngine.js';
+import { ProactiveVeracityJudgeService } from '../../legendary-arbitrage-syndicate/packages/@syndicate/core/src/prevention/ProactiveVeracityJudgeService.js';
+import { SFTFlywheelGovernor } from '../../legendary-arbitrage-syndicate/packages/@syndicate/core/src/prevention/SFTFlywheelGovernor.js';
+
+/**
+ * 🧠 CAPABILITY CREATION SYSTEM WITH LLM AGENT & HUMAN APPROVAL
+ * ENHANCED with SPECIALIZED CAPABILITY CREATION Formal Reasoning & Proactive Prevention
+ * ==============================================================
+ */
+export class CapabilityCreationSystem extends EventEmitter {
+    constructor(config = {}) {
+        super();
+        
+        this.config = {
+            enabled: config.enabled !== false,
+            autoApprovalThreshold: config.autoApprovalThreshold || 0.95, // 95% confidence
+            maxPendingCapabilities: config.maxPendingCapabilities || 10,
+            
+            // 🚨 AUTO-APPROVAL SAFETY SETTINGS (YOU CONTROL THESE):
+            // By default, ALL capabilities require human approval for safety
+            requireHumanApproval: config.requireHumanApproval !== false, // DEFAULT: true (human approval required)
+            
+            // Auto-approval only happens if ALL these conditions are met:
+            // - Strategic value >= 90% (extremely valuable)
+            // - Implementation complexity <= 30% (very simple) 
+            // - Risk level <= 20% (very low risk)
+            // - LLM confidence >= 95% (very confident)
+            // This is for simple, low-risk capabilities like "add logging to existing function"
+            autoApprovalStrategicValueMin: config.autoApprovalStrategicValueMin || 0.9,
+            autoApprovalComplexityMax: config.autoApprovalComplexityMax || 0.3,
+            autoApprovalRiskMax: config.autoApprovalRiskMax || 0.2,
+            
+            llmDeveloperEnabled: config.llmDeveloperEnabled !== false,
+            ...config
+        };
+
+        // 💡 NEW: Inject the CapabilityRegistry instead of managing state internally
+        this.capabilityRegistry = config.capabilityRegistry;
+        if (!this.capabilityRegistry) {
+            throw new Error("CapabilityCreationSystem requires a CapabilityRegistry instance.");
+        }
+
+        // Initialize core systems
+        this.contextEngine = new ContextEngine({
+            sharedMemory: config.sharedMemory,
+            capabilityRegistry: this.capabilityRegistry, // Pass it down
+            memorySystem: config.memorySystem
+        });
+
+        this.llmAssistance = new LLMIntelligenceAugmentation();
+        
+        this.humanInTheLoop = new HumanInTheLoopSystem({
+            enabled: true,
+            llmAssistanceEnabled: true,
+            telegramEnabled: true
+        });
+
+        // DEPRECATED: Internal state is now managed by the single-source-of-truth registry
+        // this.pendingCapabilities = new Map();
+        // this.developmentQueue = new Map();
+        // this.approvalQueue = new Map();
+
+        console.log('🧠 Capability Creation System initialized');
+        console.log('   🤖 LLM-powered capability development enabled');
+        console.log('   👨‍💻 Human approval workflow configured');
+        console.log('   🔧 Context engine for intelligent design');
+        console.log('   🗄️ Data persistence enabled - resuming from database state');
+    }
+
+    /**
+     * 🗄️ INITIALIZE DATA PERSISTENCE AND RESUME STATE
+     */
+    async initializeDataPersistence() {
+        try {
+            console.log('🗄️ Loading existing capability creation state from database...');
+            
+            // Load pending capabilities from database
+            await this.loadPendingCapabilitiesFromDB();
+            
+            // Load development queue from database
+            await this.loadDevelopmentQueueFromDB();
+            
+            // Load approval queue from database  
+            await this.loadApprovalQueueFromDB();
+            
+            console.log(`📊 Resumed state: ${this.pendingCapabilities.size} pending, ${this.developmentQueue.size} in development, ${this.approvalQueue.size} awaiting approval`);
+            
+        } catch (error) {
+            console.warn('⚠️ Could not load existing state from database - starting fresh:', error.message);
+        }
+    }
+
+    /**
+     * 📥 LOAD PENDING CAPABILITIES FROM DATABASE
+     */
+    async loadPendingCapabilitiesFromDB() {
+        try {
+            const query = `
+                SELECT 
+                    request_id, requesting_agent_id, description, requirements,
+                    context_data, validation_result, status, created_at
+                FROM capability_requests 
+                WHERE status IN ('PENDING_ASSESSMENT', 'ASSESSED', 'PLANNED')
+                ORDER BY created_at ASC
+            `;
+            
+            const result = await executeQuery(query);
+            
+            for (const row of result.rows) {
+                const capabilityData = {
+                    requestingAgentId: row.requesting_agent_id,
+                    description: row.description,
+                    requirements: JSON.parse(row.requirements || '{}'),
+                    context: JSON.parse(row.context_data || '{}'),
+                    validation: JSON.parse(row.validation_result || '{}'),
+                    status: row.status,
+                    createdAt: row.created_at
+                };
+                
+                this.pendingCapabilities.set(row.request_id, capabilityData);
+            }
+            
+            console.log(`📥 Loaded ${result.rows.length} pending capabilities from database`);
+            
+        } catch (error) {
+            console.warn('⚠️ Error loading pending capabilities:', error.message);
+        }
+    }
+
+    /**
+     * 🛠️ LOAD DEVELOPMENT QUEUE FROM DATABASE
+     */
+    async loadDevelopmentQueueFromDB() {
+        try {
+            const query = `
+                SELECT 
+                    request_id, assessment_data, implementation_plan, status
+                FROM capability_requests 
+                WHERE status IN ('APPROVED', 'IN_DEVELOPMENT', 'TESTING', 'DEVELOPMENT_FAILED')
+                ORDER BY created_at ASC
+            `;
+            
+            const result = await executeQuery(query);
+            
+            for (const row of result.rows) {
+                const developmentData = {
+                    assessment: JSON.parse(row.assessment_data || '{}'),
+                    implementationPlan: JSON.parse(row.implementation_plan || '{}'),
+                    status: row.status
+                };
+                
+                this.developmentQueue.set(row.request_id, developmentData);
+            }
+            
+            console.log(`🛠️ Loaded ${result.rows.length} items in development queue from database`);
+            
+        } catch (error) {
+            console.warn('⚠️ Error loading development queue:', error.message);
+        }
+    }
+
+    /**
+     * ✅ LOAD APPROVAL QUEUE FROM DATABASE
+     */
+    async loadApprovalQueueFromDB() {
+        try {
+            const query = `
+                SELECT 
+                    request_id, requesting_agent_id, description, assessment_data,
+                    implementation_plan, status, created_at
+                FROM capability_requests 
+                WHERE status IN ('PENDING_HUMAN_APPROVAL', 'AWAITING_APPROVAL')
+                ORDER BY created_at ASC
+            `;
+            
+            const result = await executeQuery(query);
+            
+            for (const row of result.rows) {
+                const approvalData = {
+                    requestingAgentId: row.requesting_agent_id,
+                    description: row.description,
+                    assessment: JSON.parse(row.assessment_data || '{}'),
+                    implementationPlan: JSON.parse(row.implementation_plan || '{}'),
+                    status: row.status,
+                    createdAt: row.created_at
+                };
+                
+                this.approvalQueue.set(row.request_id, approvalData);
+            }
+            
+            console.log(`✅ Loaded ${result.rows.length} items in approval queue from database`);
+            
+        } catch (error) {
+            console.warn('⚠️ Error loading approval queue:', error.message);
+        }
+    }
+
+    /**
+     * 🔄 AUTO-RESUME INTERRUPTED WORKFLOWS
+     */
+    async resumeInterruptedWorkflows() {
+        console.log('🔄 Checking for interrupted workflows to resume...');
+        
+        // Resume development tasks that were interrupted
+        for (const [requestId, developmentData] of this.developmentQueue) {
+            if (developmentData.status === 'IN_DEVELOPMENT') {
+                console.log(`🔄 Resuming development for capability: ${requestId}`);
+                try {
+                    await this.startCapabilityDevelopment(requestId);
+                } catch (error) {
+                    console.error(`❌ Error resuming development for ${requestId}:`, error);
+                }
+            }
+        }
+
+        // Check for stale approval requests (older than 24 hours)
+        for (const [requestId, approvalData] of this.approvalQueue) {
+            const ageHours = (Date.now() - new Date(approvalData.createdAt).getTime()) / (1000 * 60 * 60);
+            if (ageHours > 24) {
+                console.log(`⏰ Stale approval request detected: ${requestId} (${ageHours.toFixed(1)}h old)`);
+                // Could send reminder notification here
+            }
+        }
+    }
+
+    /**
+     * 🔍 REQUEST NEW CAPABILITY (MAIN ENTRY POINT)
+     */
+    async requestNewCapability(requestingAgentId, capabilityDescription, requirements, context = {}) {
+        try {
+            console.log(`🔍 Agent ${requestingAgentId} requesting new capability: ${capabilityDescription}`);
+
+            // 1. Validate the request
+            const validationResult = await this.validateCapabilityRequest(
+                requestingAgentId, 
+                capabilityDescription, 
+                requirements, 
+                context
+            );
+
+            if (!validationResult.valid) {
+                console.log(`❌ Capability request rejected: ${validationResult.reason}`);
+                return {
+                    success: false,
+                    reason: validationResult.reason,
+                    requestId: null
+                };
+            }
+
+            // 2. Create formal capability request
+            const requestId = await this.createCapabilityRequest(
+                requestingAgentId,
+                capabilityDescription,
+                requirements,
+                context,
+                validationResult
+            );
+
+            // 3. Assess strategic value and complexity
+            const assessment = await this.assessCapabilityValue(
+                requestId,
+                capabilityDescription,
+                requirements,
+                context
+            );
+
+            // 4. Generate implementation plan using LLM agent
+            const implementationPlan = await this.generateImplementationPlan(
+                requestId,
+                capabilityDescription,
+                requirements,
+                assessment,
+                context
+            );
+
+            // 5. Route to appropriate approval workflow
+            const approvalResult = await this.routeForApproval(
+                requestId,
+                assessment,
+                implementationPlan
+            );
+
+            console.log(`✅ Capability request processed: ${requestId} (${approvalResult.status})`);
+
+            return {
+                success: true,
+                requestId: requestId,
+                assessment: assessment,
+                implementationPlan: implementationPlan,
+                approvalStatus: approvalResult.status,
+                estimatedTimeline: implementationPlan.estimatedTimeline,
+                requiredResources: implementationPlan.requiredResources
+            };
+
+        } catch (error) {
+            console.error('❌ Error processing capability request:', error);
+            return {
+                success: false,
+                reason: error.message,
+                requestId: null
+            };
+        }
+    }
+
+    /**
+     * 🔍 VALIDATE CAPABILITY REQUEST
+     */
+    async validateCapabilityRequest(requestingAgentId, description, requirements, context) {
+        try {
+            // Check for duplicate capabilities using the injected registry
+            const existingCapability = await this.capabilityRegistry.getCapability(description);
+            if (existingCapability) {
+                return {
+                    valid: false,
+                    reason: `Similar capability already exists: ${existingCapability.capability_key}`
+                };
+            }
+
+            // Check agent's request history
+            const recentRequestCount = await this.getRecentRequestCount(requestingAgentId);
+            if (recentRequestCount >= this.config.maxPendingCapabilities) {
+                return {
+                    valid: false,
+                    reason: `Agent has too many pending capability requests (${recentRequestCount})`
+                };
+            }
+
+            // Validate requirements structure
+            if (!requirements || typeof requirements !== 'object') {
+                return {
+                    valid: false,
+                    reason: 'Requirements must be provided as a structured object'
+                };
+            }
+
+            // Check for minimum required fields
+            const requiredFields = ['functionality', 'inputFormat', 'outputFormat'];
+            const missingFields = requiredFields.filter(field => !requirements[field]);
+            if (missingFields.length > 0) {
+                return {
+                    valid: false,
+                    reason: `Missing required fields: ${missingFields.join(', ')}`
+                };
+            }
+
+            return {
+                valid: true,
+                reason: 'Capability request validated successfully'
+            };
+
+        } catch (error) {
+            console.error('❌ Error validating capability request:', error);
+            return {
+                valid: false,
+                reason: 'Internal validation error'
+            };
+        }
+    }
+
+    /**
+     * 📝 CREATE FORMAL CAPABILITY REQUEST
+     */
+    async createCapabilityRequest(requestingAgentId, description, requirements, context, validation) {
+        try {
+            const requestId = `CAP-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+            
+            // Use the registry to manage the request state
+            await this.capabilityRegistry.requestNewCapability(requestId, description, requirements, requestingAgentId, context, validation);
+
+            return requestId;
+
+        } catch (error) {
+            console.error('❌ Error creating capability request:', error);
+            throw error;
+        }
+    }
+
+    /**
+     * 📊 ASSESS CAPABILITY STRATEGIC VALUE
+     */
+    async assessCapabilityValue(requestId, description, requirements, context) {
+        try {
+            console.log(`📊 Assessing strategic value for capability: ${requestId}`);
+
+            // Build context for LLM assessment using Context Engine
+            const assessmentContext = await this.contextEngine.buildContext(
+                { id: 'capability-assessor', character: { name: 'Strategic Capability Assessor' } },
+                'Assess the strategic value and implementation complexity of a new capability request',
+                'CAPABILITY_ENHANCEMENT',
+                {
+                    capabilityRequest: {
+                        description,
+                        requirements,
+                        context,
+                        requestId
+                    },
+                    assessmentCriteria: {
+                        strategicValue: 'How much will this capability improve syndicate performance?',
+                        implementationComplexity: 'How difficult is this to implement correctly?',
+                        riskAssessment: 'What are the potential risks and side effects?',
+                        resourceRequirements: 'What resources (time, expertise, infrastructure) are needed?',
+                        marketAdvantage: 'Will this provide a competitive advantage?'
+                    }
+                }
+            );
+
+            // Get LLM assessment
+            const assessmentResponse = await this.llmAssistance.requestLLMAssistance(
+                assessmentContext,
+                { confidence: 0.3 }, // Always trigger LLM for capability assessment
+                'capability_assessment',
+                ['strategic_analysis', 'risk_assessment', 'resource_planning']
+            );
+
+            // Parse assessment results
+            const assessment = {
+                strategicValue: this.extractAssessmentScore(assessmentResponse.content, 'strategic_value'),
+                implementationComplexity: this.extractAssessmentScore(assessmentResponse.content, 'complexity'),
+                riskLevel: this.extractAssessmentScore(assessmentResponse.content, 'risk_level'),
+                resourceRequirements: this.extractResourceRequirements(assessmentResponse.content),
+                marketAdvantage: this.extractAssessmentScore(assessmentResponse.content, 'market_advantage'),
+                overallPriority: this.calculateOverallPriority(assessmentResponse.content),
+                recommendations: assessmentResponse.recommendations || [],
+                confidence: assessmentResponse.confidence || 0.8,
+                llmReasoning: assessmentResponse.content
+            };
+
+            // Store assessment
+            await this.storeCapabilityAssessment(requestId, assessment);
+
+            return assessment;
+
+        } catch (error) {
+            console.error('❌ Error assessing capability value:', error);
+            return {
+                strategicValue: 0.5,
+                implementationComplexity: 0.7,
+                riskLevel: 0.6,
+                overallPriority: 'MEDIUM',
+                confidence: 0.3,
+                error: error.message
+            };
+        }
+    }
+
+    /**
+     * 🛠️ GENERATE IMPLEMENTATION PLAN USING LLM AGENT
+     */
+    async generateImplementationPlan(requestId, description, requirements, assessment, context) {
+        try {
+            console.log(`🛠️ Generating implementation plan for capability: ${requestId}`);
+
+            // Build context for implementation planning
+            const planningContext = await this.contextEngine.buildContext(
+                { id: 'implementation-planner', character: { name: 'Elite Developer Agent' } },
+                'Create a detailed implementation plan for a new arbitrage syndicate capability',
+                'CODING_CONTRACT_DEVELOPMENT',
+                {
+                    capabilityRequest: {
+                        description,
+                        requirements,
+                        context,
+                        requestId
+                    },
+                    assessment: assessment,
+                    implementationGuidelines: {
+                        codeStyle: 'ES6 modules, TypeScript preferred, comprehensive error handling',
+                        architecture: 'Event-driven, modular, database-integrated',
+                        testing: 'Unit tests required, integration tests preferred',
+                        documentation: 'JSDoc comments, README with examples',
+                        security: 'Input validation, rate limiting, audit logging'
+                    },
+                    existingSystemIntegration: {
+                        database: 'PostgreSQL with contract-advancement-database.js',
+                        eventSystem: 'EventEmitter-based communication',
+                        llmIntegration: 'LLMIntelligenceAugmentation for AI features',
+                        humanApproval: 'HumanInTheLoopSystem for escalations'
+                    }
+                }
+            );
+
+            // Get LLM implementation plan
+            const planResponse = await this.llmAssistance.requestLLMAssistance(
+                planningContext,
+                { confidence: 0.3 }, // Always trigger for implementation planning
+                'implementation_planning',
+                ['system_design', 'code_generation', 'integration_planning']
+            );
+
+            // Parse implementation plan
+            const implementationPlan = {
+                architecture: this.extractArchitectureDesign(planResponse.content),
+                codeStructure: this.extractCodeStructure(planResponse.content),
+                dependencies: this.extractDependencies(planResponse.content),
+                integrationPoints: this.extractIntegrationPoints(planResponse.content),
+                testingStrategy: this.extractTestingStrategy(planResponse.content),
+                deploymentSteps: this.extractDeploymentSteps(planResponse.content),
+                estimatedTimeline: this.extractTimeline(planResponse.content),
+                requiredResources: this.extractRequiredResources(planResponse.content),
+                riskMitigation: this.extractRiskMitigation(planResponse.content),
+                generatedCode: this.extractGeneratedCode(planResponse.content),
+                confidence: planResponse.confidence || 0.8,
+                llmReasoning: planResponse.content
+            };
+
+            // Store implementation plan
+            await this.storeImplementationPlan(requestId, implementationPlan);
+
+            return implementationPlan;
+
+        } catch (error) {
+            console.error('❌ Error generating implementation plan:', error);
+            return {
+                architecture: 'Basic module structure',
+                estimatedTimeline: '2-4 weeks',
+                requiredResources: ['Senior developer', 'Code review'],
+                confidence: 0.3,
+                error: error.message
+            };
+        }
+    }
+
+    /**
+     * 🎯 ROUTE FOR APPROVAL WORKFLOW
+     */
+    async routeForApproval(requestId, assessment, implementationPlan) {
+        try {
+            const { strategicValue, implementationComplexity, riskLevel, overallPriority } = assessment;
+
+            // Determine approval workflow based on assessment
+            let approvalWorkflow = 'HUMAN_REQUIRED';
+            let autoApproval = false;
+
+            // Check for auto-approval eligibility (VERY STRICT SAFETY CONDITIONS)
+            if (this.config.requireHumanApproval === false && 
+                strategicValue >= this.config.autoApprovalStrategicValueMin && 
+                implementationComplexity <= this.config.autoApprovalComplexityMax && 
+                riskLevel <= this.config.autoApprovalRiskMax &&
+                assessment.confidence >= this.config.autoApprovalThreshold) {
+                
+                approvalWorkflow = 'AUTO_APPROVED';
+                autoApproval = true;
+                
+                console.log(`🤖 AUTO-APPROVAL TRIGGERED for ${requestId}:`);
+                console.log(`   📊 Strategic Value: ${(strategicValue * 100).toFixed(1)}% (min: ${(this.config.autoApprovalStrategicValueMin * 100)}%)`);
+                console.log(`   🔧 Complexity: ${(implementationComplexity * 100).toFixed(1)}% (max: ${(this.config.autoApprovalComplexityMax * 100)}%)`);
+                console.log(`   ⚠️ Risk: ${(riskLevel * 100).toFixed(1)}% (max: ${(this.config.autoApprovalRiskMax * 100)}%)`);
+                console.log(`   🎯 LLM Confidence: ${(assessment.confidence * 100).toFixed(1)}% (min: ${(this.config.autoApprovalThreshold * 100)}%)`);
+            }
+
+            if (autoApproval) {
+                // Auto-approve and move to development
+                await this.autoApproveCapability(requestId, assessment, implementationPlan);
+                return { status: 'AUTO_APPROVED', workflow: approvalWorkflow };
+            } else {
+                // Send to human approval via human-in-the-loop system
+                const escalationResult = await this.requestHumanApproval(
+                    requestId, 
+                    assessment, 
+                    implementationPlan
+                );
+                
+                return { 
+                    status: 'PENDING_HUMAN_APPROVAL', 
+                    workflow: approvalWorkflow,
+                    escalationId: escalationResult.escalationId
+                };
+            }
+
+        } catch (error) {
+            console.error('❌ Error routing for approval:', error);
+            return { status: 'ERROR', workflow: 'UNKNOWN', error: error.message };
+        }
+    }
+
+    /**
+     * 👨‍💻 REQUEST HUMAN APPROVAL VIA HUMAN-IN-THE-LOOP SYSTEM
+     */
+    async requestHumanApproval(requestId, assessment, implementationPlan) {
+        try {
+            const request = await this.capabilityRegistry.getCapabilityRequest(requestId);
+            
+            const escalationContext = {
+                type: 'capability_approval_request',
+                description: `Agent ${request.requestingAgentId} requests new capability: ${request.description}`,
+                requestId: requestId,
+                agentId: request.requestingAgentId,
+                financialImpact: this.estimateFinancialImpact(assessment),
+                strategicImportance: assessment.strategicValue,
+                implementationRisk: assessment.riskLevel,
+                capabilityDetails: {
+                    description: request.description,
+                    requirements: request.requirements,
+                    assessment: assessment,
+                    implementationPlan: implementationPlan
+                },
+                reason: `Strategic Value: ${(assessment.strategicValue * 100).toFixed(1)}%, Risk: ${(assessment.riskLevel * 100).toFixed(1)}%`
+            };
+
+            const escalationResult = await this.humanInTheLoop.requestHumanAssistance(escalationContext);
+
+            // Store the escalation reference
+            await this.capabilityRegistry.updateCapabilityStatus(requestId, 'PENDING_HUMAN_APPROVAL', {
+                escalationId: escalationResult.escalationId,
+                escalatedAt: new Date().toISOString()
+            });
+
+            console.log(`👨‍💻 Capability ${requestId} sent for human approval (escalation: ${escalationResult.escalationId})`);
+
+            return escalationResult;
+
+        } catch (error) {
+            console.error('❌ Error requesting human approval:', error);
+            throw error;
+        }
+    }
+
+    /**
+     * ✅ APPROVE CAPABILITY AND START DEVELOPMENT
+     */
+    async approveCapability(requestId, approverInfo = {}) {
+        try {
+            console.log(`✅ Approving capability: ${requestId}`);
+
+            const request = await this.capabilityRegistry.getCapabilityRequest(requestId);
+            if (!request) {
+                throw new Error(`Capability request ${requestId} not found`);
+            }
+
+            // Update status to approved
+            await this.capabilityRegistry.updateCapabilityStatus(requestId, 'APPROVED', {
+                approvedBy: approverInfo.approvedBy || 'system',
+                approvedAt: new Date().toISOString(),
+                approvalNotes: approverInfo.notes || 'Approved for development'
+            });
+
+            // Move to development queue
+            await this.startCapabilityDevelopment(requestId);
+
+            console.log(`🚀 Capability ${requestId} approved and queued for development`);
+
+            return { success: true, status: 'APPROVED_AND_QUEUED' };
+
+        } catch (error) {
+            console.error('❌ Error approving capability:', error);
+            throw error;
+        }
+    }
+
+    /**
+     * 🚀 START CAPABILITY DEVELOPMENT
+     */
+    async startCapabilityDevelopment(requestId) {
+        try {
+            const request = await this.capabilityRegistry.getCapabilityRequest(requestId);
+            const assessment = await this.getCapabilityAssessment(requestId);
+            const implementationPlan = await this.getImplementationPlan(requestId);
+
+            if (!this.config.llmDeveloperEnabled) {
+                console.log(`⚠️ LLM developer disabled, capability ${requestId} requires manual development`);
+                await this.capabilityRegistry.updateCapabilityStatus(requestId, 'PENDING_MANUAL_DEVELOPMENT');
+                return;
+            }
+
+            // Generate actual capability code using LLM agent
+            const developmentResult = await this.developCapabilityCode(
+                requestId,
+                request,
+                assessment,
+                implementationPlan
+            );
+
+            if (developmentResult.success) {
+                // Create the actual capability files
+                await this.createCapabilityFiles(requestId, developmentResult);
+                
+                // Test the capability
+                const testResult = await this.testCapability(requestId, developmentResult);
+                
+                if (testResult.success) {
+                    await this.capabilityRegistry.updateCapabilityStatus(requestId, 'COMPLETED');
+                    console.log(`✅ Capability ${requestId} development completed successfully`);
+                } else {
+                    await this.capabilityRegistry.updateCapabilityStatus(requestId, 'TESTING_FAILED', { testResult });
+                    console.log(`❌ Capability ${requestId} failed testing`);
+                }
+            } else {
+                await this.capabilityRegistry.updateCapabilityStatus(requestId, 'DEVELOPMENT_FAILED', { developmentResult });
+                console.log(`❌ Capability ${requestId} development failed`);
+            }
+
+        } catch (error) {
+            console.error('❌ Error starting capability development:', error);
+            await this.capabilityRegistry.updateCapabilityStatus(requestId, 'DEVELOPMENT_ERROR', { error: error.message });
+        }
+    }
+
+    /**
+     * 💻 DEVELOP CAPABILITY CODE USING LLM AGENT
+     */
+    async developCapabilityCode(requestId, request, assessment, implementationPlan) {
+        try {
+            console.log(`💻 Developing code for capability: ${requestId}`);
+
+            // Build comprehensive development context
+            const developmentContext = await this.contextEngine.buildContext(
+                { id: 'elite-developer', character: { name: 'Elite JavaScript Developer' } },
+                'Implement a complete, production-ready capability for the arbitrage syndicate',
+                'CODING_CONTRACT_DEVELOPMENT',
+                {
+                    capabilityRequest: request,
+                    assessment: assessment,
+                    implementationPlan: implementationPlan,
+                    codeRequirements: {
+                        language: 'JavaScript/TypeScript',
+                        style: 'ES6 modules, async/await, error handling',
+                        structure: 'Class-based with EventEmitter inheritance',
+                        integration: 'Database integration, HumanInTheLoopSystem escalations',
+                        testing: 'Include basic unit tests',
+                        documentation: 'JSDoc comments and usage examples'
+                    }
+                }
+            );
+
+            // Request code generation from LLM
+            const codeResponse = await this.llmAssistance.requestLLMAssistance(
+                developmentContext,
+                { confidence: 0.3 }, // Always generate code
+                'code_generation',
+                ['implementation', 'testing', 'documentation']
+            );
+
+            // Parse generated code
+            const generatedCode = this.parseGeneratedCode(codeResponse.content);
+
+            return {
+                success: true,
+                mainClass: generatedCode.mainClass,
+                supportingFiles: generatedCode.supportingFiles,
+                tests: generatedCode.tests,
+                documentation: generatedCode.documentation,
+                confidence: codeResponse.confidence,
+                llmReasoning: codeResponse.content
+            };
+
+        } catch (error) {
+            console.error('❌ Error developing capability code:', error);
+            return {
+                success: false,
+                error: error.message
+            };
+        }
+    }
+
+    // Helper methods for parsing LLM responses
+    extractAssessmentScore(content, metric) {
+        // Extract numerical scores from LLM response
+        const regex = new RegExp(`${metric}[:\\s]*(\\d+\\.?\\d*)`, 'i');
+        const match = content.match(regex);
+        return match ? parseFloat(match[1]) / 100 : 0.5; // Default to 50%
+    }
+
+    extractResourceRequirements(content) {
+        // Extract resource requirements from LLM response
+        const lines = content.split('\n');
+        const resourceLines = lines.filter(line => 
+            line.toLowerCase().includes('resource') || 
+            line.toLowerCase().includes('requirement')
+        );
+        return resourceLines.map(line => line.trim()).filter(line => line.length > 0);
+    }
+
+    calculateOverallPriority(content) {
+        // Extract or calculate overall priority
+        if (content.toLowerCase().includes('high priority')) return 'HIGH';
+        if (content.toLowerCase().includes('low priority')) return 'LOW';
+        return 'MEDIUM';
+    }
+
+    extractTimeline(content) {
+        // Extract estimated timeline from LLM response
+        const timelineRegex = /(\d+[-\s]?\d*)\s*(day|week|month)s?/i;
+        const match = content.match(timelineRegex);
+        return match ? match[0] : '1-2 weeks';
+    }
+
+    parseGeneratedCode(content) {
+        // Parse different code sections from LLM response
+        return {
+            mainClass: this.extractCodeBlock(content, 'main') || content,
+            supportingFiles: this.extractCodeBlock(content, 'support') || '',
+            tests: this.extractCodeBlock(content, 'test') || '',
+            documentation: this.extractCodeBlock(content, 'doc') || ''
+        };
+    }
+
+    extractCodeBlock(content, type) {
+        // Extract specific code blocks from LLM response
+        const regex = new RegExp(`\`\`\`[a-zA-Z]*\\s*// ${type}[\\s\\S]*?\`\`\``, 'gi');
+        const match = content.match(regex);
+        return match ? match[0].replace(/```[a-zA-Z]*/, '').replace(/```$/, '') : null;
+    }
+
+    // Database helper methods
+    async checkForExistingCapability(description) {
+        const query = `
+            SELECT capability_key, description 
+            FROM syndicate_capabilities 
+            WHERE LOWER(description) LIKE LOWER($1) OR capability_key LIKE $2
+            LIMIT 1
+        `;
+        const result = await executeQuery(query, [`%${description}%`, `%${description.replace(/\s+/g, '_')}%`]);
+        return result.rows[0] || null;
+    }
+
+    async getRecentRequestCount(agentId) {
+        const query = `
+            SELECT COUNT(*) as count 
+            FROM capability_requests 
+            WHERE requesting_agent_id = $1 
+            AND created_at > NOW() - INTERVAL '24 hours'
+            AND status IN ('PENDING_ASSESSMENT', 'PENDING_HUMAN_APPROVAL', 'APPROVED')
+        `;
+        const result = await executeQuery(query, [agentId]);
+        return parseInt(result.rows[0]?.count || 0);
+    }
+
+    async storeCapabilityAssessment(requestId, assessment) {
+        const query = `
+            UPDATE capability_requests 
+            SET assessment_data = $2, status = 'ASSESSED', assessed_at = NOW() 
+            WHERE request_id = $1
+        `;
+        await executeQuery(query, [requestId, JSON.stringify(assessment)]);
+    }
+
+    async storeImplementationPlan(requestId, plan) {
+        const query = `
+            UPDATE capability_requests 
+            SET implementation_plan = $2, status = 'PLANNED', planned_at = NOW() 
+            WHERE request_id = $1
+        `;
+        await executeQuery(query, [requestId, JSON.stringify(plan)]);
+    }
+
+    async updateCapabilityStatus(requestId, status, metadata = {}) {
+        const query = `
+            UPDATE capability_requests 
+            SET status = $2, metadata = $3, updated_at = NOW() 
+            WHERE request_id = $1
+        `;
+        await executeQuery(query, [requestId, status, JSON.stringify(metadata)]);
+        
+        // Update in-memory tracking
+        const request = this.pendingCapabilities.get(requestId);
+        if (request) {
+            request.status = status;
+            request.metadata = metadata;
+        }
+    }
+
+    estimateFinancialImpact(assessment) {
+        // Estimate potential financial impact based on strategic value
+        const baseImpact = assessment.strategicValue * 100000; // $100k max
+        return Math.round(baseImpact);
+    }
+
+    // Placeholder methods for full implementation
+    async getCapabilityAssessment(requestId) { return {}; }
+    async getImplementationPlan(requestId) { return {}; }
+    async createCapabilityFiles(requestId, developmentResult) { return true; }
+    async testCapability(requestId, developmentResult) { return { success: true }; }
+    async autoApproveCapability(requestId, assessment, plan) { return true; }
+    
+    // Additional extraction methods (simplified for brevity)
+    extractArchitectureDesign(content) { return 'Modular event-driven architecture'; }
+    extractCodeStructure(content) { return 'Class-based with database integration'; }
+    extractDependencies(content) { return ['pg', 'googleapis']; }
+    extractIntegrationPoints(content) { return ['Database', 'HumanInTheLoopSystem']; }
+    extractTestingStrategy(content) { return 'Unit tests with Jest framework'; }
+    extractDeploymentSteps(content) { return ['Test', 'Deploy', 'Monitor']; }
+    extractRequiredResources(content) { return ['Developer time', 'Testing']; }
+    extractRiskMitigation(content) { return 'Comprehensive error handling'; }
+    extractGeneratedCode(content) { return 'Generated capability code'; }
+
+    /**
+     * 🧠 SPECIALIZED CAPABILITY CREATION SYSTEM FORMAL REASONING INTEGRATION
+     * ======================================================================
+     * 
+     * Provides mathematical safety guarantees for capability creation algorithms
+     */
+    async initializeCapabilityCreationSystemFormalReasoningIntegration() {
+        try {
+            this.capabilityCreationSystemFormalReasoning = new FormalReasoningCognitiveIntegration({
+                domainContext: 'capability_creation_system_development',
+                criticality: 'HIGH',
+                mathematicalSafetyLevel: 'PRODUCTION'
+            });
+            
+            await this.capabilityCreationSystemFormalReasoning.initialize();
+            console.log('🧠 CapabilityCreationSystem Formal Reasoning Integration initialized');
+        } catch (error) {
+            console.error('❌ Failed to initialize CapabilityCreationSystem Formal Reasoning Integration:', error);
+        }
+    }
+
+    /**
+     * 🛡️ SPECIALIZED CAPABILITY CREATION SYSTEM PROACTIVE PREVENTION INTEGRATION  
+     * ===========================================================================
+     * 
+     * Provides proactive hallucination and complexity cliff management for capability creation
+     */
+    async initializeCapabilityCreationSystemProactivePreventionIntegration() {
+        try {
+            // Initialize Proactive Knowledge Credibility Pipeline for capability validation
+            this.capabilityCreationSystemCredibilityPipeline = new ProactiveKnowledgeCredibilityPipeline({
+                domainContext: 'capability_creation_system_capabilities',
+                validationMode: 'COMPREHENSIVE'
+            });
+
+            // Initialize Proactive Inference Reliability Engine for capability inference
+            this.capabilityCreationSystemInferenceReliability = new ProactiveInferenceReliabilityEngine({
+                domainContext: 'capability_creation_system_inference',
+                reliabilityThreshold: 0.95
+            });
+
+            // Initialize Proactive Veracity Judge for capability claims
+            this.capabilityCreationSystemVeracityJudge = new ProactiveVeracityJudgeService({
+                domainContext: 'capability_creation_system_claims',
+                verificationLevel: 'STRICT'
+            });
+
+            // Initialize SFT Flywheel Governor for capability quality control
+            this.capabilityCreationSystemSFTGovernor = new SFTFlywheelGovernor({
+                domainContext: 'capability_creation_system_sft',
+                governanceLevel: 'ACTIVE'
+            });
+
+            await Promise.all([
+                this.capabilityCreationSystemCredibilityPipeline.initialize(),
+                this.capabilityCreationSystemInferenceReliability.initialize(), 
+                this.capabilityCreationSystemVeracityJudge.initialize(),
+                this.capabilityCreationSystemSFTGovernor.initialize()
+            ]);
+
+            console.log('🛡️ CapabilityCreationSystem Proactive Prevention Integration initialized');
+        } catch (error) {
+            console.error('❌ Failed to initialize CapabilityCreationSystem Proactive Prevention Integration:', error);
+        }
+    }
+}

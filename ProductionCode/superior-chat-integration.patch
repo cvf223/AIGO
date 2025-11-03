@@ -1,0 +1,99 @@
+// 🚀 SUPERIOR CHAT SYSTEM FOR ADVANCED 72B MODELS
+// ===============================================
+
+import OllamaIntegration from "./ollama-chat-integration.js";
+
+class SuperiorWebGUIServer {
+    constructor() {
+        // ... existing constructor code ...
+        this.ollama = new OllamaIntegration();
+    }
+
+    async handleAdvancedChatMessage(clientId, data) {
+        console.log(`💬 Superior processing for advanced model: ${data.target.id}`);
+        
+        const client = this.connectedClients.get(clientId);
+        if (!client?.socket) return;
+
+        const { message, target, reasoningConfig } = data;
+        const streamId = `stream_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+        
+        try {
+            // Initialize superior processing
+            client.socket.emit("chat:streaming", {
+                streamId,
+                content: `🧠 Initializing ${target.name} with advanced reasoning...`,
+                status: "initializing",
+                timestamp: Date.now()
+            });
+
+            // Keep-alive for long processing
+            const keepAlive = setInterval(() => {
+                if (client.socket?.connected) {
+                    client.socket.emit("chat:keepalive", {
+                        streamId,
+                        status: "processing_advanced_model",
+                        timestamp: Date.now()
+                    });
+                }
+            }, 15000);
+
+            // Superior processing with advanced model
+            let response = await this.ollama.routeToConstructionSpecialist(message, target);
+
+            // Apply advanced reasoning if enabled
+            if (reasoningConfig.enableCoA) {
+                response += await this.ollama.processWithChainOfAgents(message, target);
+            }
+            if (reasoningConfig.enableToT) {
+                response += await this.ollama.processWithTreeOfThought(message, target);
+            }
+            if (reasoningConfig.enableGoT) {
+                response += await this.ollama.processWithGraphOfThought(message, target);
+            }
+
+            clearInterval(keepAlive);
+
+            // Stream final response
+            await this.streamSuperiorResponse(client.socket, streamId, response, target);
+
+        } catch (error) {
+            console.error("❌ Superior processing failed:", error.message);
+            client.socket.emit("chat:response", {
+                streamId,
+                from: target.name,
+                response: `❌ Advanced processing error: ${error.message}`,
+                error: true,
+                completed: true,
+                timestamp: Date.now()
+            });
+        }
+    }
+
+    async streamSuperiorResponse(socket, streamId, response, target) {
+        const sentences = response.split(". ");
+        let streamedContent = "";
+        
+        for (let i = 0; i < sentences.length; i++) {
+            streamedContent += sentences[i] + (i < sentences.length - 1 ? ". " : "");
+            
+            socket.emit("chat:streaming", {
+                streamId,
+                content: streamedContent,
+                progress: (i + 1) / sentences.length,
+                timestamp: Date.now()
+            });
+            
+            await new Promise(resolve => setTimeout(resolve, 200));
+        }
+        
+        // Completion
+        socket.emit("chat:response", {
+            streamId,
+            from: target.name,
+            response: response,
+            completed: true,
+            timestamp: Date.now()
+        });
+    }
+}

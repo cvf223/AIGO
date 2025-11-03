@@ -1,0 +1,2 @@
+export POSTGRES_DB=construction_syndicate
+export DATABASE_URL=postgres://postgres:password@localhost:5432/construction_syndicate

@@ -1,0 +1,19 @@
+--- a/src/construction/tests/ComprehensiveTestSuite.js
++++ b/src/construction/tests/ComprehensiveTestSuite.js
+@@ -300,10 +300,14 @@ export default class ComprehensiveTestSuite extends EventEmitter {
+         
+         // Initialize in parallel
+         const initPromises = Object.entries(this.systems).map(async ([name, system]) => {
+             try {
+-                await system.initialize();
+-                console.log(`  ✅ ${name} initialized`);
++                if (typeof system.initialize === "function") {
++                    await system.initialize();
++                    console.log(`  ✅ ${name} initialized`);
++                } else {
++                    console.log(`  ✅ ${name} ready (no initialization needed)`);
++                }
+             } catch (error) {
+                 console.error(`  ❌ ${name} failed:`, error.message);
+                 throw error;
+             }

@@ -1,0 +1,119 @@
+/**
+ * 👁️ Google Vision Service
+ * =========================
+ *
+ * This is a dedicated, isolated service for interacting with the Google Cloud Vision API.
+ * Its purpose is to analyze specific image frames from videos to extract structured
+ * information from charts, graphs, and blockchain transaction explorers.
+ *
+ * This service is designed to be used sparingly and intelligently, triggered only when
+ * textual analysis of a transcript suggests a high-value visual is present.
+ */
+
+import { ImageAnnotatorClient } from '@google-cloud/vision';
+import dotenv from 'dotenv';
+
+// 🧠 FORMAL REASONING & VERIFICATION INTEGRATION (SPECIALIZED FOR GOOGLE VISION SERVICE)
+import { FormalReasoningConstructionIntegration as FormalReasoningCognitiveIntegration } from '../construction/cognitive/FormalReasoningConstructionIntegration.js';;
+
+// 🛡️ PROACTIVE PREVENTION SYSTEMS INTEGRATION (SPECIALIZED FOR GOOGLE VISION SERVICE)
+import { ProactiveConstructionKnowledgePipeline as ProactiveKnowledgeCredibilityPipeline } from '../construction/prevention/ProactiveConstructionKnowledgePipeline.js';;
+import { ProactiveConstructionInferenceEngine as ProactiveInferenceReliabilityEngine } from '../construction/prevention/ProactiveConstructionInferenceEngine.js';;
+
+dotenv.config();
+
+/**
+ * 👁️ GOOGLE VISION SERVICE
+ * ENHANCED with SPECIALIZED GOOGLE VISION Formal Reasoning & Proactive Prevention
+ * =========================
+ */
+class GoogleVisionService {
+    constructor() {
+        if (!process.env.GOOGLE_APPLICATION_CREDENTIALS) {
+            if (!this.warnedOnce) { console.warn("⚠️ GOOGLE_APPLICATION_CREDENTIALS not set. GoogleVisionService will be disabled."); this.warnedOnce = true; }
+            this.isEnabled = false;
+            this.client = null;
+        } else {
+            try {
+                
+        // 🧠 FORMAL REASONING & VERIFICATION SYSTEMS (GOOGLE VISION SERVICE SPECIALIZED)
+        this.googleVisionServiceFormalReasoning = null;        // Google vision service formal reasoning coordinator
+        
+        // 🛡️ PROACTIVE PREVENTION SYSTEMS (GOOGLE VISION SERVICE SPECIALIZED)  
+        this.googleVisionServiceCredibilityPipeline = null;   // Google vision service credibility validation
+        this.googleVisionServiceInferenceReliability = null;  // Google vision service inference reliability
+        this.googleVisionServiceVeracityJudge = null;         // Google vision service truth-over-profit evaluation
+        this.googleVisionServiceSFTGovernor = null;           // Google vision service training data governance
+                this.client = new ImageAnnotatorClient();
+                this.isEnabled = true;
+                console.log('👁️ Google Vision Service initialized successfully.');
+            } catch (error) {
+                console.error('❌ CRITICAL: Failed to initialize Google Vision client.', error.message);
+                console.error('Ensure your GOOGLE_APPLICATION_CREDENTIALS path is correct and the file is valid.');
+                this.isEnabled = false;
+                this.client = null;
+            }
+        }
+    }
+
+    /**
+     * Analyzes an image buffer (a video frame) to detect and transcribe text,
+     * with a focus on identifying financial charts and data.
+     * @param {Buffer} imageBuffer - The image data to analyze.
+     * @returns {Promise<object>} An object containing the analysis.
+     */
+    async analyzeFrame(imageBuffer) {
+        if (!this.isEnabled) {
+            return { success: false, reason: 'Vision service is not enabled.' };
+        }
+
+        try {
+            const [result] = await this.client.textDetection(imageBuffer);
+            const detections = result.textAnnotations;
+
+            if (!detections || detections.length === 0) {
+                return { success: true, text: '', hasChart: false, details: 'No text detected.' };
+            }
+
+            // The first detection is the full text block.
+            const fullText = detections[0].description;
+            
+            // Simple heuristic to check for chart-like or data-heavy content
+            const hasChart = this.checkForChartIndicators(fullText);
+
+            return {
+                success: true,
+                text: fullText,
+                hasChart: hasChart,
+                details: `Detected ${detections.length} text blocks.`
+            };
+
+        } catch (error) {
+            console.error('❌ Google Vision API call failed:', error.message);
+            return { success: false, reason: 'API call failed.', error: error.message };
+        }
+    }
+
+    /**
+     * Checks a block of text for keywords that strongly indicate the presence of a
+     * financial chart, graph, or on-chain explorer screenshot.
+     * @param {string} text - The text detected in the image.
+     * @returns {boolean} True if indicators are found.
+     */
+    checkForChartIndicators(text) {
+        const lowerText = text.toLowerCase();
+        const indicators = [
+            'tradingview', 'etherscan', 'arbiscan', // Platform names
+            'market cap', 'volume', 'tvl',         // Financial metrics
+            'rsi', 'macd', 'bollinger bands',      // Technical indicators
+            'gas limit', 'gas used', 'nonce',      // Transaction details
+            'liquidity pool', 'swap', 'slippage'   // DeFi terms
+        ];
+
+        return indicators.some(indicator => lowerText.includes(indicator));
+    }
+}
+
+const googleVisionService = new GoogleVisionService();
+
+export { GoogleVisionService, googleVisionService };

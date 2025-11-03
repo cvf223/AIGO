@@ -1,0 +1,67 @@
+{
+  "projectId": "project_002",
+  "totalErrors": 3,
+  "knownErrors": [
+    {
+      "errorId": "err_project_002_001",
+      "planId": "project_002_detail_04",
+      "type": "missing_reference",
+      "description": "Intentional missing_reference for testing error detection",
+      "severity": "critical",
+      "affectedPlans": [
+        "project_002_detail_04"
+      ],
+      "location": {
+        "page": 1,
+        "coordinates": [
+          361,
+          118
+        ]
+      },
+      "correctSolution": "Apply standard correction for missing_reference",
+      "detectedBy": "synthetic_generator",
+      "date": "2025-10-11T17:21:14.954Z"
+    },
+    {
+      "errorId": "err_project_002_002",
+      "planId": "project_002_floor_plan_06",
+      "type": "missing_element",
+      "description": "Intentional missing_element for testing error detection",
+      "severity": "critical",
+      "affectedPlans": [
+        "project_002_floor_plan_06"
+      ],
+      "location": {
+        "page": 1,
+        "coordinates": [
+          289,
+          129
+        ]
+      },
+      "correctSolution": "Apply standard correction for missing_element",
+      "detectedBy": "synthetic_generator",
+      "date": "2025-10-11T17:21:14.954Z"
+    },
+    {
+      "errorId": "err_project_002_003",
+      "planId": "project_002_elevation_07",
+      "type": "dimension_mismatch",
+      "description": "Intentional dimension_mismatch for testing error detection",
+      "severity": "critical",
+      "affectedPlans": [
+        "project_002_elevation_07"
+      ],
+      "location": {
+        "page": 1,
+        "coordinates": [
+          137,
+          462
+        ]
+      },
+      "correctSolution": "Apply standard correction for dimension_mismatch",
+      "detectedBy": "synthetic_generator",
+      "date": "2025-10-11T17:21:14.954Z"
+    }
+  ],
+  "generatedAt": "2025-10-11T17:21:14.954Z"
+}

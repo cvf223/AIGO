@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Simple mirror command for server
+case "${1:-status}" in
+    pull)
+        ./mirror-pull.sh
+        ;;
+    push)
+        ./mirror-push.sh
+        ;;
+    status)
+        echo "📊 Server Mirror Status"
+        echo "======================="
+        echo ""
+        echo "Location: ~/ProductionCode"
+        echo "Size: $(du -sh ~/ProductionCode | cut -f1)"
+        echo ""
+        echo "Commands:"
+        echo "  ./mirror pull   - Pull from local machine"
+        echo "  ./mirror push   - Push to local machine"
+        ;;
+    *)
+        echo "Usage: ./mirror [pull|push|status]"
+        ;;
+esac

@@ -1,0 +1,52 @@
+{
+  "phase": "lp7",
+  "name": "Vergabe (Contract Award)",
+  "description": "Evaluation of bids and contract awarding",
+  "requiredDocuments": [
+    "bid_evaluation_report",
+    "price_comparison",
+    "award_recommendation",
+    "contract_award_documentation",
+    "notification_to_bidders"
+  ],
+  "regulations": {
+    "VOB_A": {
+      "required": true,
+      "description": "Award procedures",
+      "sections": [
+        "§16",
+        "§19",
+        "§20",
+        "§24"
+      ]
+    },
+    "GWB": {
+      "required": true,
+      "description": "Gesetz gegen Wettbewerbsbeschränkungen",
+      "sections": [
+        "§97",
+        "§99",
+        "§100",
+        "§107"
+      ]
+    }
+  },
+  "evaluationCriteria": [
+    "price",
+    "quality",
+    "timeline",
+    "experience",
+    "references",
+    "technical_capability"
+  ],
+  "minimumCompleteness": 0.98,
+  "qualityStandards": [
+    "ISO_19650",
+    "VOB_A_compliance"
+  ],
+  "feeRange": {
+    "min": 0.03,
+    "max": 0.04,
+    "description": "Percentage of estimated construction cost"
+  }
+}

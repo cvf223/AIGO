@@ -1,0 +1,81 @@
+{
+  "timestamp": "2025-10-23T07:47:03.327Z",
+  "totalPlans": 14,
+  "completed": 0,
+  "failed": 14,
+  "totalArea": 0,
+  "totalElements": 0,
+  "averageProcessingTime": null,
+  "results": [
+    {
+      "plan": "FB_AUS A_GR00_B_240529.pdf",
+      "status": "failed",
+      "error": "Command failed: ssh root@162.55.83.33 \"cd /root/ProductionCode && timeout 120 node analyze-real-plan-optimized.js \"FB_AUS A_GR00_B_240529.pdf\"\"\n❌ PDF conversion failed: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS\" \"/root/ProductionCode/temp_plan_images/FB_AUS\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS': No such file or directory.\n\n\n❌ Fatal error: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS\" \"/root/ProductionCode/temp_plan_images/FB_AUS\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS': No such file or directory.\n\n"
+    },
+    {
+      "plan": "FB_AUS A_GR-01_A_230828.pdf",
+      "status": "failed",
+      "error": "Command failed: ssh root@162.55.83.33 \"cd /root/ProductionCode && timeout 120 node analyze-real-plan-optimized.js \"FB_AUS A_GR-01_A_230828.pdf\"\"\n❌ PDF conversion failed: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS\" \"/root/ProductionCode/temp_plan_images/FB_AUS\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS': No such file or directory.\n\n\n❌ Fatal error: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS\" \"/root/ProductionCode/temp_plan_images/FB_AUS\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS': No such file or directory.\n\n"
+    },
+    {
+      "plan": "FB_AUS A_GR01_C_231011.pdf",
+      "status": "failed",
+      "error": "Command failed: ssh root@162.55.83.33 \"cd /root/ProductionCode && timeout 120 node analyze-real-plan-optimized.js \"FB_AUS A_GR01_C_231011.pdf\"\"\n❌ PDF conversion failed: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS\" \"/root/ProductionCode/temp_plan_images/FB_AUS\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS': No such file or directory.\n\n\n❌ Fatal error: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS\" \"/root/ProductionCode/temp_plan_images/FB_AUS\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS': No such file or directory.\n\n"
+    },
+    {
+      "plan": "FB_AUS A_GR02_C_231011.pdf",
+      "status": "failed",
+      "error": "Command failed: ssh root@162.55.83.33 \"cd /root/ProductionCode && timeout 120 node analyze-real-plan-optimized.js \"FB_AUS A_GR02_C_231011.pdf\"\"\n❌ PDF conversion failed: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS\" \"/root/ProductionCode/temp_plan_images/FB_AUS\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS': No such file or directory.\n\n\n❌ Fatal error: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS\" \"/root/ProductionCode/temp_plan_images/FB_AUS\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS': No such file or directory.\n\n"
+    },
+    {
+      "plan": "FB_AUS A_GR03_B_231011.pdf",
+      "status": "failed",
+      "error": "Command failed: ssh root@162.55.83.33 \"cd /root/ProductionCode && timeout 120 node analyze-real-plan-optimized.js \"FB_AUS A_GR03_B_231011.pdf\"\"\n❌ PDF conversion failed: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS\" \"/root/ProductionCode/temp_plan_images/FB_AUS\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS': No such file or directory.\n\n\n❌ Fatal error: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS\" \"/root/ProductionCode/temp_plan_images/FB_AUS\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS': No such file or directory.\n\n"
+    },
+    {
+      "plan": "FB_AUS A_GR04_A_231011.pdf",
+      "status": "failed",
+      "error": "Command failed: ssh root@162.55.83.33 \"cd /root/ProductionCode && timeout 120 node analyze-real-plan-optimized.js \"FB_AUS A_GR04_A_231011.pdf\"\"\n❌ PDF conversion failed: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS\" \"/root/ProductionCode/temp_plan_images/FB_AUS\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS': No such file or directory.\n\n\n❌ Fatal error: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS\" \"/root/ProductionCode/temp_plan_images/FB_AUS\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS': No such file or directory.\n\n"
+    },
+    {
+      "plan": "FB_AUS A_GR05_B_231011.pdf",
+      "status": "failed",
+      "error": "Command failed: ssh root@162.55.83.33 \"cd /root/ProductionCode && timeout 120 node analyze-real-plan-optimized.js \"FB_AUS A_GR05_B_231011.pdf\"\"\n❌ PDF conversion failed: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS\" \"/root/ProductionCode/temp_plan_images/FB_AUS\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS': No such file or directory.\n\n\n❌ Fatal error: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS\" \"/root/ProductionCode/temp_plan_images/FB_AUS\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS': No such file or directory.\n\n"
+    },
+    {
+      "plan": "FB_AUS A_GR06_B_231011.pdf",
+      "status": "failed",
+      "error": "Command failed: ssh root@162.55.83.33 \"cd /root/ProductionCode && timeout 120 node analyze-real-plan-optimized.js \"FB_AUS A_GR06_B_231011.pdf\"\"\n❌ PDF conversion failed: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS\" \"/root/ProductionCode/temp_plan_images/FB_AUS\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS': No such file or directory.\n\n\n❌ Fatal error: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS\" \"/root/ProductionCode/temp_plan_images/FB_AUS\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS': No such file or directory.\n\n"
+    },
+    {
+      "plan": "FB_AUS_AN W BR_D_240529KOM_TG.pdf",
+      "status": "failed",
+      "error": "Command failed: ssh root@162.55.83.33 \"cd /root/ProductionCode && timeout 120 node analyze-real-plan-optimized.js \"FB_AUS_AN W BR_D_240529KOM_TG.pdf\"\"\n❌ PDF conversion failed: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS_AN\" \"/root/ProductionCode/temp_plan_images/FB_AUS_AN\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS_AN': No such file or directory.\n\n\n❌ Fatal error: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS_AN\" \"/root/ProductionCode/temp_plan_images/FB_AUS_AN\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS_AN': No such file or directory.\n\n"
+    },
+    {
+      "plan": "FB_AUS_AN W BR_D_240529.pdf",
+      "status": "failed",
+      "error": "Command failed: ssh root@162.55.83.33 \"cd /root/ProductionCode && timeout 120 node analyze-real-plan-optimized.js \"FB_AUS_AN W BR_D_240529.pdf\"\"\n❌ PDF conversion failed: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS_AN\" \"/root/ProductionCode/temp_plan_images/FB_AUS_AN\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS_AN': No such file or directory.\n\n\n❌ Fatal error: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS_AN\" \"/root/ProductionCode/temp_plan_images/FB_AUS_AN\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS_AN': No such file or directory.\n\n"
+    },
+    {
+      "plan": "FB_AUS_AN W_C_240529.pdf",
+      "status": "failed",
+      "error": "Command failed: ssh root@162.55.83.33 \"cd /root/ProductionCode && timeout 120 node analyze-real-plan-optimized.js \"FB_AUS_AN W_C_240529.pdf\"\"\n❌ PDF conversion failed: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS_AN\" \"/root/ProductionCode/temp_plan_images/FB_AUS_AN\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS_AN': No such file or directory.\n\n\n❌ Fatal error: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS_AN\" \"/root/ProductionCode/temp_plan_images/FB_AUS_AN\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS_AN': No such file or directory.\n\n"
+    },
+    {
+      "plan": "FB_AUS_AN W WD_D_240529.pdf",
+      "status": "failed",
+      "error": "Command failed: ssh root@162.55.83.33 \"cd /root/ProductionCode && timeout 120 node analyze-real-plan-optimized.js \"FB_AUS_AN W WD_D_240529.pdf\"\"\n❌ PDF conversion failed: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS_AN\" \"/root/ProductionCode/temp_plan_images/FB_AUS_AN\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS_AN': No such file or directory.\n\n\n❌ Fatal error: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS_AN\" \"/root/ProductionCode/temp_plan_images/FB_AUS_AN\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS_AN': No such file or directory.\n\n"
+    },
+    {
+      "plan": "FB_AUS_SN AA_I_240529.pdf",
+      "status": "failed",
+      "error": "Command failed: ssh root@162.55.83.33 \"cd /root/ProductionCode && timeout 120 node analyze-real-plan-optimized.js \"FB_AUS_SN AA_I_240529.pdf\"\"\n❌ PDF conversion failed: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS_SN\" \"/root/ProductionCode/temp_plan_images/FB_AUS_SN\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS_SN': No such file or directory.\n\n\n❌ Fatal error: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS_SN\" \"/root/ProductionCode/temp_plan_images/FB_AUS_SN\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS_SN': No such file or directory.\n\n"
+    },
+    {
+      "plan": "FB_AUS_SN CC_I_240529.pdf",
+      "status": "failed",
+      "error": "Command failed: ssh root@162.55.83.33 \"cd /root/ProductionCode && timeout 120 node analyze-real-plan-optimized.js \"FB_AUS_SN CC_I_240529.pdf\"\"\n❌ PDF conversion failed: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS_SN\" \"/root/ProductionCode/temp_plan_images/FB_AUS_SN\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS_SN': No such file or directory.\n\n\n❌ Fatal error: Command failed: pdftoppm -png -r 150 -singlefile \"/root/ProductionCode/TestProject/FB_AUS_SN\" \"/root/ProductionCode/temp_plan_images/FB_AUS_SN\"\nI/O Error: Couldn't open file '/root/ProductionCode/TestProject/FB_AUS_SN': No such file or directory.\n\n"
+    }
+  ]
+}

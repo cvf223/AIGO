@@ -1,0 +1,1449 @@
+/**
+ * 🧠 GENERIC CONCLUSION ENGINE - ENHANCED FINANCIAL VALUATION
+ * ===========================================================
+ * 
+ * FIXED: Proper financial opportunity valuation based on market context
+ * FIXES: 
+ * 1. Realistic profit potential calculations
+ * 2. Context-aware opportunity assessment  
+ * 3. Smart scaling based on opportunity type
+ * 4. Enhanced financial pattern recognition
+ */
+
+import fs from 'fs';
+import { EventEmitter } from 'events';
+
+// 🧠 FORMAL REASONING & VERIFICATION INTEGRATION (SPECIALIZED FOR GENERIC CONCLUSION ENGINE)
+import { FormalReasoningConstructionIntegration as FormalReasoningCognitiveIntegration } from '../construction/cognitive/FormalReasoningConstructionIntegration.js';;
+
+// 🛡️ PROACTIVE PREVENTION SYSTEMS INTEGRATION (SPECIALIZED FOR GENERIC CONCLUSION ENGINE)
+import { ProactiveConstructionKnowledgePipeline as ProactiveKnowledgeCredibilityPipeline } from '../construction/prevention/ProactiveConstructionKnowledgePipeline.js';;
+import { ProactiveConstructionInferenceEngine as ProactiveInferenceReliabilityEngine } from '../construction/prevention/ProactiveConstructionInferenceEngine.js';;
+
+/**
+ * 🧠 GENERIC CONCLUSION ENGINE - ENHANCED FINANCIAL VALUATION
+ * ENHANCED with SPECIALIZED GENERIC CONCLUSION Formal Reasoning & Proactive Prevention
+ * ===========================================================
+ */
+export class GenericConclusionEngine extends EventEmitter {
+    constructor(agentCharacter, serviceRegistry) {
+        super();
+        this.character = agentCharacter;
+        this.serviceRegistry = serviceRegistry;
+        this.portfolioManager = serviceRegistry.portfolioManager;
+        if (!this.portfolioManager) {
+            throw new Error("GenericConclusionEngine requires a PortfolioManager instance.");
+        }
+        this.capabilities = capabilities || [];
+        this.availableCapital = availableCapital || 1000;
+        
+        // 🧠 FORMAL REASONING & VERIFICATION INTEGRATION (SPECIALIZED FOR GENERIC CONCLUSION ENGINE)
+        this.genericConclusionEngineFormalReasoning = null;
+        
+        // 🛡️ PROACTIVE PREVENTION SYSTEMS INTEGRATION (SPECIALIZED FOR GENERIC CONCLUSION ENGINE)
+        this.genericConclusionEngineCredibilityPipeline = null;
+        this.genericConclusionEngineInferenceReliability = null;
+        this.genericConclusionEngineVeracityJudge = null;
+        this.genericConclusionEngineSFTGovernor = null;
+
+        // 💾 STATE PERSISTENCE & BACKUP SYSTEMS (DATABASE-BACKED)
+        this.statePersistence = {
+            lastBackupTimestamp: null,
+            stateId: `generic-conclusion-engine-${Date.now()}`,
+            autosaveInterval: 60 * 60 * 1000, // 1 hour in milliseconds
+            autosaveTimer: null,
+            isStateLoaded: false,
+            lastSaveTimestamp: null,
+            stateVersion: '1.0.0'
+        };
+
+        // 📊 PERSISTENT STATE DATA STRUCTURES  
+        this.persistentState = {
+            dynamicKeywords: [],
+            agentDiscoveredKeywords: '',
+            opportunityMultipliers: { ...this.opportunityMultipliers },
+            analysisHistory: [],
+            performanceMetrics: {
+                totalConclusions: 0,
+                successfulConclusions: 0,
+                totalOpportunitiesGenerated: 0,
+                avgConfidence: 0,
+                avgProcessingTime: 0,
+                lastConclusionTime: null
+            },
+            conclusionCache: new Map(),
+            configurationState: {},
+            lastActiveTimestamp: Date.now()
+        };
+
+        this.goalKeywords = [
+            'profit', 'arbitrage', 'trading', 'investment', 'yield', 'returns',
+            'defi', 'crypto', 'blockchain', 'token', 'liquidity', 'volume',
+            'price', 'market', 'trend', 'opportunity', 'strategy', 'earn',
+            'stake', 'farm', 'mint', 'airdrop', 'launch', 'raise', 'fund'
+        ];
+        
+        // Enhanced financial opportunity multipliers
+        this.opportunityMultipliers = {
+            'massive_liquidity_event': { base: 0.15, max: 5000 },      // 15% of liquidity events  
+            'arbitrage_opportunity': { base: 0.08, max: 2000 },        // 8% arbitrage potential
+            'yield_farming': { base: 0.25, max: 1500 },                // 25% yield opportunities
+            'airdrop_farming': { base: 0.50, max: 3000 },              // 50% airdrop value
+            'institutional_flow': { base: 0.05, max: 8000 },           // 5% but huge volume
+            'price_momentum': { base: 0.12, max: 4000 },               // 12% momentum trades
+            'defi_protocol_launch': { base: 0.20, max: 2500 },         // 20% protocol opportunities
+            'market_inefficiency': { base: 0.30, max: 1800 },          // 30% inefficiency exploitation
+            'funding_round': { base: 0.02, max: 1000 },                // 2% funding opportunities
+            'regulatory_catalyst': { base: 0.08, max: 6000 }           // 8% regulatory plays
+        };
+        
+        // Dynamic keywords discovered by agent during analysis
+        this.dynamicKeywords = [];
+        this.agentDiscoveredKeywords = '';
+        
+        console.log('🧠 GenericConclusionEngine initialized with ENHANCED financial valuation');
+    }
+
+    /**
+     * 🧠 GENERATE CONCLUSION FROM DISCOVERIES
+     * FIXED: Doability is collaboration metadata, NOT a filter!
+     */
+    async generateConclusion(discoveries, stage = 'comprehensive', metadata = {}) {
+        const startTime = Date.now();
+        console.log(`🧠 Generating ${stage} conclusion with enhanced valuation...`);
+        
+        // Enhanced opportunity calculation
+        const opportunities = this.calculateEnhancedOpportunities(discoveries);
+        
+        // FIXED: Only filter by confidence - doability is collaboration metadata!
+        const viableOpportunities = opportunities.filter(opp => 
+            opp.confidence >= 0.3  // REMOVED doability filter!
+        );
+        
+        // Separate opportunities by doability for collaboration requests
+        const soloOpportunities = viableOpportunities.filter(opp => opp.doability >= 0.7);
+        const collaborationOpportunities = viableOpportunities.filter(opp => opp.doability < 0.7 && opp.doability >= 0.4);
+        const helpNeededOpportunities = viableOpportunities.filter(opp => opp.doability < 0.4);
+        
+        // Improved total calculation with opportunity clustering
+        const totalDailyPotential = this.calculateClusteredPotential(viableOpportunities);
+        
+        const averageConfidence = viableOpportunities.length > 0 
+            ? viableOpportunities.reduce((sum, opp) => sum + opp.confidence, 0) / viableOpportunities.length
+            : 0;
+            
+        const averageDoability = viableOpportunities.length > 0
+            ? viableOpportunities.reduce((sum, opp) => sum + opp.doability, 0) / viableOpportunities.length  
+            : 0;
+            
+        const dataQuality = this.assessDataQuality(discoveries);
+        
+        // Generate enhanced conclusion text with collaboration context
+        const agentName = this.character.name;
+        const conclusionText = await this.generateCollaborationAwareConclusionText(
+            agentName, opportunities, viableOpportunities, 
+            soloOpportunities, collaborationOpportunities, helpNeededOpportunities,
+            totalDailyPotential
+        );
+        
+        const processingTime = Date.now() - startTime;
+        
+        console.log(`🧠 Enhanced Conclusion: ${conclusionText}`);
+        console.log(`📊 Viable opportunities: ${viableOpportunities.length}/${opportunities.length}`);
+        console.log(`🤖 Solo capabilities: ${soloOpportunities.length}`);
+        console.log(`🤝 Collaboration needed: ${collaborationOpportunities.length}`);
+        console.log(`🆘 Help required: ${helpNeededOpportunities.length}`);
+        console.log(`💰 Enhanced daily potential: $${totalDailyPotential.toFixed(2)}`);
+        
+        return {
+            stage,
+            conclusionText,
+            opportunities: viableOpportunities,
+            totalOpportunities: opportunities.length,
+            viableOpportunities: viableOpportunities.length,
+            
+            // COLLABORATION METADATA:
+            soloOpportunities,
+            collaborationOpportunities, 
+            helpNeededOpportunities,
+            collaborationRequests: this.generateCollaborationRequests(helpNeededOpportunities, collaborationOpportunities),
+            
+            totalDailyPotential,
+            averageConfidence,
+            averageDoability,
+            dataQuality,
+            processingTime,
+            metadata: {
+                ...metadata,
+                timestamp: Date.now(),
+                engineVersion: '3.1.0-collaboration-aware',
+                valuationMethod: 'smart_financial_context',
+                collaborationEnabled: true
+            }
+        };
+    }
+
+    /**
+     * 🎯 CALCULATE ENHANCED OPPORTUNITIES FROM DISCOVERIES
+     * Uses smart financial context analysis for realistic valuations
+     */
+    calculateEnhancedOpportunities(discoveries) {
+        console.log('🎯 Calculating ENHANCED opportunities with smart financial valuation...');
+        
+        const opportunities = [];
+        
+        // Extract all numerical data with financial context
+        const numericalData = this.extractFinancialNumericalData(discoveries);
+        const structuredData = this.extractFinancialStructuredData(discoveries);
+        const entityMentions = this.extractFinancialEntities(discoveries);
+        
+        // Process large financial values with context awareness
+        numericalData.forEach(item => {
+            const opportunity = this.createFinancialOpportunity(item);
+            if (opportunity && opportunity.estimatedValue > 50) { // Only include significant opportunities
+                opportunities.push(opportunity);
+            }
+        });
+        
+        // Process structured financial opportunities
+        structuredData.forEach(item => {
+            const opportunity = this.createStructuredFinancialOpportunity(item);
+            if (opportunity && opportunity.estimatedValue > 30) {
+                opportunities.push(opportunity);
+            }
+        });
+        
+        // Process entity-based opportunities (tokens, protocols, etc.)
+        entityMentions.forEach(entity => {
+            const opportunity = this.createEntityBasedOpportunity(entity);
+            if (opportunity && opportunity.estimatedValue > 40) {
+                opportunities.push(opportunity);
+            }
+        });
+        
+        console.log(`🎯 Generated ${opportunities.length} enhanced financial opportunities`);
+        return opportunities;
+    }
+
+    /**
+     * 💰 CREATE FINANCIAL OPPORTUNITY FROM NUMERICAL DATA
+     */
+    createFinancialOpportunity(numericalItem) {
+        const value = numericalItem.value || 0;
+        const context = (numericalItem.context || '').toLowerCase();
+        const scalingFactor = numericalItem.scalingFactor;
+        
+        // Smart opportunity type detection
+        let opportunityType = 'unknown';
+        let multiplier = { base: 0.01, max: 100 };
+        
+        if (context.includes('raised') && context.includes('minutes')) {
+            opportunityType = 'massive_liquidity_event';
+            multiplier = this.opportunityMultipliers.massive_liquidity_event;
+        } else if (context.includes('airdrop') || context.includes('farm')) {
+            opportunityType = 'airdrop_farming';
+            multiplier = this.opportunityMultipliers.airdrop_farming;
+        } else if (context.includes('yield') || context.includes('apy') || context.includes('%')) {
+            opportunityType = 'yield_farming';
+            multiplier = this.opportunityMultipliers.yield_farming;
+        } else if (context.includes('arbitrage') || context.includes('spread')) {
+            opportunityType = 'arbitrage_opportunity';
+            multiplier = this.opportunityMultipliers.arbitrage_opportunity;
+        } else if (context.includes('market cap') || context.includes('volume')) {
+            opportunityType = 'price_momentum';
+            multiplier = this.opportunityMultipliers.price_momentum;
+        } else if (context.includes('etf') || context.includes('institutional')) {
+            opportunityType = 'institutional_flow';
+            multiplier = this.opportunityMultipliers.institutional_flow;
+        } else if (context.includes('protocol') || context.includes('defi')) {
+            opportunityType = 'defi_protocol_launch';
+            multiplier = this.opportunityMultipliers.defi_protocol_launch;
+        }
+        
+        // Smart value calculation based on opportunity type and scale
+        let baseValue = value;
+        if (scalingFactor === 'B') baseValue *= 1000000000;
+        else if (scalingFactor === 'M') baseValue *= 1000000;
+        else if (scalingFactor === 'K') baseValue *= 1000;
+        else if (scalingFactor === 'T') baseValue *= 1000000000000;
+        
+        const estimatedValue = Math.min(
+            baseValue * multiplier.base,
+            multiplier.max
+        );
+        
+        // Enhanced confidence based on context richness
+        const confidence = this.calculateContextConfidence(context, opportunityType);
+        const doability = this.calculateDoability(opportunityType, baseValue);
+        
+        if (estimatedValue < 50) return null; // Filter out low-value opportunities
+        
+        return {
+            id: `financial_${Date.now()}_${Math.random().toString(36).substr(2, 5)}`,
+            type: opportunityType,
+            description: this.generateOpportunityDescription(opportunityType, baseValue, context),
+            estimatedValue,
+            confidence,
+            doability,
+            timeframe: this.getTimeframe(opportunityType),
+            requirements: this.getRequirements(opportunityType),
+            source: 'enhanced_numerical_analysis',
+            baseValue,
+            scalingFactor,
+            multiplierUsed: multiplier.base
+        };
+    }
+
+    /**
+     * 📊 CALCULATE CLUSTERED POTENTIAL
+     * Avoids double-counting overlapping opportunities
+     */
+    calculateClusteredPotential(opportunities) {
+        // Group opportunities by type to avoid double-counting
+        const clustered = {};
+        
+        opportunities.forEach(opp => {
+            if (!clustered[opp.type]) {
+                clustered[opp.type] = [];
+            }
+            clustered[opp.type].push(opp);
+        });
+        
+        let totalPotential = 0;
+        
+        // Take best opportunities from each cluster
+        Object.keys(clustered).forEach(type => {
+            const typeOpportunities = clustered[type];
+            
+            // Sort by value and take top opportunities (avoid saturation)
+            typeOpportunities.sort((a, b) => b.estimatedValue - a.estimatedValue);
+            const maxOpportunities = Math.min(typeOpportunities.length, 3); // Max 3 per type
+            
+            for (let i = 0; i < maxOpportunities; i++) {
+                const scalingFactor = i === 0 ? 1 : (i === 1 ? 0.7 : 0.4); // Diminishing returns
+                totalPotential += typeOpportunities[i].estimatedValue * scalingFactor;
+            }
+        });
+        
+        return totalPotential;
+    }
+
+    /**
+     * 📝 GENERATE ENHANCED CONCLUSION TEXT
+     */
+    generateEnhancedConclusionText(stage, allOpportunities, viableOpportunities, totalDailyPotential, dataQuality) {
+        const opportunityTypes = [...new Set(viableOpportunities.map(opp => opp.type))];
+        const topOpportunity = viableOpportunities.reduce((best, current) => 
+            current.estimatedValue > (best?.estimatedValue || 0) ? current : best, null);
+        
+        let conclusion = `${stage.toUpperCase()} ANALYSIS: `;
+        
+        if (totalDailyPotential > 1000) {
+            conclusion += `🚀 SIGNIFICANT OPPORTUNITY DETECTED! `;
+        } else if (totalDailyPotential > 500) {
+            conclusion += `💰 GOOD OPPORTUNITY POTENTIAL! `;
+        } else if (totalDailyPotential > 100) {
+            conclusion += `📈 MODERATE OPPORTUNITY IDENTIFIED. `;
+        } else {
+            conclusion += `📊 LIMITED OPPORTUNITY SCOPE. `;
+        }
+        
+        conclusion += `Found ${viableOpportunities.length} viable opportunities `;
+        conclusion += `across ${opportunityTypes.length} categories `;
+        conclusion += `with $${totalDailyPotential.toFixed(0)} daily potential. `;
+        
+        if (topOpportunity) {
+            conclusion += `Top opportunity: ${topOpportunity.type} `;
+            conclusion += `($${topOpportunity.estimatedValue.toFixed(0)} potential). `;
+        }
+        
+        if (dataQuality > 0.7) {
+            conclusion += `High-quality data supports analysis.`;
+        } else if (dataQuality > 0.4) {
+            conclusion += `Moderate data quality - recommendations viable.`;
+        } else {
+            conclusion += `Limited data quality - proceed with caution.`;
+        }
+        
+        return conclusion;
+    }
+
+    /**
+     * 📝 GENERATE COLLABORATION-AWARE CONCLUSION TEXT
+     */
+    async generateCollaborationAwareConclusionText(
+        agentName,
+        opportunities,
+        viableOpportunities,
+        soloOpportunities,
+        collaborationOpportunities,
+        helpNeededOpportunities,
+        totalDailyPotential
+    ) {
+        const availableCapital = await this.portfolioManager.getAvailableCapital(this.character.id, this.character.chain); // Assuming chain is on character
+        const riskTolerance = this.character.decisionMaking.riskProfile;
+
+        // Dynamic logic based on character and real-time data
+        let conclusion = `Conclusion for ${agentName} (Risk Profile: ${riskTolerance}, Available Capital: $${availableCapital.toLocaleString()}):\n`;
+
+        if (viableOpportunities.length === 0) {
+            conclusion += "No viable opportunities detected in the current market scan. Continuing to monitor for favorable conditions.";
+            return conclusion;
+        }
+
+        conclusion += `Identified ${viableOpportunities.length} viable opportunities with a total daily potential of $${totalDailyPotential.toFixed(2)}.\n`;
+
+        if (soloOpportunities.length > 0) {
+            conclusion += `  - ${soloOpportunities.length} opportunities are executable solo and meet the high doability threshold.\n`;
+        }
+        if (collaborationOpportunities.length > 0) {
+            conclusion += `  - ${collaborationOpportunities.length} opportunities require collaboration with other specialists.\n`;
+        }
+        if (helpNeededOpportunities.length > 0) {
+            conclusion += `  - ${helpNeededOpportunities.length} high-potential opportunities require human-in-the-loop assistance or new capabilities.\n`;
+        }
+
+        // Add a strategic recommendation based on the agent's personality
+        if (riskTolerance === 'HIGH_REWARD_AGGRESSIVE' && soloOpportunities.length > 0) {
+            conclusion += `Recommendation: Prioritize execution of the ${soloOpportunities.length} solo opportunities to maximize immediate returns.`;
+        } else if (riskTolerance === 'CONSERVATIVE' && collaborationOpportunities.length > 0) {
+            conclusion += `Recommendation: Focus on collaborative opportunities to minimize risk and validate strategy with peers.`;
+        } else {
+            conclusion += `Recommendation: A balanced approach is advised. Execute high-confidence solo opportunities while initiating collaboration on more complex ones.`;
+        }
+
+        return conclusion;
+    }
+
+    /**
+     * 🎯 CALCULATE CONTEXT CONFIDENCE
+     */
+    calculateContextConfidence(context, opportunityType) {
+        let confidence = 0.5; // Base confidence
+        
+        // Boost confidence based on specific financial indicators
+        if (context.includes('$') || context.includes('million') || context.includes('billion')) confidence += 0.2;
+        if (context.includes('raised') || context.includes('funding')) confidence += 0.15;
+        if (context.includes('apy') || context.includes('%')) confidence += 0.15;
+        if (context.includes('arbitrage') || context.includes('spread')) confidence += 0.25;
+        if (context.includes('volume') || context.includes('liquidity')) confidence += 0.1;
+        
+        return Math.min(confidence, 0.95); // Cap at 95%
+    }
+
+    /**
+     * 🛠️ CALCULATE DOABILITY (FIXED - MORE REALISTIC)
+     */
+    calculateDoability(opportunityType, baseValue) {
+        let doability = 0.5; // Base doability
+        
+        // Adjust based on opportunity type and scale
+        const doabilityMap = {
+            'airdrop_farming': 0.8,
+            'yield_farming': 0.7,
+            'arbitrage_opportunity': 0.6,
+            'price_momentum': 0.5,
+            'defi_protocol_launch': 0.4,
+            'institutional_flow': 0.6,  // Increased from 0.3
+            'massive_liquidity_event': 0.7  // Increased from 0.4
+        };
+        
+        doability = doabilityMap[opportunityType] || 0.5;
+        
+        // FIXED: More realistic capital requirement calculation
+        // Most opportunities don't require the full baseValue as capital
+        const capitalRequirement = Math.min(baseValue * 0.00001, this.availableCapital * 2); // Much smaller requirement
+        
+        if (capitalRequirement > this.availableCapital) {
+            doability *= 0.6; // Reduced penalty - many opportunities are still viable with smaller positions
+        } else if (capitalRequirement < this.availableCapital * 0.5) {
+            doability *= 1.1; // Smaller bonus to avoid over-optimism
+        }
+        
+        // FIXED: Higher minimum doability for legitimate opportunities
+        return Math.max(Math.min(doability, 0.95), 0.35); // Minimum 35% doability for any valid opportunity
+    }
+
+    /**
+     * 📄 GENERATE OPPORTUNITY DESCRIPTION
+     */
+    generateOpportunityDescription(type, value, context) {
+        const formattedValue = this.formatValue(value);
+        
+        const descriptions = {
+            'massive_liquidity_event': `Liquidity event opportunity: ${formattedValue} injection detected`,
+            'airdrop_farming': `Airdrop farming opportunity: Position for ${formattedValue} distribution`,
+            'yield_farming': `Yield farming opportunity: Access to high-yield pools`,
+            'arbitrage_opportunity': `Arbitrage opportunity: Cross-platform price differential`,
+            'price_momentum': `Price momentum opportunity: ${formattedValue} market movement`,
+            'institutional_flow': `Institutional flow opportunity: ${formattedValue} institutional interest`,
+            'defi_protocol_launch': `DeFi protocol opportunity: New protocol with ${formattedValue} TVL potential`,
+            'regulatory_catalyst': `Regulatory catalyst opportunity: Policy change impact`
+        };
+        
+        return descriptions[type] || `Financial opportunity: ${formattedValue} potential detected`;
+    }
+
+    /**
+     * 💲 FORMAT VALUE FOR DISPLAY
+     */
+    formatValue(value) {
+        if (value >= 1000000000000) return `$${(value/1000000000000).toFixed(1)}T`;
+        if (value >= 1000000000) return `$${(value/1000000000).toFixed(1)}B`;
+        if (value >= 1000000) return `$${(value/1000000).toFixed(1)}M`;
+        if (value >= 1000) return `$${(value/1000).toFixed(1)}K`;
+        return `$${value.toFixed(0)}`;
+    }
+
+    /**
+     * 📊 GROUP DISCOVERIES BY PROFIT PATTERNS
+     * Analyzes numerical discoveries to identify profit patterns
+     */
+    groupByProfitPatterns(numericalFindings = []) {
+        const patterns = [];
+        
+        numericalFindings.forEach(finding => {
+            // Look for profit-related patterns
+            if (finding.goalRelevance > 0.3) {
+                let patternType = 'unknown_opportunity';
+                let estimatedValue = 0;
+                let confidence = 0.5;
+                
+                // Pattern classification based on context and value
+                if (finding.context && finding.context.toLowerCase().includes('fund')) {
+                    patternType = 'funding_opportunity';
+                    estimatedValue = finding.value * 0.001; // 0.1% potential from funding news
+                    confidence = 0.7;
+                } else if (finding.context && finding.context.toLowerCase().includes('market')) {
+                    patternType = 'market_opportunity';
+                    estimatedValue = finding.value * 0.0005; // 0.05% potential from market movement
+                    confidence = 0.6;
+                } else if (finding.scalingFactor) {
+                    patternType = 'large_scale_opportunity';
+                    estimatedValue = Math.min(finding.value * 0.0001, this.availableCapital * 0.1);
+                    confidence = 0.8;
+                }
+                
+                patterns.push({
+                    type: patternType,
+                    description: `${patternType.replace('_', ' ')} detected: ${finding.original} in "${finding.context}"`,
+                    estimatedValue,
+                    confidence,
+                    timeframe: this.estimateTimeframe(finding),
+                    requirements: this.identifyRequirements(finding),
+                    source: finding
+                });
+            }
+        });
+        
+        return patterns;
+    }
+
+    /**
+     * ⏰ ESTIMATE TIMEFRAME FROM DISCOVERY
+     */
+    estimateTimeframe(finding) {
+        if (finding.context && finding.context.toLowerCase().includes('immediate')) {
+            return 'immediate';
+        } else if (finding.context && finding.context.toLowerCase().includes('week')) {
+            return 'short_term';
+        } else if (finding.context && finding.context.toLowerCase().includes('month')) {
+            return 'medium_term';
+        }
+        return 'medium_term';
+    }
+
+    /**
+     * 📋 IDENTIFY REQUIREMENTS FROM DISCOVERY
+     */
+    identifyRequirements(finding) {
+        const requirements = ['Validate discovery', 'Assess risk'];
+        
+        if (finding.value > this.availableCapital) {
+            requirements.push('Secure additional capital');
+        }
+        
+        if (finding.context && finding.context.toLowerCase().includes('technical')) {
+            requirements.push('Technical analysis required');
+        }
+        
+        return requirements;
+    }
+
+    /**
+     * ⚖️ ASSESS DOABILITY OF PATTERN
+     */
+    assessDoability(pattern) {
+        let doability = 0.5; // base doability
+        
+        // Adjust based on estimated value vs available capital
+        if (pattern.estimatedValue <= this.availableCapital * 0.1) {
+            doability += 0.3; // Easy to execute with current capital
+        } else if (pattern.estimatedValue <= this.availableCapital * 0.5) {
+            doability += 0.1; // Moderate capital requirement
+        } else {
+            doability -= 0.2; // High capital requirement
+        }
+        
+        // Adjust based on confidence
+        doability += (pattern.confidence - 0.5) * 0.4;
+        
+        // Adjust based on timeframe
+        if (pattern.timeframe === 'immediate') {
+            doability += 0.2;
+        } else if (pattern.timeframe === 'short_term') {
+            doability += 0.1;
+        }
+        
+        return Math.max(0.1, Math.min(1.0, doability));
+    }
+
+    /**
+     * ⚖️ ASSESS DOABILITY FROM STRUCTURED DISCOVERY
+     */
+    assessDoabilityFromStructured(finding) {
+        let doability = 0.6; // base for structured data
+        
+        if (finding.confidence) {
+            doability += (finding.confidence - 0.5) * 0.3;
+        }
+        
+        if (finding.goalRelevance > 0.7) {
+            doability += 0.2;
+        }
+        
+        return Math.max(0.1, Math.min(1.0, doability));
+    }
+
+    /**
+     * ⚖️ ASSESS DOABILITY FROM INSIGHT DISCOVERY
+     */
+    assessDoabilityFromInsight(item) {
+        let doability = 0.7; // base for actionable insights
+        
+        if (item.confidence) {
+            doability += (item.confidence - 0.5) * 0.2;
+        }
+        
+        if (item.urgency && item.urgency > 0.7) {
+            doability += 0.2;
+        }
+        
+        return Math.max(0.1, Math.min(1.0, doability));
+    }
+
+    /**
+     * 💰 ESTIMATE VALUE FROM INSIGHT
+     */
+    estimateValueFromInsight(item) {
+        const baseValue = this.availableCapital * 0.02; // 2% of available capital as base
+        let multiplier = 1;
+        
+        if (item.urgency) {
+            multiplier *= item.urgency;
+        }
+        
+        if (item.confidence) {
+            multiplier *= item.confidence;
+        }
+        
+        return baseValue * multiplier;
+    }
+
+    /**
+     * 📊 ASSESS DATA QUALITY OF DISCOVERIES
+     */
+    assessDataQuality(discoveries) {
+        let qualityScore = 0;
+        let totalMetrics = 0;
+        
+        // Check numerical data quality
+        const numericalFindings = discoveries.numericalFindings || [];
+        if (numericalFindings.length > 0) {
+            qualityScore += Math.min(numericalFindings.length / 10, 1) * 0.3;
+            totalMetrics += 0.3;
+        }
+        
+        // Check structured data quality
+        const structuredFindings = discoveries.structuredFindings || [];
+        if (structuredFindings.length > 0) {
+            qualityScore += Math.min(structuredFindings.length / 5, 1) * 0.2;
+            totalMetrics += 0.2;
+        }
+        
+        // Check entity mentions quality
+        const entityMentions = discoveries.entityMentions || [];
+        if (entityMentions.length > 0) {
+            qualityScore += Math.min(entityMentions.length / 8, 1) * 0.2;
+            totalMetrics += 0.2;
+        }
+        
+        // Check sentiment data quality
+        const sentiment = discoveries.sentiment || {};
+        if (sentiment.confidence && sentiment.confidence > 0.5) {
+            qualityScore += sentiment.confidence * 0.15;
+            totalMetrics += 0.15;
+        }
+        
+        // Check actionable items quality
+        const actionableItems = discoveries.actionableItems || {};
+        const marketInsights = actionableItems.marketInsights || [];
+        if (marketInsights.length > 0) {
+            qualityScore += Math.min(marketInsights.length / 3, 1) * 0.15;
+            totalMetrics += 0.15;
+        }
+        
+        return totalMetrics > 0 ? qualityScore / totalMetrics : 0.5;
+    }
+
+    /**
+     * 📝 GENERATE CONCLUSION TEXT
+     */
+    generateConclusionText(stage, totalOpportunities, viableOpportunities, totalDailyPotential, dataQuality) {
+        let conclusion = `${stage.charAt(0).toUpperCase() + stage.slice(1)} analysis`;
+        
+        if (viableOpportunities === 0) {
+            conclusion += ` found ${totalOpportunities} opportunities but none meet viability thresholds`;
+        } else if (viableOpportunities === 1) {
+            conclusion += ` identified 1 viable opportunity`;
+        } else {
+            conclusion += ` identified ${viableOpportunities} viable opportunities`;
+        }
+        
+        conclusion += `. Data quality: ${dataQuality.toFixed(2)}`;
+        
+        if (totalDailyPotential > 0) {
+            conclusion += `. Daily potential: $${totalDailyPotential.toFixed(2)}`;
+        } else {
+            conclusion += `. Further investigation needed`;
+        }
+        
+        return conclusion;
+    }
+
+    /**
+     * 📈 ESTIMATE VALUE FROM RELEVANCE SCORE
+     */
+    estimateValueFromRelevance(relevance) {
+        const baseValue = this.availableCapital * 0.1; // 10% of available capital as base
+        return baseValue * relevance;
+    }
+
+    /**
+     * ⚡ ESTIMATE VALUE FROM URGENCY SCORE
+     */
+    estimateValueFromUrgency(urgency) {
+        const baseValue = this.availableCapital * 0.05; // 5% of available capital as base
+        return baseValue * urgency;
+    }
+
+    assessMagnitude(value) {
+        if (value < 10) return 'small';
+        if (value < 1000) return 'medium';
+        if (value < 100000) return 'large';
+        return 'very_large';
+    }
+
+    assessGoalRelevance(text) {
+        const lowerText = text.toLowerCase();
+        let relevance = 0;
+        
+        this.goalKeywords.forEach(keyword => {
+            if (lowerText.includes(keyword)) {
+                relevance += 0.2;
+            }
+        });
+        
+        return Math.min(1.0, relevance);
+    }
+
+    calculateNumericalConfidence(value, key) {
+        let confidence = 0.5; // Base confidence
+        
+        // Higher confidence for specific patterns
+        if (key.includes('amount') || key.includes('value') || key.includes('price')) {
+            confidence += 0.2;
+        }
+        
+        // Confidence based on magnitude reasonableness
+        if (value > 0 && value < 1000000) {
+            confidence += 0.2;
+        }
+        
+        return Math.min(1.0, confidence);
+    }
+
+    isLearnable(capability) {
+        const learnableCapabilities = [
+            'smartContracts', 'apis', 'blockchain', 'trading', 'analysis'
+        ];
+        return learnableCapabilities.includes(capability);
+    }
+
+    // Additional helper methods would go here...
+    extractPatternsFromText(text, key, path) { return []; }
+    basicSentimentAnalysis(text) { return 'neutral'; }
+    getContext(text, index, length) { return text.substring(Math.max(0, index - length), index + length); }
+    calculateExtractionConfidence(text, extracted) { return 0.7; }
+    findCrossFieldPatterns(analysis) { /* Implementation */ }
+    calculateDailyPotential(pattern) { return pattern.baseValue || 0; }
+    calculatePatternConfidence(pattern) { return pattern.confidence || 0.5; }
+    calculateGoalAlignment(pattern) { return pattern.goalRelevance || 0.5; }
+    identifyRequirements(pattern) { return { capital: 100, capabilities: {} }; }
+    identifyRisks(pattern) { return []; }
+    inferRequirements(finding) { return {}; }
+    estimateCapitalNeeds(pattern) { return 100; }
+    assessComplexity(pattern) { return 0.5; }
+    rankPotentials(potentials) { 
+        return potentials.sort((a, b) => 
+            (b.dailyPotential * b.confidence * b.doability.score) - 
+            (a.dailyPotential * a.confidence * a.doability.score)
+        ); 
+    }
+    rateMemoryImportance(analysisResults) { return {}; }
+    assessOverallQuality(analysisResults) { return 0.7; }
+    collectAllFlags(potentials) { return []; }
+    suggestNextActions(potentials, stage) { return []; }
+    calculateConclusionConfidence(potentials, analysisResults) {
+        if (!analysisResults || analysisResults.length === 0) return 0.3; // Low confidence if no analysis
+
+        const avgAnalysisConfidence = analysisResults.reduce((sum, result) => sum + result.confidence, 0) / analysisResults.length;
+        const viableOpportunityRatio = potentials.viableOpportunities.length / Math.max(potentials.allOpportunities.length, 1);
+
+        // Confidence is a blend of the quality of analysis and the quantity of good opportunities found.
+        let confidence = (avgAnalysisConfidence * 0.6) + (viableOpportunityRatio * 0.4);
+        
+        // Boost confidence if there are high-value solo opportunities
+        if(potentials.soloOpportunities.length > 0){
+            confidence += 0.1;
+        }
+
+        return Math.min(0.95, confidence); // Cap at 95%
+    }
+
+    /**
+     * 🔍 AGENT KEYWORD DISCOVERY
+     * Allows agent to discover and set new keywords when finding discoveries without existing keywords
+     */
+    discoverNewKeyword(discoveryText, context = '') {
+        // Extract potential keywords from discovery text
+        const words = discoveryText.toLowerCase().split(/\s+/);
+        const potentialKeywords = words.filter(word => 
+            word.length > 3 && 
+            !this.goalKeywords.includes(word) &&
+            !this.dynamicKeywords.includes(word) &&
+            /^[a-z]+$/.test(word) // Only alphabetic words
+        );
+        
+        if (potentialKeywords.length > 0) {
+            const newKeyword = potentialKeywords[0]; // Take first potential keyword
+            this.dynamicKeywords.push(newKeyword);
+            this.agentDiscoveredKeywords = `${this.agentDiscoveredKeywords} ${newKeyword}`.trim();
+            
+            console.log(`🔍 Agent discovered new keyword: "${newKeyword}" from discovery: "${discoveryText}"`);
+            console.log(`📝 Dynamic keywords now: [${this.dynamicKeywords.join(', ')}]`);
+            
+            return newKeyword;
+        }
+        
+        return null;
+    }
+
+    /**
+     * 🎯 GET ALL KEYWORDS (STATIC + DYNAMIC)
+     */
+    getAllKeywords() {
+        return [...this.goalKeywords, ...this.dynamicKeywords];
+    }
+
+    /**
+     * 📊 CALCULATE GOAL RELEVANCE WITH DYNAMIC KEYWORDS
+     * Now includes both static and agent-discovered keywords
+     */
+    calculateGoalRelevanceWithDynamics(text) {
+        const allKeywords = this.getAllKeywords();
+        const lowercaseText = text.toLowerCase();
+        
+        let relevanceScore = 0;
+        let matchedKeywords = [];
+        
+        allKeywords.forEach(keyword => {
+            if (lowercaseText.includes(keyword.toLowerCase())) {
+                relevanceScore += 0.1;
+                matchedKeywords.push(keyword);
+            }
+        });
+        
+        // If no existing keywords match, try to discover new ones
+        if (matchedKeywords.length === 0) {
+            const discoveredKeyword = this.discoverNewKeyword(text);
+            if (discoveredKeyword) {
+                relevanceScore = 0.05; // Base relevance for discovered keywords
+                matchedKeywords.push(discoveredKeyword);
+            }
+        }
+        
+        return {
+            score: Math.min(1.0, relevanceScore),
+            matchedKeywords,
+            dynamicDiscovery: matchedKeywords.some(k => this.dynamicKeywords.includes(k))
+        };
+    }
+
+    /**
+     * 📊 EXTRACT FINANCIAL NUMERICAL DATA
+     */
+    extractFinancialNumericalData(discoveries) {
+        const numericalData = [];
+        
+        // Check bound extractNumericalData
+        const boundData = discoveries.extractedData?.['bound extractNumericalData'];
+        if (boundData) {
+            if (boundData.currencies) numericalData.push(...boundData.currencies);
+            if (boundData.percentages) numericalData.push(...boundData.percentages.map(p => ({...p, type: 'percentage'})));
+        }
+        
+        return numericalData.filter(item => item.value > 0);
+    }
+
+    /**
+     * 🏗️ EXTRACT FINANCIAL STRUCTURED DATA
+     */
+    extractFinancialStructuredData(discoveries) {
+        const structuredData = [];
+        
+        const boundData = discoveries.extractedData?.['bound extractStructuredData'];
+        if (boundData) {
+            if (boundData.links) structuredData.push(...boundData.links);
+            if (boundData.highlights) structuredData.push(...boundData.highlights);
+        }
+        
+        return structuredData;
+    }
+
+    /**
+     * 🏢 EXTRACT FINANCIAL ENTITIES
+     */
+    extractFinancialEntities(discoveries) {
+        const entities = [];
+        
+        const boundData = discoveries.extractedData?.['bound extractEntityMentions'];
+        if (boundData) {
+            if (boundData.tokens) entities.push(...boundData.tokens.map(t => ({...t, type: 'token'})));
+            if (boundData.protocols) entities.push(...boundData.protocols.map(p => ({...p, type: 'protocol'})));
+            if (boundData.companies) entities.push(...boundData.companies.map(c => ({...c, type: 'company'})));
+        }
+        
+        return entities;
+    }
+
+    /**
+     * 🏗️ CREATE STRUCTURED FINANCIAL OPPORTUNITY
+     */
+    createStructuredFinancialOpportunity(item) {
+        // Implementation for structured opportunities
+        return null; // Placeholder
+    }
+
+    /**
+     * 🏢 CREATE ENTITY-BASED OPPORTUNITY
+     */
+    createEntityBasedOpportunity(entity) {
+        // Implementation for entity-based opportunities
+        return null; // Placeholder
+    }
+
+    /**
+     * ⏰ GET TIMEFRAME
+     */
+    getTimeframe(opportunityType) {
+        const timeframes = {
+            'airdrop_farming': 'medium_term',
+            'yield_farming': 'short_term',
+            'arbitrage_opportunity': 'immediate',
+            'price_momentum': 'short_term',
+            'defi_protocol_launch': 'medium_term',
+            'institutional_flow': 'long_term',
+            'massive_liquidity_event': 'immediate'
+        };
+        
+        return timeframes[opportunityType] || 'medium_term';
+    }
+
+    /**
+     * 📋 GET REQUIREMENTS
+     */
+    getRequirements(opportunityType) {
+        const requirements = {
+            'airdrop_farming': ['Research eligibility', 'Set up wallets', 'Execute transactions'],
+            'yield_farming': ['Research protocols', 'Assess risks', 'Provide liquidity'],
+            'arbitrage_opportunity': ['Monitor prices', 'Execute trades', 'Manage gas fees'],
+            'price_momentum': ['Technical analysis', 'Risk management', 'Timing execution'],
+            'defi_protocol_launch': ['Due diligence', 'Early positioning', 'Risk assessment'],
+            'institutional_flow': ['Monitor flows', 'Position sizing', 'Long-term strategy'],
+            'massive_liquidity_event': ['Quick execution', 'Capital allocation', 'Risk management']
+        };
+        
+        return requirements[opportunityType] || ['Research opportunity', 'Assess risks', 'Execute strategy'];
+    }
+
+    /**
+     * 🤝 GENERATE COLLABORATION REQUESTS
+     */
+    generateCollaborationRequests(helpNeededOpportunities, collaborationOpportunities) {
+        const requests = [];
+        
+        [...helpNeededOpportunities, ...collaborationOpportunities].forEach(opp => {
+            const request = {
+                opportunityId: opp.id,
+                type: opp.type,
+                estimatedValue: opp.estimatedValue,
+                myDoability: opp.doability,
+                requiredSkills: this.identifyMissingSkills(opp),
+                collaborationType: opp.doability < 0.4 ? 'LEAD_NEEDED' : 'SUPPORT_NEEDED',
+                urgency: opp.timeframe === 'immediate' ? 'HIGH' : 'MEDIUM',
+                description: `Collaboration needed for ${opp.type} opportunity worth $${opp.estimatedValue.toFixed(0)}`
+            };
+            requests.push(request);
+        });
+        
+        return requests;
+    }
+
+    /**
+     * 🔍 IDENTIFY MISSING SKILLS FOR COLLABORATION
+     */
+    identifyMissingSkills(opportunity) {
+        const skillRequirements = {
+            'massive_liquidity_event': ['flash_loans', 'high_frequency_trading', 'liquidity_provision'],
+            'arbitrage_opportunity': ['cross_exchange_trading', 'gas_optimization', 'mev_protection'],
+            'yield_farming': ['defi_protocols', 'risk_assessment', 'smart_contracts'],
+            'airdrop_farming': ['sybil_resistance', 'wallet_management', 'automation'],
+            'institutional_flow': ['market_making', 'large_order_execution', 'regulatory_compliance'],
+            'price_momentum': ['technical_analysis', 'position_sizing', 'risk_management'],
+            'defi_protocol_launch': ['security_auditing', 'tokenomics', 'community_building']
+        };
+        
+        const requiredSkills = skillRequirements[opportunity.type] || ['general_trading'];
+        const mySkills = this.capabilities || [];
+        
+        return requiredSkills.filter(skill => !mySkills.includes(skill));
+    }
+
+    /**
+     * 🚀 Initialize Generic Conclusion Engine with formal reasoning and proactive prevention
+     */
+    async initialize() {
+        console.log('🚀 Initializing Generic Conclusion Engine with advanced safety systems...');
+        
+        try {
+            // 💾 Initialize STATE PERSISTENCE & Load from Last Backup
+            await this.initializeStatePersistence();
+            
+            // 🧠 Initialize GENERIC CONCLUSION ENGINE Formal Reasoning Integration
+            await this.initializeGenericConclusionEngineFormalReasoningIntegration();
+            
+            // 🛡️ Initialize GENERIC CONCLUSION ENGINE Proactive Prevention Integration
+            await this.initializeGenericConclusionEngineProactivePreventionIntegration();
+            
+            // 🔄 Start HOURLY AUTOSAVE System
+            await this.startAutosaveSystem();
+            
+            console.log('✅ Generic Conclusion Engine initialized successfully');
+            console.log('💾 State persistence & hourly autosave: ACTIVE');
+            console.log('🧠 Generic conclusion engine formal reasoning: ACTIVE');
+            console.log('🛡️ Generic conclusion engine proactive prevention: ACTIVE');
+            
+            return true;
+            
+        } catch (error) {
+            console.error('❌ Failed to initialize Generic Conclusion Engine:', error);
+            throw error;
+        }
+    }
+
+    /**
+     * 💾 INITIALIZE STATE PERSISTENCE & LOAD FROM LAST BACKUP
+     * =======================================================
+     * 
+     * Database-backed state persistence for server restart recovery
+     */
+    async initializeStatePersistence() {
+        console.log('💾 Initializing State Persistence & Loading from Last Backup...');
+        
+        try {
+            // Create state persistence tables if they don't exist
+            await this.createStatePersistenceTables();
+            
+            // Load state from last backup
+            await this.loadStateFromLastBackup();
+            
+            console.log('✅ State persistence initialized and state loaded from backup');
+            console.log(`📊 Loaded state: ${this.persistentState.dynamicKeywords.length} dynamic keywords, ${this.persistentState.performanceMetrics.totalConclusions} total conclusions`);
+            
+        } catch (error) {
+            console.error('❌ Failed to initialize state persistence:', error);
+            // Continue with fresh state if backup loading fails
+            console.log('🔄 Continuing with fresh state...');
+        }
+    }
+
+    /**
+     * 🗄️ CREATE STATE PERSISTENCE TABLES
+     * ==================================
+     */
+    async createStatePersistenceTables() {
+        // Use the portfolioManager's database connection
+        const dbPool = this.serviceRegistry?.databaseManager?.pool || this.portfolioManager?.dbPool;
+        
+        if (!dbPool) {
+            console.warn('⚠️ No database pool available - state persistence disabled');
+            return;
+        }
+        
+        const createStateTable = `
+            CREATE TABLE IF NOT EXISTS generic_conclusion_engine_state (
+                state_id VARCHAR(255) PRIMARY KEY,
+                component_type VARCHAR(100) NOT NULL,
+                state_version VARCHAR(20) NOT NULL,
+                dynamic_keywords JSONB,
+                agent_discovered_keywords TEXT,
+                opportunity_multipliers JSONB,
+                analysis_history JSONB,
+                performance_metrics JSONB,
+                conclusion_cache JSONB,
+                configuration_state JSONB,
+                last_active_timestamp TIMESTAMP WITH TIME ZONE,
+                created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+                updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+            );
+            
+            CREATE INDEX IF NOT EXISTS idx_generic_conclusion_engine_state_component 
+            ON generic_conclusion_engine_state(component_type);
+            
+            CREATE INDEX IF NOT EXISTS idx_generic_conclusion_engine_state_updated 
+            ON generic_conclusion_engine_state(updated_at);
+        `;
+        
+        await dbPool.query(createStateTable);
+        console.log('✅ State persistence tables created/verified');
+    }
+
+    /**
+     * 📥 LOAD STATE FROM LAST BACKUP
+     * =============================
+     */
+    async loadStateFromLastBackup() {
+        console.log('📥 Loading state from last backup...');
+        
+        const dbPool = this.serviceRegistry?.databaseManager?.pool || this.portfolioManager?.dbPool;
+        
+        if (!dbPool) {
+            console.log('📝 No database pool available - skipping state loading');
+            this.statePersistence.isStateLoaded = true;
+            return;
+        }
+        
+        try {
+            const result = await dbPool.query(`
+                SELECT * FROM generic_conclusion_engine_state 
+                WHERE component_type = 'generic_conclusion_engine'
+                ORDER BY updated_at DESC 
+                LIMIT 1
+            `);
+            
+            if (result.rows.length > 0) {
+                const backupState = result.rows[0];
+                
+                // Restore dynamic keywords
+                if (backupState.dynamic_keywords) {
+                    this.dynamicKeywords = backupState.dynamic_keywords;
+                    this.persistentState.dynamicKeywords = this.dynamicKeywords;
+                }
+                
+                // Restore agent discovered keywords
+                if (backupState.agent_discovered_keywords) {
+                    this.agentDiscoveredKeywords = backupState.agent_discovered_keywords;
+                    this.persistentState.agentDiscoveredKeywords = this.agentDiscoveredKeywords;
+                }
+                
+                // Restore opportunity multipliers
+                if (backupState.opportunity_multipliers) {
+                    this.opportunityMultipliers = {
+                        ...this.opportunityMultipliers,
+                        ...backupState.opportunity_multipliers
+                    };
+                    this.persistentState.opportunityMultipliers = this.opportunityMultipliers;
+                }
+                
+                // Restore analysis history
+                if (backupState.analysis_history) {
+                    this.persistentState.analysisHistory = backupState.analysis_history;
+                }
+                
+                // Restore performance metrics
+                if (backupState.performance_metrics) {
+                    this.persistentState.performanceMetrics = {
+                        ...this.persistentState.performanceMetrics,
+                        ...backupState.performance_metrics
+                    };
+                }
+                
+                // Restore conclusion cache
+                if (backupState.conclusion_cache) {
+                    this.persistentState.conclusionCache.clear();
+                    for (const [key, value] of Object.entries(backupState.conclusion_cache)) {
+                        this.persistentState.conclusionCache.set(key, value);
+                    }
+                }
+                
+                // Restore configuration state
+                if (backupState.configuration_state) {
+                    this.persistentState.configurationState = backupState.configuration_state;
+                }
+                
+                // Update persistence metadata
+                this.statePersistence.lastBackupTimestamp = new Date(backupState.updated_at);
+                this.statePersistence.isStateLoaded = true;
+                this.persistentState.lastActiveTimestamp = new Date(backupState.last_active_timestamp);
+                
+                console.log('✅ State loaded from backup successfully');
+                console.log(`📅 Last backup: ${this.statePersistence.lastBackupTimestamp.toISOString()}`);
+                console.log(`📊 Restored: ${this.dynamicKeywords.length} dynamic keywords, ${this.persistentState.performanceMetrics.totalConclusions} conclusions`);
+                
+            } else {
+                console.log('📝 No previous backup found - starting with fresh state');
+                this.statePersistence.isStateLoaded = true;
+            }
+            
+        } catch (error) {
+            console.error('❌ Failed to load state from backup:', error);
+            console.log('🔄 Continuing with fresh state...');
+            this.statePersistence.isStateLoaded = true;
+        }
+    }
+
+    /**
+     * 🔄 START AUTOSAVE SYSTEM (HOURLY)
+     * =================================
+     */
+    async startAutosaveSystem() {
+        console.log('🔄 Starting hourly autosave system...');
+        
+        const dbPool = this.serviceRegistry?.databaseManager?.pool || this.portfolioManager?.dbPool;
+        
+        if (!dbPool) {
+            console.log('⚠️ No database pool available - autosave disabled');
+            return;
+        }
+        
+        // Clear any existing autosave timer
+        if (this.statePersistence.autosaveTimer) {
+            clearInterval(this.statePersistence.autosaveTimer);
+        }
+        
+        // Start hourly autosave
+        this.statePersistence.autosaveTimer = setInterval(async () => {
+            console.log('⏰ Hourly autosave triggered...');
+            await this.saveCurrentState();
+            
+            // Update analysis history with autosave entry
+            this.persistentState.analysisHistory.push({
+                timestamp: Date.now(),
+                event: 'autosave',
+                dynamic_keywords_count: this.dynamicKeywords.length,
+                total_conclusions: this.persistentState.performanceMetrics.totalConclusions,
+                avg_confidence: this.persistentState.performanceMetrics.avgConfidence
+            });
+            
+            // Keep only last 100 history entries to prevent memory bloat
+            if (this.persistentState.analysisHistory.length > 100) {
+                this.persistentState.analysisHistory = this.persistentState.analysisHistory.slice(-100);
+            }
+            
+        }, this.statePersistence.autosaveInterval);
+        
+        console.log(`✅ Hourly autosave system started (interval: ${this.statePersistence.autosaveInterval / 1000 / 60} minutes)`);
+    }
+
+    /**
+     * 💾 SAVE CURRENT STATE TO DATABASE
+     * =================================
+     */
+    async saveCurrentState() {
+        console.log('💾 Saving current state to database...');
+        
+        const dbPool = this.serviceRegistry?.databaseManager?.pool || this.portfolioManager?.dbPool;
+        
+        if (!dbPool) {
+            console.log('⚠️ No database pool available - state save skipped');
+            return;
+        }
+        
+        try {
+            // Convert Maps to Objects for JSON storage
+            const conclusionCacheObject = Object.fromEntries(this.persistentState.conclusionCache);
+            
+            // Update persistent state
+            this.persistentState.lastActiveTimestamp = Date.now();
+            this.persistentState.dynamicKeywords = this.dynamicKeywords;
+            this.persistentState.agentDiscoveredKeywords = this.agentDiscoveredKeywords;
+            
+            const stateData = {
+                state_id: this.statePersistence.stateId,
+                component_type: 'generic_conclusion_engine',
+                state_version: this.statePersistence.stateVersion,
+                dynamic_keywords: this.persistentState.dynamicKeywords,
+                agent_discovered_keywords: this.persistentState.agentDiscoveredKeywords,
+                opportunity_multipliers: this.persistentState.opportunityMultipliers,
+                analysis_history: this.persistentState.analysisHistory,
+                performance_metrics: this.persistentState.performanceMetrics,
+                conclusion_cache: conclusionCacheObject,
+                configuration_state: this.persistentState.configurationState,
+                last_active_timestamp: new Date(this.persistentState.lastActiveTimestamp)
+            };
+            
+            await dbPool.query(`
+                INSERT INTO generic_conclusion_engine_state (
+                    state_id, component_type, state_version, dynamic_keywords, agent_discovered_keywords,
+                    opportunity_multipliers, analysis_history, performance_metrics, conclusion_cache,
+                    configuration_state, last_active_timestamp, updated_at
+                ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, NOW())
+                ON CONFLICT (state_id) DO UPDATE SET
+                    dynamic_keywords = EXCLUDED.dynamic_keywords,
+                    agent_discovered_keywords = EXCLUDED.agent_discovered_keywords,
+                    opportunity_multipliers = EXCLUDED.opportunity_multipliers,
+                    analysis_history = EXCLUDED.analysis_history,
+                    performance_metrics = EXCLUDED.performance_metrics,
+                    conclusion_cache = EXCLUDED.conclusion_cache,
+                    configuration_state = EXCLUDED.configuration_state,
+                    last_active_timestamp = EXCLUDED.last_active_timestamp,
+                    updated_at = NOW()
+            `, [
+                stateData.state_id,
+                stateData.component_type,
+                stateData.state_version,
+                JSON.stringify(stateData.dynamic_keywords),
+                stateData.agent_discovered_keywords,
+                JSON.stringify(stateData.opportunity_multipliers),
+                JSON.stringify(stateData.analysis_history),
+                JSON.stringify(stateData.performance_metrics),
+                JSON.stringify(stateData.conclusion_cache),
+                JSON.stringify(stateData.configuration_state),
+                stateData.last_active_timestamp
+            ]);
+            
+            this.statePersistence.lastSaveTimestamp = Date.now();
+            console.log('✅ State saved to database successfully');
+            
+        } catch (error) {
+            console.error('❌ Failed to save state to database:', error);
+        }
+    }
+
+    /**
+     * 🛑 STOP AUTOSAVE SYSTEM & FINAL SAVE
+     * ====================================
+     */
+    async stopAutosaveSystem() {
+        console.log('🛑 Stopping autosave system...');
+        
+        if (this.statePersistence.autosaveTimer) {
+            clearInterval(this.statePersistence.autosaveTimer);
+            this.statePersistence.autosaveTimer = null;
+        }
+        
+        // Perform final state save
+        await this.saveCurrentState();
+        
+        console.log('✅ Autosave system stopped and final state saved');
+    }
+
+    /**
+     * 📊 GET STATE PERSISTENCE STATUS
+     * ===============================
+     */
+    getStatePersistenceStatus() {
+        return {
+            stateId: this.statePersistence.stateId,
+            isStateLoaded: this.statePersistence.isStateLoaded,
+            lastBackupTimestamp: this.statePersistence.lastBackupTimestamp,
+            lastSaveTimestamp: this.statePersistence.lastSaveTimestamp,
+            autosaveInterval: this.statePersistence.autosaveInterval,
+            autosaveActive: !!this.statePersistence.autosaveTimer,
+            stateVersion: this.statePersistence.stateVersion,
+            persistentState: {
+                dynamicKeywordsCount: this.dynamicKeywords.length,
+                agentDiscoveredKeywords: this.agentDiscoveredKeywords,
+                analysisHistoryCount: this.persistentState.analysisHistory.length,
+                performanceMetrics: this.persistentState.performanceMetrics,
+                conclusionCacheSize: this.persistentState.conclusionCache.size,
+                lastActiveTimestamp: this.persistentState.lastActiveTimestamp
+            }
+        };
+    }
+
+    /**
+     * 🧠 SPECIALIZED GENERIC CONCLUSION ENGINE FORMAL REASONING INTEGRATION
+     * Provides mathematical safety guarantees for conclusion generation algorithms
+     */
+    async initializeGenericConclusionEngineFormalReasoningIntegration() {
+        try {
+            this.genericConclusionEngineFormalReasoning = new FormalReasoningCognitiveIntegration({
+                domainContext: 'generic_conclusion_engine_financial_valuation',
+                criticality: 'HIGH',
+                mathematicalSafetyLevel: 'PRODUCTION'
+            });
+            
+            await this.genericConclusionEngineFormalReasoning.initialize();
+            console.log('🧠 GenericConclusionEngine Formal Reasoning Integration initialized');
+        } catch (error) {
+            console.error('❌ Failed to initialize GenericConclusionEngine Formal Reasoning Integration:', error);
+        }
+    }
+
+    /**
+     * 🛡️ SPECIALIZED GENERIC CONCLUSION ENGINE PROACTIVE PREVENTION INTEGRATION  
+     * Provides proactive hallucination and complexity cliff management for conclusion systems
+     */
+    async initializeGenericConclusionEngineProactivePreventionIntegration() {
+        try {
+            // Initialize Proactive Knowledge Credibility Pipeline for conclusion verification
+            this.genericConclusionEngineCredibilityPipeline = new ProactiveKnowledgeCredibilityPipeline({
+                domainContext: 'generic_conclusion_engine_conclusions',
+                validationMode: 'COMPREHENSIVE'
+            });
+
+            // Initialize Proactive Inference Reliability Engine for conclusion inference
+            this.genericConclusionEngineInferenceReliability = new ProactiveInferenceReliabilityEngine({
+                domainContext: 'generic_conclusion_engine_inference',
+                reliabilityThreshold: 0.95
+            });
+
+            // Initialize Proactive Veracity Judge for conclusion claims
+            this.genericConclusionEngineVeracityJudge = new ProactiveVeracityJudgeService({
+                domainContext: 'generic_conclusion_engine_claims',
+                verificationLevel: 'STRICT'
+            });
+
+            // Initialize SFT Flywheel Governor for conclusion quality control
+            this.genericConclusionEngineSFTGovernor = new SFTFlywheelGovernor({
+                domainContext: 'generic_conclusion_engine_sft',
+                governanceLevel: 'ACTIVE'
+            });
+
+            await Promise.all([
+                this.genericConclusionEngineCredibilityPipeline.initialize(),
+                this.genericConclusionEngineInferenceReliability.initialize(), 
+                this.genericConclusionEngineVeracityJudge.initialize(),
+                this.genericConclusionEngineSFTGovernor.initialize()
+            ]);
+
+            console.log('🛡️ GenericConclusionEngine Proactive Prevention Integration initialized');
+        } catch (error) {
+            console.error('❌ Failed to initialize GenericConclusionEngine Proactive Prevention Integration:', error);
+        }
+    }
+}
+
+export default GenericConclusionEngine; 

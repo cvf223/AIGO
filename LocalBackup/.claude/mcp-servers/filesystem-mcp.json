@@ -1,0 +1,76 @@
+{
+  "name": "filesystem-mcp",
+  "version": "1.0.0",
+  "description": "Filesystem MCP server for AIGO-Syndicate",
+  "type": "filesystem",
+  "enabled": true,
+  "config": {
+    "server": {
+      "command": "@modelcontextprotocol/server-filesystem",
+      "args": ["--config", "filesystem-config.json"],
+      "env": {
+        "NODE_ENV": "production",
+        "LOG_LEVEL": "info"
+      }
+    },
+    "permissions": {
+      "rootDirectory": "/Users/epicbattlegods/Desktop/Multi-Agent-AI-Framework",
+      "allowedPaths": [
+        "/Users/epicbattlegods/Desktop/Multi-Agent-AI-Framework/src",
+        "/Users/epicbattlegods/Desktop/Multi-Agent-AI-Framework/.claude",
+        "/Users/epicbattlegods/Desktop/Multi-Agent-AI-Framework/docs"
+      ],
+      "deniedPaths": [
+        "/Users/epicbattlegods/Desktop/Multi-Agent-AI-Framework/.env",
+        "/Users/epicbattlegods/Desktop/Multi-Agent-AI-Framework/secrets",
+        "/Users/epicbattlegods/Desktop/Multi-Agent-AI-Framework/node_modules"
+      ],
+      "allowedOperations": [
+        "read",
+        "write",
+        "list",
+        "search"
+      ],
+      "maxFileSize": "50MB",
+      "allowSymlinks": false
+    },
+    "features": {
+      "caching": {
+        "enabled": true,
+        "ttl": 300,
+        "maxSize": "100MB"
+      },
+      "search": {
+        "enabled": true,
+        "indexing": true,
+        "respectGitignore": true,
+        "maxResults": 100
+      },
+      "watch": {
+        "enabled": true,
+        "events": ["change", "add", "delete"],
+        "debounce": 1000
+      }
+    },
+    "security": {
+      "encryption": "AES-256-GCM",
+      "auditLogging": true,
+      "rateLimit": {
+        "enabled": true,
+        "maxRequests": 1000,
+        "windowMs": 60000
+      }
+    },
+    "monitoring": {
+      "healthCheck": {
+        "enabled": true,
+        "interval": 60000,
+        "timeout": 5000
+      },
+      "metrics": {
+        "enabled": true,
+        "port": 9101
+      }
+    }
+  }
+}

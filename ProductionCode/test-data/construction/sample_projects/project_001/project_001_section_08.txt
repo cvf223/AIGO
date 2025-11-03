@@ -1,0 +1,32 @@
+SYNTHETIC CONSTRUCTION PLAN
+Project: Office Building project_001
+Plan Type: section
+Plan ID: project_001_section_08
+
+{
+  "planId": "project_001_section_08",
+  "projectId": "project_001",
+  "planType": "section",
+  "fileName": "project_001_section_08.txt",
+  "dimensions": {
+    "width": 24.32,
+    "height": 17.34,
+    "unit": "m",
+    "area": 421.73
+  },
+  "elements": {
+    "elementCount": 27
+  },
+  "hasIntentionalError": false,
+  "errorDetails": null,
+  "metadata": {
+    "scale": "1:100",
+    "format": "A1",
+    "revision": "R01",
+    "date": "2024-01-15",
+    "drawnBy": "Synthetic Generator"
+  }
+}
+
+Note: This is a synthetic test plan generated for testing purposes.
+In production, this would be an actual PDF/DWG file with visual content.

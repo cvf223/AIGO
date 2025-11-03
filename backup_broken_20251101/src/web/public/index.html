@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏗️ EXTRAORDINARY Construction Syndicate AI - Control Center</title>
+    <link rel="icon" type="image/svg+xml" data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🏗️%3C/text%3E%3C/svg%3E">
+    
+    <!-- Chart.js for advanced visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    
+    <!-- Socket.IO for real-time communication -->
+    <script src="https://cdn.socket.io/4.7.4/socket.io.min.js"></script>
+    
+    <!-- D3.js for network topology -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            color: #ffffff;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><defs><radialGradient id="a" cx="50%" cy="50%"><stop offset="0%" style="stop-color:rgba(255,255,255,0.1)"/><stop offset="100%" style="stop-color:rgba(255,255,255,0)"/></radialGradient></defs><rect width="100" height="20" fill="url(%23a)"/></svg>') repeat-x;
+            opacity: 0.1;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 1;
+        }
+
+        .header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .status-bar {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            backdrop-filter: blur(10px);
+        }
+
+        .status-item {
+            text-align: center;
+            margin: 5px;
+            padding: 10px 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+
+        .status-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .status-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .status-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            border-radius: 15px;
+            padding: 20px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7);
+            background-size: 300% 100%;
+            animation: shimmer 3s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -300% 0; }
+            100% { background-position: 300% 0; }
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: #4ecdc4;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 300px;
+            margin-top: 10px;
+        }
+
+        .network-container {
+            position: relative;
+            height: 400px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .activity-feed {
+            max-height: 400px;
+            overflow-y: auto;
+            margin-top: 10px;
+        }
+
+        .activity-item {
+            padding: 10px;
+            margin: 5px 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            border-left: 3px solid #4ecdc4;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.2s ease;
+        }
+
+        .activity-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .activity-time {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            min-width: 60px;
+        }
+
+        .alerts-container {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .alert {
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            transition: all 0.2s ease;
+        }
+
+        .alert.warning {
+            background: rgba(255, 193, 7, 0.2);
+            border-left: 4px solid #ffc107;
+        }
+
+        .alert.info {
+            background: rgba(13, 202, 240, 0.2);
+            border-left: 4px solid #0dcaf0;
+        }
+
+        .alert.success {
+            background: rgba(25, 135, 84, 0.2);
+            border-left: 4px solid #198754;
+        }
+
+        .alert:hover {
+            transform: translateX(5px);
+        }
+
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .metric {
+            text-align: center;
+            padding: 15px 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            transition: all 0.2s ease;
+        }
+
+        .metric:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: scale(1.05);
+        }
+
+        .metric-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            background: linear-gradient(45deg, #4ecdc4, #45b7d1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .metric-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .connection-status {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            border-radius: 25px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .connection-status.connected {
+            border: 2px solid #28a745;
+        }
+
+        .connection-status.disconnected {
+            border: 2px solid #dc3545;
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        .status-dot.connected {
+            background: #28a745;
+        }
+
+        .status-dot.disconnected {
+            background: #dc3545;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            overflow-x: auto;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .tab:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .tab.active {
+            background: linear-gradient(45deg, #4ecdc4, #45b7d1);
+            color: #000;
+            font-weight: bold;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .status-bar {
+                flex-direction: column;
+            }
+            
+            .chart-container {
+                height: 250px;
+            }
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Loading animation */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #4ecdc4;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🏗️ EXTRAORDINARY Construction Syndicate AI</h1>
+        <div class="subtitle">Superintelligence-Level Monitoring & Control Center</div>
+    </div>
+
+    <div class="status-bar" id="statusBar">
+        <div class="status-item">
+            <div class="status-value" id="uptime">--</div>
+            <div class="status-label">System Uptime</div>
+        </div>
+        <div class="status-item">
+            <div class="status-value" id="activeAgents">--</div>
+            <div class="status-label">Active Agents</div>
+        </div>
+        <div class="status-item">
+            <div class="status-value" id="quantumCoherence">--</div>
+            <div class="status-label">Quantum Coherence</div>
+        </div>
+        <div class="status-item">
+            <div class="status-value" id="autonomousTasks">--</div>
+            <div class="status-label">Tasks Executed</div>
+        </div>
+        <div class="status-item">
+            <div class="status-value" id="memoryUsage">--</div>
+            <div class="status-label">Memory Usage</div>
+        </div>
+    </div>
+
+    <div class="dashboard">
+        <!-- System Performance Card -->
+        <div class="card">
+            <h3><i class="fas fa-tachometer-alt"></i> System Performance</h3>
+            <div class="tabs">
+                <div class="tab active" onclick="switchTab('performance', 'cpu')">CPU</div>
+                <div class="tab" onclick="switchTab('performance', 'memory')">Memory</div>
+                <div class="tab" onclick="switchTab('performance', 'load')">Load</div>
+            </div>
+            <div class="tab-content active" id="performance-cpu">
+                <div class="chart-container">
+                    <canvas id="cpuChart"></canvas>
+                </div>
+            </div>
+            <div class="tab-content" id="performance-memory">
+                <div class="chart-container">
+                    <canvas id="memoryChart"></canvas>
+                </div>
+            </div>
+            <div class="tab-content" id="performance-load">
+                <div class="chart-container">
+                    <canvas id="loadChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Construction Specialists Card -->
+        <div class="card">
+            <h3><i class="fas fa-users-cog"></i> Construction Specialists</h3>
+            <div class="metric-grid" id="specialistMetrics">
+                <div class="metric">
+                    <div class="metric-value" id="specialistCount">0</div>
+                    <div class="metric-label">Active</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value" id="specialistPerformance">--</div>
+                    <div class="metric-label">Avg Performance</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value" id="specialistCollaborations">0</div>
+                    <div class="metric-label">Collaborations</div>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="specialistChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Quantum Systems Card -->
+        <div class="card">
+            <h3><i class="fas fa-atom"></i> Quantum Systems</h3>
+            <div class="metric-grid">
+                <div class="metric">
+                    <div class="metric-value" id="quantumCoherenceMetric">--</div>
+                    <div class="metric-label">Coherence</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value" id="quantumEntanglement">--</div>
+                    <div class="metric-label">Entanglement</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value" id="quantumSuperposition">--</div>
+                    <div class="metric-label">Superposition</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value" id="quantumNodes">--</div>
+                    <div class="metric-label">Nodes</div>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="quantumChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Autonomous Intelligence Card -->
+        <div class="card">
+            <h3><i class="fas fa-robot"></i> 24/7 Autonomous Intelligence</h3>
+            <div class="metric-grid">
+                <div class="metric">
+                    <div class="metric-value" id="tasksExecutedMetric">0</div>
+                    <div class="metric-label">Tasks</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value" id="learningProgress">0</div>
+                    <div class="metric-label">Learning</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value" id="collaborationsMetric">0</div>
+                    <div class="metric-label">Collaborations</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value" id="improvements">0</div>
+                    <div class="metric-label">Improvements</div>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="autonomousChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Transformer Ecosystem Card -->
+        <div class="card">
+            <h3><i class="fas fa-brain"></i> Transformer Ecosystem</h3>
+            <div class="metric-grid">
+                <div class="metric">
+                    <div class="metric-value" id="activeModels">0</div>
+                    <div class="metric-label">Models</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value" id="cacheHitRate">--</div>
+                    <div class="metric-label">Cache Hit</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value" id="inferenceRate">--</div>
+                    <div class="metric-label">Inference</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value" id="transformerMemory">--</div>
+                    <div class="metric-label">Memory</div>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="transformerChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Network Topology Card -->
+        <div class="card">
+            <h3><i class="fas fa-project-diagram"></i> Network Topology</h3>
+            <div class="tabs">
+                <div class="tab active" onclick="switchTab('network', 'agents')">Agents</div>
+                <div class="tab" onclick="switchTab('network', 'quantum')">Quantum</div>
+                <div class="tab" onclick="switchTab('network', 'dataflow')">Data Flow</div>
+            </div>
+            <div class="tab-content active" id="network-agents">
+                <div class="network-container" id="agentsNetwork"></div>
+            </div>
+            <div class="tab-content" id="network-quantum">
+                <div class="network-container" id="quantumNetwork"></div>
+            </div>
+            <div class="tab-content" id="network-dataflow">
+                <div class="network-container" id="dataflowNetwork"></div>
+            </div>
+        </div>
+
+        <!-- Activity Feed Card -->
+        <div class="card">
+            <h3><i class="fas fa-stream"></i> Live Activity Feed</h3>
+            <div class="activity-feed" id="activityFeed">
+                <div class="activity-item">
+                    <div class="activity-time">--:--</div>
+                    <div>🔄 Initializing monitoring systems...</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Smart Alerts Card -->
+        <div class="card">
+            <h3><i class="fas fa-exclamation-triangle"></i> Smart Alerts</h3>
+            <div class="alerts-container" id="alertsContainer">
+                <div class="alert info">
+                    <i class="fas fa-info-circle"></i>
+                    <div>
+                        <strong>System Status</strong><br>
+                        Waiting for real-time data connection...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="connection-status disconnected" id="connectionStatus">
+        <div class="status-dot disconnected" id="statusDot"></div>
+        <span id="connectionText">Connecting...</span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

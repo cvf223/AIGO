@@ -1,0 +1,15 @@
+{
+  "rules": [],
+  "usage_stats": {},
+  "metadata": {
+    "last_saved": 1752792059319,
+    "total_rules": 0,
+    "system_state": {
+      "initialized": true,
+      "total_distillations": 0,
+      "total_rules_created": 0,
+      "active_rules": 0,
+      "last_distillation": 0
+    }
+  }
+}

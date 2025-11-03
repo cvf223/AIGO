@@ -1,0 +1,34 @@
+{
+  "models": {
+    "head-architect": {
+      "model": "qwen-vl:fp16",
+      "quantization": "FP16",
+      "memoryGB": 40,
+      "accuracy": 0.998,
+      "latency": 2000,
+      "description": "896GB: Maximum precision for architect-level analysis"
+    },
+    "quantity-surveyor": {
+      "model": "qwen-vl:fp16", 
+      "quantization": "FP16",
+      "memoryGB": 40,
+      "accuracy": 0.998,
+      "latency": 2000,
+      "description": "896GB: Maximum precision for quantity takeoff"
+    },
+    "rapid-screener": {
+      "model": "qwen-vl:int8",
+      "quantization": "INT8",
+      "memoryGB": 20,
+      "accuracy": 0.995,
+      "latency": 800,
+      "description": "Fast screening with 99.5% accuracy"
+    }
+  },
+  "ollama": {
+    "host": "http://localhost:11434",
+    "keepAlive": -1,
+    "numParallel": 16,
+    "comment": "896GB: Doubled parallel processing capacity"
+  }
+}

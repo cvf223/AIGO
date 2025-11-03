@@ -1,0 +1,199 @@
+# 🚀 10K CONCURRENT WEBSOCKET CONNECTIONS TEST
+# Elite Construction AI Syndicate
+# Target: 10,000 simultaneous WebSocket connections
+
+config:
+  target: "ws://localhost:3001"
+  
+  # Phases to reach 10k connections
+  phases:
+    # Phase 1: Initial ramp-up (0-1000 connections)
+    - duration: 60
+      arrivalRate: 50
+      name: "Initial ramp to 1k"
+    
+    # Phase 2: Accelerated ramp (1000-5000 connections)
+    - duration: 120
+      arrivalRate: 100
+      name: "Ramp to 5k"
+    
+    # Phase 3: Final push (5000-10000 connections)
+    - duration: 180
+      arrivalRate: 150
+      name: "Push to 10k"
+    
+    # Phase 4: Sustain 10k connections
+    - duration: 300
+      arrivalRate: 20
+      name: "Sustain 10k"
+  
+  processor: "./websocket-processor.js"
+  
+  # WebSocket specific settings
+  ws:
+    # Keep connections alive
+    keepalive: true
+    # Reconnect on failure
+    reconnect: true
+    # Connection timeout
+    timeout: 30000
+    
+  # Engine settings for high concurrency
+  engines:
+    ws:
+      maxSockets: 15000
+      
+  # Performance settings
+  settings:
+    # Increase timeout for high load
+    timeout: 60
+    # Batch size for virtual users
+    batch: 100
+
+# Variables for connection diversity
+variables:
+  connectionTypes:
+    - "monitor"      # Just receives updates
+    - "chat"         # Active chat user
+    - "analyst"      # Plan analysis user
+    - "admin"        # Admin monitoring
+  
+  subscriptionTopics:
+    - "system-updates"
+    - "agent-status"
+    - "arbitrage-opportunities"
+    - "plan-analysis"
+    - "notifications"
+
+scenarios:
+  # Lightweight monitoring connection (60% of load)
+  - name: "Monitor Connection"
+    weight: 60
+    engine: "ws"
+    flow:
+      # Connect without authentication
+      - connect:
+          url: "/"
+          
+      # Subscribe to a random topic
+      - send:
+          json:
+            type: "subscribe"
+            topic: "{{ subscriptionTopics[$randomNumber(0, 4)] }}"
+      
+      # Keep alive - receive updates
+      - loop:
+          count: 100
+          actions:
+            - wait:
+                match:
+                  type: "systemUpdate"
+                timeout: 60
+            - think: 10
+      
+      # Stay connected (don't disconnect to maintain count)
+      - think: 300
+  
+  # Authenticated chat user (30% of load)
+  - name: "Chat User Connection"
+    weight: 30
+    engine: "ws"
+    flow:
+      # Get auth token first (via HTTP)
+      - post:
+          url: "http://localhost:3001/api/auth/login"
+          json:
+            username: "loaduser{{ $randomNumber(1, 1000) }}"
+            password: "LoadTest123!"
+          capture:
+            - json: "$.accessToken"
+              as: "token"
+              
+      # Connect with authentication
+      - connect:
+          url: "/"
+          headers:
+            Authorization: "Bearer {{ token }}"
+      
+      # Send periodic chat messages
+      - loop:
+          count: 50
+          actions:
+            - think: 30
+            - send:
+                json:
+                  type: "chat:message"
+                  data:
+                    target:
+                      type: "coordinator"
+                      id: "centralNervousSystem"
+                    message: "Status update request {{ $loopCount }}"
+            - wait:
+                match:
+                  type: "chat:response"
+                timeout: 30
+      
+      # Stay connected
+      - think: 300
+  
+  # System subscriber (10% of load)
+  - name: "System Subscriber"
+    weight: 10
+    engine: "ws"
+    flow:
+      # Connect
+      - connect:
+          url: "/"
+      
+      # Subscribe to multiple systems
+      - loop:
+          count: 5
+          actions:
+            - send:
+                json:
+                  type: "subscribeToSystem"
+                  systemId: "system-{{ $randomNumber(1, 60) }}"
+            - think: 1
+      
+      # Receive updates
+      - loop:
+          count: 200
+          actions:
+            - wait:
+                match:
+                  type: "systemUpdate"
+                timeout: 30
+            - think: 5
+      
+      # Stay connected
+      - think: 300
+
+# Custom metrics tracking
+reporting:
+  - type: "json"
+    path: "./reports/10k-websocket-results.json"
+  - type: "html"
+    path: "./reports/10k-websocket-report.html"
+  - type: "influxdb"
+    url: "http://localhost:8086/write?db=loadtest"
+
+# Performance thresholds for 10k connections
+ensure:
+  # Connection success rate
+  min: 
+    connectionRate: 0.98  # 98% successful connections
+  # Maximum connection time
+  max:
+    connectionTime: 5000  # 5 seconds max to establish connection
+  # Error rate
+  maxErrorRate: 0.02     # 2% max error rate
+  
+# Monitoring hooks
+hooks:
+  # Log connection milestones
+  afterScenario:
+    - log: "Active connections: {{ activeConnections }}"
+  
+  # Alert on high error rate
+  onError:
+    - alert: "High error rate detected: {{ errorRate }}%"

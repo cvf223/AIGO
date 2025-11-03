@@ -1,0 +1,40 @@
+{
+  "flashLoanArbitrage": {
+    "name": "OptimizedFlashLoanArbitrage",
+    "type": "flash_loan_arbitrage",
+    "gasOptimization": "high",
+    "securityFeatures": [
+      "reentrancy_guard",
+      "emergency_pause"
+    ],
+    "code": "// Optimized flash loan arbitrage contract template"
+  },
+  "crossChainArbitrage": {
+    "name": "CrossChainArbitrageOptimizer",
+    "type": "cross_chain_arbitrage",
+    "chains": [
+      "arbitrum",
+      "base",
+      "polygon"
+    ],
+    "code": "// Cross-chain arbitrage template"
+  },
+  "yieldFarmingOptimizer": {
+    "name": "YieldFarmingOptimizer",
+    "type": "yield_farming",
+    "strategies": [
+      "compound",
+      "auto_harvest"
+    ],
+    "code": "// Yield farming optimizer template"
+  },
+  "mevProtection": {
+    "name": "MEVProtectionSystem",
+    "type": "mev_protection",
+    "features": [
+      "commit_reveal",
+      "time_locks"
+    ],
+    "code": "// MEV protection template"
+  }
+}

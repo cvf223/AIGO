@@ -1,0 +1,47 @@
+SYNTHETIC CONSTRUCTION PLAN
+Project: Warehouse Building project_002
+Plan Type: floor_plan
+Plan ID: project_002_floor_plan_06
+
+{
+  "planId": "project_002_floor_plan_06",
+  "projectId": "project_002",
+  "planType": "floor_plan",
+  "fileName": "project_002_floor_plan_06.txt",
+  "dimensions": {
+    "width": 32.36,
+    "height": 17.97,
+    "unit": "m",
+    "area": 562.69
+  },
+  "elements": {
+    "rooms": 7,
+    "doors": 8,
+    "windows": 12,
+    "walls": 10,
+    "stairs": 1
+  },
+  "hasIntentionalError": true,
+  "errorDetails": {
+    "type": "missing_element",
+    "severity": "critical",
+    "description": "Intentional missing_element for testing error detection",
+    "location": {
+      "page": 1,
+      "coordinates": [
+        289,
+        129
+      ]
+    }
+  },
+  "metadata": {
+    "scale": "1:100",
+    "format": "A1",
+    "revision": "R01",
+    "date": "2024-01-15",
+    "drawnBy": "Synthetic Generator"
+  }
+}
+
+Note: This is a synthetic test plan generated for testing purposes.
+In production, this would be an actual PDF/DWG file with visual content.

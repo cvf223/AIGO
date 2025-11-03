@@ -1,0 +1,220 @@
+{
+  "scale": {
+    "notation": "1:100",
+    "pixelsPerMeter": 300
+  },
+  "buildingArea": {
+    "x": 943,
+    "y": 943,
+    "width": 8040,
+    "height": 12150
+  },
+  "measurements": {
+    "pattern_1": {
+      "matchCount": 5421,
+      "pixelCount": 13552500,
+      "areaSquareMeters": 150.58333333333334,
+      "confidence": 0.8840012153174155
+    },
+    "pattern_2": {
+      "matchCount": 2,
+      "pixelCount": 5000,
+      "areaSquareMeters": 0.05555555555555555,
+      "confidence": 0.8911764705882352
+    },
+    "pattern_3": {
+      "matchCount": 10,
+      "pixelCount": 25000,
+      "areaSquareMeters": 0.2777777777777778,
+      "confidence": 0.8823529411764708
+    },
+    "pattern_4": {
+      "matchCount": 2,
+      "pixelCount": 5000,
+      "areaSquareMeters": 0.05555555555555555,
+      "confidence": 0.8823529411764706
+    },
+    "pattern_5": {
+      "matchCount": 2,
+      "pixelCount": 5000,
+      "areaSquareMeters": 0.05555555555555555,
+      "confidence": 0.8823529411764706
+    },
+    "pattern_6": {
+      "matchCount": 7,
+      "pixelCount": 17500,
+      "areaSquareMeters": 0.19444444444444445,
+      "confidence": 0.8873949579831935
+    },
+    "pattern_7": {
+      "matchCount": 0,
+      "pixelCount": 0,
+      "areaSquareMeters": 0,
+      "confidence": 0
+    },
+    "pattern_8": {
+      "matchCount": 61,
+      "pixelCount": 152500,
+      "areaSquareMeters": 1.6944444444444444,
+      "confidence": 0.8857280617164901
+    },
+    "pattern_9": {
+      "matchCount": 13,
+      "pixelCount": 32500,
+      "areaSquareMeters": 0.3611111111111111,
+      "confidence": 0.8837104072398193
+    },
+    "pattern_10": {
+      "matchCount": 62,
+      "pixelCount": 155000,
+      "areaSquareMeters": 1.7222222222222223,
+      "confidence": 0.8834914611005695
+    },
+    "pattern_11": {
+      "matchCount": 6,
+      "pixelCount": 15000,
+      "areaSquareMeters": 0.16666666666666666,
+      "confidence": 0.8882352941176471
+    },
+    "pattern_12": {
+      "matchCount": 6,
+      "pixelCount": 15000,
+      "areaSquareMeters": 0.16666666666666666,
+      "confidence": 0.8882352941176471
+    },
+    "pattern_13": {
+      "matchCount": 20,
+      "pixelCount": 50000,
+      "areaSquareMeters": 0.5555555555555556,
+      "confidence": 0.8894117647058826
+    },
+    "pattern_14": {
+      "matchCount": 28,
+      "pixelCount": 70000,
+      "areaSquareMeters": 0.7777777777777778,
+      "confidence": 0.8823529411764709
+    },
+    "pattern_15": {
+      "matchCount": 347,
+      "pixelCount": 867500,
+      "areaSquareMeters": 9.63888888888889,
+      "confidence": 0.8854043058145401
+    },
+    "pattern_16": {
+      "matchCount": 112770,
+      "pixelCount": 281925000,
+      "areaSquareMeters": 3132.5,
+      "confidence": 0.8829503570501588
+    },
+    "pattern_17": {
+      "matchCount": 834,
+      "pixelCount": 2085000,
+      "areaSquareMeters": 23.166666666666668,
+      "confidence": 0.8843701509380665
+    },
+    "pattern_18": {
+      "matchCount": 38,
+      "pixelCount": 95000,
+      "areaSquareMeters": 1.0555555555555556,
+      "confidence": 0.8842105263157897
+    },
+    "pattern_19": {
+      "matchCount": 855,
+      "pixelCount": 2137500,
+      "areaSquareMeters": 23.75,
+      "confidence": 0.8863226694186368
+    },
+    "pattern_20": {
+      "matchCount": 5726,
+      "pixelCount": 14315000,
+      "areaSquareMeters": 159.05555555555554,
+      "confidence": 0.8840675145364548
+    },
+    "pattern_21": {
+      "matchCount": 133108,
+      "pixelCount": 332770000,
+      "areaSquareMeters": 3697.4444444444443,
+      "confidence": 0.8985481051193263
+    },
+    "pattern_22": {
+      "matchCount": 6268,
+      "pixelCount": 15670000,
+      "areaSquareMeters": 174.11111111111111,
+      "confidence": 0.8855944292203884
+    },
+    "pattern_23": {
+      "matchCount": 4917,
+      "pixelCount": 12292500,
+      "areaSquareMeters": 136.58333333333334,
+      "confidence": 0.8841043677996683
+    },
+    "pattern_24": {
+      "matchCount": 4917,
+      "pixelCount": 12292500,
+      "areaSquareMeters": 136.58333333333334,
+      "confidence": 0.8841043677996683
+    },
+    "pattern_25": {
+      "matchCount": 927,
+      "pixelCount": 2317500,
+      "areaSquareMeters": 25.75,
+      "confidence": 0.8846690779871752
+    },
+    "pattern_26": {
+      "matchCount": 113302,
+      "pixelCount": 283255000,
+      "areaSquareMeters": 3147.277777777778,
+      "confidence": 0.8831427616133009
+    },
+    "pattern_27": {
+      "matchCount": 598,
+      "pixelCount": 1495000,
+      "areaSquareMeters": 16.61111111111111,
+      "confidence": 0.8833366122368621
+    },
+    "pattern_28": {
+      "matchCount": 5985,
+      "pixelCount": 14962500,
+      "areaSquareMeters": 166.25,
+      "confidence": 0.8833859157698988
+    },
+    "pattern_29": {
+      "matchCount": 113018,
+      "pixelCount": 282545000,
+      "areaSquareMeters": 3139.3888888888887,
+      "confidence": 0.8829117797983672
+    },
+    "pattern_30": {
+      "matchCount": 24,
+      "pixelCount": 60000,
+      "areaSquareMeters": 0.6666666666666666,
+      "confidence": 0.8823529411764709
+    },
+    "pattern_31": {
+      "matchCount": 0,
+      "pixelCount": 0,
+      "areaSquareMeters": 0,
+      "confidence": 0
+    },
+    "pattern_32": {
+      "matchCount": 1084,
+      "pixelCount": 2710000,
+      "areaSquareMeters": 30.11111111111111,
+      "confidence": 0.8852235728239567
+    },
+    "pattern_33": {
+      "matchCount": 0,
+      "pixelCount": 0,
+      "areaSquareMeters": 0,
+      "confidence": 0
+    },
+    "pattern_34": {
+      "matchCount": 113372,
+      "pixelCount": 283430000,
+      "areaSquareMeters": 3149.222222222222,
+      "confidence": 0.8829794575262211
+    }
+  },
+  "patternCount": 34,
+  "totalMatches": 623730
+}

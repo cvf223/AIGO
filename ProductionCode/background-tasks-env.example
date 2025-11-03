@@ -1,0 +1,94 @@
+# Background Task System Environment Configuration
+# ==========================================
+#
+# Copy this file to .env and fill in your values
+
+# Background Task Settings
+# -----------------------
+# THE GOLDEN NUGGET CONFIGURATION
+ENABLE_BACKGROUND_TASKS=true
+BACKGROUND_TASK_SAVE_INTERVAL=60000
+BACKGROUND_TASK_SAVE_PATH=./data/tasks
+MAX_CONCURRENT_TASKS=5
+TASK_HISTORY_LENGTH=1000
+TASK_SWITCH_TIMEOUT_MS=1.4
+
+# Moralis Streams Settings
+# -----------------------
+# For local testing, use ngrok: npm run test-webhook
+# Then set MORALIS_WEBHOOK_URL to the ngrok URL + /webhook
+MORALIS_WEBHOOK_URL=
+MORALIS_WEBHOOK_PORT=3333
+MORALIS_STREAM_NETWORKS=arbitrum,base,polygon
+MORALIS_API_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub25jZSI6IjFiY2M4ZDg1LTUwMTAtNGNiZi1iNzU4LWJhZTM5ZTE4OTE4ZiIsIm9yZ0lkIjoiMzg0MDE1IiwidXNlcklkIjoiMzk0NTc4IiwidHlwZUlkIjoiMzEwMzhkMjItZTg4NS00N2FkLTllNjMtODQwNmQ3NTdhNGYxIiwidHlwZSI6IlBST0pFQ1QiLCJpYXQiOjE3MTEwMjk0MTYsImV4cCI6NDg2Njc4OTQxNn0.9un3GBdrCb4AlUDfP9bsckyt5Ztusbp35iQx0Bmdleo
+PRICE_IMPACT_THRESHOLD=0.005
+
+# Database Configuration
+# -----------------------
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+POSTGRES_DB=arbitrum_flash_specialist
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_SSL=false
+DATABASE_URL=postgres://postgres:postgres@localhost:5432/arbitrum_flash_specialist
+
+# Redis Cache Settings (Optional)
+REDIS_URL=redis://localhost:6379
+REDIS_PASSWORD=
+
+# Blockchain RPC Endpoints
+# -----------------------
+# Arbitrum
+ALCHEMY_API_KEY=REbCC-FAc8AJD0WniRPH4R5aRtTCC9up
+ALCHEMY_ARBITRUM_URL=https://arb-mainnet.g.alchemy.com/v2/REbCC-FAc8AJD0WniRPH4R5aRtTCC9up
+ARBITRUM_RPC_URL=https://arb-mainnet.g.alchemy.com/v2/REbCC-FAc8AJD0WniRPH4R5aRtTCC9up
+QUICKNODE_ARBITRUM_URL=https://virulent-indulgent-yard.arbitrum-mainnet.quiknode.pro/c61b57427482cdc4cdb4d14b5c7a8c682905d5b3
+QUICKNODE_ARBITRUM_WSS=wss://virulent-indulgent-yard.arbitrum-mainnet.quiknode.pro/c61b57427482cdc4cdb4d14b5c7a8c682905d5b3
+
+# Base
+ALCHEMY_BASE_URL=https://base-mainnet.g.alchemy.com/v2/REbCC-FAc8AJD0WniRPH4R5aRtTCC9up
+BASE_RPC_URL=https://base-mainnet.g.alchemy.com/v2/REbCC-FAc8AJD0WniRPH4R5aRtTCC9up
+
+# Polygon
+ALCHEMY_POLYGON_URL=https://polygon-mainnet.g.alchemy.com/v2/REbCC-FAc8AJD0WniRPH4R5aRtTCC9up
+POLYGON_RPC_URL=https://polygon-mainnet.g.alchemy.com/v2/REbCC-FAc8AJD0WniRPH4R5aRtTCC9up
+
+# Ethereum
+ETHEREUM_RPC_URL=https://eth-mainnet.g.alchemy.com/v2/REbCC-FAc8AJD0WniRPH4R5aRtTCC9up
+
+# Backup RPC endpoints
+INFURA_API_KEY=11bceda966e2492b825fecdfc5189ee4
+INFURA_ARBITRUM_URL=https://arbitrum-mainnet.infura.io/v3/11bceda966e2492b825fecdfc5189ee4
+INFURA_BASE_MAINNET=https://base-mainnet.infura.io/v3/11bceda966e2492b825fecdfc5189ee4
+INFURA_POLYGON_MAINNET=https://polygon-mainnet.infura.io/v3/11bceda966e2492b825fecdfc5189ee4
+
+# Wallet Configuration
+# -----------------------
+EVM_PRIVATE_KEY=0xa4e69019fdda37babdb875d8752bc00bc9cc24ddda51816a3c5449c69ec0b3c2
+EVM_ADDRESS=0x35F25CC8D5de12e9902449A124E2345734Ff95Fc
+ARBITRAGE_PRIVATE_KEY=0xa4e69019fdda37babdb875d8752bc00bc9cc24ddda51816a3c5449c69ec0b3c2
+FLASHBOTS_RELAY_SIGNING_KEY=
+
+# Telegram Notifications (Optional)
+# -----------------------
+TELEGRAM_BOT_TOKEN=8051510601:AAE_JRuF8IepPS6cnWKEDqgqgb0YVjTE4CQ
+TELEGRAM_GROUP_ID=-1002537429306
+
+# Logging Settings
+# -----------------------
+LOG_LEVEL=info
+LOG_FILE_PATH=./logs/background-tasks.log
+
+# Performance Settings
+# -----------------------
+API_RATE_LIMIT_REQUESTS_PER_MINUTE=60
+API_TIMEOUT_MS=30000
+API_RETRY_ATTEMPTS=3
+API_RETRY_DELAY_MS=1000
+CACHE_TTL_SECONDS=300
+
+# Arbitrage Settings
+# -----------------------
+MIN_PROFIT_THRESHOLD_USD=50
+MAX_SLIPPAGE=0.005 

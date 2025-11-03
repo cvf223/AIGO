@@ -1,0 +1,151 @@
+{
+  "name": "COT Reasoning MCP",
+  "id": "cot-reasoning",
+  "version": "1.0.0",
+  "description": "Chain-of-Thought reasoning implementation for step-by-step problem solving",
+  "category": "reasoning",
+  "capabilities": [
+    "step-generation",
+    "reasoning-chains",
+    "thought-validation",
+    "explanation-generation",
+    "confidence-scoring"
+  ],
+  "configuration": {
+    "endpoint": {
+      "url": "http://localhost:3015",
+      "protocol": "http"
+    },
+    "authentication": {
+      "type": "bearer",
+      "tokenEnvVar": "COT_BEARER_TOKEN"
+    },
+    "reasoning": {
+      "maxSteps": 15,
+      "minConfidence": 0.7,
+      "verbosity": "detailed",
+      "includeAlternatives": true,
+      "trackAssumptions": true
+    },
+    "models": {
+      "primary": "gpt-4",
+      "validation": "claude-3",
+      "fallback": "gpt-3.5-turbo"
+    },
+    "strategies": {
+      "mathematical": {
+        "showWork": true,
+        "verifyCalculations": true,
+        "unitTracking": true
+      },
+      "logical": {
+        "formalLogic": true,
+        "truthTables": true,
+        "proofGeneration": true
+      },
+      "analytical": {
+        "breakdownComplexity": true,
+        "identifyPatterns": true,
+        "compareAlternatives": true
+      }
+    }
+  },
+  "methods": [
+    {
+      "name": "generateChainOfThought",
+      "description": "Generate a complete chain of thought for a problem",
+      "parameters": {
+        "problem": "string",
+        "context": "object",
+        "strategy": "string",
+        "maxSteps": "number"
+      }
+    },
+    {
+      "name": "addReasoningStep",
+      "description": "Add a step to an existing chain",
+      "parameters": {
+        "chainId": "string",
+        "step": "string",
+        "evidence": "array",
+        "confidence": "number"
+      }
+    },
+    {
+      "name": "validateReasoning",
+      "description": "Validate the logical consistency of a reasoning chain",
+      "parameters": {
+        "chain": "object",
+        "checkContradictions": "boolean",
+        "checkCompleteness": "boolean"
+      }
+    },
+    {
+      "name": "explainReasoning",
+      "description": "Generate human-readable explanation of reasoning",
+      "parameters": {
+        "chainId": "string",
+        "audience": "string",
+        "detailLevel": "string"
+      }
+    },
+    {
+      "name": "scoreConfidence",
+      "description": "Calculate confidence score for reasoning chain",
+      "parameters": {
+        "chain": "object",
+        "factors": "array"
+      }
+    },
+    {
+      "name": "generateAlternatives",
+      "description": "Generate alternative reasoning paths",
+      "parameters": {
+        "problem": "string",
+        "currentChain": "object",
+        "numAlternatives": "number"
+      }
+    }
+  ],
+  "templates": {
+    "mathematical": {
+      "steps": [
+        "Identify given information",
+        "Define variables",
+        "Set up equations",
+        "Solve step by step",
+        "Verify solution",
+        "Check units and reasonableness"
+      ]
+    },
+    "construction": {
+      "steps": [
+        "Analyze requirements",
+        "Check HOAI compliance",
+        "Consider materials",
+        "Evaluate methods",
+        "Assess risks",
+        "Validate against standards"
+      ]
+    },
+    "debugging": {
+      "steps": [
+        "Reproduce issue",
+        "Isolate components",
+        "Form hypothesis",
+        "Test hypothesis",
+        "Identify root cause",
+        "Propose solution"
+      ]
+    }
+  },
+  "integration": {
+    "agents": ["master-orchestrator", "ml-engineer", "formal-verification", "construction-lead"],
+    "priority": "high",
+    "caching": {
+      "enabled": true,
+      "ttl": 3600,
+      "key": "problem-hash"
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "newsletterSources": {
+    "milkRoad": {
+      "name": "Milk Road Newsletter",
+      "url": "https://themilkroad.beehiiv.com/p/what-you-missed-this-week-5fd8",
+      "contentFile": "./newsletter-content.txt",
+      "type": "crypto_newsletter"
+    }
+  },
+  "agentConfig": {
+    "characterFile": "./characters/arbitrum-flash-specialist.character.json",
+    "defaultCapital": 1000,
+    "capabilities": {
+      "blockchain": true,
+      "analysis": true,
+      "smartContracts": false,
+      "apis": true,
+      "trading": true,
+      "research": true,
+      "semanticAnalysis": true,
+      "financialPatternRecognition": true
+    }
+  },
+  "analysisConfig": {
+    "goalKeywords": ["profit", "revenue", "yield", "return", "earn", "income", "gain", "mev", "arbitrage", "opportunity"],
+    "semanticFinancialPatterns": {
+      "massivePriceMovements": [
+        "ripped hard", "exploded", "rocketed", "surged", "pumped", "massive gains", 
+        "record-breaking", "all-time high", "ATH", "breakout", "rally", "moonshot"
+      ],
+      "liquidityEvents": [
+        "raised $", "funding", "volume", "liquidity injection", "inflows", "outflows",
+        "market cap", "TVL", "in minutes", "in hours", "institutional flow"
+      ],
+      "marketOpportunities": [
+        "altcoin season", "bull market", "market cycle", "momentum", "trend", "cycle",
+        "season", "narrative", "rotation", "institutional adoption", "mainstream adoption"
+      ],
+      "yieldOpportunities": [
+        "APY", "returns", "yield", "staking", "farming", "rewards", "passive income",
+        "earn", "interest", "dividend", "real yield", "sustainable returns"
+      ],
+      "arbitrageSignals": [
+        "price difference", "spread", "arbitrage", "MEV", "cross-exchange", "cross-chain",
+        "low-cap", "memecoin", "flash loan", "sandwich", "frontrun", "backrun"
+      ],
+      "institutionalFlow": [
+        "ETF", "institutional", "adoption", "treasury", "corporate", "pension fund",
+        "endowment", "hedge fund", "family office", "wealth management"
+      ],
+      "freeMoneyEvents": [
+        "airdrop", "free", "giveaway", "claim", "distribution", "snapshot",
+        "bonus", "reward", "retroactive", "early user", "testnet rewards"
+      ]
+    },
+    "financialValuePatterns": [
+      "\\$[\\d,]+[BMK]",
+      "\\d+%\\s*(APY|yield|return|gain)",
+      "\\d+x\\s*(multiplier|leverage|gains)",
+      "\\$[\\d,]+\\s*(in|within)\\s*\\d+\\s*(minutes|hours|days)",
+      "market\\s*cap.*\\$[\\d,]+[BMK]",
+      "TVL.*\\$[\\d,]+[BMK]",
+      "volume.*\\$[\\d,]+[BMK]"
+    ],
+    "competitionWindow": 604800000,
+    "legendaryThreshold": 100,
+    "weeklyGoal": 14000,
+    "semanticAnalysisEnabled": true,
+    "financialPatternDetection": true,
+    "contextualUnderstanding": true
+  },
+  "loggingConfig": {
+    "statusInterval": 10000,
+    "showDetailedMetrics": true,
+    "logAnalysisResults": true,
+    "logFinancialOpportunities": true,
+    "logSemanticMatches": true,
+    "logMemoryState": true
+  }
+} 

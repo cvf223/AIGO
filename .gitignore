@@ -1,0 +1,49 @@
+# Large files
+*.tar.gz
+*.zip
+deployment-packages/
+**/temp_plan_images/*_visualization.html
+
+# Next.js
+**/.next/
+**/out/
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment files - ALL .env files
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*~
+
+# Build outputs
+dist/
+build/

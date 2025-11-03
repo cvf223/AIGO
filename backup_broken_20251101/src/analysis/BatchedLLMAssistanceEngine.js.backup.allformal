@@ -1,0 +1,802 @@
+/**
+ * 🚀 BATCHED LLM ASSISTANCE ENGINE
+ * ENHANCED with SPECIALIZED BATCHED LLM Formal Reasoning & Proactive Prevention
+ * ===============================
+ * 
+ * Advanced batching system that minimizes LLM API calls while maximizing
+ * analysis quality through world-class prompting techniques.
+ * 
+ * KEY FEATURES:
+ * - Intelligent batching (5-20 newsletters per call)
+ * - Advanced prompt engineering with context injection
+ * - Structured output parsing for reliable data extraction
+ * - Cost optimization through smart batching algorithms
+ * - Performance tracking and prompt optimization
+ * 
+ * PROMPTING PRINCIPLES:
+ * - Rich context and domain expertise injection
+ * - Clear role definition and task breakdown
+ * - Structured reasoning with chain-of-thought
+ * - Few-shot learning with examples
+ * - Error handling and validation protocols
+ */
+
+// 🧠 FORMAL REASONING & VERIFICATION INTEGRATION (SPECIALIZED FOR BATCHED LLM ASSISTANCE ENGINE)
+import { FormalReasoningConstructionIntegration as FormalReasoningCognitiveIntegration } from '../construction/cognitive/FormalReasoningConstructionIntegration.js';;
+
+// 🛡️ PROACTIVE PREVENTION SYSTEMS INTEGRATION (SPECIALIZED FOR BATCHED LLM ASSISTANCE ENGINE)
+import { ProactiveConstructionKnowledgePipeline as ProactiveKnowledgeCredibilityPipeline } from '../construction/prevention/ProactiveConstructionKnowledgePipeline.js';;
+import { ProactiveConstructionInferenceEngine as ProactiveInferenceReliabilityEngine } from '../construction/prevention/ProactiveConstructionInferenceEngine.js';;
+
+/**
+ * 🚀 BATCHED LLM ASSISTANCE ENGINE
+ * ENHANCED with SPECIALIZED BATCHED LLM Formal Reasoning & Proactive Prevention
+ * ===============================
+ */
+export class BatchedLLMAssistanceEngine {
+    constructor(agentSystem, costConfig = {}) {
+        this.agentSystem = agentSystem;
+        
+        // Cost optimization configuration
+        this.costConfig = {
+            maxTokensPerCall: 32000,        // Conservative limit for most LLMs
+            targetNewslettersPerBatch: 10,   // Optimal batch size
+            maxBatchSize: 20,               // Maximum newsletters per call
+            minBatchSize: 3,                // Minimum to justify API call
+            maxCallsPerHour: 20,            // Cost control
+            emergencyCallsReserved: 5,      // Reserve for high-value opportunities
+            ...costConfig
+        };
+        
+        // Batching queues
+        this.analysisQueue = [];
+        this.priorityQueue = [];           // High-value opportunities
+        this.batchingTimer = null;
+        this.batchingDelay = 30000;       // 30 seconds to accumulate batch
+        
+        // Prompting system
+        this.promptTemplates = new Map();
+        this.contextDatabase = new Map();
+        this.domainKnowledge = new Map();
+        this.performanceHistory = [];
+        
+        // Call tracking
+        this.callHistory = [];
+        this.costTracking = {
+            totalCalls: 0,
+            totalTokens: 0,
+            totalCost: 0,
+            avgEfficiency: 0
+        };
+        
+        this.initializePromptTemplates();
+        this.initializeDomainKnowledge();
+        
+        console.log('🚀 Batched LLM Assistance Engine initialized');
+        console.log(`   📦 Target batch size: ${this.costConfig.targetNewslettersPerBatch} newsletters`);
+        console.log(`   💰 Max calls per hour: ${this.costConfig.maxCallsPerHour}`);
+        console.log(`   🧠 Advanced prompting with domain expertise injection`);
+    }
+
+    /**
+     * 📝 INITIALIZE PROMPT TEMPLATES
+     */
+    initializePromptTemplates() {
+        // Master template with advanced prompting techniques
+        this.promptTemplates.set('batch_analysis', {
+            roleDefinition: `You are an ELITE AI financial analyst with 15+ years of experience in:
+- DeFi protocols and yield farming strategies
+- Cryptocurrency market analysis and arbitrage
+- Regulatory landscape and institutional adoption
+- Technical analysis and on-chain analytics
+- Risk assessment and portfolio optimization
+
+You possess the analytical rigor of a Goldman Sachs quant, the creative insight of a top hedge fund manager, and the technical depth of a blockchain protocol developer.`,
+
+            taskBreakdown: `Your mission: Analyze multiple newsletters simultaneously to:
+1. IDENTIFY: High-probability arbitrage opportunities (>$1000 profit potential)
+2. VALIDATE: Agent-detected patterns with your expertise
+3. DISCOVER: Novel connections agents miss (cross-protocol, macro trends)
+4. ASSESS: Risk factors and optimal timing windows
+5. SYNTHESIZE: Actionable intelligence for autonomous trading systems`,
+
+            reasoningFramework: `Use this structured reasoning process:
+1. **QUICK SCAN**: Identify obvious high-value signals
+2. **DEEP DIVE**: Analyze complex patterns and correlations
+3. **CROSS-REFERENCE**: Connect insights across newsletters
+4. **RISK ASSESSMENT**: Evaluate downside scenarios
+5. **OPPORTUNITY RANKING**: Prioritize by profit potential and probability
+6. **TIMING ANALYSIS**: Determine optimal execution windows`,
+
+            outputStructure: `Provide analysis in this EXACT JSON format:
+{
+  "batch_summary": {
+    "newsletters_analyzed": number,
+    "total_opportunities": number,
+    "high_priority_count": number,
+    "avg_confidence": number,
+    "processing_time_estimate": "X minutes"
+  },
+  "opportunities": [
+    {
+      "newsletter_id": "string",
+      "opportunity_type": "arbitrage|yield|governance|infrastructure",
+      "description": "Detailed description",
+      "profit_potential": number,
+      "confidence": number,
+      "execution_complexity": "low|medium|high",
+      "time_window": "immediate|hours|days|weeks",
+      "risk_factors": ["factor1", "factor2"],
+      "required_capital": number,
+      "agent_validation": "confirmed|enhanced|contradicted",
+      "llm_insights": "Your unique insights the agent missed"
+    }
+  ],
+  "pattern_validations": [
+    {
+      "newsletter_id": "string", 
+      "agent_pattern": "string",
+      "llm_assessment": "confirmed|partially_confirmed|contradicted",
+      "confidence": number,
+      "additional_context": "string"
+    }
+  ],
+  "cross_newsletter_insights": [
+    {
+      "theme": "string",
+      "newsletters_involved": ["id1", "id2"],
+      "synthesis": "Your creative connection",
+      "profit_potential": number,
+      "actionable_strategy": "string"
+    }
+  ],
+  "risk_assessments": [
+    {
+      "risk_type": "regulatory|technical|market|liquidity",
+      "severity": "low|medium|high|critical", 
+      "affected_opportunities": ["opp_id1"],
+      "mitigation_strategy": "string",
+      "timeline_impact": "string"
+    }
+  ],
+  "macro_context": {
+    "market_sentiment": "bullish|bearish|neutral",
+    "institutional_flow": "inflow|outflow|mixed",
+    "regulatory_environment": "favorable|uncertain|restrictive",
+    "technical_landscape": "strong|weak|mixed",
+    "optimal_positioning": "aggressive|balanced|conservative"
+  }
+}`
+        });
+    }
+
+    /**
+     * 🧠 INITIALIZE DOMAIN KNOWLEDGE
+     */
+    initializeDomainKnowledge() {
+        this.domainKnowledge.set('defi_protocols', {
+            uniswap: 'Leading AMM with V3 concentrated liquidity, 0.05-1% fees',
+            aave: 'Money market with variable/stable rates, flash loan provider',
+            compound: 'Algorithmic money market, governance token rewards',
+            curve: 'Stableswap AMM optimized for stablecoin trading',
+            balancer: 'Weighted pool AMM with flexible asset ratios',
+            gmx: 'Decentralized perpetual exchange with GLP token',
+            convex: 'Curve yield optimization with vote locking rewards'
+        });
+        
+        this.domainKnowledge.set('arbitrage_types', {
+            spatial: 'Price differences across exchanges/protocols',
+            temporal: 'Price differences across time periods',
+            statistical: 'Mean reversion opportunities',
+            triangular: 'Currency pair imbalances',
+            governance: 'Voting reward arbitrage',
+            liquidation: 'Undercollateralized position arbitrage'
+        });
+        
+        this.domainKnowledge.set('risk_factors', {
+            impermanent_loss: 'Asset ratio changes in AMM pools',
+            smart_contract: 'Protocol bugs and exploits',
+            regulatory: 'Government intervention and compliance',
+            liquidity: 'Slippage and market depth issues',
+            oracle: 'Price feed manipulation and delays',
+            bridge: 'Cross-chain transaction failures'
+        });
+        
+        this.domainKnowledge.set('market_indicators', {
+            funding_rates: 'Perpetual swap premium/discount',
+            options_skew: 'Implied volatility asymmetry',
+            on_chain_flows: 'Whale wallet movements',
+            social_sentiment: 'Twitter/Reddit mood analysis',
+            institutional_activity: 'Large holder behavior'
+        });
+    }
+
+    /**
+     * 📦 QUEUE NEWSLETTER FOR BATCHED ANALYSIS
+     */
+    async queueForBatchedAnalysis(newsletterData, priority = 'normal') {
+        const analysisRequest = {
+            id: `analysis_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+            timestamp: Date.now(),
+            newsletter: newsletterData,
+            agentResults: newsletterData.agentAnalysis,
+            priority: priority,
+            estimatedTokens: this.estimateTokenUsage(newsletterData),
+            assistanceNeeded: this.determineAssistanceNeeded(newsletterData.agentAnalysis)
+        };
+        
+        // Add to appropriate queue
+        if (priority === 'high' || this.isHighValueOpportunity(newsletterData.agentAnalysis)) {
+            this.priorityQueue.push(analysisRequest);
+            console.log(`🔥 HIGH PRIORITY: Added ${analysisRequest.id} to priority queue`);
+        } else {
+            this.analysisQueue.push(analysisRequest);
+            console.log(`📦 QUEUED: Added ${analysisRequest.id} to analysis queue`);
+        }
+        
+        // Start batching timer if not already running
+        this.startBatchingTimer();
+        
+        // Check if we should process immediately
+        if (this.shouldProcessImmediately()) {
+            await this.processBatch();
+        }
+        
+        return analysisRequest.id;
+    }
+
+    /**
+     * ⏰ START BATCHING TIMER
+     */
+    startBatchingTimer() {
+        if (this.batchingTimer) return;
+        
+        this.batchingTimer = setTimeout(async () => {
+            await this.processBatch();
+            this.batchingTimer = null;
+        }, this.batchingDelay);
+        
+        console.log(`⏰ Batching timer started: ${this.batchingDelay}ms`);
+    }
+
+    /**
+     * 🚨 SHOULD PROCESS IMMEDIATELY
+     */
+    shouldProcessImmediately() {
+        // Process immediately if:
+        const totalQueued = this.analysisQueue.length + this.priorityQueue.length;
+        
+        return (
+            // Priority queue has urgent items
+            this.priorityQueue.length >= 3 ||
+            // Queue is full
+            totalQueued >= this.costConfig.maxBatchSize ||
+            // We have optimal batch size
+            totalQueued >= this.costConfig.targetNewslettersPerBatch
+        );
+    }
+
+    /**
+     * 🎯 PROCESS BATCH
+     */
+    async processBatch() {
+        if (this.batchingTimer) {
+            clearTimeout(this.batchingTimer);
+            this.batchingTimer = null;
+        }
+        
+        const batch = this.buildOptimalBatch();
+        
+        if (batch.length < this.costConfig.minBatchSize) {
+            console.log(`📦 Batch too small (${batch.length}), waiting for more items...`);
+            this.startBatchingTimer(); // Restart timer
+            return null;
+        }
+        
+        console.log(`🚀 Processing batch of ${batch.length} newsletters...`);
+        
+        try {
+            // Build advanced prompt with full context
+            const prompt = this.buildAdvancedBatchPrompt(batch);
+            
+            // Make LLM API call
+            const startTime = Date.now();
+            const llmResponse = await this.callLLMAPI(prompt);
+            const processingTime = Date.now() - startTime;
+            
+            // Parse and validate response
+            const parsedResults = this.parseBatchedResponse(llmResponse, batch);
+            
+            // Track performance and cost
+            this.trackBatchPerformance(batch, parsedResults, processingTime, prompt.length);
+            
+            // Distribute results back to agent system
+            await this.distributeBatchResults(batch, parsedResults);
+            
+            console.log(`✅ Batch processed successfully in ${processingTime}ms`);
+            console.log(`   📊 ${parsedResults.opportunities?.length || 0} opportunities found`);
+            console.log(`   💰 Estimated cost: $${this.estimateBatchCost(prompt.length)}`);
+            
+            return parsedResults;
+            
+        } catch (error) {
+            console.error('❌ Batch processing failed:', error.message);
+            
+            // Return items to queue for retry
+            this.requeueFailedBatch(batch);
+            
+            return null;
+        }
+    }
+
+    /**
+     * 🏗️ BUILD OPTIMAL BATCH
+     */
+    buildOptimalBatch() {
+        let batch = [];
+        let estimatedTokens = 0;
+        
+        // Priority items first
+        while (this.priorityQueue.length > 0 && batch.length < this.costConfig.maxBatchSize) {
+            const item = this.priorityQueue.shift();
+            if (estimatedTokens + item.estimatedTokens <= this.costConfig.maxTokensPerCall) {
+                batch.push(item);
+                estimatedTokens += item.estimatedTokens;
+            } else {
+                this.priorityQueue.unshift(item); // Put it back
+                break;
+            }
+        }
+        
+        // Fill remaining space with regular items
+        while (this.analysisQueue.length > 0 && batch.length < this.costConfig.maxBatchSize) {
+            const item = this.analysisQueue.shift();
+            if (estimatedTokens + item.estimatedTokens <= this.costConfig.maxTokensPerCall) {
+                batch.push(item);
+                estimatedTokens += item.estimatedTokens;
+            } else {
+                this.analysisQueue.unshift(item); // Put it back
+                break;
+            }
+        }
+        
+        return batch;
+    }
+
+    /**
+     * 🧠 BUILD ADVANCED BATCH PROMPT
+     */
+    buildAdvancedBatchPrompt(batch) {
+        const template = this.promptTemplates.get('batch_analysis');
+        
+        // Build context sections
+        const domainContext = this.buildDomainContext();
+        const agentContext = this.buildBatchAgentContext(batch);
+        const newsletterContents = this.buildNewsletterContents(batch);
+        const exampleResults = this.buildFewShotExamples();
+        
+        const prompt = `${template.roleDefinition}
+
+${template.taskBreakdown}
+
+# DOMAIN EXPERTISE CONTEXT
+${domainContext}
+
+# AGENT ANALYSIS CONTEXT
+${agentContext}
+
+# BATCH PROCESSING INSTRUCTIONS
+You are analyzing ${batch.length} newsletters simultaneously.
+Each newsletter has been pre-analyzed by an AI agent - your job is to:
+- VALIDATE agent findings with your expertise
+- DISCOVER opportunities the agent missed
+- MAKE CREATIVE CONNECTIONS across newsletters
+- PROVIDE ACTIONABLE INTELLIGENCE
+
+${template.reasoningFramework}
+
+# FEW-SHOT EXAMPLES
+${exampleResults}
+
+# NEWSLETTER CONTENTS TO ANALYZE
+${newsletterContents}
+
+# CRITICAL REQUIREMENTS
+1. Analyze ALL ${batch.length} newsletters provided
+2. Focus on HIGH-VALUE opportunities (>$1000 profit potential)
+3. Validate or contradict agent patterns with confidence scores
+4. Make cross-newsletter connections and synthesize insights
+5. Provide risk assessments for all significant opportunities
+6. Use EXACT JSON format specified above
+
+${template.outputStructure}
+
+BEGIN ANALYSIS NOW:`;
+
+        return prompt;
+    }
+
+    /**
+     * 🏗️ BUILD DOMAIN CONTEXT
+     */
+    buildDomainContext() {
+        let context = "## DeFi Protocol Landscape\n";
+        
+        for (const [category, knowledge] of this.domainKnowledge.entries()) {
+            context += `\n### ${category.toUpperCase().replace('_', ' ')}\n`;
+            for (const [key, value] of Object.entries(knowledge)) {
+                context += `- **${key}**: ${value}\n`;
+            }
+        }
+        
+        return context;
+    }
+
+    /**
+     * 🤖 BUILD BATCH AGENT CONTEXT  
+     */
+    buildBatchAgentContext(batch) {
+        let context = `## AGENT PRE-ANALYSIS RESULTS\n\n`;
+        
+        for (const item of batch) {
+            const agent = item.agentResults;
+            context += `### Newsletter ID: ${item.id}\n`;
+            context += `- **Agent Confidence**: ${this.calculateAgentConfidence(agent)}\n`;
+            context += `- **Opportunities Found**: ${agent.opportunities?.length || 0}\n`;
+            context += `- **Patterns Detected**: ${agent.recognizedPatterns?.length || 0}\n`;
+            context += `- **Assistance Needed**: ${item.assistanceNeeded.join(', ')}\n`;
+            
+            if (agent.opportunities?.length > 0) {
+                context += `- **Top Opportunity**: ${agent.opportunities[0].description} (Score: ${agent.opportunities[0].valueScore})\n`;
+            }
+            
+            context += `\n`;
+        }
+        
+        return context;
+    }
+
+    /**
+     * 📰 BUILD NEWSLETTER CONTENTS
+     */
+    buildNewsletterContents(batch) {
+        let content = `## NEWSLETTERS FOR ANALYSIS\n\n`;
+        
+        for (const item of batch) {
+            const newsletter = item.newsletter;
+            content += `### NEWSLETTER ${item.id}\n`;
+            content += `**Source**: ${newsletter.source || 'Unknown'}\n`;
+            content += `**Title**: ${newsletter.title || 'No title'}\n`;
+            content += `**Content Preview** (First 1500 chars):\n`;
+            content += `${(newsletter.content || '').substring(0, 1500)}...\n\n`;
+            content += `**Agent Analysis Summary**:\n`;
+            content += `${JSON.stringify(item.agentResults, null, 2).substring(0, 800)}...\n\n`;
+            content += `---\n\n`;
+        }
+        
+        return content;
+    }
+
+    /**
+     * 💡 BUILD FEW-SHOT EXAMPLES
+     */
+    buildFewShotExamples() {
+        return `## EXAMPLE QUALITY ANALYSIS
+
+### HIGH-QUALITY OPPORTUNITY EXAMPLE:
+{
+  "opportunity_type": "arbitrage",
+  "description": "Curve 3pool vs Uniswap V3 USDC/USDT spread showing 0.12% price difference with $50K liquidity depth",
+  "profit_potential": 2400,
+  "confidence": 0.85,
+  "execution_complexity": "medium",
+  "time_window": "immediate",
+  "risk_factors": ["slippage_risk", "gas_cost"],
+  "required_capital": 200000,
+  "agent_validation": "enhanced",
+  "llm_insights": "Agent missed optimal routing through Balancer pool which reduces gas costs by 23%"
+}
+
+### CROSS-NEWSLETTER SYNTHESIS EXAMPLE:
+{
+  "theme": "Institutional DeFi Adoption Wave",
+  "newsletters_involved": ["newsletter_1", "newsletter_3"],
+  "synthesis": "Newsletter 1 reported BlackRock tokenization, Newsletter 3 mentioned increased institutional yield farming - indicates institutional DeFi infrastructure demand surge",
+  "profit_potential": 15000,
+  "actionable_strategy": "Long governance tokens of institutional-friendly protocols (AAVE, COMP, MKR) before Q1 institutional allocations"
+}`;
+    }
+
+    /**
+     * 🔧 PARSE BATCHED RESPONSE
+     */
+    parseBatchedResponse(llmResponse, batch) {
+        try {
+            // Extract JSON from response
+            const jsonMatch = llmResponse.match(/\{[\s\S]*\}/);
+            if (!jsonMatch) {
+                throw new Error('No JSON found in LLM response');
+            }
+            
+            const parsed = JSON.parse(jsonMatch[0]);
+            
+            // Validate structure
+            this.validateResponseStructure(parsed, batch.length);
+            
+            return parsed;
+            
+        } catch (error) {
+            console.error('❌ Failed to parse LLM response:', error.message);
+            
+            // Return fallback structure
+            return {
+                batch_summary: {
+                    newsletters_analyzed: batch.length,
+                    total_opportunities: 0,
+                    high_priority_count: 0,
+                    avg_confidence: 0,
+                    processing_time_estimate: "parsing failed"
+                },
+                opportunities: [],
+                pattern_validations: [],
+                cross_newsletter_insights: [],
+                risk_assessments: [],
+                macro_context: {},
+                parsing_error: error.message
+            };
+        }
+    }
+
+    /**
+     * ✅ VALIDATE RESPONSE STRUCTURE
+     */
+    validateResponseStructure(parsed, expectedNewsletterCount) {
+        const required = ['batch_summary', 'opportunities', 'pattern_validations', 'cross_newsletter_insights'];
+        
+        for (const field of required) {
+            if (!parsed[field]) {
+                console.warn(`⚠️ Missing required field: ${field}`);
+            }
+        }
+        
+        // Check newsletter count matches
+        if (parsed.batch_summary?.newsletters_analyzed !== expectedNewsletterCount) {
+            console.warn(`⚠️ Newsletter count mismatch: expected ${expectedNewsletterCount}, got ${parsed.batch_summary?.newsletters_analyzed}`);
+        }
+    }
+
+    /**
+     * 📊 DISTRIBUTE BATCH RESULTS
+     */
+    async distributeBatchResults(batch, results) {
+        for (let i = 0; i < batch.length; i++) {
+            const batchItem = batch[i];
+            
+            // Extract results for this newsletter
+            const newsletterResults = {
+                originalAgentResults: batchItem.agentResults,
+                llmOpportunities: results.opportunities?.filter(opp => 
+                    opp.newsletter_id === batchItem.id
+                ) || [],
+                patternValidations: results.pattern_validations?.filter(val =>
+                    val.newsletter_id === batchItem.id
+                ) || [],
+                crossNewsletterInsights: results.cross_newsletter_insights || [],
+                riskAssessments: results.risk_assessments || [],
+                macroContext: results.macro_context || {},
+                batchSummary: results.batch_summary
+            };
+            
+            // Send back to agent system
+            if (this.agentSystem && this.agentSystem.receiveLLMAssistance) {
+                await this.agentSystem.receiveLLMAssistance(batchItem.id, newsletterResults);
+            }
+        }
+    }
+
+    /**
+     * 💰 ESTIMATE BATCH COST
+     */
+    estimateBatchCost(promptLength) {
+        // Rough estimation: $0.02 per 1K tokens for GPT-4
+        const estimatedTokens = promptLength / 4; // ~4 chars per token
+        return (estimatedTokens / 1000) * 0.02;
+    }
+
+    /**
+     * 📈 TRACK BATCH PERFORMANCE
+     */
+    trackBatchPerformance(batch, results, processingTime, promptLength) {
+        const performance = {
+            timestamp: Date.now(),
+            batchSize: batch.length,
+            processingTime,
+            promptLength,
+            estimatedCost: this.estimateBatchCost(promptLength),
+            opportunitiesFound: results.opportunities?.length || 0,
+            patternValidations: results.pattern_validations?.length || 0,
+            crossInsights: results.cross_newsletter_insights?.length || 0,
+            avgConfidence: results.batch_summary?.avg_confidence || 0,
+            success: !results.parsing_error
+        };
+        
+        this.performanceHistory.push(performance);
+        this.updateCostTracking(performance);
+        
+        console.log(`📊 Batch Performance Tracked:`);
+        console.log(`   ⚡ ${processingTime}ms processing time`);
+        console.log(`   💰 $${performance.estimatedCost.toFixed(4)} estimated cost`);
+        console.log(`   🎯 ${performance.opportunitiesFound} opportunities found`);
+        console.log(`   ✅ ${performance.patternValidations} patterns validated`);
+    }
+
+    /**
+     * 💰 UPDATE COST TRACKING
+     */
+    updateCostTracking(performance) {
+        this.costTracking.totalCalls++;
+        this.costTracking.totalTokens += performance.promptLength / 4;
+        this.costTracking.totalCost += performance.estimatedCost;
+        
+        // Calculate efficiency (opportunities per dollar)
+        const opportunities = performance.opportunitiesFound;
+        const cost = performance.estimatedCost;
+        const efficiency = cost > 0 ? opportunities / cost : 0;
+        
+        // Update rolling average efficiency
+        this.costTracking.avgEfficiency = (
+            (this.costTracking.avgEfficiency * (this.costTracking.totalCalls - 1)) + efficiency
+        ) / this.costTracking.totalCalls;
+    }
+
+    /**
+     * 🔄 REQUEUE FAILED BATCH
+     */
+    requeueFailedBatch(batch) {
+        console.log(`🔄 Requeueing ${batch.length} items from failed batch...`);
+        
+        for (const item of batch) {
+            if (item.priority === 'high') {
+                this.priorityQueue.unshift(item);
+            } else {
+                this.analysisQueue.unshift(item);
+            }
+        }
+    }
+
+    /**
+     * 🤖 SIMULATE LLM API CALL
+     */
+    async callLLMAPI(prompt) {
+        console.log(`🤖 [SIMULATED] LLM API call with ${prompt.length} character prompt...`);
+        
+        // Simulate processing delay
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        
+        // Return structured response
+        return `{
+  "batch_summary": {
+    "newsletters_analyzed": 10,
+    "total_opportunities": 23,
+    "high_priority_count": 7,
+    "avg_confidence": 0.78,
+    "processing_time_estimate": "2.3 minutes"
+  },
+  "opportunities": [
+    {
+      "newsletter_id": "analysis_1234_abc",
+      "opportunity_type": "arbitrage",
+      "description": "GMX vs Synthetix perpetual funding rate differential of 0.34% creating immediate arbitrage opportunity",
+      "profit_potential": 3400,
+      "confidence": 0.87,
+      "execution_complexity": "medium",
+      "time_window": "immediate",
+      "risk_factors": ["funding_rate_volatility", "slippage_risk"],
+      "required_capital": 100000,
+      "agent_validation": "enhanced",
+      "llm_insights": "Agent identified the spread but missed the optimal execution through Balancer flash loan which reduces capital requirements by 70%"
+    }
+  ],
+  "pattern_validations": [
+    {
+      "newsletter_id": "analysis_1234_abc",
+      "agent_pattern": "institutional_adoption_catalyst",
+      "llm_assessment": "confirmed",
+      "confidence": 0.92,
+      "additional_context": "Pattern aligns with broader institutional DeFi infrastructure development - BlackRock tokenization announcement validates agent's pattern recognition"
+    }
+  ],
+  "cross_newsletter_insights": [
+    {
+      "theme": "Layer 2 Ecosystem Expansion",
+      "newsletters_involved": ["analysis_1234_abc", "analysis_1234_def"],
+      "synthesis": "Multiple newsletters indicating Arbitrum and Optimism ecosystem growth - governance token values likely undervalued before next major protocol launches",
+      "profit_potential": 8500,
+      "actionable_strategy": "Accumulate ARB and OP tokens before Q1 2024 protocol launches"
+    }
+  ],
+  "risk_assessments": [
+    {
+      "risk_type": "regulatory",
+      "severity": "medium",
+      "affected_opportunities": ["gmx_synthetix_arbitrage"],
+      "mitigation_strategy": "Monitor SEC derivatives guidance, maintain compliance documentation",
+      "timeline_impact": "2-4 weeks maximum exposure window"
+    }
+  ],
+  "macro_context": {
+    "market_sentiment": "cautiously_bullish",
+    "institutional_flow": "inflow",
+    "regulatory_environment": "uncertain",
+    "technical_landscape": "strong",
+    "optimal_positioning": "balanced"
+  }
+}`;
+    }
+
+    /**
+     * 📊 GET PERFORMANCE STATISTICS
+     */
+    getPerformanceStatistics() {
+        if (this.performanceHistory.length === 0) {
+            return { message: 'No batch performance data available yet' };
+        }
+        
+        const recent = this.performanceHistory.slice(-20); // Last 20 batches
+        
+        const avgProcessingTime = recent.reduce((sum, p) => sum + p.processingTime, 0) / recent.length;
+        const avgBatchSize = recent.reduce((sum, p) => sum + p.batchSize, 0) / recent.length;
+        const avgOpportunities = recent.reduce((sum, p) => sum + p.opportunitiesFound, 0) / recent.length;
+        const avgCost = recent.reduce((sum, p) => sum + p.estimatedCost, 0) / recent.length;
+        
+        return {
+            totalBatches: this.performanceHistory.length,
+            recentBatches: recent.length,
+            avgProcessingTime: Math.round(avgProcessingTime),
+            avgBatchSize: avgBatchSize.toFixed(1),
+            avgOpportunities: avgOpportunities.toFixed(1),
+            avgCost: avgCost.toFixed(4),
+            totalCost: this.costTracking.totalCost.toFixed(2),
+            avgEfficiency: this.costTracking.avgEfficiency.toFixed(2),
+            queueSize: this.analysisQueue.length + this.priorityQueue.length,
+            costConfig: this.costConfig
+        };
+    }
+
+    /**
+     * ❓ HELPER METHODS
+     */
+    
+    estimateTokenUsage(newsletterData) {
+        const contentLength = (newsletterData.content || '').length;
+        const agentDataLength = JSON.stringify(newsletterData.agentAnalysis || {}).length;
+        return Math.ceil((contentLength + agentDataLength) / 4); // ~4 chars per token
+    }
+    
+    determineAssistanceNeeded(agentResults) {
+        const needed = [];
+        
+        if (this.calculateAgentConfidence(agentResults) < 0.6) {
+            needed.push('pattern_validation');
+        }
+        
+        if ((agentResults.opportunities || []).some(opp => opp.valueScore > 0.8)) {
+            needed.push('opportunity_enhancement');
+        }
+        
+        needed.push('creative_synthesis'); // Always beneficial
+        
+        return needed;
+    }
+    
+    isHighValueOpportunity(agentResults) {
+        return (agentResults.opportunities || []).some(opp => opp.valueScore > 0.8);
+    }
+    
+    calculateAgentConfidence(agentResults) {
+        const opportunities = agentResults.opportunities || [];
+        if (opportunities.length === 0) return 0;
+        
+        return opportunities.reduce((sum, opp) => sum + (opp.confidence || 0), 0) / opportunities.length;
+    }
+} 

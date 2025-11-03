@@ -1,0 +1,260 @@
+# Elite Construction AI Syndicate - Nginx Configuration
+# Version: 1.0.0
+# Optimized for production deployment with WebSocket support
+
+# Upstream definitions for load balancing
+upstream construction_api {
+    # PM2 cluster instances
+    server 127.0.0.1:3001;
+    
+    # Connection settings
+    keepalive 64;
+    keepalive_requests 100;
+    keepalive_timeout 60s;
+}
+
+upstream construction_frontend {
+    server 127.0.0.1:3000;
+    keepalive 32;
+}
+
+upstream log_monitoring {
+    server 127.0.0.1:3003;
+    keepalive 16;
+}
+
+# Rate limiting zones
+limit_req_zone $binary_remote_addr zone=api_limit:10m rate=30r/s;
+limit_req_zone $binary_remote_addr zone=auth_limit:10m rate=5r/s;
+limit_req_zone $binary_remote_addr zone=upload_limit:10m rate=2r/s;
+
+# Connection limiting
+limit_conn_zone $binary_remote_addr zone=conn_limit:10m;
+
+# Main server block
+server {
+    listen 80;
+    server_name your-domain.com www.your-domain.com;
+    
+    # Redirect HTTP to HTTPS
+    return 301 https://$server_name$request_uri;
+}
+
+# HTTPS server block
+server {
+    listen 443 ssl http2;
+    server_name your-domain.com www.your-domain.com;
+    
+    # SSL Configuration
+    ssl_certificate /etc/letsencrypt/live/your-domain.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/your-domain.com/privkey.pem;
+    ssl_trusted_certificate /etc/letsencrypt/live/your-domain.com/chain.pem;
+    
+    # SSL Security
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384;
+    ssl_prefer_server_ciphers off;
+    ssl_session_cache shared:SSL:10m;
+    ssl_session_timeout 10m;
+    ssl_session_tickets off;
+    ssl_stapling on;
+    ssl_stapling_verify on;
+    
+    # Security Headers
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-XSS-Protection "1; mode=block" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+    add_header Content-Security-Policy "default-src 'self' https: wss:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';" always;
+    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+    
+    # General Settings
+    client_max_body_size 100M; # For plan uploads
+    client_body_buffer_size 1M;
+    
+    # Gzip Compression
+    gzip on;
+    gzip_vary on;
+    gzip_proxied any;
+    gzip_comp_level 6;
+    gzip_types text/plain text/css text/xml text/javascript application/json application/javascript application/xml+rss application/rss+xml application/atom+xml image/svg+xml;
+    
+    # Connection limits
+    limit_conn conn_limit 100;
+    
+    # Root location - Frontend
+    location / {
+        proxy_pass http://construction_frontend;
+        proxy_http_version 1.1;
+        
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        
+        # Next.js specific
+        proxy_set_header Connection "";
+        
+        # Timeouts
+        proxy_connect_timeout 60s;
+        proxy_send_timeout 60s;
+        proxy_read_timeout 60s;
+    }
+    
+    # API endpoints
+    location /api {
+        limit_req zone=api_limit burst=50 nodelay;
+        
+        proxy_pass http://construction_api;
+        proxy_http_version 1.1;
+        
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Connection "";
+        
+        # Timeouts for API
+        proxy_connect_timeout 30s;
+        proxy_send_timeout 30s;
+        proxy_read_timeout 30s;
+    }
+    
+    # Authentication endpoints (stricter rate limiting)
+    location /api/auth {
+        limit_req zone=auth_limit burst=10 nodelay;
+        
+        proxy_pass http://construction_api;
+        proxy_http_version 1.1;
+        
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+    
+    # File upload endpoints
+    location /api/construction/upload {
+        limit_req zone=upload_limit burst=5 nodelay;
+        
+        proxy_pass http://construction_api;
+        proxy_http_version 1.1;
+        
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        
+        # Extended timeout for uploads
+        proxy_connect_timeout 300s;
+        proxy_send_timeout 300s;
+        proxy_read_timeout 300s;
+    }
+    
+    # WebSocket endpoint
+    location /socket.io/ {
+        proxy_pass http://construction_api;
+        proxy_http_version 1.1;
+        
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        
+        # WebSocket timeouts
+        proxy_connect_timeout 7d;
+        proxy_send_timeout 7d;
+        proxy_read_timeout 7d;
+    }
+    
+    # Log monitoring endpoint
+    location /monitoring {
+        # Restrict access to admin IPs
+        # allow 10.0.0.0/8;
+        # deny all;
+        
+        proxy_pass http://log_monitoring;
+        proxy_http_version 1.1;
+        
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+    
+    # Health check endpoint
+    location /health {
+        proxy_pass http://construction_api/health;
+        proxy_http_version 1.1;
+        
+        # Don't log health checks
+        access_log off;
+    }
+    
+    # Static files (if any)
+    location /static {
+        alias /var/www/construction-syndicate/static;
+        expires 30d;
+        add_header Cache-Control "public, immutable";
+    }
+    
+    # Uploaded files
+    location /uploads {
+        alias /var/www/construction-syndicate/uploads;
+        
+        # Secure uploaded files
+        add_header X-Content-Type-Options "nosniff" always;
+        add_header Content-Disposition "attachment" always;
+        
+        # Only allow specific file types
+        location ~ \.(pdf|png|jpg|jpeg)$ {
+            expires 7d;
+            add_header Cache-Control "public";
+        }
+        
+        # Deny everything else
+        location ~ . {
+            deny all;
+        }
+    }
+    
+    # Block access to hidden files
+    location ~ /\. {
+        deny all;
+        access_log off;
+        log_not_found off;
+    }
+    
+    # Custom error pages
+    error_page 404 /404.html;
+    error_page 500 502 503 504 /50x.html;
+    
+    location = /404.html {
+        root /var/www/construction-syndicate/error-pages;
+        internal;
+    }
+    
+    location = /50x.html {
+        root /var/www/construction-syndicate/error-pages;
+        internal;
+    }
+    
+    # Logging
+    access_log /var/log/nginx/construction-syndicate-access.log combined buffer=16k;
+    error_log /var/log/nginx/construction-syndicate-error.log warn;
+}
+
+# Monitoring server (internal only)
+server {
+    listen 127.0.0.1:9090;
+    server_name localhost;
+    
+    location /nginx_status {
+        stub_status on;
+        access_log off;
+        allow 127.0.0.1;
+        deny all;
+    }
+}

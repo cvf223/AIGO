@@ -1,0 +1,39 @@
+{
+  "projectId": "project_005",
+  "projectName": "Apartment Building project_005",
+  "projectType": "commercial",
+  "buildingType": "apartment",
+  "location": {
+    "city": "Berlin",
+    "district": "Mitte",
+    "address": "Test Street project_005",
+    "coordinates": {
+      "lat": 52.55488724602187,
+      "lng": 13.451086158246625
+    }
+  },
+  "dimensions": {
+    "floors": 6,
+    "unitsPerFloor": 3,
+    "totalUnits": 18,
+    "grossFloorArea": 4357.69,
+    "netFloorArea": 3704.0364999999997,
+    "height": 18
+  },
+  "costs": {
+    "estimated": 7856280.34,
+    "currency": "EUR",
+    "costPerSqm": 1578.39
+  },
+  "timeline": {
+    "planningStart": "2024-01-01",
+    "constructionStart": "2024-06-01",
+    "completionTarget": "2025-12-31",
+    "duration": "18 months"
+  },
+  "hoaiPhases": [
+    "lp6",
+    "lp7"
+  ],
+  "generatedAt": "2025-10-11T17:21:14.958Z"
+}

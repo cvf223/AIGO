@@ -1,0 +1,18 @@
+{
+  "projectId": "project_003",
+  "projectName": "Retail Building project_003",
+  "hoaiPhase": "lp6",
+  "compliant": true,
+  "checkedStandards": [
+    "VOB/A",
+    "VOB/B",
+    "DIN 276",
+    "DIN 277"
+  ],
+  "violations": [],
+  "completenessScore": 1,
+  "qualityScore": 0.95,
+  "validatedBy": "synthetic_generator",
+  "validationMethod": "rule_based_checking",
+  "date": "2025-10-11T17:21:14.956Z"
+}

@@ -1,0 +1,481 @@
+/**
+ * 🧠 Construction Superintelligence Orchestrator
+ * ==============================================
+ * CRITICAL: Orchestrates ALL superintelligence systems for construction
+ * Ensures DEEP INTEGRATION throughout the entire syndicate
+ * Assigns the RIGHT models to the RIGHT tasks
+ */
+
+export class ConstructionSuperintelligenceOrchestrator {
+    constructor(config = {}) {
+        this.config = {
+            enableAllSuperintelligence: true,
+            deepIntegration: true,
+            constructionOptimized: true,
+            ...config
+        };
+        
+        // Model assignments for specific tasks
+        this.modelAssignments = {
+            mathematical: 'phi3:14b',           // Math expert for autoformalization
+            reasoning: 'qwen2.5:72b-instruct-fp16', // Advanced reasoning
+            vision: 'llava:34b',                // Vision tasks
+            fast: 'mistral:7b-instruct-fp16',   // Fast responses
+            backup: 'llama3.3:70b'              // Backup model
+        };
+        
+        // Superintelligence systems
+        this.systems = new Map();
+        this.isInitialized = false;
+    }
+    
+    /**
+     * Initialize ALL superintelligence systems
+     */
+    async initialize() {
+        console.log('🧠 Initializing Construction Superintelligence Orchestrator...');
+        console.log('   🎯 DEEP INTEGRATION MODE: ACTIVE');
+        
+        try {
+            // Initialize Ollama with proper model assignments
+            await this.initializeOllamaIntegration();
+            
+            // Initialize Graph-of-Thought (GOT)
+            await this.initializeGOT();
+            
+            // Initialize Chain-of-Agents (COA)
+            await this.initializeCOA();
+            
+            // Initialize Tree-of-Thought (TOT)
+            await this.initializeTOT();
+            
+            // Initialize Chain-of-Thought (COT)
+            await this.initializeCOT();
+            
+            // Initialize Zero-shot Action Planning (ZAP)
+            await this.initializeZAP();
+            
+            // Initialize Autoformalization with Phi3
+            await this.initializeAutoformalization();
+            
+            // DEEP INTEGRATION - Connect everything
+            await this.performDeepIntegration();
+            
+            this.isInitialized = true;
+            console.log('   ✅ Construction Superintelligence FULLY INTEGRATED');
+            
+        } catch (error) {
+            console.error('   ❌ Failed to initialize superintelligence:', error.message);
+            throw error;
+        }
+    }
+    
+    /**
+     * Initialize Ollama with proper model assignments
+     */
+    async initializeOllamaIntegration() {
+        console.log('   🤖 Configuring model assignments...');
+        
+        // Import Ollama if available
+        try {
+            const { OllamaIntegration } = await import('../../llm/OllamaIntegration.js');
+            
+            this.ollama = new OllamaIntegration({
+                primaryModel: this.modelAssignments.reasoning,
+                mathModel: this.modelAssignments.mathematical,
+                visionModel: this.modelAssignments.vision,
+                fastModel: this.modelAssignments.fast,
+                backupModel: this.modelAssignments.backup,
+                
+                // Model-specific configurations
+                modelConfigs: {
+                    'phi3:14b': {
+                        role: 'mathematical_expert',
+                        temperature: 0.1, // Very precise for math
+                        tasks: ['autoformalization', 'proof_verification', 'mathematical_reasoning']
+                    },
+                    'qwen2.5:72b-instruct-fp16': {
+                        role: 'advanced_reasoning',
+                        temperature: 0.7,
+                        tasks: ['got', 'tot', 'cot', 'complex_reasoning']
+                    },
+                    'llava:34b': {
+                        role: 'vision_analysis',
+                        tasks: ['blueprint_analysis', 'site_inspection', 'visual_verification']
+                    }
+                }
+            });
+            
+            await this.ollama.initialize();
+            console.log('   ✅ Model assignments configured');
+            
+        } catch (error) {
+            console.warn('   ⚠️ OllamaIntegration not available, using mock');
+            this.ollama = this.createMockOllama();
+        }
+    }
+    
+    /**
+     * Initialize Graph-of-Thought for Construction
+     */
+    async initializeGOT() {
+        console.log('   🕸️ Initializing Graph-of-Thought (GOT) for Construction...');
+        
+        const { ConstructionGOT } = await import('./ConstructionGOT.js');
+        this.got = new ConstructionGOT({
+            model: this.modelAssignments.reasoning,
+            ollama: this.ollama,
+            constructionOptimized: true
+        });
+        
+        await this.got.initialize();
+        this.systems.set('got', this.got);
+    }
+    
+    /**
+     * Initialize Chain-of-Agents for Construction
+     */
+    async initializeCOA() {
+        console.log('   ⛓️ Initializing Chain-of-Agents (COA) for Construction...');
+        
+        const { ConstructionCOA } = await import('./ConstructionCOA.js');
+        this.coa = new ConstructionCOA({
+            model: this.modelAssignments.reasoning,
+            ollama: this.ollama,
+            agentRoles: [
+                'structural_engineer',
+                'architect',
+                'project_manager',
+                'cost_estimator',
+                'compliance_officer'
+            ]
+        });
+        
+        await this.coa.initialize();
+        this.systems.set('coa', this.coa);
+    }
+    
+    /**
+     * Initialize Tree-of-Thought for Construction
+     */
+    async initializeTOT() {
+        console.log('   🌳 Initializing Tree-of-Thought (TOT) for Construction...');
+        
+        const { ConstructionTOT } = await import('./ConstructionTOT.js');
+        this.tot = new ConstructionTOT({
+            model: this.modelAssignments.reasoning,
+            ollama: this.ollama,
+            maxDepth: 10,
+            branchingFactor: 3
+        });
+        
+        await this.tot.initialize();
+        this.systems.set('tot', this.tot);
+    }
+    
+    /**
+     * Initialize Chain-of-Thought for Construction
+     */
+    async initializeCOT() {
+        console.log('   🔗 Initializing Chain-of-Thought (COT) for Construction...');
+        
+        const { ConstructionCOT } = await import('./ConstructionCOT.js');
+        this.cot = new ConstructionCOT({
+            model: this.modelAssignments.reasoning,
+            ollama: this.ollama,
+            stepByStep: true
+        });
+        
+        await this.cot.initialize();
+        this.systems.set('cot', this.cot);
+    }
+    
+    /**
+     * Initialize Zero-shot Action Planning for Construction
+     */
+    async initializeZAP() {
+        console.log('   ⚡ Initializing Zero-shot Action Planning (ZAP) for Construction...');
+        
+        const { ConstructionZAP } = await import('./ConstructionZAP.js');
+        this.zap = new ConstructionZAP({
+            model: this.modelAssignments.reasoning,
+            ollama: this.ollama,
+            actionSpace: 'construction'
+        });
+        
+        await this.zap.initialize();
+        this.systems.set('zap', this.zap);
+    }
+    
+    /**
+     * Initialize Autoformalization with Phi3 as math expert
+     */
+    async initializeAutoformalization() {
+        console.log('   🧮 Initializing Autoformalization with Phi3:14b...');
+        
+        const { ConstructionAutoformalization } = await import('../cognitive/ConstructionAutoformalization.js');
+        this.autoformalization = new ConstructionAutoformalization({
+            mathModel: this.modelAssignments.mathematical,
+            ollama: this.ollama
+        });
+        
+        await this.autoformalization.initialize();
+        
+        // CRITICAL: Assign Phi3 for mathematical operations
+        this.autoformalization.performMathematicalOperation = async (operation) => {
+            return await this.ollama.query(operation, {
+                model: 'phi3:14b',
+                temperature: 0.1,
+                system: 'You are a mathematical expert. Provide precise mathematical proofs and formal verification.'
+            });
+        };
+        
+        this.systems.set('autoformalization', this.autoformalization);
+        console.log('   ✅ Phi3:14b assigned as mathematical expert');
+    }
+    
+    /**
+     * DEEP INTEGRATION - Connect all systems
+     */
+    async performDeepIntegration() {
+        console.log('   🔗 Performing DEEP INTEGRATION of all systems...');
+        
+        // Connect GOT to other systems
+        if (this.got) {
+            this.got.autoformalization = this.autoformalization;
+            this.got.coa = this.coa;
+            this.got.tot = this.tot;
+            this.got.zap = this.zap;
+        }
+        
+        // Connect COA to other systems
+        if (this.coa) {
+            this.coa.got = this.got;
+            this.coa.autoformalization = this.autoformalization;
+            this.coa.cot = this.cot;
+            this.coa.zap = this.zap;
+        }
+        
+        // Connect TOT to other systems
+        if (this.tot) {
+            this.tot.autoformalization = this.autoformalization;
+            this.tot.got = this.got;
+            this.tot.cot = this.cot;
+        }
+        
+        // Connect COT to all systems
+        if (this.cot) {
+            this.cot.autoformalization = this.autoformalization;
+            this.cot.got = this.got;
+            this.cot.zap = this.zap;
+        }
+        
+        // Connect ZAP to all systems
+        if (this.zap) {
+            this.zap.autoformalization = this.autoformalization;
+            this.zap.got = this.got;
+            this.zap.cot = this.cot;
+        }
+        
+        // Create circular reference for full integration
+        for (const [name, system] of this.systems) {
+            system.superintelligence = this;
+            system.getAllSystems = () => this.systems;
+        }
+        
+        console.log('   ✅ All systems DEEPLY INTEGRATED');
+    }
+    
+    /**
+     * Process construction problem with ALL superintelligence
+     */
+    async processWithSuperintelligence(problem, context = {}) {
+        console.log('🧠 Processing with FULL SUPERINTELLIGENCE...');
+        
+        const result = {
+            problem,
+            context,
+            timestamp: new Date(),
+            systems: {},
+            synthesis: null,
+            recommendation: null
+        };
+        
+        try {
+            // 1. Autoformalize with Phi3 (Mathematical Expert)
+            console.log('   🧮 Autoformalizing with Phi3:14b...');
+            result.systems.autoformalization = await this.autoformalization.autoformalize(problem, context);
+            
+            // 2. Graph-of-Thought reasoning
+            console.log('   🕸️ Applying Graph-of-Thought...');
+            result.systems.got = await this.got.reason(problem, result.systems.autoformalization);
+            
+            // 3. Chain-of-Agents collaboration
+            console.log('   ⛓️ Engaging Chain-of-Agents...');
+            result.systems.coa = await this.coa.collaborate(problem, result.systems.got);
+            
+            // 4. Tree-of-Thought exploration
+            console.log('   🌳 Exploring with Tree-of-Thought...');
+            result.systems.tot = await this.tot.explore(problem, result.systems.coa);
+            
+            // 5. Chain-of-Thought step-by-step
+            console.log('   🔗 Step-by-step Chain-of-Thought...');
+            result.systems.cot = await this.cot.reason(problem, result.systems.tot);
+            
+            // 6. Zero-shot Action Planning
+            console.log('   ⚡ Zero-shot Action Planning...');
+            result.systems.zap = await this.zap.plan(problem, result.systems.cot);
+            
+            // 7. Synthesize all results
+            result.synthesis = await this.synthesizeResults(result.systems);
+            
+            // 8. Generate final recommendation
+            result.recommendation = await this.generateRecommendation(result.synthesis);
+            
+            console.log('   ✅ Superintelligence processing complete');
+            
+        } catch (error) {
+            result.error = error.message;
+            console.error('   ❌ Superintelligence processing failed:', error.message);
+        }
+        
+        return result;
+    }
+    
+    /**
+     * Synthesize results from all systems
+     */
+    async synthesizeResults(systems) {
+        const synthesis = {
+            consensus: [],
+            conflicts: [],
+            insights: [],
+            confidence: 0
+        };
+        
+        // Find consensus across systems
+        for (const [name, result] of Object.entries(systems)) {
+            if (result && result.conclusion) {
+                synthesis.consensus.push({
+                    system: name,
+                    conclusion: result.conclusion
+                });
+            }
+        }
+        
+        // Calculate overall confidence
+        let totalConfidence = 0;
+        let count = 0;
+        
+        for (const result of Object.values(systems)) {
+            if (result && typeof result.confidence === 'number') {
+                totalConfidence += result.confidence;
+                count++;
+            }
+        }
+        
+        synthesis.confidence = count > 0 ? totalConfidence / count : 0;
+        
+        // Extract key insights
+        if (systems.autoformalization && systems.autoformalization.mathematicalProofs) {
+            synthesis.insights.push({
+                type: 'mathematical',
+                content: 'Formal mathematical proofs generated',
+                verified: true
+            });
+        }
+        
+        if (systems.got && systems.got.graph) {
+            synthesis.insights.push({
+                type: 'graph_reasoning',
+                content: 'Complex relationships identified',
+                nodes: systems.got.graph.nodes?.length || 0
+            });
+        }
+        
+        return synthesis;
+    }
+    
+    /**
+     * Generate final recommendation
+     */
+    async generateRecommendation(synthesis) {
+        return {
+            action: 'implement_solution',
+            confidence: synthesis.confidence,
+            reasoning: 'Based on comprehensive superintelligence analysis',
+            consensus: synthesis.consensus.length,
+            insights: synthesis.insights
+        };
+    }
+    
+    /**
+     * Create mock Ollama for testing
+     */
+    createMockOllama() {
+        return {
+            query: async (prompt, options) => {
+                return {
+                    response: `Mock response for: ${prompt}`,
+                    model: options?.model || 'mock'
+                };
+            },
+            initialize: async () => true
+        };
+    }
+    
+    /**
+     * Get integration status
+     */
+    getIntegrationStatus() {
+        const status = {
+            initialized: this.isInitialized,
+            systems: {},
+            modelAssignments: this.modelAssignments,
+            deepIntegration: true
+        };
+        
+        for (const [name, system] of this.systems) {
+            status.systems[name] = {
+                initialized: system?.isInitialized || false,
+                connected: !!(system?.superintelligence),
+                hasAutoformalization: !!(system?.autoformalization)
+            };
+        }
+        
+        return status;
+    }
+    
+    /**
+     * Verify construction optimization
+     */
+    verifyConstructionOptimization() {
+        const verification = {
+            allSystemsOptimized: true,
+            details: []
+        };
+        
+        for (const [name, system] of this.systems) {
+            const optimized = system?.config?.constructionOptimized || 
+                             system?.constructionDomain || 
+                             false;
+            
+            verification.details.push({
+                system: name,
+                optimized,
+                model: system?.model || 'unknown'
+            });
+            
+            if (!optimized) {
+                verification.allSystemsOptimized = false;
+            }
+        }
+        
+        return verification;
+    }
+}
+
+// Export singleton instance
+export const superintelligenceOrchestrator = new ConstructionSuperintelligenceOrchestrator();
+export default ConstructionSuperintelligenceOrchestrator;
+

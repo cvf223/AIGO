@@ -1,0 +1,369 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2025-10-15T18:54:54.178Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "wrk_1760554494179",
+      "parentId": null,
+      "modified": 1760554494179,
+      "created": 1760554494179,
+      "name": "Elite Construction AI Syndicate API",
+      "description": "🏗️ **Elite Construction AI Syndicate - Production API Documentation**\n\nThis API provides comprehensive endpoints for:\n- Multi-agent AI orchestration\n- Construction plan analysis with VLM\n- Real-time WebSocket communication\n- LLM chat interfaces\n- Authentication and authorization\n- System monitoring and metrics\n\n**Key Features:**\n- JWT-based authentication\n- WebSocket support for real-time updates\n- VLM (Visual Language Model) plan annotation\n- Multi-target chat routing (agents, LLMs, coordinators)\n- HOAI LP 6/7 compliance checking\n- DIN 276 standard verification\n",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_1760554494179",
+      "parentId": "wrk_1760554494179",
+      "modified": 1760554494179,
+      "created": 1760554494179,
+      "name": "Base Environment",
+      "data": {
+        "base_url": "https://api.construction-syndicate.ai",
+        "access_token": ""
+      },
+      "_type": "environment"
+    },
+    {
+      "_id": "req_1",
+      "parentId": "wrk_1760554494179",
+      "modified": 1760554494179,
+      "created": 1760554494179,
+      "url": "{{ _.base_url }}/api/auth/register",
+      "name": "Register new user",
+      "description": "Create a new user account",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"username\": \"john_doe\",\n  \"email\": \"john@example.com\",\n  \"password\": \"SecurePassword123!\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 2,
+      "_type": "request"
+    },
+    {
+      "_id": "req_2",
+      "parentId": "wrk_1760554494179",
+      "modified": 1760554494179,
+      "created": 1760554494179,
+      "url": "{{ _.base_url }}/api/auth/login",
+      "name": "Login user",
+      "description": "Authenticate user and receive JWT tokens",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"username\": \"john_doe\",\n  \"password\": \"SecurePassword123!\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 3,
+      "_type": "request"
+    },
+    {
+      "_id": "req_3",
+      "parentId": "wrk_1760554494179",
+      "modified": 1760554494179,
+      "created": 1760554494179,
+      "url": "{{ _.base_url }}/api/auth/logout",
+      "name": "Logout user",
+      "description": "Invalidate user session and tokens",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.access_token }}"
+      },
+      "metaSortKey": 4,
+      "_type": "request"
+    },
+    {
+      "_id": "req_4",
+      "parentId": "wrk_1760554494179",
+      "modified": 1760554494179,
+      "created": 1760554494179,
+      "url": "{{ _.base_url }}/api/auth/refresh",
+      "name": "Refresh access token",
+      "description": "Use refresh token to get new access token",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"refreshToken\": \"string\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 5,
+      "_type": "request"
+    },
+    {
+      "_id": "req_5",
+      "parentId": "wrk_1760554494179",
+      "modified": 1760554494179,
+      "created": 1760554494179,
+      "url": "{{ _.base_url }}/api/auth/me",
+      "name": "Get current user",
+      "description": "Retrieve current authenticated user information",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.access_token }}"
+      },
+      "metaSortKey": 6,
+      "_type": "request"
+    },
+    {
+      "_id": "req_6",
+      "parentId": "wrk_1760554494179",
+      "modified": 1760554494179,
+      "created": 1760554494179,
+      "url": "{{ _.base_url }}/api/systems",
+      "name": "List all systems",
+      "description": "Get list of all agents, services, and coordinators",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.access_token }}"
+      },
+      "metaSortKey": 7,
+      "_type": "request"
+    },
+    {
+      "_id": "req_7",
+      "parentId": "wrk_1760554494179",
+      "modified": 1760554494179,
+      "created": 1760554494179,
+      "url": "{{ _.base_url }}/api/systems/{systemId}/status",
+      "name": "Get system status",
+      "description": "Get detailed status of a specific system",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.access_token }}"
+      },
+      "metaSortKey": 8,
+      "_type": "request"
+    },
+    {
+      "_id": "req_8",
+      "parentId": "wrk_1760554494179",
+      "modified": 1760554494179,
+      "created": 1760554494179,
+      "url": "{{ _.base_url }}/api/systems/{systemId}/metrics",
+      "name": "Get system metrics",
+      "description": "Get performance metrics for a specific system",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.access_token }}"
+      },
+      "metaSortKey": 9,
+      "_type": "request"
+    },
+    {
+      "_id": "req_9",
+      "parentId": "wrk_1760554494179",
+      "modified": 1760554494179,
+      "created": 1760554494179,
+      "url": "{{ _.base_url }}/api/chat/send",
+      "name": "Send chat message",
+      "description": "Send message to agent, LLM, or coordinator",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"target\": {\n    \"type\": \"agent\",\n    \"id\": \"centralNervousSystem\"\n  },\n  \"message\": \"Analyze the latest arbitrage opportunities\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.access_token }}"
+      },
+      "metaSortKey": 10,
+      "_type": "request"
+    },
+    {
+      "_id": "req_10",
+      "parentId": "wrk_1760554494179",
+      "modified": 1760554494179,
+      "created": 1760554494179,
+      "url": "{{ _.base_url }}/api/chat/history/{targetId}",
+      "name": "Get chat history",
+      "description": "Retrieve chat history with specific target",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.access_token }}"
+      },
+      "metaSortKey": 11,
+      "_type": "request"
+    },
+    {
+      "_id": "req_11",
+      "parentId": "wrk_1760554494179",
+      "modified": 1760554494179,
+      "created": 1760554494179,
+      "url": "{{ _.base_url }}/api/construction/upload-plan",
+      "name": "Upload construction plan",
+      "description": "Upload PDF or image file for analysis",
+      "method": "POST",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.access_token }}"
+      },
+      "metaSortKey": 12,
+      "_type": "request"
+    },
+    {
+      "_id": "req_12",
+      "parentId": "wrk_1760554494179",
+      "modified": 1760554494179,
+      "created": 1760554494179,
+      "url": "{{ _.base_url }}/api/construction/analyze-plan",
+      "name": "Analyze construction plan",
+      "description": "Start AI analysis of uploaded plan",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"planId\": 1,\n  \"analysisType\": \"quick\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.access_token }}"
+      },
+      "metaSortKey": 13,
+      "_type": "request"
+    },
+    {
+      "_id": "req_13",
+      "parentId": "wrk_1760554494179",
+      "modified": 1760554494179,
+      "created": 1760554494179,
+      "url": "{{ _.base_url }}/api/construction/analysis/{analysisId}/progress",
+      "name": "Get analysis progress",
+      "description": "Check progress of plan analysis",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.access_token }}"
+      },
+      "metaSortKey": 14,
+      "_type": "request"
+    },
+    {
+      "_id": "req_14",
+      "parentId": "wrk_1760554494179",
+      "modified": 1760554494179,
+      "created": 1760554494179,
+      "url": "{{ _.base_url }}/api/construction/analysis/{analysisId}/results",
+      "name": "Get analysis results",
+      "description": "Retrieve completed analysis results",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.access_token }}"
+      },
+      "metaSortKey": 15,
+      "_type": "request"
+    },
+    {
+      "_id": "req_15",
+      "parentId": "wrk_1760554494179",
+      "modified": 1760554494179,
+      "created": 1760554494179,
+      "url": "{{ _.base_url }}/api/construction/annotate-plan",
+      "name": "Generate annotated plan",
+      "description": "Create visual annotations on construction plan",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"analysisId\": \"123e4567-e89b-12d3-a456-426614174000\",\n  \"planId\": 1\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.access_token }}"
+      },
+      "metaSortKey": 16,
+      "_type": "request"
+    },
+    {
+      "_id": "req_16",
+      "parentId": "wrk_1760554494179",
+      "modified": 1760554494179,
+      "created": 1760554494179,
+      "url": "{{ _.base_url }}/socket.io",
+      "name": "WebSocket connection",
+      "description": "Establish WebSocket connection for real-time updates.\n\n**Connection URL:** `wss://api.construction-syndicate.ai/socket.io/`\n\n**Authentication:** Pass JWT token as query parameter or in handshake auth\n\n**Events:**\n\n**Emitted by Client:**\n- `chat:message` - Send chat message\n- `subscribeToSystem` - Subscribe to system updates\n- `unsubscribeFromSystem` - Unsubscribe from system\n- `configureLLM` - Configure LLM settings\n\n**Received by Client:**\n- `systemUpdate` - System status updates\n- `chat:streaming` - Streaming chat response chunks\n- `chat:response` - Final chat response\n- `escalation` - Escalation notifications\n- `notificationNew` - New notifications\n- `planPresentation` - Plan presentation updates\n",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 17,
+      "_type": "request"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "scale": {
+    "notation": "1:100",
+    "scale": 100,
+    "pixelsPerMeter": 300
+  },
+  "results": [
+    {
+      "element": "MW KS 2.0",
+      "category": "wall",
+      "measurement": 328.53333333333336,
+      "unit": "m²",
+      "matches": 4620,
+      "confidence": 0.8361264405629254,
+      "dinCode": "342"
+    },
+    {
+      "element": "Stahlbeton",
+      "category": "wall",
+      "measurement": 328.53333333333336,
+      "unit": "m²",
+      "matches": 4620,
+      "confidence": 0.8545111408311369,
+      "dinCode": "341"
+    },
+    {
+      "element": "Trockenbau imprägniert",
+      "category": "wall",
+      "measurement": 328.53333333333336,
+      "unit": "m²",
+      "matches": 4620,
+      "confidence": 0.8528859315430863,
+      "dinCode": "346"
+    },
+    {
+      "element": "Dämmung hart",
+      "category": "wall",
+      "measurement": 328.53333333333336,
+      "unit": "m²",
+      "matches": 4620,
+      "confidence": 0.8600452905764151,
+      "dinCode": "334"
+    },
+    {
+      "element": "Dämmung weich",
+      "category": "wall",
+      "measurement": 328.53333333333336,
+      "unit": "m²",
+      "matches": 4620,
+      "confidence": 0.8517755288260384,
+      "dinCode": "334"
+    }
+  ],
+  "summary": {
+    "totalWallArea": 1642.6666666666667,
+    "totalOpenings": 0,
+    "wallTypes": 5,
+    "openingTypes": 0,
+    "totalElements": 5,
+    "totalMatches": 23100,
+    "averageConfidence": 0.8510688664679205
+  },
+  "timestamp": "2025-10-23T07:21:25.763Z"
+}

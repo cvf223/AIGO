@@ -1,0 +1,67 @@
+{
+  "phase": "lp6",
+  "name": "Ausschreibung (Tendering)",
+  "description": "Preparation of tender documents and invitation to bid",
+  "requiredDocuments": [
+    "tender_invitation",
+    "bill_of_quantities",
+    "technical_specifications",
+    "contract_terms",
+    "project_schedule",
+    "cost_estimate",
+    "site_information"
+  ],
+  "regulations": {
+    "VOB_A": {
+      "required": true,
+      "description": "Vergabe- und Vertragsordnung für Bauleistungen Teil A",
+      "sections": [
+        "§1",
+        "§2",
+        "§3",
+        "§7",
+        "§8"
+      ]
+    },
+    "VOB_B": {
+      "required": true,
+      "description": "Allgemeine Vertragsbedingungen für die Ausführung von Bauleistungen",
+      "sections": [
+        "§1",
+        "§2",
+        "§4",
+        "§5"
+      ]
+    },
+    "DIN_276": {
+      "required": true,
+      "description": "Kosten im Bauwesen",
+      "costCategories": [
+        "300",
+        "400",
+        "500",
+        "600",
+        "700"
+      ]
+    },
+    "DIN_277": {
+      "required": true,
+      "description": "Grundflächen und Rauminhalte",
+      "areas": [
+        "gross_floor_area",
+        "net_floor_area",
+        "usable_area"
+      ]
+    }
+  },
+  "minimumCompleteness": 0.95,
+  "qualityStandards": [
+    "ISO_19650",
+    "DIN_EN_ISO_7200"
+  ],
+  "feeRange": {
+    "min": 0.1,
+    "max": 0.12,
+    "description": "Percentage of estimated construction cost"
+  }
+}

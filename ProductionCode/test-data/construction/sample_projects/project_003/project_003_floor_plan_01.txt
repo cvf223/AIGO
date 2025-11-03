@@ -1,0 +1,36 @@
+SYNTHETIC CONSTRUCTION PLAN
+Project: Retail Building project_003
+Plan Type: floor_plan
+Plan ID: project_003_floor_plan_01
+
+{
+  "planId": "project_003_floor_plan_01",
+  "projectId": "project_003",
+  "planType": "floor_plan",
+  "fileName": "project_003_floor_plan_01.txt",
+  "dimensions": {
+    "width": 33.73,
+    "height": 12.35,
+    "unit": "m",
+    "area": 416.59
+  },
+  "elements": {
+    "rooms": 6,
+    "doors": 5,
+    "windows": 15,
+    "walls": 18,
+    "stairs": 1
+  },
+  "hasIntentionalError": false,
+  "errorDetails": null,
+  "metadata": {
+    "scale": "1:100",
+    "format": "A1",
+    "revision": "R01",
+    "date": "2024-01-15",
+    "drawnBy": "Synthetic Generator"
+  }
+}
+
+Note: This is a synthetic test plan generated for testing purposes.
+In production, this would be an actual PDF/DWG file with visual content.

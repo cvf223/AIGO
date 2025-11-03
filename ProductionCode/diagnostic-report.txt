@@ -1,0 +1,75 @@
+Agent System Diagnostic Report - 2025-05-17T04:55:02.062Z
+
+[STEP] Checking required directories...
+[SUCCESS] All required directories exist.
+[STEP] Checking agent character files...
+[INFO] Found 8 character files
+[WARNING] Character file blockchain-analyst.json is missing required fields (id, name, or system)
+[WARNING] Character file chrissuperdev.json is missing required fields (id, name, or system)
+[WARNING] Character file flae-executer.json is missing required fields (id, name, or system)
+[WARNING] Character file market-analyst.json is missing required fields (id, name, or system)
+[WARNING] Character file meme-coin-creator.json is missing required fields (id, name, or system)
+[WARNING] Character file meme-market-analyst.json is missing required fields (id, name, or system)
+[WARNING] Character file opportunity-spotter.json is missing required fields (id, name, or system)
+[WARNING] Character file social-media-manager.json is missing required fields (id, name, or system)
+[WARNING] 8 invalid character files found.
+[STEP] Checking memory files...
+[INFO] Directory /Users/epicbattlegods/Downloads/AI-AGENT_Fresh_8AgentsWorking_needs_memoryfixing_SharedRoom_ID/agent/data/memory-storage: 27162 memory files
+[INFO] Directory /Users/epicbattlegods/Downloads/AI-AGENT_Fresh_8AgentsWorking_needs_memoryfixing_SharedRoom_ID/agent/data/shared-memory: 9 memory files
+[INFO] Directory /Users/epicbattlegods/Downloads/AI-AGENT_Fresh_8AgentsWorking_needs_memoryfixing_SharedRoom_ID/agent/data/memory/short_term: 0 memory files
+[INFO] Directory /Users/epicbattlegods/Downloads/AI-AGENT_Fresh_8AgentsWorking_needs_memoryfixing_SharedRoom_ID/agent/data/memory-fallback: 10 memory files
+[SUCCESS] Found 21 room memory files.
+[STEP] Checking for dependency issues...
+[SUCCESS] Dependency 'dotenv' is available
+[SUCCESS] Dependency 'openai' is available
+[ERROR] Dependency 'node-telegram-bot-api' is missing or has issues: Command failed: node -e "try { require('node-telegram-bot-api'); process.exit(0); } catch (e) { console.error(e.message); process.exit(1); }"
+Cannot find module 'node-telegram-bot-api'
+Require stack:
+- /Users/epicbattlegods/Downloads/AI-AGENT_Fresh_8AgentsWorking_needs_memoryfixing_SharedRoom_ID/[eval]
+
+[TIP] Try reinstalling the dependency: npm install node-telegram-bot-api
+[INFO] Checking for essential environment variables...
+[SUCCESS] Environment variable OPENAI_API_KEY is defined in .env file
+[SUCCESS] Environment variable TELEGRAM_BOT_TOKEN is defined in .env file
+[STEP] Checking runtime files and state...
+[SUCCESS] Found 12 agent-related processes running
+[INFO] Found 3 PID files
+[WARNING] Process initialize.pid (PID: 20667) is NOT running: kill ESRCH
+[WARNING] Process mastermind.pid (PID: 21464) is NOT running: kill ESRCH
+[WARNING] Process telegram-bridge.pid (PID: 20675) is NOT running: kill ESRCH
+[STEP] Checking Telegram bridge...
+[INFO] Last 10 lines of Telegram bridge log:
+[DATA]     ok: false,
+    error_code: 409,
+    description: 'Conflict: terminated by other getUpdates request; make sure that only one bot instance is running'
+  },
+  on: {
+    method: 'getUpdates',
+    payload: { timeout: 50, offset: 0, allowed_updates: [] }
+  }
+}
+
+[WARNING] Found 3 potential error messages in the bridge log
+[WARNING] Bridge config file exists but may be missing required fields
+[STEP] 
+Generating advice based on diagnostics...
+[ADVICE] General recommendations:
+[ADVICE] 1. If agents are not responding, check if the agent runtimes are actually running. The "0 agent runtimes active" message suggests a runtime initialization problem.
+[ADVICE] 2. Try running the system with "./run-with-debug.sh" which includes detailed diagnostic logging.
+[ADVICE] 3. Check the telegram-bridge.log for any connection problems with the Telegram API.
+[ADVICE] 4. Ensure the correct room ID is being used consistently throughout the system.
+[ADVICE] 5. If messages are being received in Telegram but not showing in logs, your telegram-logger.js script should be able to detect them by monitoring memory files directly.
+[ADVICE] 
+Common fixes for "0 agent runtimes active" issue:
+[ADVICE] 1. Restart the system with a clean slate: "./run-with-logs.sh"
+[ADVICE] 2. If initialization is failing, ensure all required directories exist and have proper permissions.
+[ADVICE] 3. Check for valid character files in "agent/data/characters/" - they must be valid JSON.
+[ADVICE] 4. Verify the telegram bridge is connecting successfully to your Telegram bot.
+[ADVICE] 5. Look for errors in "logs/initialize.log" which may contain useful information.
+[ADVICE] 
+If agents are working in Telegram but not showing in logs:
+[ADVICE] 1. This could indicate a disconnect between the memory system and runtime monitoring.
+[ADVICE] 2. Use the telegram-logger.js script to bypass the runtime monitoring and directly read memory files.
+[ADVICE] 3. Check for file permission issues that might prevent writing to log files.
+[SUCCESS] 
+A diagnostic report has been saved to: /Users/epicbattlegods/Downloads/AI-AGENT_Fresh_8AgentsWorking_needs_memoryfixing_SharedRoom_ID/diagnostic-report.txt

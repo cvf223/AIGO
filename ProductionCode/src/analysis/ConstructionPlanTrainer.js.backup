@@ -1,0 +1,422 @@
+import fs from 'fs/promises';
+import path from 'path';
+import { ConstructionPlanAnalyzer } from './ConstructionPlanAnalyzer.js';
+
+// 🧠 FORMAL REASONING & VERIFICATION INTEGRATION (SPECIALIZED FOR CONSTRUCTION PLAN TRAINER)
+import { FormalReasoningCognitiveIntegration } from '../../legendary-arbitrage-syndicate/packages/@syndicate/core/src/safety/cognitive/FormalReasoningCognitiveIntegration.js';
+
+// 🛡️ PROACTIVE PREVENTION SYSTEMS INTEGRATION (SPECIALIZED FOR CONSTRUCTION PLAN TRAINER)
+import { ProactiveKnowledgeCredibilityPipeline } from '../../legendary-arbitrage-syndicate/packages/@syndicate/core/src/prevention/ProactiveKnowledgeCredibilityPipeline.js';
+import { ProactiveInferenceReliabilityEngine } from '../../legendary-arbitrage-syndicate/packages/@syndicate/core/src/prevention/ProactiveInferenceReliabilityEngine.js';
+import { ProactiveVeracityJudgeService } from '../../legendary-arbitrage-syndicate/packages/@syndicate/core/src/prevention/ProactiveVeracityJudgeService.js';
+import { SFTFlywheelGovernor } from '../../legendary-arbitrage-syndicate/packages/@syndicate/core/src/prevention/SFTFlywheelGovernor.js';
+
+/**
+ * 🏗️ CONSTRUCTION PLAN TRAINER
+ * ENHANCED with SPECIALIZED CONSTRUCTION PLAN Formal Reasoning & Proactive Prevention
+ * ===========================
+ */
+export class ConstructionPlanTrainer {
+  constructor() {
+    this.analyzer = new ConstructionPlanAnalyzer();
+    this.trainingResults = [];
+    
+    // 🧠 FORMAL REASONING & VERIFICATION INTEGRATION (SPECIALIZED FOR CONSTRUCTION PLAN TRAINER)
+    this.constructionPlanTrainerFormalReasoning = null;
+    
+    // 🛡️ PROACTIVE PREVENTION SYSTEMS INTEGRATION (SPECIALIZED FOR CONSTRUCTION PLAN TRAINER)
+    this.constructionPlanTrainerCredibilityPipeline = null;
+    this.constructionPlanTrainerInferenceReliability = null;
+    this.constructionPlanTrainerVeracityJudge = null;
+    this.constructionPlanTrainerSFTGovernor = null;
+  }
+
+  /**
+   * 🎓 Prepare training data format
+   * Expected structure:
+   * training-data/
+   *   plan-001/
+   *     - plan.png (the construction plan image)
+   *     - expected-bom.json (the correct bill of materials)
+   *   plan-002/
+   *     ...
+   */
+  async prepareTrainingData(dataPath) {
+    console.log('📚 Preparing training data...');
+    
+    const trainingSet = [];
+    const directories = await fs.readdir(dataPath);
+    
+    for (const dir of directories) {
+      const planDir = path.join(dataPath, dir);
+      const stat = await fs.stat(planDir);
+      
+      if (!stat.isDirectory()) continue;
+      
+      // Find plan image
+      const files = await fs.readdir(planDir);
+      const imageFile = files.find(f => /\.(png|jpg|jpeg|pdf)$/i.test(f));
+      const bomFile = files.find(f => f.includes('bom') && f.endsWith('.json'));
+      
+      if (imageFile && bomFile) {
+        const imagePath = path.join(planDir, imageFile);
+        const bomPath = path.join(planDir, bomFile);
+        const expectedBOM = JSON.parse(await fs.readFile(bomPath, 'utf8'));
+        
+        trainingSet.push({
+          id: dir,
+          imagePath,
+          expectedBOM,
+          metadata: await this.extractMetadata(imagePath, expectedBOM)
+        });
+      }
+    }
+    
+    console.log(`✅ Loaded ${trainingSet.length} training samples`);
+    return trainingSet;
+  }
+
+  /**
+   * 🔄 Semi-supervised learning approach
+   * Use your 1000+ files to train the system
+   */
+  async semiSupervisedTraining(options = {}) {
+    const {
+      labeledDataPath,    // Path to manually labeled plans
+      unlabeledDataPath,  // Path to unlabeled plans
+      outputPath = './models/construction-analyzer',
+      epochs = 50,
+      validationSplit = 0.2
+    } = options;
+
+    console.log('🚀 Starting semi-supervised training...');
+    
+    // Step 1: Train on labeled data
+    if (labeledDataPath) {
+      const labeledData = await this.prepareTrainingData(labeledDataPath);
+      await this.trainOnLabeledData(labeledData, { epochs, validationSplit });
+    }
+    
+    // Step 2: Generate pseudo-labels for unlabeled data
+    if (unlabeledDataPath) {
+      const unlabeledPlans = await this.loadUnlabeledPlans(unlabeledDataPath);
+      const pseudoLabels = await this.generatePseudoLabels(unlabeledPlans);
+      
+      // Step 3: Retrain with combined dataset
+      await this.retrainWithPseudoLabels(pseudoLabels, { epochs: epochs / 2 });
+    }
+    
+    // Step 4: Save final model
+    await this.saveModel(outputPath);
+    
+    return {
+      success: true,
+      modelPath: outputPath,
+      performance: this.evaluatePerformance()
+    };
+  }
+
+  /**
+   * 🎯 Interactive training mode
+   * The system analyzes plans and you correct the results
+   */
+  async interactiveTraining(planPath) {
+    console.log('🎮 Interactive Training Mode');
+    console.log('The system will analyze the plan and you can correct the results.\n');
+    
+    // Analyze the plan
+    const result = await this.analyzer.analyzePlan(planPath);
+    
+    if (result.success) {
+      // Display results
+      console.log('\n📊 SYSTEM ANALYSIS:');
+      console.log('===================');
+      this.displayBOM(result.billOfMaterials);
+      
+      // Get corrections
+      const corrections = await this.getCorrectionFromUser(result.billOfMaterials);
+      
+      // Save training sample
+      await this.saveTrainingSample(planPath, corrections);
+      
+      // Update model incrementally
+      await this.incrementalUpdate(result, corrections);
+      
+      console.log('✅ Training sample saved and model updated!');
+    }
+    
+    return result;
+  }
+
+  /**
+   * 🤖 Active learning - system asks for help on uncertain cases
+   */
+  async activeLearning(unlabeledPath, options = {}) {
+    const {
+      uncertaintyThreshold = 0.7,
+      maxSamplesToLabel = 50
+    } = options;
+    
+    console.log('🤖 Active Learning Mode');
+    console.log('System will identify uncertain cases for manual labeling.\n');
+    
+    const uncertainCases = [];
+    const plans = await this.loadUnlabeledPlans(unlabeledPath);
+    
+    // Analyze all plans and find uncertain ones
+    for (const planPath of plans) {
+      const result = await this.analyzer.analyzePlan(planPath);
+      
+      if (result.success && result.confidence < uncertaintyThreshold) {
+        uncertainCases.push({
+          planPath,
+          confidence: result.confidence,
+          result
+        });
+      }
+    }
+    
+    // Sort by uncertainty (lowest confidence first)
+    uncertainCases.sort((a, b) => a.confidence - b.confidence);
+    
+    // Request labels for most uncertain cases
+    const casesToLabel = uncertainCases.slice(0, maxSamplesToLabel);
+    console.log(`Found ${uncertainCases.length} uncertain cases.`);
+    console.log(`Requesting labels for top ${casesToLabel.length} cases.\n`);
+    
+    for (const caseData of casesToLabel) {
+      console.log(`\nPlan: ${caseData.planPath}`);
+      console.log(`Confidence: ${(caseData.confidence * 100).toFixed(0)}%`);
+      
+      // Show current analysis
+      this.displayBOM(caseData.result.billOfMaterials);
+      
+      // Get correct labels
+      const corrections = await this.getCorrectionFromUser(caseData.result.billOfMaterials);
+      
+      // Save for training
+      await this.saveTrainingSample(caseData.planPath, corrections);
+    }
+    
+    // Retrain with new labels
+    await this.retrainWithNewLabels();
+    
+    return {
+      totalUncertain: uncertainCases.length,
+      labeled: casesToLabel.length,
+      modelUpdated: true
+    };
+  }
+
+  /**
+   * 📊 Data augmentation for construction plans
+   */
+  async augmentTrainingData(originalData) {
+    const augmented = [];
+    
+    for (const sample of originalData) {
+      // Original
+      augmented.push(sample);
+      
+      // Rotation augmentation (90, 180, 270 degrees)
+      for (const angle of [90, 180, 270]) {
+        augmented.push(await this.rotatePlan(sample, angle));
+      }
+      
+      // Scale augmentation (simulate different zoom levels)
+      for (const scale of [0.8, 1.2]) {
+        augmented.push(await this.scalePlan(sample, scale));
+      }
+      
+      // Noise augmentation (simulate scan quality variations)
+      augmented.push(await this.addNoise(sample, 0.05));
+      
+      // Color variation (simulate different printing/scanning)
+      augmented.push(await this.adjustColors(sample, {
+        brightness: 0.9,
+        contrast: 1.1
+      }));
+    }
+    
+    console.log(`📊 Augmented ${originalData.length} samples to ${augmented.length}`);
+    return augmented;
+  }
+
+  /**
+   * 🔍 Feature engineering for better learning
+   */
+  async engineerFeatures(planPath) {
+    const features = {
+      // Geometric features
+      lineStatistics: await this.calculateLineStatistics(planPath),
+      junctionDensity: await this.calculateJunctionDensity(planPath),
+      pathComplexity: await this.calculatePathComplexity(planPath),
+      
+      // Symbol features
+      symbolCounts: await this.countSymbolTypes(planPath),
+      symbolDistribution: await this.analyzeSymbolDistribution(planPath),
+      
+      // Color features
+      colorProfile: await this.analyzeColorProfile(planPath),
+      dominantColors: await this.findDominantColors(planPath),
+      
+      // Structural features
+      roomCount: await this.detectRoomCount(planPath),
+      floorArea: await this.estimateFloorArea(planPath),
+      wallStructure: await this.analyzeWallStructure(planPath)
+    };
+    
+    return features;
+  }
+
+  /**
+   * 💾 Training data format converter
+   * Convert your existing data to the required format
+   */
+  async convertExistingData(inputFormat, outputPath) {
+    console.log('🔄 Converting existing training data...');
+    
+    // Support various input formats
+    switch (inputFormat.type) {
+      case 'csv':
+        return await this.convertFromCSV(inputFormat.path, outputPath);
+        
+      case 'excel':
+        return await this.convertFromExcel(inputFormat.path, outputPath);
+        
+      case 'autocad':
+        return await this.convertFromAutoCAD(inputFormat.path, outputPath);
+        
+      case 'custom':
+        return await this.convertFromCustomFormat(inputFormat, outputPath);
+        
+      default:
+        throw new Error(`Unsupported format: ${inputFormat.type}`);
+    }
+  }
+
+  /**
+   * 📈 Performance evaluation
+   */
+  async evaluateModel(testDataPath) {
+    console.log('📈 Evaluating model performance...');
+    
+    const testData = await this.prepareTrainingData(testDataPath);
+    const results = {
+      correct: 0,
+      total: testData.length,
+      errors: []
+    };
+    
+    for (const test of testData) {
+      const prediction = await this.analyzer.analyzePlan(test.imagePath);
+      const accuracy = this.compareBOMs(prediction.billOfMaterials, test.expectedBOM);
+      
+      if (accuracy > 0.9) {
+        results.correct++;
+      } else {
+        results.errors.push({
+          plan: test.id,
+          accuracy,
+          predicted: prediction.billOfMaterials,
+          expected: test.expectedBOM
+        });
+      }
+    }
+    
+    results.accuracy = results.correct / results.total;
+    console.log(`\n✅ Model Accuracy: ${(results.accuracy * 100).toFixed(1)}%`);
+    
+    return results;
+  }
+
+  /**
+   * 🛠️ Helper methods
+   */
+  displayBOM(bom) {
+    console.log('\n🔌 WIRING:');
+    for (const [type, details] of Object.entries(bom.wires || {})) {
+      console.log(`  ${details.description}: ${details.quantity} ${details.unit}`);
+    }
+    
+    console.log('\n🔲 COMPONENTS:');
+    for (const [type, details] of Object.entries(bom.components || {})) {
+      console.log(`  ${details.description}: ${details.quantity} ${details.unit}`);
+    }
+  }
+
+  compareBOMs(predicted, expected) {
+    // Calculate accuracy based on wire lengths and component counts
+    let totalScore = 0;
+    let totalItems = 0;
+    
+    // Compare wires
+    for (const wireType in expected.wires) {
+      const expectedQty = expected.wires[wireType].quantity;
+      const predictedQty = predicted.wires?.[wireType]?.quantity || 0;
+      
+      const accuracy = 1 - Math.abs(expectedQty - predictedQty) / Math.max(expectedQty, 1);
+      totalScore += Math.max(0, accuracy);
+      totalItems++;
+    }
+    
+    // Compare components
+    for (const compType in expected.components) {
+      const expectedQty = expected.components[compType].quantity;
+      const predictedQty = predicted.components?.[compType]?.quantity || 0;
+      
+      const accuracy = expectedQty === predictedQty ? 1 : 0.5;
+      totalScore += accuracy;
+      totalItems++;
+    }
+    
+    return totalItems > 0 ? totalScore / totalItems : 0;
+  }
+
+  async saveTrainingSample(planPath, correctedBOM) {
+    const sampleId = `sample-${Date.now()}`;
+    const outputDir = './training-data/corrections';
+    
+    await fs.mkdir(outputDir, { recursive: true });
+    
+    const sampleData = {
+      id: sampleId,
+      planPath,
+      correctedBOM,
+      timestamp: new Date().toISOString()
+    };
+    
+    await fs.writeFile(
+      path.join(outputDir, `${sampleId}.json`),
+      JSON.stringify(sampleData, null, 2)
+    );
+  }
+}
+
+// 🚀 Quick start function
+export async function trainConstructionAnalyzer(options) {
+  const trainer = new ConstructionPlanTrainer();
+  
+  // Different training modes
+  switch (options.mode) {
+    case 'supervised':
+      // Traditional supervised learning with labeled data
+      return await trainer.semiSupervisedTraining({
+        labeledDataPath: options.labeledData,
+        epochs: options.epochs || 100
+      });
+      
+    case 'interactive':
+      // Interactive training - system analyzes, you correct
+      return await trainer.interactiveTraining(options.planPath);
+      
+    case 'active':
+      // Active learning - system asks for help on difficult cases
+      return await trainer.activeLearning(options.unlabeledPath, {
+        maxSamplesToLabel: options.maxLabels || 50
+      });
+      
+    default:
+      throw new Error('Invalid training mode. Use: supervised, interactive, or active');
+  }
+} 

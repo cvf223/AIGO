@@ -1,0 +1,231 @@
+{
+  "name": "Internet of Agents MCP",
+  "id": "internet-of-agents",
+  "version": "1.0.0",
+  "description": "Agent-to-Agent communication, discovery, and collaboration protocol implementation",
+  "category": "communication",
+  "capabilities": [
+    "agent-discovery",
+    "identity-management",
+    "secure-messaging",
+    "capability-matching",
+    "task-delegation",
+    "collective-intelligence"
+  ],
+  "configuration": {
+    "endpoint": {
+      "url": "http://localhost:3018",
+      "protocol": "websocket"
+    },
+    "authentication": {
+      "type": "did",
+      "method": "key",
+      "registry": "${DID_REGISTRY_URL}"
+    },
+    "network": {
+      "discoveryProtocol": "mdns",
+      "p2p": true,
+      "relayNodes": ["${RELAY_NODE_1}", "${RELAY_NODE_2}"],
+      "maxPeers": 100
+    },
+    "slim": {
+      "version": "2.0",
+      "encryption": "e2e",
+      "compression": true,
+      "multimodal": true,
+      "realtime": true
+    },
+    "discovery": {
+      "broadcastInterval": 30000,
+      "ttl": 300,
+      "capabilities": {
+        "publish": true,
+        "query": true,
+        "subscribe": true
+      }
+    },
+    "identity": {
+      "verifiable": true,
+      "attestations": true,
+      "reputation": true,
+      "privacy": "selective-disclosure"
+    }
+  },
+  "methods": [
+    {
+      "name": "registerAgent",
+      "description": "Register an agent in the IoA network",
+      "parameters": {
+        "agentId": "string",
+        "did": "string",
+        "capabilities": "array",
+        "metadata": "object",
+        "visibility": "string"
+      }
+    },
+    {
+      "name": "discoverAgents",
+      "description": "Discover agents with specific capabilities",
+      "parameters": {
+        "capabilities": "array",
+        "filters": "object",
+        "radius": "number",
+        "maxResults": "number"
+      }
+    },
+    {
+      "name": "sendMessage",
+      "description": "Send a message to another agent",
+      "parameters": {
+        "to": "string",
+        "message": "object",
+        "protocol": "string",
+        "encrypted": "boolean",
+        "receipt": "boolean"
+      }
+    },
+    {
+      "name": "broadcastMessage",
+      "description": "Broadcast a message to multiple agents",
+      "parameters": {
+        "topic": "string",
+        "message": "object",
+        "ttl": "number",
+        "targetCapabilities": "array"
+      }
+    },
+    {
+      "name": "createCollaboration",
+      "description": "Create a collaboration session between agents",
+      "parameters": {
+        "agents": "array",
+        "task": "object",
+        "protocol": "string",
+        "consensus": "string"
+      }
+    },
+    {
+      "name": "delegateTask",
+      "description": "Delegate a task to another agent",
+      "parameters": {
+        "task": "object",
+        "requirements": "object",
+        "deadline": "string",
+        "compensation": "object"
+      }
+    },
+    {
+      "name": "attestCapability",
+      "description": "Attest to another agent's capability",
+      "parameters": {
+        "agentId": "string",
+        "capability": "string",
+        "evidence": "object",
+        "confidence": "number"
+      }
+    },
+    {
+      "name": "queryReputation",
+      "description": "Query an agent's reputation",
+      "parameters": {
+        "agentId": "string",
+        "capability": "string",
+        "timeframe": "object"
+      }
+    },
+    {
+      "name": "subscribeToAgent",
+      "description": "Subscribe to an agent's updates",
+      "parameters": {
+        "agentId": "string",
+        "events": "array",
+        "filter": "object"
+      }
+    },
+    {
+      "name": "negotiateProtocol",
+      "description": "Negotiate communication protocol with another agent",
+      "parameters": {
+        "agentId": "string",
+        "proposedProtocols": "array",
+        "requirements": "object"
+      }
+    }
+  ],
+  "protocols": {
+    "slim": {
+      "secure": true,
+      "lightweight": true,
+      "intelligent": true,
+      "multimodal": true,
+      "features": {
+        "endToEndEncryption": true,
+        "perfectForwardSecrecy": true,
+        "multimodalData": ["text", "image", "audio", "video", "structured"],
+        "realtimeStreaming": true,
+        "adaptiveBandwidth": true
+      }
+    },
+    "discovery": {
+      "dht": true,
+      "gossip": true,
+      "beacon": true,
+      "registry": true
+    },
+    "consensus": {
+      "raft": true,
+      "pbft": true,
+      "pow": false,
+      "liquidDemocracy": true
+    }
+  },
+  "capabilities": {
+    "construction": [
+      "hoai-compliance",
+      "quantity-surveying",
+      "safety-analysis",
+      "bim-modeling"
+    ],
+    "ai": [
+      "nlp",
+      "computer-vision",
+      "reinforcement-learning",
+      "formal-verification"
+    ],
+    "data": [
+      "etl",
+      "analysis",
+      "visualization",
+      "storage"
+    ]
+  },
+  "security": {
+    "authentication": {
+      "methods": ["did", "oauth", "x509"],
+      "mfa": true
+    },
+    "authorization": {
+      "rbac": true,
+      "abac": true,
+      "capabilities": true
+    },
+    "audit": {
+      "allActions": true,
+      "tamperProof": true,
+      "retention": 365
+    }
+  },
+  "integration": {
+    "agents": "all",
+    "external": {
+      "ethereum": "optional",
+      "ipfs": "optional",
+      "ceramic": "optional"
+    },
+    "monitoring": {
+      "metrics": true,
+      "tracing": true,
+      "logging": true
+    }
+  }
+}

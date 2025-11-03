@@ -1,0 +1,836 @@
+
+export DB_HOST=localhost
+export DB_PORT=5432
+export DB_NAME=syndicate
+export DB_USER=postgres
+export DB_PASSWORD= postgres
+
+export SOURCE_DB_HOST=localhost
+export SOURCE_DB_PORT=5432
+export SOURCE_DB_NAME=elizaos
+export SOURCE_DB_USER=postgres
+export SOURCE_DB_PASSWORD= postgres
+
+
+
+
+
+
+# Development
+export NODE_ENV=development
+
+# Production
+export NODE_ENV=production
+export REDIS_NODES=redis1:6379,redis2:6379
+export POSTGRES_URL=postgresql://user:pass@host:5432/db
+export S3_BUCKET=prod-memory-bucket
+export AWS_REGION=us-east-1
+
+ARBITRAGE_PRIVATE_KEY="0xa4e69019fdda37babdb875d8752bc00bc9cc24ddda51816a3c5449c69ec0b3c2"
+# export FLASHBOTS_AUTH_KEY="0x..."  
+# export ETHEREUM_RPC_URL="https://eth-mainnet.g.alchemy.com/v2/..."
+
+####################################
+#### Server & DB Configurations ####
+####################################
+
+# PostgreSQL Database Configuration
+PGHOST=localhost
+PGPORT=5432
+PGDATABASE=elizaos
+PGUSER= postgres
+PGPASSWORD= postgres
+
+# Database URL for pool discovery scripts
+DATABASE_URL=postgres://postgres:postgres@localhost:5432/elizaos
+
+# Cache Configs
+CACHE_STORE=database
+CACHE_DIR=./data/cache
+
+REDIS_URL=
+PGLITE_DATA_DIR=
+
+USE_OPENAI_EMBEDDING=true
+EMBEDDING_OPENAI_MODEL=text-embedding-3-small
+
+SERVER_URL=http://localhost
+SERVER_PORT=3000
+
+###############################
+#### Client Configurations ####
+###############################
+
+BITMIND=true
+BITMIND_API_TOKEN=
+
+DISCORD_APPLICATION_ID=
+DISCORD_API_TOKEN=
+DISCORD_VOICE_CHANNEL_ID=
+
+DEVIN_API_TOKEN=
+
+GELATO_RELAY_API_KEY=
+
+FARCASTER_FID=
+FARCASTER_NEYNAR_API_KEY=D3B9F2FF-F43E-49E8-A708-2DF04328CABE
+FARCASTER_NEYNAR_SIGNER_UUID=
+FARCASTER_DRY_RUN=false
+FARCASTER_POLL_INTERVAL=120
+
+TELEGRAM_BOT_TOKEN=8051510601:AAE_JRuF8IepPS6cnWKEDqgqgb0YVjTE4CQ
+TELEGRAM_GROUP_ID=-1002537429306
+TELEGRAM_ENABLE_PRIVACY_MODE=false
+TELEGRAM_POLL_INTERVAL=1000
+TELEGRAM_MAX_MESSAGE_LENGTH=4096
+TELEGRAM_ENABLE_MARKDOWN=true
+
+TELEGRAM_ACCOUNT_PHONE=
+TELEGRAM_ACCOUNT_APP_ID=
+TELEGRAM_ACCOUNT_APP_HASH=
+TELEGRAM_ACCOUNT_DEVICE_MODEL=
+TELEGRAM_ACCOUNT_SYSTEM_VERSION=
+
+TWITTER_DRY_RUN=false
+TWITTER_USERNAME=
+TWITTER_PASSWORD=
+TWITTER_EMAIL=
+TWITTER_2FA_SECRET=
+TWITTER_API_KEY=crz4NoEBWdgXWCQgk8bD45kh1
+TWITTER_API_SECRET=OmFr46uDYDcoJfxiDWSbLIlKRHnWavEbNFq122biCxgDT2RUIH
+TWITTER_COOKIES_AUTH_TOKEN=
+TWITTER_COOKIES_CT0=
+TWITTER_COOKIES_GUEST_ID=
+TWITTER_POLL_INTERVAL=120
+TWITTER_SEARCH_ENABLE=FALSE
+TWITTER_TARGET_USERS=
+TWITTER_RETRY_LIMIT=
+TWITTER_SPACES_ENABLE=false
+ENABLE_TWITTER_POST_GENERATION=true
+POST_INTERVAL_MIN=
+POST_INTERVAL_MAX=
+POST_IMMEDIATELY=
+ACTION_INTERVAL=
+ENABLE_ACTION_PROCESSING=false
+MAX_ACTIONS_PROCESSING=1
+ACTION_TIMELINE_TYPE=foryou
+TWITTER_APPROVAL_DISCORD_CHANNEL_ID=
+TWITTER_APPROVAL_DISCORD_BOT_TOKEN=
+TWITTER_APPROVAL_ENABLED=
+TWITTER_APPROVAL_CHECK_INTERVAL=60000
+
+WHATSAPP_ACCESS_TOKEN=
+WHATSAPP_PHONE_NUMBER_ID=
+WHATSAPP_BUSINESS_ACCOUNT_ID=
+WHATSAPP_WEBHOOK_VERIFY_TOKEN=
+WHATSAPP_API_VERSION=v17.0
+
+ALEXA_SKILL_ID=
+ALEXA_CLIENT_ID=
+ALEXA_CLIENT_SECRET=
+
+SIMSAI_API_KEY=
+SIMSAI_AGENT_ID=
+SIMSAI_USERNAME=
+SIMSAI_DRY_RUN=
+
+EXPRESS_MAX_PAYLOAD=
+
+#######################################
+#### Model Provider Configurations ####
+#######################################
+
+# Memory & Database Configuration
+SUPABASE_URL=https://lgieudddjnjpwanusgjz.supabase.co
+SUPABASE_SERVICE_API_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxnaWV1ZGRkam5qcHdhbnVzZ2p6Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0NDI2NjIyNCwiZXhwIjoyMDU5ODQyMjI0fQ
+SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxnaWV1ZGRkam5qcHdhbnVzZ2J6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQyNjYyMjQsImV4cCI6MjA1OTg0MjIyNH0.keY4nbXMBFBr7quyo
+
+OPENAI_API_KEY=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
+OPENAI_API_URL=
+SMALL_OPENAI_MODEL=
+MEDIUM_OPENAI_MODEL=
+LARGE_OPENAI_MODEL=
+EMBEDDING_OPENAI_MODEL=
+IMAGE_OPENAI_MODEL=
+USE_OPENAI_EMBEDDING=
+
+# ... (other model provider configs unchanged) ...
+
+######################################
+#### Crypto Plugin Configurations ####
+######################################
+
+COINMARKETCAP_API_KEY=95c44748-8f0f-4396-9bbd-d3dfdf47318b
+COINGECKO_API_KEY=CG-VQMLBAqPw4F3v1JyS48HjQdh
+COINGECKO_PRO_API_KEY=CG-VQMLBAqPw4F3v1JyS48HjQdh
+MORALIS_API_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJub25jZSI6IjFiY2M4ZDg1LTUwMTAtNGNiZi1iNzU4LWJhZTM5ZTE4OTE4ZiIsIm9yZ0lkIjoiMzg0MDE1IiwidXNlcklkIjoiMzk0NTc4IiwidHlwZUlkIjoiMzEwMzhkMjItZTg4NS00N2FkLTllNjMtODQwNmQ3NTdhNGYxIiwidHlwZSI6IlBST0pFQ1QiLCJpYXQiOjE3MTEwMjk0MTYsImV4cCI6NDg2Njc4OTQxNn0.9un3GBdrCb4AlUDfP9bsckyt5Ztusbp35iQx0Bmdleo
+
+# EVM/CHAIN PROVIDERS
+EVM_PRIVATE_KEY=0xa4e69019fdda37babdb875d8752bc00bc9cc24ddda51816a3c5449c69ec0b3c2
+EVM_PROVIDER_URL=https://eth-mainnet.g.alchemy.com/v2/REbCC-FAc8AJD0WniRPH4R5aRtTCC9up
+ALCHEMY_API_KEY=REbCC-FAc8AJD0WniRPH4R5aRtTCC9up
+ALCHEMY_ETHEREUM_URL=https://eth-mainnet.g.alchemy.com/v2/REbCC-FAc8AJD0WniRPH4R5aRtTCC9up
+ALCHEMY_ARBITRUM_URL=https://arb-mainnet.g.alchemy.com/v2/REbCC-FAc8AJD0WniRPH4R5aRtTCC9up
+ALCHEMY_SOLANA_URL=https://solana-mainnet.g.alchemy.com/v2/REbCC-FAc8AJD0WniRPH4R5aRtTCC9up
+ALCHEMY_BASE_URL=https://base-mainnet.g.alchemy.com/v2/REbCC-FAc8AJD0WniRPH4R5aRtTCC9up
+ALCHEMY_POLYGON_URL=https://polygon-mainnet.g.alchemy.com/v2/REbCC-FAc8AJD0WniRPH4R5aRtTCC9up
+ALCHEMY_HTTP_TRANSPORT_URL=https://eth-mainnet.g.alchemy.com/v2/REbCC-FAc8AJD0WniRPH4R5aRtTCC9up
+
+# SOLANA
+SOLANA_PRIVATE_KEY=NaktNFCsARGorW7CCrug21r9TLRZKggxc5pR423Y4YmEHWXVieK6Mo7beBViLepNx4NS4PL8YQ6Z4xReC4Ngqie
+SOLANA_RPC_URL=https://api.mainnet-beta.solana.com
+
+# POOL/AGENT CONFIGURATION (add or adjust as needed)
+# If your agent scripts require a pool list or endpoint, add it here:
+
+POOL_LIST_PATH=./allpools.json
+
+# 🚀 YOUR NEW INFURA ENDPOINTS
+INFURA_API_KEY=11bceda966e2492b825fecdfc5189ee4
+INFURA_API_SECRET=2290811cf9a648978692cc9b6c91644b
+INFURA_ETHEREUM_MAINNET=https://mainnet.infura.io/v3/11bceda966e2492b825fecdfc5189ee4
+INFURA_ETHEREUM_SEPOLIA=https://sepolia.infura.io/v3/11bceda966e2492b825fecdfc5189ee4
+INFURA_POLYGON_MAINNET=https://polygon-mainnet.infura.io/v3/11bceda966e2492b825fecdfc5189ee4
+INFURA_ARBITRUM_MAINNET=https://arbitrum-mainnet.infura.io/v3/11bceda966e2492b825fecdfc5189ee4
+INFURA_BASE_MAINNET=https://base-mainnet.infura.io/v3/11bceda966e2492b825fecdfc5189ee4
+INFURA_OPTIMISM_SEPOLIA=https://optimism-sepolia.infura.io/v3/11bceda966e2492b825fecdfc5189ee4
+INFURA_AVALANCHE_MAINNET=https://avalanche-mainnet.infura.io/v3/11bceda966e2492b825fecdfc5189ee4
+
+# 🚀 YOUR NEW QUICKNODE API KEY
+QUICKNODE_API_KEY=QN_f3e8340da0024b0eb190d874b73bc367
+
+# Zilliqa
+ZILLIQA_PRIVATE_KEY=
+ZILLIQA_PROVIDER_URL=
+
+# Avalanche
+AVALANCHE_PRIVATE_KEY=
+AVALANCHE_PUBLIC_KEY=
+
+# Arthera
+ARTHERA_PRIVATE_KEY=
+
+
+# Injective
+INJECTIVE_PRIVATE_KEY= #
+INJECTIVE_PUBLIC_KEY= #
+INJECTIVE_NETWORK= #
+# Fallback Wallet Configuration (deprecated)
+WALLET_PRIVATE_KEY=
+WALLET_PUBLIC_KEY=
+
+# 🚀 YOUR NEW BIRDEYE API KEY
+BIRDEYE_API_KEY=94e4e5b160784c11b8389fc16fe78c59
+
+
+# Abstract Configuration
+ABSTRACT_ADDRESS=
+ABSTRACT_PRIVATE_KEY=
+ABSTRACT_RPC_URL=https://api.testnet.abs.xyz
+
+# Starknet Configuration
+STARKNET_ADDRESS=
+STARKNET_PRIVATE_KEY=
+STARKNET_RPC_URL=https://rpc.starknet-testnet.lava.build
+
+# Lens Network Configuration
+LENS_ADDRESS=
+LENS_PRIVATE_KEY=
+
+# Form Chain
+FORM_PRIVATE_KEY= # Form character account private key
+FORM_TESTNET=true # A flag indicating if connection is made to Form Testnet. Set to false for Mainnet connection.
+
+# 🚀 YOUR NEW COINBASE CONFIGURATION
+COINBASE_COMMERCE_KEY=              # From Coinbase developer portal
+COINBASE_API_KEY=organizations/becca723-2d20-41e5-906e-f9d31b8ca846/apiKeys/8ed861de-7faf-46c5-b288-e711f4994f07                   # From Coinbase developer portal
+COINBASE_PRIVATE_KEY=-----BEGIN EC PRIVATE KEY-----\nMHcCAQEEIBo4zD3fW49+ZHBqb16LlLG1vZCrT+QqU1N38JX+MLsCoAoGCCqGSM49\nAwEHoUQDQgAEEkVECQCDeqKKS96ll2b/R+ejoyzAmpNRtRY9V4SDH2UNlz78uMfm\nzWPJH1k8mFABi3AiwW2biHkDle6h22+9JA==\n-----END EC PRIVATE KEY-----\n               # From Coinbase developer portal
+COINBASE_GENERATED_WALLET_ID=       # Not your address but the wallet ID from generating a wallet through the plugin
+COINBASE_GENERATED_WALLET_HEX_SEED= # Not your address but the wallet hex seed from generating a wallet through the plugin and calling export
+COINBASE_NOTIFICATION_URI=          # For webhook plugin the uri you want to send the webhook to for dummy ones use https://webhook.site
+
+# Coinbase AgentKit
+CDP_API_KEY_NAME=
+CDP_API_KEY_PRIVATE_KEY=
+CDP_AGENT_KIT_NETWORK=base-sepolia # Optional: Defaults to base-sepolia
+
+# Coinbase Charity Configuration
+IS_CHARITABLE=false # Set to true to enable charity donations
+CHARITY_ADDRESS_BASE=0x1234567890123456789012345678901234567890
+CHARITY_ADDRESS_SOL=pWvDXKu6CpbKKvKQkZvDA66hgsTB6X2AgFxksYogHLV
+CHARITY_ADDRESS_ETH=0x750EF1D7a0b4Ab1c97B7A623D7917CcEb5ea779C
+CHARITY_ADDRESS_ARB=0x1234567890123456789012345678901234567890
+CHARITY_ADDRESS_POL=0x1234567890123456789012345678901234567890
+
+# 🚀 YOUR NEW THIRDWEB CONFIGURATION
+THIRDWEB_SECRET_KEY=ECFBCyZuO8Gcvc5ATROdulQ2_MwU7hDZwoVH6Wtf1DulrhpFJ7Wk0ajxxweOhYvtA8u74xTJTZywT60NI20enw
+THIRDWEB_CLIENT_ID=29c750a96b41ab685af2750b828cae6f
+
+# 🚀 YOUR NEW BINANCE API KEY (COMPLETE)
+BINANCE_API_KEY=X2XUbgYRSTXna4jTxHmKu6hvcriSjRLcqgtQkqlZTyS7cAC317YFXLiI1VdAQILh
+BINANCE_API_SECRET=L0l2zpuvA9pIqSum6tvrInNtKHXvooXLUYcMyxsQXHOZRHHZ7i8SDNWv8Ig2g2oM
+
+
+# 🚀 YOUR NEW CRYPTOAPIS.IO API KEY
+CRYPTOAPIS_API_KEY=aeb94b46c993b6d292edf9a646a678856a865b90
+
+# Conflux Configuration
+CONFLUX_CORE_PRIVATE_KEY=
+CONFLUX_CORE_SPACE_RPC_URL=
+CONFLUX_ESPACE_PRIVATE_KEY=
+CONFLUX_ESPACE_RPC_URL=
+CONFLUX_MEME_CONTRACT_ADDRESS=
+
+# Mind Network Configuration
+MIND_HOT_WALLET_PRIVATE_KEY=
+MIND_COLD_WALLET_ADDRESS=
+
+# ZeroG
+ZEROG_INDEXER_RPC=
+ZEROG_EVM_RPC=
+ZEROG_PRIVATE_KEY=
+ZEROG_FLOW_ADDRESS=
+
+# IQ6900
+# Load json recorded on-chain through IQ
+# Inscribe your json character file here: https://elizacodein.com/
+
+IQ_WALLET_ADDRESS=              # If you enter the wallet address used on the site, the most recently inscribed json will be loaded.
+IQSOlRPC=
+
+# Squid Router
+SQUID_SDK_URL=https://apiplus.squidrouter.com # Default: https://apiplus.squidrouter.com
+SQUID_INTEGRATOR_ID=                          # get integrator id through https://docs.squidrouter.com/
+SQUID_EVM_ADDRESS=
+SQUID_EVM_PRIVATE_KEY=
+SQUID_API_THROTTLE_INTERVAL=1000 # Default: 1000; Used to throttle API calls to avoid rate limiting (in ms)
+
+# TEE Configuration
+# TEE_MODE options:
+# - LOCAL: Uses simulator at localhost:8090 (for local development)
+# - DOCKER: Uses simulator at host.docker.internal:8090 (for docker development)
+# - PRODUCTION: No simulator, uses production endpoints
+# Defaults to OFF if not specified
+TEE_MODE=OFF        # LOCAL | DOCKER | PRODUCTION
+WALLET_SECRET_SALT= # ONLY define if you want to use TEE Plugin, otherwise it will throw errors
+TEE_LOG_DB_PATH=    # Custom path for TEE Log database, default: ./data/tee_log.sqlite
+
+# TEE Verifiable Log Configuration
+VLOG= # true/false;  if you want to use TEE Verifiable Log, set this to "true"
+
+# Web search API Configuration
+TAVILY_API_KEY=
+
+# WhatsApp Cloud API Configuration
+WHATSAPP_ACCESS_TOKEN=         # Permanent access token from Facebook Developer Console
+WHATSAPP_PHONE_NUMBER_ID=      # Phone number ID from WhatsApp Business API
+WHATSAPP_BUSINESS_ACCOUNT_ID=  # Business Account ID from Facebook Business Manager
+WHATSAPP_WEBHOOK_VERIFY_TOKEN= # Custom string for webhook verification
+WHATSAPP_API_VERSION=v17.0     # WhatsApp API version (default: v17.0)
+ENABLE_TEE_LOG=false           # Set to true to enable TEE logging, only available when running eliza in TEE
+
+# Flow Blockchain Configuration
+FLOW_ADDRESS=
+FLOW_PRIVATE_KEY=  # Private key for SHA3-256 + P256 ECDSA
+FLOW_NETWORK=      # Default: mainnet
+FLOW_ENDPOINT_URL= # Default: https://mainnet.onflow.org
+
+# ICP
+INTERNET_COMPUTER_PRIVATE_KEY=
+INTERNET_COMPUTER_ADDRESS=
+
+#Cloudflare AI Gateway
+CLOUDFLARE_GW_ENABLED=    # Set to true to enable Cloudflare AI Gateway
+CLOUDFLARE_AI_ACCOUNT_ID= # Cloudflare AI Account ID - found in the Cloudflare Dashboard under AI Gateway
+CLOUDFLARE_AI_GATEWAY_ID= # Cloudflare AI Gateway ID - found in the Cloudflare Dashboard under AI Gateway
+
+# Aptos
+APTOS_PRIVATE_KEY= # Aptos private key
+APTOS_NETWORK=     # Must be one of mainnet, testnet
+
+# MultiversX
+MVX_PRIVATE_KEY=                    # Multiversx private key
+MVX_NETWORK=                        # must be one of mainnet, devnet, testnet
+ACCESS_TOKEN_MANAGEMENT_TO=everyone  # you can put an userid to limit token managament to one user only (use same id as in the database)
+
+# NEAR
+NEAR_WALLET_SECRET_KEY= # NEAR Wallet Secret Key
+NEAR_WALLET_PUBLIC_KEY= # NEAR Wallet Public Key
+NEAR_ADDRESS=
+NEAR_SLIPPAGE=1
+NEAR_RPC_URL=https://near-testnet.lava.build
+NEAR_NETWORK=testnet # or mainnet
+
+# ZKsync Era Configuration
+ZKSYNC_ADDRESS=
+ZKSYNC_PRIVATE_KEY=
+
+# HoldStation Wallet Configuration
+HOLDSTATION_PRIVATE_KEY=
+
+# Avail DA Configuration
+AVAIL_ADDRESS=
+AVAIL_SEED=
+AVAIL_APP_ID=0
+AVAIL_RPC_URL=wss://avail-turing.public.blastapi.io/ # (Default) Testnet: wss://avail-turing.public.blastapi.io/ | Mainnet: wss://avail-mainnet.public.blastapi.io/
+
+# Marlin
+TEE_MARLIN=                      # Set "yes" to enable the plugin
+TEE_MARLIN_ATTESTATION_ENDPOINT= # Optional, default "http://127.0.0.1:1350"
+
+# Ton
+TON_PRIVATE_KEY= # Ton Mnemonic Seed Phrase Join With Empty String
+TON_RPC_URL=     # ton rpc
+TON_RPC_API_KEY= # ton rpc api key
+TON_NFT_IMAGES_FOLDER= # Path to the folder containing the NFT images
+TON_NFT_METADATA_FOLDER= # Path to the folder containing the NFT metadata
+PINATA_API_KEY= # Pinata API key
+PINATA_API_SECRET= # Pinata API secret
+
+# Sui
+SUI_PRIVATE_KEY= # Sui Mnemonic Seed Phrase (`sui keytool generate ed25519`) , Also support `suiprivatekeyxxxx` (sui keytool export --key-identity 0x63)
+SUI_NETWORK=     # must be one of mainnet, testnet, devnet, localnet
+
+# Mina Settings
+MINA_PRIVATE_KEY= # Mina Mnemonic Seed Phrase: https://docs.minaprotocol.com/using-mina/install-a-wallet
+MINA_NETWORK=devnet # must be one of mainnet, testnet, devnet, localnet
+
+# Story
+STORY_PRIVATE_KEY=  # Story private key
+STORY_API_BASE_URL= # Story API base URL
+STORY_API_KEY=      # Story API key
+PINATA_JWT=         # Pinata JWT for uploading files to IPFS
+
+# Cosmos
+COSMOS_RECOVERY_PHRASE=  # 12 words recovery phrase (need to be in quotes, because of spaces)
+COSMOS_AVAILABLE_CHAINS= # mantrachaintestnet2,cosmos  # Array of chains
+# Cronos zkEVM
+CRONOSZKEVM_ADDRESS=
+CRONOSZKEVM_PRIVATE_KEY=
+
+
+# Fuel Ecosystem (FuelVM)
+FUEL_WALLET_PRIVATE_KEY=
+
+# Tokenizer Settings
+TOKENIZER_MODEL= # Specify the tokenizer model to be used.
+TOKENIZER_TYPE=  # Options: tiktoken (for OpenAI models) or auto (AutoTokenizer from Hugging Face for non-OpenAI models). Default: tiktoken.
+
+# Spheron
+SPHERON_PRIVATE_KEY=
+SPHERON_PROVIDER_PROXY_URL=
+SPHERON_WALLET_ADDRESS=
+
+# Stargaze NFT marketplace from Cosmos (You can use https://graphql.mainnet.stargaze-apis.com/graphql)
+STARGAZE_ENDPOINT=
+
+# GenLayer
+GENLAYER_PRIVATE_KEY= # Private key of the GenLayer account to use for the agent in this format (0x0000000000000000000000000000000000000000000000000000000000000000)
+
+# BNB chain
+BNB_PRIVATE_KEY=            # BNB chain private key
+BNB_PUBLIC_KEY=             # BNB-smart-chain public key (address)
+BSC_PROVIDER_URL=           # BNB-smart-chain rpc url
+OPBNB_PROVIDER_URL=         # OPBNB rpc url
+
+####################################
+#### Misc Plugin Configurations ####
+####################################
+
+# Intiface Configuration
+INTIFACE_WEBSOCKET_URL=ws://localhost:12345
+
+# API key for giphy from https://developers.giphy.com/dashboard/
+GIPHY_API_KEY=
+
+# OpenWeather
+OPEN_WEATHER_API_KEY= # OpenWeather API key
+
+#GITCOIN Passport
+PASSPORT_API_KEY= #Gitcoin Passport key
+PASSPORT_SCORER=  #Scorer number
+
+# EchoChambers Configuration
+ECHOCHAMBERS_API_URL=http://127.0.0.1:3333
+ECHOCHAMBERS_API_KEY=testingkey0011
+ECHOCHAMBERS_USERNAME=eliza
+ECHOCHAMBERS_ROOMS=general #comma delimited list of rooms the agent watches
+ECHOCHAMBERS_POLL_INTERVAL=60
+ECHOCHAMBERS_MAX_MESSAGES=10
+# How often the agent checks if it should start a conversation
+ECHOCHAMBERS_CONVERSATION_STARTER_INTERVAL=300 # 5 minutes - checks rooms every 5 minutes
+
+# How long a room must be quiet before starting a new conversation
+ECHOCHAMBERS_QUIET_PERIOD=900 # 15 minutes - waits for 15 minutes of silence
+
+# Allora
+ALLORA_API_KEY=    # Allora API key, format: UP-f8db7d6558ab432ca0d92716
+ALLORA_CHAIN_SLUG= # must be one of mainnet, testnet. If not specified, it will use testnet by default
+
+
+# B2 Network
+B2_PRIVATE_KEY= # Private key of the B2 Network account to use for the agent
+
+# Opacity zkTLS
+OPACITY_TEAM_ID=f309ac8ae8a9a14a7e62cd1a521b1c5f
+OPACITY_CLOUDFLARE_NAME=eigen-test
+OPACITY_PROVER_URL=https://opacity-ai-zktls-demo.vercel.app
+
+# AWS Credentials for S3 File Upload and Amazon Bedrock
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_REGION=
+AWS_S3_BUCKET=
+AWS_S3_UPLOAD_PATH=
+AWS_S3_ENDPOINT=
+AWS_S3_SSL_ENABLED=
+AWS_S3_FORCE_PATH_STYLE=
+
+
+# Deva Configuration
+DEVA_API_KEY= # You can get the API key from the created application in deva.me/settings/apps
+DEVA_API_BASE_URL=https://api.deva.me # Default server url for production. Use https://api-staging.deva.me for staging.
+
+# Deepgram
+DEEPGRAM_API_KEY=
+
+# Verifiable Inference Configuration
+VERIFIABLE_INFERENCE_ENABLED=false    # Set to false to disable verifiable inference
+VERIFIABLE_INFERENCE_PROVIDER=opacity # Options: opacity
+
+# Qdrant
+# URL of your Qdrant instance (e.g., https://your-instance.qdrant.tech)
+QDRANT_URL=
+# API key for authentication (optional for local instances)
+QDRANT_KEY=
+# Qdrant service port (default: 443 for cloud, typically 6333 for local)
+QDRANT_PORT=443
+# Vector size matching your embedding model (default: 1536 for OpenAI embeddings)
+QDRANT_VECTOR_SIZE=1536
+
+# Autonome Configuration
+AUTONOME_JWT_TOKEN=
+AUTONOME_RPC=https://wizard-bff-rpc.alt.technology/v1/bff/aaa/apps
+
+####################################
+#### Akash Network Configuration ####
+####################################
+AKASH_ENV=mainnet
+AKASH_NET=https://raw.githubusercontent.com/ovrclk/net/master/mainnet
+RPC_ENDPOINT=https://rpc.akashnet.net:443
+AKASH_GAS_PRICES=0.025uakt
+AKASH_GAS_ADJUSTMENT=1.5
+AKASH_KEYRING_BACKEND=os
+AKASH_FROM=default
+AKASH_FEES=20000uakt
+AKASH_DEPOSIT=500000uakt
+AKASH_MNEMONIC=
+AKASH_WALLET_ADDRESS=
+# Akash Pricing API
+AKASH_PRICING_API_URL=https://console-api.akash.network/v1/pricing
+# Default values # 1 CPU = 1000 1GB = 1000000000 1GB = 1000000000
+AKASH_DEFAULT_CPU=1000
+AKASH_DEFAULT_MEMORY=1000000000
+AKASH_DEFAULT_STORAGE=1000000000
+AKASH_SDL=example.sdl.yml
+# Close deployment
+# Close all deployments = closeAll
+# Close a single deployment = dseq and add the value in AKASH_CLOSE_DSEQ
+AKASH_CLOSE_DEP=closeAll
+AKASH_CLOSE_DSEQ=19729929
+# Provider Info we added one to check you will have to pass this into the action
+AKASH_PROVIDER_INFO=akash1ccktptfkvdc67msasmesuy5m7gpc76z75kukpz
+# Deployment Status
+# AKASH_DEP_STATUS = dseq or param_passed when you are building you wil pass the dseq dinamically to test you
+# you can pass the dseq using AKASH_DEP_DSEQ 19729929 is an example of a dseq we test while build.
+AKASH_DEP_STATUS=dseq
+AKASH_DEP_DSEQ=19729929
+# Gas Estimation Options: close, create, or update
+# qseq is required when operation is "close" 19729929 is an example of a dseq we test while build.
+AKASH_GAS_OPERATION=close
+AKASH_GAS_DSEQ=19729929
+# Manifest
+# Values: "auto" | "manual" | "validate_only" Default: "auto"
+AKASH_MANIFEST_MODE=auto
+# Default: Will use the SDL directory
+AKASH_MANIFEST_PATH=
+# Values: "strict" | "lenient" | "none" - Default: "strict"
+AKASH_MANIFEST_VALIDATION_LEVEL=strict
+# Quai Network Ecosystem
+QUAI_PRIVATE_KEY=
+QUAI_RPC_URL=https://rpc.quai.network
+
+# Chainbase
+# demo is a free tier key
+CHAINBASE_API_KEY= # demo is a free tier key
+
+# 0x
+ZERO_EX_API_KEY=
+ALCHEMY_HTTP_TRANSPORT_URL=
+
+# Instagram Configuration
+INSTAGRAM_DRY_RUN=false
+INSTAGRAM_USERNAME=               # Account username
+INSTAGRAM_PASSWORD=               # Account password
+INSTAGRAM_APP_ID=                 # Instagram App ID is required
+INSTAGRAM_APP_SECRET=             # Instagram App Secret is required
+INSTAGRAM_BUSINESS_ACCOUNT_ID=    # Optional Business Account ID for additional features
+INSTAGRAM_POST_INTERVAL_MIN=60    # Default: 60 minutes
+INSTAGRAM_POST_INTERVAL_MAX=120   # Default: 120 minutes
+INSTAGRAM_ENABLE_ACTION_PROCESSING=false  # Enable/disable action processing
+INSTAGRAM_ACTION_INTERVAL=5       # Interval between actions in minutes
+INSTAGRAM_MAX_ACTIONS=1          # Maximum number of actions to process at once
+
+####################################
+#### Pyth Plugin Configuration ####
+####################################
+# Network Environment (mainnet or testnet)git
+PYTH_NETWORK_ENV=mainnet
+
+# Mainnet Network Configuration
+PYTH_MAINNET_HERMES_URL=https://hermes.pyth.network
+PYTH_MAINNET_WSS_URL=wss://hermes.pyth.network/ws
+PYTH_MAINNET_PYTHNET_URL=https://pythnet.rpcpool.com
+PYTH_MAINNET_CONTRACT_REGISTRY=https://pyth.network/developers/price-feed-ids
+PYTH_MAINNET_PROGRAM_KEY=
+
+# Testnet Network Configuration
+PYTH_TESTNET_HERMES_URL=https://hermes.pyth.network
+PYTH_TESTNET_WSS_URL=wss://hermes.pyth.network/ws
+PYTH_TESTNET_PYTHNET_URL=https://pythnet.rpcpool.com
+PYTH_TESTNET_CONTRACT_REGISTRY=https://pyth.network/developers/price-feed-ids#testnet
+PYTH_TESTNET_PROGRAM_KEY=
+
+# Connection Settings
+PYTH_MAX_RETRIES=3
+PYTH_RETRY_DELAY=1000
+PYTH_TIMEOUT=5000
+PYTH_GRANULAR_LOG=true
+PYTH_LOG_LEVEL=debug
+PYTH_LOG_LEVEL=info
+
+# Runtime Settings
+RUNTIME_CHECK_MODE=false
+
+# Pyth Price Streaming and test ID
+PYTH_ENABLE_PRICE_STREAMING=true
+PYTH_MAX_PRICE_STREAMS=2
+PYTH_TEST_ID01=0xe62df6c8b4a85fe1a67db44dc12de5db330f7ac66b72dc658afedf0f4a415b43
+PYTH_TEST_ID02=0xff61491a931112ddf1bd8147cd1b641375f79f5825126d665480874634fd0ace
+
+# Router Nitro EVM Configuration
+ROUTER_NITRO_EVM_ADDRESS=
+ROUTER_NITRO_EVM_PRIVATE_KEY=
+
+# OriginTrail DKG
+DKG_ENVIRONMENT=""
+# Values: "development", "testnet", "mainnet"
+DKG_HOSTNAME=""
+DKG_PORT="8900"
+DKG_PUBLIC_KEY=""
+DKG_PRIVATE_KEY=""
+DKG_BLOCKCHAIN_NAME=""
+# Values: (mainnet) "base:8453", "gnosis:100", "otp:2043" (testnet) "base:84532", "gnosis:10200", "otp:20430"
+
+# Initia Plugin Configuration
+INITIA_PRIVATE_KEY=  # Your Initia wallet private key
+INITIA_NODE_URL=  # Initia node URL (default: testnet)
+INITIA_CHAIN_ID=initia-test  # Chain ID (default: testnet)
+
+# ####################################
+# #### NVIDIA Configuration ##########
+# ####################################
+NVIDIA_NIM_ENV=production
+NVIDIA_NIM_SPASH=false
+# Api Keys
+NVIDIA_NIM_API_KEY=
+NVIDIA_NGC_API_KEY=
+NVIDIA_NIM_MAX_RETRIES=3
+NVIDIA_NIM_RETRY_DELAY=1000
+NVIDIA_NIM_TIMEOUT=5000
+# Logging Configuration
+NVIDIA_GRANULAR_LOG=true
+NVIDIA_LOG_LEVEL=debug
+# NVIDIA Off-topic system and user configuration
+NVIDIA_OFFTOPIC_SYSTEM=
+NVIDIA_OFFTOPIC_USER=
+# NVIDIA Cosmos Model Configuration
+NVIDIA_NIM_BASE_VISION_URL=https://ai.api.nvidia.com/v1/vlm
+NVIDIA_COSMOS_MODEL=nvidia/cosmos-nemotron-34b
+NVIDIA_COSMOS_INVOKE_URL=https://ai.api.nvidia.com/v1/vlm/nvidia/cosmos-nemotron-34b
+NVIDIA_COSMOS_ASSET_URL=https://api.nvcf.nvidia.com/v2/nvcf/assets
+NVIDIA_COSMOS_MAX_TOKENS=1000
+
+# Email Plugin Configuration
+
+# Outgoing Email Settings (SMTP/Gmail)
+EMAIL_OUTGOING_SERVICE=smtp    # Use "smtp" or "gmail"
+EMAIL_OUTGOING_HOST=smtp.example.com    # Required for SMTP only
+EMAIL_OUTGOING_PORT=465    # Default 465 for secure SMTP, 587 for TLS
+EMAIL_OUTGOING_USER=
+EMAIL_OUTGOING_PASS=  # For Gmail, use App Password
+
+# Incoming Email Settings (IMAP)
+EMAIL_INCOMING_SERVICE=imap
+EMAIL_INCOMING_HOST=imap.example.com
+EMAIL_INCOMING_PORT=993    # Default port for secure IMAP
+EMAIL_INCOMING_USER=
+EMAIL_INCOMING_PASS=
+
+# SEI Network Ecosystem
+SEI_PRIVATE_KEY=
+SEI_NETWORK=   # Either "mainnet", "testnet", or "devnet"
+SEI_RPC_URL=    # Only set if using a different RPC URL from the default
+
+# Omniflix
+OMNIFLIX_API_URL=                    # https://rest.omniflix.network
+OMNIFLIX_MNEMONIC=                   # your mnemonic 12 words or 24 words
+OMNIFLIX_RPC_ENDPOINT=               # https://rpc.omniflix.network
+OMNIFLIX_PRIVATE_KEY=                 # your private key
+
+# Suno AI Music Generation
+SUNO_API_KEY=
+
+# Udio AI Music Generation
+UDIO_AUTH_TOKEN=
+
+# Football Plugin Configuration
+FOOTBALL_API_KEY=                   # API key from Football-Data.org (https://www.football-data.org/)
+
+# Imgflip
+IMGFLIP_USERNAME=
+IMGFLIP_PASSWORD=
+
+# Hyperliquid Api
+HYPERLIQUID_PRIVATE_KEY=    # Required for trading and cancelling orders, your_private_key
+HYPERLIQUID_TESTNET=        # Optional, defaults to false; true or false
+
+# Lit Protocol
+FUNDING_PRIVATE_KEY=    # Private key for funding transactions in Lit Protocol
+EVM_RPC_URL=                # RPC endpoint URL for blockchain interactions
+
+# EthStorage DA Configuration
+ETHSTORAGE_PRIVATE_KEY=
+ETHSTORAGE_ADDRESS=0x64003adbdf3014f7E38FC6BE752EB047b95da89A
+ETHSTORAGE_RPC_URL=https://rpc.beta.testnet.l2.quarkchain.io:8545
+
+
+# Email Automation Plugin Configuration
+RESEND_API_KEY=           # Your Resend API key
+DEFAULT_TO_EMAIL=         # Default recipient
+DEFAULT_FROM_EMAIL=       # Default sender
+
+# Optional Settings
+EMAIL_AUTOMATION_ENABLED=false    # Enable AI detection. If this is enabled, the plugin will automatically detect email-worthy conversations and handle generation/delivery and only that.
+EMAIL_EVALUATION_PROMPT=        # Custom detection criteria for shouldEmail# ####################################
+
+
+# #### ANKR Configuration ####
+# ####################################
+ANKR_ENV=production
+ANKR_WALLET=
+ANKR_MAX_RETRIES=3
+ANKR_RETRY_DELAY=1000
+ANKR_TIMEOUT=5000
+ANKR_GRANULAR_LOG=true
+ANKR_LOG_LEVEL=debug
+ANKR_RUNTIME_CHECK_MODE=false
+ANKR_SPASH=true
+
+# DCAP Plugin Configuration
+DCAP_EVM_PRIVATE_KEY=
+DCAP_MODE=                       # Options: OFF, PLUGIN-SGX, PLUGIN-TEE, MOCK
+
+# QuickIntel Token Security API
+QUICKINTEL_API_KEY=              # Your QuickIntel API key for token security analysis
+
+# News API Key
+NEWS_API_KEY= # News API KEY from https://newsapi.org/
+
+# BTCFUN Plugin Configuration
+BTCFUN_API_URL=                  # Default: https://api-testnet-new.btc.fun
+BTC_PRIVATE_KEY_WIF=             # Your BTC private key in WIF format
+BTC_ADDRESS=                     # Your BTC address
+BTC_MINT_CAP=10000              # Maximum amount that can be minted
+BTC_MINT_DEADLINE=864000        # Deadline for minting in seconds
+BTC_FUNDRAISING_CAP=100         # Maximum amount for fundraising
+
+# Trikon Plugin Configuration
+TRIKON_WALLET_ADDRESS= # Your Trikon wallet address (must be a valid 64-character hex string starting with '0x')
+TRIKON_INITIAL_BALANCE= # (Optional) The initial balance for the wallet. Defaults to "0" if not provided.
+
+####################################
+#### Arbitrage Plugin Configuration ####
+####################################
+
+ARBITRAGE_ETHEREUM_WS_URL=                  # WebSocket URL for Ethereum node connection
+ARBITRAGE_EVM_PROVIDER_URL=                 # RPC URL for Ethereum node connection (if WS not available)
+ARBITRAGE_EVM_PRIVATE_KEY=                  # Private key for the wallet executing arbitrage transactions
+FLASHBOTS_RELAY_SIGNING_KEY=      # Signing key for Flashbots relay interactions
+BUNDLE_EXECUTOR_ADDRESS=          # Address of the bundle executor contract
+
+# DESK Exchange Plugin Configration
+DESK_EXCHANGE_PRIVATE_KEY=                  # Required for trading and cancelling orders
+DESK_EXCHANGE_NETWORK=                      # "mainnet" or "testnet
+
+# Compass plugin configuration
+COMPASS_WALLET_PRIVATE_KEY=
+COMPASS_ARBITRUM_RPC_URL=
+COMPASS_ETHEREUM_RPC_URL=
+COMPASS_BASE_RPC_URL=
+
+# d.a.t.a Plugin Configurations
+DATA_API_KEY=           # Your d.a.t.a API key
+DATA_AUTH_TOKEN=       # Your d.a.t.a auth token
+
+# NKN Configuration
+NKN_CLIENT_PRIVATE_KEY=           # Required, NKN client private key
+NKN_CLIENT_ID=                    # Optional, NKN client ID
+
+HELIUS_API_KEY=45c0b207-327b-467d-9375-8d9fce9a59f7
+TAVILY_API_KEY=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
+NEWS_API_KEY= a5e10a9fc04a4f8fbd2c45dcc67a95e7
+CHAINBASE_API_KEY=8ed861de-7faf-46c5-b288-e711f4994f07
+ZERO_EX_API_KEY=b7210b39-bb96-4d2b-8750-b446e207b7c9
+MESSARI_API_KEY=OOmHnwgBDeB2EK9e+ZO3Umm9aVY+T6eCj2dY16bAS0htJAeA
+DEFILLAMA_API_KEY=                 # quite expensive need to be evaluated how valuable and needed !!
+NANSEN_API_KEY= #not available yet
+
+# 🚀 RATE LIMITING & PERFORMANCE OPTIMIZATION
+API_RATE_LIMIT_REQUESTS_PER_MINUTE=60
+API_RATE_LIMIT_BURST=10
+API_TIMEOUT_MS=30000
+API_RETRY_ATTEMPTS=3
+API_RETRY_DELAY_MS=1000
+
+# Data Caching Strategy
+CACHE_TTL_SECONDS=300              # 5 minutes for market data
+CACHE_TTL_LONG_SECONDS=3600        # 1 hour for static data
+ENABLE_AGGRESSIVE_CACHING=true
+
+
+# 🚀 TRADING WALLET CONFIGURATIONS
+EVM_PRIVATE_KEY=0xa4e69019fdda37babdb875d8752bc00bc9cc24ddda51816a3c5449c69ec0b3c2
+SOLANA_PRIVATE_KEY=NaktNFCsARGorW7CCrug21r9TLRZKggxc5pR423Y4YmEHWXVieK6Mo7beBViLepNx4NS4PL8YQ6Z4xReC4Ngqie
+WALLET_SECRET_SALT=2ae8334d9d1bb561030326d2808acf7be7f6266d9ce59830322cb345e49de74e
+
+# HIGH PRIORITY - Add these:
+GOOGLE_GENERATIVE_AI_API_KEY=AIzaSyBFlTnnDW1nWTeCAB0FZGU0mjVf27LRrBE
+ANTHROPIC_API_KEY= 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
+GROQ_API_KEY=gsk_zj69iC6BTH9unYn7bNTmWGdyb3FYTyOB7tH9STb5b8KNPf0ZbNZiConsole (starts with gsk_)
+ELEVENLABS_XI_API_KEY=sk_a6bfe0c89225aabee26fffb50b04235a8c65d554f88032c8
+DEEPGRAM_API_KEY=cb37efc24c5b9f7dd0d56e8f19b54841fb9383b9
+
+
+EVM_ADDRESS=0x35F25CC8D5de12e9902449A124E2345734Ff95Fc
+SOLANA_ADDRESS=5mVQbMs4Rzn5MVtyNmmQzMcSjag6WdMm85dyGYc5Lddg
+CHAINBASE_API_KEY=#Payed  LATER when production state!!!
+DEFILLAMA_API_KEY=   # definitly needed! But also later!analytics worth the cost
+GIPHY_API_KEY=RRipZykNVvEKXQvT1flLqZEfbNPiqxnJ
+OPEN_WEATHER_API_KEY=0230874b10de0b281b8231a7817d35c6
+
+
+
+
+
+

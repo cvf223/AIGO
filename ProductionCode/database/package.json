@@ -1,0 +1,27 @@
+{
+  "name": "@syndicate/database",
+  "version": "1.0.0",
+  "description": "Database schema and migration system for AI Flash Loan Arbitrage Syndicate",
+  "type": "module",
+  "scripts": {
+    "init": "node initialize-database.js",
+    "init:full": "node initialize-database.js --seed --verify",
+    "init:force": "node initialize-database.js --force --seed --verify",
+    "migrate": "node migrations/migration-system.js migrate",
+    "migrate:status": "node migrations/migration-system.js status",
+    "migrate:create": "node migrations/migration-system.js create",
+    "migrate:rollback": "node migrations/migration-system.js rollback",
+    "migrate:validate": "node migrations/migration-system.js validate",
+    "psql": "psql -d arbitrage_syndicate",
+    "backup": "pg_dump -Fc arbitrage_syndicate > backups/syndicate_$(date +%Y%m%d_%H%M%S).dump",
+    "restore": "echo 'Usage: npm run restore <backup_file>'"
+  },
+  "dependencies": {
+    "pg": "^8.11.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "Elite Syndicate Collective",
+  "license": "MIT"
+}

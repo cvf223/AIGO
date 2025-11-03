@@ -1,0 +1,47 @@
+{
+  "projectId": "project_001",
+  "totalErrors": 2,
+  "knownErrors": [
+    {
+      "errorId": "err_project_001_001",
+      "planId": "project_001_section_03",
+      "type": "missing_reference",
+      "description": "Intentional missing_reference for testing error detection",
+      "severity": "critical",
+      "affectedPlans": [
+        "project_001_section_03"
+      ],
+      "location": {
+        "page": 1,
+        "coordinates": [
+          454,
+          318
+        ]
+      },
+      "correctSolution": "Apply standard correction for missing_reference",
+      "detectedBy": "synthetic_generator",
+      "date": "2025-10-11T17:21:14.952Z"
+    },
+    {
+      "errorId": "err_project_001_002",
+      "planId": "project_001_elevation_07",
+      "type": "dimension_mismatch",
+      "description": "Intentional dimension_mismatch for testing error detection",
+      "severity": "high",
+      "affectedPlans": [
+        "project_001_elevation_07"
+      ],
+      "location": {
+        "page": 1,
+        "coordinates": [
+          304,
+          187
+        ]
+      },
+      "correctSolution": "Apply standard correction for dimension_mismatch",
+      "detectedBy": "synthetic_generator",
+      "date": "2025-10-11T17:21:14.952Z"
+    }
+  ],
+  "generatedAt": "2025-10-11T17:21:14.952Z"
+}

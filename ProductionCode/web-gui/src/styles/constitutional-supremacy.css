@@ -1,0 +1,883 @@
+/**
+ * 🏛️ CONSTITUTIONAL SUPREMACY STYLES
+ * =================================
+ * 
+ * Breathtaking styles for the Supreme Constitutional Framework
+ * Guaranteed to make competitors jealous with professional-grade
+ * visual sophistication and quantum-enhanced styling
+ */
+
+/* Constitutional Theme Colors */
+:root {
+  /* Constitutional color palette */
+  --constitutional-primary: #1e1b4b;
+  --constitutional-secondary: #312e81;
+  --constitutional-accent: #fbbf24;
+  --constitutional-success: #10b981;
+  --constitutional-warning: #f59e0b;
+  --constitutional-danger: #ef4444;
+  --constitutional-quantum: #8b5cf6;
+  
+  /* Supreme authority colors */
+  --supreme-gold: #fbbf24;
+  --supreme-royal: #1e1b4b;
+  --supreme-platinum: #e5e7eb;
+  --supreme-quantum: #8b5cf6;
+  
+  /* Advanced gradients */
+  --constitutional-gradient: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #1e1b4b 100%);
+  --quantum-gradient: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 50%, #1e40af 100%);
+  --supreme-gradient: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #dc2626 100%);
+  --success-gradient: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+  
+  /* Professional shadows */
+  --elite-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  --quantum-shadow: 0 15px 35px rgba(139, 92, 246, 0.25);
+  --constitutional-shadow: 0 20px 40px rgba(30, 27, 75, 0.3);
+  
+  /* Advanced typography */
+  --elite-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --constitutional-font-weight: 600;
+  --supreme-font-weight: 700;
+  
+  /* Animation timings */
+  --elite-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --quantum-transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --constitutional-transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Constitutional Supremacy Center */
+.constitutional-supremacy-center {
+  min-height: 100vh;
+  background: var(--constitutional-gradient);
+  color: white;
+  font-family: var(--elite-font-family);
+  padding: 2rem;
+  overflow-x: hidden;
+}
+
+/* Elite Header Styles */
+.center-header {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(251, 191, 36, 0.2);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--constitutional-shadow);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header-title-section {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header-icon {
+  font-size: 3rem;
+  filter: drop-shadow(0 0 20px var(--supreme-gold));
+}
+
+.header-title {
+  font-size: 2.5rem;
+  font-weight: var(--supreme-font-weight);
+  background: var(--supreme-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+}
+
+.header-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0.5rem 0 0 0;
+  font-weight: var(--constitutional-font-weight);
+}
+
+.header-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.header-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--elite-transition);
+}
+
+.header-stat:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+  box-shadow: var(--quantum-shadow);
+}
+
+.header-stat.revolutionary {
+  border-color: var(--constitutional-accent);
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.2);
+}
+
+.header-stat.excellence {
+  border-color: var(--constitutional-success);
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+}
+
+.header-stat.constitutional {
+  border-color: var(--constitutional-primary);
+  box-shadow: 0 0 20px rgba(30, 27, 75, 0.3);
+}
+
+.header-stat.quantum {
+  border-color: var(--constitutional-quantum);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+}
+
+.stat-icon {
+  font-size: 1.5rem;
+  filter: drop-shadow(0 0 10px currentColor);
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: var(--supreme-font-weight);
+  color: var(--supreme-gold);
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: var(--constitutional-font-weight);
+}
+
+/* Elite Controls */
+.center-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.view-mode-selector {
+  display: flex;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.view-mode-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: var(--constitutional-font-weight);
+  transition: var(--elite-transition);
+  cursor: pointer;
+}
+
+.view-mode-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.view-mode-button.active {
+  background: var(--quantum-gradient);
+  color: white;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+}
+
+.mode-icon {
+  font-size: 1.25rem;
+}
+
+.mode-title {
+  font-size: 0.875rem;
+}
+
+.control-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.control-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-weight: var(--constitutional-font-weight);
+  transition: var(--elite-transition);
+  cursor: pointer;
+}
+
+.control-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--constitutional-accent);
+  box-shadow: 0 0 15px rgba(251, 191, 36, 0.3);
+}
+
+.control-button.active {
+  background: var(--supreme-gradient);
+  border-color: var(--supreme-gold);
+  box-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
+}
+
+.button-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.time-range-selector {
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-weight: var(--constitutional-font-weight);
+  transition: var(--elite-transition);
+}
+
+.time-range-selector:focus {
+  outline: none;
+  border-color: var(--constitutional-accent);
+  box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.2);
+}
+
+/* Validation Layers */
+.validation-layers-section {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: var(--supreme-font-weight);
+  margin-bottom: 1.5rem;
+  background: var(--supreme-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.validation-layers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.validation-layer-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: var(--constitutional-transition);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.validation-layer-card:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-5px);
+  box-shadow: var(--quantum-shadow);
+}
+
+.validation-layer-card.selected {
+  border-color: var(--supreme-gold);
+  background: rgba(251, 191, 36, 0.1);
+  box-shadow: 0 0 30px rgba(251, 191, 36, 0.3);
+}
+
+.layer-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.layer-icon {
+  font-size: 2rem;
+  filter: drop-shadow(0 0 10px currentColor);
+}
+
+.layer-info {
+  flex: 1;
+}
+
+.layer-title {
+  font-size: 1.25rem;
+  font-weight: var(--supreme-font-weight);
+  margin: 0 0 0.5rem 0;
+  color: white;
+}
+
+.layer-description {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.layer-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.75rem;
+}
+
+.layer-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: var(--constitutional-font-weight);
+}
+
+.stat-value {
+  font-size: 1.25rem;
+  font-weight: var(--supreme-font-weight);
+  color: var(--supreme-gold);
+  margin-top: 0.25rem;
+}
+
+.selected-indicator {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 3rem 3rem 0;
+  border-color: transparent var(--supreme-gold) transparent transparent;
+}
+
+.selected-indicator::after {
+  content: '👑';
+  position: absolute;
+  top: 0.5rem;
+  right: -2.5rem;
+  font-size: 1rem;
+  filter: drop-shadow(0 0 10px var(--supreme-gold));
+}
+
+/* Main Visualization */
+.main-visualization-section {
+  margin-bottom: 2rem;
+}
+
+.visualization-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.visualization-container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.visualization-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--supreme-gradient);
+  opacity: 0.8;
+}
+
+/* System Governance */
+.system-governance-section {
+  margin-bottom: 2rem;
+}
+
+.system-governance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.system-governance-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 4px solid var(--constitutional-accent);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: var(--constitutional-transition);
+}
+
+.system-governance-card:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-3px);
+  box-shadow: var(--elite-shadow);
+}
+
+.governance-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.governance-icon {
+  font-size: 1.5rem;
+  filter: drop-shadow(0 0 10px currentColor);
+}
+
+.governance-title {
+  font-size: 1.125rem;
+  font-weight: var(--supreme-font-weight);
+  margin: 0;
+  color: white;
+}
+
+.governance-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.governance-metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.metric-label {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: var(--constitutional-font-weight);
+}
+
+.metric-value {
+  color: var(--supreme-gold);
+  font-weight: var(--supreme-font-weight);
+}
+
+.compliance-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.compliance-bar {
+  flex: 1;
+  height: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.compliance-fill {
+  height: 100%;
+  border-radius: 0.25rem;
+  transition: var(--constitutional-transition);
+  box-shadow: 0 0 10px currentColor;
+}
+
+.compliance-percentage {
+  font-size: 0.875rem;
+  font-weight: var(--supreme-font-weight);
+  color: var(--supreme-gold);
+  min-width: 3rem;
+  text-align: right;
+}
+
+/* Constitutional Decisions Queue */
+.constitutional-decisions-section {
+  margin-bottom: 2rem;
+}
+
+.decisions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.decisions-stats {
+  display: flex;
+  gap: 2rem;
+  font-size: 0.875rem;
+  font-weight: var(--constitutional-font-weight);
+}
+
+.decisions-pending {
+  color: var(--constitutional-warning);
+}
+
+.decisions-processed {
+  color: var(--constitutional-success);
+}
+
+.decisions-approval-rate {
+  color: var(--supreme-gold);
+}
+
+.decisions-queue {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.decision-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: var(--constitutional-transition);
+}
+
+.decision-card.high {
+  border-color: var(--constitutional-danger);
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.decision-card.medium {
+  border-color: var(--constitutional-warning);
+  background: rgba(245, 158, 11, 0.1);
+}
+
+.decision-card.low {
+  border-color: var(--constitutional-success);
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.decision-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--quantum-shadow);
+}
+
+.decision-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.decision-priority {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: var(--supreme-font-weight);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.decision-timestamp {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.timestamp-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.decision-title {
+  font-size: 1.125rem;
+  font-weight: var(--supreme-font-weight);
+  margin: 0 0 0.5rem 0;
+  color: white;
+}
+
+.decision-description {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+}
+
+.decision-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.decision-metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.risk-low {
+  color: var(--constitutional-success);
+}
+
+.risk-medium {
+  color: var(--constitutional-warning);
+}
+
+.risk-high {
+  color: var(--constitutional-danger);
+}
+
+.decision-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.decision-approve,
+.decision-review,
+.decision-reject {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: var(--constitutional-font-weight);
+  transition: var(--elite-transition);
+  cursor: pointer;
+}
+
+.decision-approve {
+  background: var(--success-gradient);
+  color: white;
+}
+
+.decision-review {
+  background: var(--quantum-gradient);
+  color: white;
+}
+
+.decision-reject {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+}
+
+.action-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Constitutional Violations */
+.constitutional-violations-section {
+  margin-bottom: 2rem;
+}
+
+.violations-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.violations-summary {
+  display: flex;
+  gap: 2rem;
+  font-size: 0.875rem;
+  font-weight: var(--constitutional-font-weight);
+}
+
+.violations-blocked {
+  color: var(--constitutional-danger);
+}
+
+.violations-zero-tolerance {
+  color: var(--supreme-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.violations-stream {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  max-height: 300px;
+  overflow-y: auto;
+  font-family: 'Monaco', 'Menlo', monospace;
+}
+
+.violation-stream-item {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto auto;
+  gap: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  transition: var(--elite-transition);
+}
+
+.violation-stream-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.violation-stream-item.blocked {
+  background: rgba(239, 68, 68, 0.1);
+  border-left: 3px solid var(--constitutional-danger);
+}
+
+.violation-stream-item.approved {
+  background: rgba(16, 185, 129, 0.1);
+  border-left: 3px solid var(--constitutional-success);
+}
+
+.violation-timestamp {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: var(--constitutional-font-weight);
+}
+
+.violation-type {
+  font-weight: var(--supreme-font-weight);
+}
+
+.violation-source {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.violation-action {
+  font-weight: var(--supreme-font-weight);
+  text-align: center;
+}
+
+.violation-reason {
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .constitutional-supremacy-center {
+    padding: 1rem;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .center-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .validation-layers-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .system-governance-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .decisions-queue {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 2rem;
+  }
+  
+  .header-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .decisions-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .decisions-stats {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* Animation Classes */
+.pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 5px currentColor);
+  }
+  50% {
+    opacity: 0.7;
+    filter: drop-shadow(0 0 20px currentColor);
+  }
+}
+
+.rotate-quantum {
+  animation: rotateQuantum 4s linear infinite;
+}
+
+@keyframes rotateQuantum {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.float-constitutional {
+  animation: floatConstitutional 3s ease-in-out infinite;
+}
+
+@keyframes floatConstitutional {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

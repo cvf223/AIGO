@@ -1,0 +1,178 @@
+{
+  "name": "TOT Exploration MCP",
+  "id": "tot-exploration",
+  "version": "1.0.0",
+  "description": "Tree-of-Thought multi-path exploration for complex decision making and problem solving",
+  "category": "reasoning",
+  "capabilities": [
+    "tree-generation",
+    "path-exploration",
+    "branch-evaluation",
+    "pruning-strategies",
+    "path-comparison",
+    "decision-synthesis"
+  ],
+  "configuration": {
+    "endpoint": {
+      "url": "http://localhost:3016",
+      "protocol": "websocket"
+    },
+    "authentication": {
+      "type": "jwt",
+      "secretEnvVar": "TOT_JWT_SECRET"
+    },
+    "exploration": {
+      "maxDepth": 10,
+      "maxBranches": 5,
+      "explorationStrategy": "best-first",
+      "pruningThreshold": 0.3,
+      "parallelExploration": true
+    },
+    "evaluation": {
+      "scoringMethod": "weighted-sum",
+      "factors": {
+        "feasibility": 0.3,
+        "cost": 0.2,
+        "quality": 0.3,
+        "risk": 0.2
+      },
+      "confidenceRequired": 0.75
+    },
+    "strategies": {
+      "breadthFirst": {
+        "enabled": true,
+        "maxWidth": 10
+      },
+      "depthFirst": {
+        "enabled": true,
+        "backtrackThreshold": 0.4
+      },
+      "monteCarlo": {
+        "enabled": true,
+        "simulations": 100,
+        "explorationConstant": 1.414
+      },
+      "beam": {
+        "enabled": true,
+        "beamWidth": 3
+      }
+    }
+  },
+  "methods": [
+    {
+      "name": "createThoughtTree",
+      "description": "Initialize a new tree of thoughts",
+      "parameters": {
+        "rootProblem": "string",
+        "context": "object",
+        "constraints": "array",
+        "objective": "object"
+      }
+    },
+    {
+      "name": "exploreBranch",
+      "description": "Explore a specific branch of the tree",
+      "parameters": {
+        "treeId": "string",
+        "nodeId": "string",
+        "depth": "number",
+        "strategy": "string"
+      }
+    },
+    {
+      "name": "evaluateNode",
+      "description": "Evaluate a node in the thought tree",
+      "parameters": {
+        "node": "object",
+        "criteria": "object",
+        "compareToSiblings": "boolean"
+      }
+    },
+    {
+      "name": "pruneBranches",
+      "description": "Prune unpromising branches",
+      "parameters": {
+        "treeId": "string",
+        "strategy": "string",
+        "threshold": "number",
+        "keepMinimum": "number"
+      }
+    },
+    {
+      "name": "synthesizePaths",
+      "description": "Synthesize insights from multiple paths",
+      "parameters": {
+        "treeId": "string",
+        "topPaths": "number",
+        "synthesisMethod": "string"
+      }
+    },
+    {
+      "name": "compareDecisionPaths",
+      "description": "Compare different decision paths",
+      "parameters": {
+        "paths": "array",
+        "criteria": "object",
+        "includeTradeoffs": "boolean"
+      }
+    },
+    {
+      "name": "backtrack",
+      "description": "Backtrack and explore alternative paths",
+      "parameters": {
+        "treeId": "string",
+        "fromNode": "string",
+        "reason": "string"
+      }
+    }
+  ],
+  "templates": {
+    "construction": {
+      "rootFactors": [
+        "design_options",
+        "material_choices",
+        "construction_methods",
+        "timeline_variations",
+        "cost_optimizations"
+      ],
+      "evaluationCriteria": {
+        "hoai_compliance": 0.3,
+        "cost_efficiency": 0.25,
+        "construction_time": 0.2,
+        "quality": 0.15,
+        "sustainability": 0.1
+      }
+    },
+    "algorithm": {
+      "rootFactors": [
+        "algorithm_choice",
+        "data_structure",
+        "optimization_level",
+        "parallelization",
+        "caching_strategy"
+      ],
+      "evaluationCriteria": {
+        "performance": 0.4,
+        "scalability": 0.3,
+        "maintainability": 0.2,
+        "resource_usage": 0.1
+      }
+    }
+  },
+  "visualization": {
+    "enabled": true,
+    "format": "d3-json",
+    "realtime": true,
+    "includeScores": true,
+    "highlightBestPath": true
+  },
+  "integration": {
+    "agents": ["master-orchestrator", "ml-engineer", "construction-lead", "creativity-specialist"],
+    "combinedWith": ["cot-reasoning", "zap-engine"],
+    "persistence": {
+      "saveTree": true,
+      "database": "postgres",
+      "compressionEnabled": true
+    }
+  }
+}

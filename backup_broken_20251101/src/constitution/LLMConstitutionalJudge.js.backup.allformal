@@ -1,0 +1,485 @@
+/**
+ * 🧠⚖️ LLM CONSTITUTIONAL JUDGE - THE REAL INTELLIGENCE
+ * ====================================================
+ * 
+ * CRITICAL: This is the ACTUAL judge that uses LLM reasoning
+ * with full context to evaluate all creative alternatives,
+ * incentives, and offspring!
+ * 
+ * ENFORCES:
+ * - TRUTH RULES from workspace requirements
+ * - Constitutional laws with LLM reasoning
+ * - Formal verification with mathematical proofs
+ * - Real blockchain data verification
+ * - Production database requirements
+ */
+
+import { EventEmitter } from 'events';
+import { getConstitution } from './SyndicateConstitution.js';
+import { LLMAgent } from '../agents/LLMAgent.js';
+import { ContextEngine } from '../llm/ContextEngine.js';
+import { EliteJudgeGatekeeperService } from '../services/EliteJudgeGatekeeperService.js';
+import { OllamaIntegration } from '../llm/OllamaIntegration.js';
+import { FormalReasoningConstructionIntegration as FormalReasoningCognitiveIntegration } from '../construction/cognitive/FormalReasoningConstructionIntegration.js';;
+
+// TRUTH RULE ENFORCEMENT
+const TRUTH_RULES = {
+    BLOCKCHAIN_DATA_ONLY: {
+        rule: 'All arbitrage, pool, and price data must be from LIVE blockchain APIs',
+        allowedSources: ['alchemy', 'infura', 'moralis', 'direct_node'],
+        verification: 'Must provide API endpoint and transaction hash'
+    },
+    NO_SIMULATIONS: {
+        rule: 'NO simulation or mock data permitted',
+        verification: 'Must show real blockchain transaction or query'
+    },
+    DATABASE_REQUIRED: {
+        rule: 'Pool configuration MUST be from production PostgreSQL',
+        verification: 'Must provide database query and timestamp'
+    },
+    TRANSACTION_LOGGING: {
+        rule: 'All actions must be logged with blockchain transaction hashes',
+        verification: 'Must provide tx hash and block number'
+    },
+    CRYPTOGRAPHIC_PROOF: {
+        rule: 'Shared memory must have cryptographic proofs',
+        verification: 'Must provide block number, Merkle root, or signature'
+    }
+};
+
+export class LLMConstitutionalJudge extends EventEmitter {
+    constructor(config = {}) {
+        super();
+        
+        console.log('🧠⚖️ Initializing LLM Constitutional Judge...');
+        
+        this.config = {
+            model: config.model || 'qwen2.5:32b',
+            temperature: config.temperature || 0.2,  // Low for consistency
+            maxTokens: config.maxTokens || 4096,
+            requireBlockchainProof: config.requireBlockchainProof !== false,
+            requireDatabaseEvidence: config.requireDatabaseEvidence !== false,
+            ...config
+        };
+        
+        // Core systems
+        this.constitution = getConstitution();
+        this.llmAgent = null;
+        this.contextEngine = null;
+        this.eliteJudge = null;
+        this.ollamaService = null;
+        this.formalReasoning = null;
+        
+        // Tracking
+        this.judgmentStats = {
+            totalEvaluations: 0,
+            llmApprovals: 0,
+            llmRejections: 0,
+            truthViolations: 0,
+            constitutionViolations: 0,
+            formalProofsFailed: 0
+        };
+    }
+    
+    async initialize() {
+        console.log('🚀 Initializing LLM judge systems...');
+        
+        // Initialize Ollama for LLM reasoning
+        this.ollamaService = new OllamaIntegration({
+            model: this.config.model,
+            temperature: this.config.temperature
+        });
+        await this.ollamaService.init();
+        
+        // Initialize Context Engine for rich context building
+        this.contextEngine = new ContextEngine({
+            enableProactivePrevention: true,
+            enableQuantumForecasting: true
+        });
+        await this.contextEngine.initialize();
+        
+        // Initialize Elite Judge for reward/penalty decisions
+        this.eliteJudge = new EliteJudgeGatekeeperService({
+            dbPool: this.config.dbPool,
+            requireBlockchainProof: true
+        });
+        
+        // Initialize Formal Reasoning for mathematical proofs
+        this.formalReasoning = new FormalReasoningCognitiveIntegration({
+            enableFormalVerification: true,
+            requireMathematicalProof: true
+        });
+        
+        // Initialize LLM Agent with dependencies
+        this.llmAgent = new LLMAgent({
+            character: { 
+                name: 'Constitutional Judge',
+                role: 'Supreme arbiter of intelligence preservation'
+            },
+            dependencies: {
+                ollamaService: this.ollamaService,
+                contextEngine: this.contextEngine,
+                eliteJudge: this.eliteJudge,
+                formalReasoning: this.formalReasoning
+            }
+        });
+        
+        console.log('✅ LLM Constitutional Judge ready!');
+    }
+    
+    /**
+     * 🧠⚖️ EVALUATE WITH FULL LLM REASONING
+     * ====================================
+     * This is the CORE evaluation that uses LLM with rich context
+     * 
+     * Process:
+     * 1. Build rich context with ContextEngine
+     * 2. Check TRUTH RULES compliance
+     * 3. LLM reasoning with chain-of-thought
+     * 4. Formal verification if required
+     * 5. Constitutional law checking
+     * 6. Final verdict with full explanation
+     */
+    async evaluateWithLLMReasoning(action, context = {}) {
+        console.log('🧠⚖️ LLM Constitutional evaluation initiated...');
+        this.judgmentStats.totalEvaluations++;
+        
+        try {
+            // STEP 1: Build rich context
+            console.log('📚 Building rich context...');
+            const richContext = await this.contextEngine.buildContext({
+                action,
+                systemState: context,
+                historicalData: await this._getHistoricalContext(action),
+                marketConditions: context.marketConditions,
+                competitorAnalysis: context.competitors
+            });
+            
+            // STEP 2: Check TRUTH RULES
+            console.log('🔍 Verifying TRUTH RULES compliance...');
+            const truthCompliance = await this._checkTruthRules(action, context);
+            
+            if (!truthCompliance.compliant) {
+                console.error('❌ TRUTH RULES VIOLATED!');
+                console.error('   Violations:', truthCompliance.violations);
+                this.judgmentStats.truthViolations++;
+                
+                return {
+                    approved: false,
+                    reason: 'TRUTH RULES violation',
+                    violations: truthCompliance.violations,
+                    llmReasoning: 'Rejected before LLM evaluation due to TRUTH violations'
+                };
+            }
+            
+            // STEP 3: LLM Reasoning with Chain of Thought
+            console.log('🤔 LLM reasoning with chain-of-thought...');
+            const llmVerdict = await this._performLLMReasoning(action, richContext);
+            
+            if (!llmVerdict.approved) {
+                console.log('❌ LLM rejected the action');
+                this.judgmentStats.llmRejections++;
+                
+                return {
+                    approved: false,
+                    reason: 'LLM reasoning rejection',
+                    llmReasoning: llmVerdict.reasoning,
+                    suggestions: llmVerdict.improvements
+                };
+            }
+            
+            // STEP 4: Formal Verification (if required)
+            if (this.config.requireFormalProof && action.requiresFormalProof) {
+                console.log('🔬 Performing formal verification...');
+                const formalVerification = await this.formalReasoning.verifyReasoning({
+                    claim: llmVerdict.claim,
+                    evidence: {
+                        action,
+                        llmReasoning: llmVerdict.reasoning,
+                        context: richContext
+                    },
+                    requireProof: true
+                });
+                
+                if (!formalVerification.valid) {
+                    console.log('❌ Formal verification failed');
+                    this.judgmentStats.formalProofsFailed++;
+                    
+                    return {
+                        approved: false,
+                        reason: 'Formal verification failed',
+                        llmReasoning: llmVerdict.reasoning,
+                        formalError: formalVerification.error
+                    };
+                }
+                
+                llmVerdict.formalProof = formalVerification.proof;
+            }
+            
+            // STEP 5: Constitutional Law Check
+            console.log('⚖️ Checking constitutional laws...');
+            const constitutionalCheck = await this.constitution.verifyCompliance(
+                action, 
+                { ...context, llmVerdict }
+            );
+            
+            if (!constitutionalCheck.compliant) {
+                console.log('❌ Constitutional violation');
+                this.judgmentStats.constitutionViolations++;
+                
+                return {
+                    approved: false,
+                    reason: 'Constitutional violation',
+                    violations: constitutionalCheck.violations,
+                    llmReasoning: llmVerdict.reasoning
+                };
+            }
+            
+            // SUCCESS - All checks passed!
+            console.log('✅ LLM APPROVED with full verification!');
+            this.judgmentStats.llmApprovals++;
+            
+            return {
+                approved: true,
+                llmReasoning: llmVerdict.reasoning,
+                confidenceScore: llmVerdict.confidence,
+                formalProof: llmVerdict.formalProof,
+                improvements: llmVerdict.improvements,
+                certification: 'LLM_CONSTITUTIONALLY_APPROVED'
+            };
+            
+        } catch (error) {
+            console.error('❌ LLM evaluation failed:', error);
+            return {
+                approved: false,
+                reason: 'Evaluation error',
+                error: error.message
+            };
+        }
+    }
+    
+    /**
+     * 🔍 CHECK TRUTH RULES
+     */
+    async _checkTruthRules(action, context) {
+        const violations = [];
+        
+        // Check blockchain data source
+        if (action.dataSource && !TRUTH_RULES.BLOCKCHAIN_DATA_ONLY.allowedSources.includes(action.dataSource)) {
+            violations.push({
+                rule: 'BLOCKCHAIN_DATA_ONLY',
+                violation: `Invalid data source: ${action.dataSource}`,
+                required: TRUTH_RULES.BLOCKCHAIN_DATA_ONLY.allowedSources
+            });
+        }
+        
+        // Check for simulations
+        if (action.isSimulation || action.isMock || context.isTestEnvironment) {
+            violations.push({
+                rule: 'NO_SIMULATIONS',
+                violation: 'Simulation or mock data detected',
+                required: 'Real blockchain data only'
+            });
+        }
+        
+        // Check database evidence
+        if (this.config.requireDatabaseEvidence && !action.databaseQuery) {
+            violations.push({
+                rule: 'DATABASE_REQUIRED',
+                violation: 'No database query provided',
+                required: 'PostgreSQL query and timestamp'
+            });
+        }
+        
+        // Check transaction hash
+        if (action.type === 'execution' && !action.transactionHash) {
+            violations.push({
+                rule: 'TRANSACTION_LOGGING',
+                violation: 'No transaction hash provided',
+                required: 'Blockchain transaction hash and block number'
+            });
+        }
+        
+        // Check cryptographic proof
+        if (action.requiresCryptographicProof && !action.proof) {
+            violations.push({
+                rule: 'CRYPTOGRAPHIC_PROOF',
+                violation: 'No cryptographic proof provided',
+                required: 'Block number, Merkle root, or signature'
+            });
+        }
+        
+        return {
+            compliant: violations.length === 0,
+            violations
+        };
+    }
+    
+    /**
+     * 🤔 PERFORM LLM REASONING
+     */
+    async _performLLMReasoning(action, richContext) {
+        const prompt = this._buildReasoningPrompt(action, richContext);
+        
+        const response = await this.ollamaService.complete({
+            prompt,
+            system: `You are the Constitutional Judge of the Elite AI Arbitrage Syndicate.
+Your role is to evaluate actions for:
+1. Intelligence preservation (no degradation allowed)
+2. Strategic superiority (must enhance, not replace)
+3. Profit maximization (every action must increase profit potential)
+4. Formal correctness (must be mathematically sound)
+5. Market dominance (maintain TOP 5% trajectory)
+
+Use chain-of-thought reasoning to evaluate the action.
+Consider all context and evidence provided.
+Be extremely strict - only approve actions that clearly enhance the system.
+Provide specific improvements if rejecting.
+
+Response format:
+VERDICT: [APPROVED/REJECTED]
+CONFIDENCE: [0.0-1.0]
+REASONING: [Detailed chain-of-thought analysis]
+IMPROVEMENTS: [Specific suggestions if rejected]
+CLAIM: [The core claim being evaluated]`,
+            temperature: this.config.temperature,
+            max_tokens: this.config.maxTokens
+        });
+        
+        // Parse LLM response
+        const verdict = this._parseLLMResponse(response);
+        
+        // Log the reasoning
+        console.log('🧠 LLM Reasoning:');
+        console.log(`   Verdict: ${verdict.approved ? 'APPROVED' : 'REJECTED'}`);
+        console.log(`   Confidence: ${verdict.confidence}`);
+        console.log(`   Core reasoning: ${verdict.reasoning.substring(0, 200)}...`);
+        
+        return verdict;
+    }
+    
+    /**
+     * 📝 BUILD REASONING PROMPT
+     */
+    _buildReasoningPrompt(action, context) {
+        return `
+EVALUATE THIS ACTION FOR CONSTITUTIONAL COMPLIANCE:
+
+ACTION TYPE: ${action.type}
+ACTION DETAILS: ${JSON.stringify(action, null, 2)}
+
+CONTEXT:
+- Market Conditions: ${JSON.stringify(context.marketConditions || {}, null, 2)}
+- System State: ${JSON.stringify(context.systemState || {}, null, 2)}
+- Historical Performance: ${JSON.stringify(context.historicalData || {}, null, 2)}
+- Competitor Analysis: ${JSON.stringify(context.competitorAnalysis || {}, null, 2)}
+
+CONSTITUTIONAL LAWS TO ENFORCE:
+1. PROFIT_MAXIMIZATION - Must demonstrably increase profit
+2. MARKET_DOMINANCE - Must maintain TOP 5% trajectory
+3. MATHEMATICAL_RIGOR - Must be formally verifiable
+4. INTELLIGENCE_PRESERVATION - ZERO tolerance for degradation
+5. CONTROLLED_INNOVATION - Creativity must enhance, not replace
+
+TRUTH RULES TO VERIFY:
+- All data must be from live blockchain sources
+- No simulations or mocks allowed
+- Database queries must be from production PostgreSQL
+- Actions must have blockchain transaction hashes
+- Cryptographic proofs required for critical claims
+
+EVALUATE:
+1. Does this action enhance or degrade system intelligence?
+2. Is the strategic value genuine or speculative?
+3. Is there mathematical proof of improvement?
+4. Are all data sources verified and real?
+5. Does this move us toward market dominance?
+
+Provide your verdict with detailed reasoning.`;
+    }
+    
+    /**
+     * 📊 PARSE LLM RESPONSE
+     */
+    _parseLLMResponse(response) {
+        const text = response.response || response;
+        
+        // Extract verdict
+        const verdictMatch = text.match(/VERDICT:\s*(APPROVED|REJECTED)/i);
+        const approved = verdictMatch && verdictMatch[1].toUpperCase() === 'APPROVED';
+        
+        // Extract confidence
+        const confidenceMatch = text.match(/CONFIDENCE:\s*([\d.]+)/i);
+        const confidence = confidenceMatch ? parseFloat(confidenceMatch[1]) : 0.5;
+        
+        // Extract reasoning
+        const reasoningMatch = text.match(/REASONING:\s*([^]*?)(?:IMPROVEMENTS:|CLAIM:|$)/i);
+        const reasoning = reasoningMatch ? reasoningMatch[1].trim() : text;
+        
+        // Extract improvements
+        const improvementsMatch = text.match(/IMPROVEMENTS:\s*([^]*?)(?:CLAIM:|$)/i);
+        const improvements = improvementsMatch ? improvementsMatch[1].trim() : null;
+        
+        // Extract claim
+        const claimMatch = text.match(/CLAIM:\s*([^]*?)$/i);
+        const claim = claimMatch ? claimMatch[1].trim() : 'Action enhances system';
+        
+        return {
+            approved,
+            confidence,
+            reasoning,
+            improvements,
+            claim
+        };
+    }
+    
+    /**
+     * 📚 GET HISTORICAL CONTEXT
+     */
+    async _getHistoricalContext(action) {
+        // Retrieve relevant historical data from database
+        if (this.config.dbPool) {
+            try {
+                const result = await this.config.dbPool.query(
+                    `SELECT * FROM action_history 
+                     WHERE action_type = $1 
+                     ORDER BY timestamp DESC 
+                     LIMIT 10`,
+                    [action.type]
+                );
+                return result.rows;
+            } catch (error) {
+                console.warn('Could not retrieve historical context:', error.message);
+                return [];
+            }
+        }
+        return [];
+    }
+    
+    /**
+     * 📊 GET JUDGMENT STATISTICS
+     */
+    getJudgmentStats() {
+        const approvalRate = this.judgmentStats.llmApprovals / 
+            Math.max(1, this.judgmentStats.totalEvaluations);
+        
+        return {
+            ...this.judgmentStats,
+            approvalRate: (approvalRate * 100).toFixed(1) + '%',
+            truthComplianceRate: ((1 - this.judgmentStats.truthViolations / 
+                Math.max(1, this.judgmentStats.totalEvaluations)) * 100).toFixed(1) + '%'
+        };
+    }
+}
+
+// Singleton instance
+let judgeInstance = null;
+
+export function getLLMJudge(config) {
+    if (!judgeInstance) {
+        judgeInstance = new LLMConstitutionalJudge(config);
+    }
+    return judgeInstance;
+}
+
+export default LLMConstitutionalJudge;

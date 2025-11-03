@@ -1,0 +1,26 @@
+{
+  "plan": "FB_AUS A_GR00_B_240529.pdf",
+  "timestamp": "2025-10-23T08:32:41.371Z",
+  "scale": "1:50",
+  "buildingArea": {
+    "x": 1092.6,
+    "y": 1544.5,
+    "width": 2780.8,
+    "height": 3932
+  },
+  "statistics": {
+    "totalDetected": 0,
+    "validElements": 0,
+    "filteredOut": 0,
+    "patternSize": 64
+  },
+  "elements": {},
+  "visualizationPath": "/root/ProductionCode/production_output/FB_AUS A_GR00_B_240529_visualization.html",
+  "improvements": [
+    "Correct scale detection",
+    "Building area isolation",
+    "Human-readable analysis",
+    "No hallucinations",
+    "Context validation"
+  ]
+}

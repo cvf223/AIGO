@@ -1,0 +1,34 @@
+{
+  "test_agent_001": {
+    "patternRecognitionAccuracy": 0,
+    "patternsIdentified": 5,
+    "accuratePredictions": 0,
+    "falsePositives": 0,
+    "falseNegatives": 0,
+    "competitorBenchmarksCreated": 0,
+    "competitorStrategiesIdentified": 0,
+    "competitorAnalysisAccuracy": 0,
+    "postDecisionAnalysesCompleted": 0,
+    "improvementSuggestionsGenerated": 0,
+    "suggestionImplementationRate": 0,
+    "collaborationEvents": 0,
+    "successfulCoordinations": 0,
+    "knowledgeSharingEvents": 0,
+    "crossAgentAssistance": 0,
+    "forecastsGenerated": 0,
+    "forecastAccuracy": 0,
+    "confidenceCalibration": 0,
+    "totalAnalyses": 0,
+    "averageAnalysisTime": 0,
+    "analysisQualityScore": 0
+  },
+  "poor_performance_agent": {
+    "patternRecognitionAccuracy": 0.5,
+    "competitorAnalysisAccuracy": 0.6,
+    "forecastAccuracy": 0.4,
+    "collaborationEvents": 10,
+    "successfulCoordinations": 6,
+    "patternsIdentified": 20,
+    "accuratePredictions": 10
+  }
+}

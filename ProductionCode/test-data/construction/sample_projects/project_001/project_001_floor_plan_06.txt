@@ -1,0 +1,36 @@
+SYNTHETIC CONSTRUCTION PLAN
+Project: Office Building project_001
+Plan Type: floor_plan
+Plan ID: project_001_floor_plan_06
+
+{
+  "planId": "project_001_floor_plan_06",
+  "projectId": "project_001",
+  "planType": "floor_plan",
+  "fileName": "project_001_floor_plan_06.txt",
+  "dimensions": {
+    "width": 26.75,
+    "height": 13.39,
+    "unit": "m",
+    "area": 358.12
+  },
+  "elements": {
+    "rooms": 8,
+    "doors": 5,
+    "windows": 10,
+    "walls": 29,
+    "stairs": 1
+  },
+  "hasIntentionalError": false,
+  "errorDetails": null,
+  "metadata": {
+    "scale": "1:100",
+    "format": "A1",
+    "revision": "R01",
+    "date": "2024-01-15",
+    "drawnBy": "Synthetic Generator"
+  }
+}
+
+Note: This is a synthetic test plan generated for testing purposes.
+In production, this would be an actual PDF/DWG file with visual content.

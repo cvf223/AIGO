@@ -1,0 +1,6 @@
+packages:
+    # - "docs"  # Excluded - no package.json
+    # - "packages/*"  # Excluded - Eliza framework CJS/ESM conflict
+    - "client"
+    - "agent"
+    - "web-gui-construction"

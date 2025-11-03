@@ -1,0 +1,47 @@
+{
+  "projectId": "project_003",
+  "projectName": "Retail Building project_003",
+  "quantities": {
+    "concrete": {
+      "value": 1407.73,
+      "unit": "m³",
+      "category": "structural"
+    },
+    "steel": {
+      "value": 234622,
+      "unit": "kg",
+      "category": "structural"
+    },
+    "bricks": {
+      "value": 563092,
+      "unit": "pieces",
+      "category": "masonry"
+    },
+    "windows": {
+      "value": 57,
+      "unit": "pieces",
+      "category": "finishes"
+    },
+    "doors": {
+      "value": 16,
+      "unit": "pieces",
+      "category": "finishes"
+    },
+    "paint": {
+      "value": 11731.1,
+      "unit": "m²",
+      "category": "finishes"
+    },
+    "flooring": {
+      "value": 3390.29,
+      "unit": "m²",
+      "category": "finishes"
+    }
+  },
+  "totalEstimatedCost": 8476745.63,
+  "boqReference": "project_003_boq.xlsx",
+  "validatedBy": "synthetic_generator",
+  "validationMethod": "algorithmic_calculation",
+  "confidenceLevel": 0.95,
+  "date": "2025-10-11T17:21:14.956Z"
+}

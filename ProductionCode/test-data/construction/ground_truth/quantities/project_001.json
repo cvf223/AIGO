@@ -1,0 +1,47 @@
+{
+  "projectId": "project_001",
+  "projectName": "Office Building project_001",
+  "quantities": {
+    "concrete": {
+      "value": 575.75,
+      "unit": "m³",
+      "category": "structural"
+    },
+    "steel": {
+      "value": 95958,
+      "unit": "kg",
+      "category": "structural"
+    },
+    "bricks": {
+      "value": 230299,
+      "unit": "pieces",
+      "category": "masonry"
+    },
+    "windows": {
+      "value": 48,
+      "unit": "pieces",
+      "category": "finishes"
+    },
+    "doors": {
+      "value": 19,
+      "unit": "pieces",
+      "category": "finishes"
+    },
+    "paint": {
+      "value": 4797.9,
+      "unit": "m²",
+      "category": "finishes"
+    },
+    "flooring": {
+      "value": 1386.59,
+      "unit": "m²",
+      "category": "finishes"
+    }
+  },
+  "totalEstimatedCost": 2981961.82,
+  "boqReference": "project_001_boq.xlsx",
+  "validatedBy": "synthetic_generator",
+  "validationMethod": "algorithmic_calculation",
+  "confidenceLevel": 0.95,
+  "date": "2025-10-11T17:21:14.952Z"
+}

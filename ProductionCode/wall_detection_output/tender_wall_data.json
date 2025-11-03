@@ -1,0 +1,55 @@
+{
+  "project": "temp_1761173471469-1.png",
+  "scale": {
+    "scale": "1:100",
+    "pixelsPerMeter": 300
+  },
+  "totalWallArea": 147.94308023593945,
+  "positions": [
+    {
+      "position": "341",
+      "description": "Tragende Wände (Load-bearing)",
+      "quantity": 17.031311613741195,
+      "unit": "m²",
+      "details": {
+        "count": 328,
+        "totalLength": 279.763333333333,
+        "avgThickness": 0.05950113085602888
+      }
+    },
+    {
+      "position": "342",
+      "description": "Nichttragende Wände (Partition)",
+      "quantity": 7.42283724282258,
+      "unit": "m²",
+      "details": {
+        "count": 223,
+        "totalLength": 191.96999999999994,
+        "avgThickness": 0.03884623612780228
+      }
+    },
+    {
+      "position": "334",
+      "description": "Gedämmte Wände (Insulated)",
+      "quantity": 122.45182923651853,
+      "unit": "m²",
+      "details": {
+        "count": 663,
+        "totalLength": 473.4533333333301,
+        "avgThickness": 0.28414939518452487
+      }
+    },
+    {
+      "position": "346",
+      "description": "Trockenbauwände (Drywall)",
+      "quantity": 1.0371021428571419,
+      "unit": "m²",
+      "details": {
+        "count": 123,
+        "totalLength": 52.50333333333333,
+        "avgThickness": 0.020254936120789793
+      }
+    }
+  ],
+  "timestamp": "2025-10-23T03:02:28.453Z"
+}

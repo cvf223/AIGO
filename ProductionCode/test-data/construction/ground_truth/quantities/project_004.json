@@ -1,0 +1,47 @@
+{
+  "projectId": "project_004",
+  "projectName": "Hotel Building project_004",
+  "quantities": {
+    "concrete": {
+      "value": 474.22,
+      "unit": "m³",
+      "category": "structural"
+    },
+    "steel": {
+      "value": 79037.5,
+      "unit": "kg",
+      "category": "structural"
+    },
+    "bricks": {
+      "value": 189690,
+      "unit": "pieces",
+      "category": "masonry"
+    },
+    "windows": {
+      "value": 47,
+      "unit": "pieces",
+      "category": "finishes"
+    },
+    "doors": {
+      "value": 14,
+      "unit": "pieces",
+      "category": "finishes"
+    },
+    "paint": {
+      "value": 3951.88,
+      "unit": "m²",
+      "category": "finishes"
+    },
+    "flooring": {
+      "value": 1142.09,
+      "unit": "m²",
+      "category": "finishes"
+    }
+  },
+  "totalEstimatedCost": 2921944.83,
+  "boqReference": "project_004_boq.xlsx",
+  "validatedBy": "synthetic_generator",
+  "validationMethod": "algorithmic_calculation",
+  "confidenceLevel": 0.95,
+  "date": "2025-10-11T17:21:14.958Z"
+}

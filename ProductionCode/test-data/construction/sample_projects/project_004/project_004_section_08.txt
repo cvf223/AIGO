@@ -1,0 +1,32 @@
+SYNTHETIC CONSTRUCTION PLAN
+Project: Hotel Building project_004
+Plan Type: section
+Plan ID: project_004_section_08
+
+{
+  "planId": "project_004_section_08",
+  "projectId": "project_004",
+  "planType": "section",
+  "fileName": "project_004_section_08.txt",
+  "dimensions": {
+    "width": 20.95,
+    "height": 24.36,
+    "unit": "m",
+    "area": 510.44
+  },
+  "elements": {
+    "elementCount": 24
+  },
+  "hasIntentionalError": false,
+  "errorDetails": null,
+  "metadata": {
+    "scale": "1:100",
+    "format": "A1",
+    "revision": "R01",
+    "date": "2024-01-15",
+    "drawnBy": "Synthetic Generator"
+  }
+}
+
+Note: This is a synthetic test plan generated for testing purposes.
+In production, this would be an actual PDF/DWG file with visual content.

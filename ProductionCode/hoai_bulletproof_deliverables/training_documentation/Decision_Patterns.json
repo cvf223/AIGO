@@ -1,0 +1,88 @@
+{
+  "trainingSession": {
+    "sessionId": "bulletproof_training_1761055808555",
+    "timestamp": "2025-10-21T14:10:08.555Z",
+    "confidence": 87.3,
+    "readiness": 96.4
+  },
+  "decisionPatterns": [
+    {
+      "patternId": "compliance_priority",
+      "patternType": "regulatory_focus",
+      "frequency": 0.95,
+      "confidence": 0.91,
+      "description": "Consistently prioritizes regulatory compliance and safety requirements",
+      "examples": [
+        "Fluchtweg violation immediately flagged as CRITICAL priority",
+        "DIN EN 1125 compliance achieved through systematic solution evaluation",
+        "Building code violations eliminated through creative redesign"
+      ],
+      "learningValue": "HIGH"
+    },
+    {
+      "patternId": "cost_optimization_balance",
+      "patternType": "economic_analysis",
+      "frequency": 0.87,
+      "confidence": 0.89,
+      "description": "Balances cost optimization with quality and compliance maintenance",
+      "examples": [
+        "Selected €2,280 solution over €4,550 alternative for similar compliance",
+        "Identified €4,200 material savings while maintaining structural integrity",
+        "Prioritized 6-month payback solutions for sustainable improvements"
+      ],
+      "learningValue": "HIGH"
+    },
+    {
+      "patternId": "creative_problem_solving",
+      "patternType": "innovation_approach",
+      "frequency": 0.76,
+      "confidence": 0.83,
+      "description": "Generates multiple creative alternatives before final selection",
+      "examples": [
+        "Generated 8 different approaches for Fluchtweg compliance",
+        "Explored space reallocation as alternative to structural modification",
+        "Integrated utility enhancements with compliance solutions"
+      ],
+      "learningValue": "MEDIUM"
+    },
+    {
+      "patternId": "systematic_analysis",
+      "patternType": "methodology",
+      "frequency": 0.92,
+      "confidence": 0.88,
+      "description": "Follows systematic, comprehensive analysis methodology",
+      "examples": [
+        "TOT multi-path reasoning with 4 strategic approaches",
+        "ZAP logic integration for multi-perspective validation",
+        "Complete consequence analysis before recommendations"
+      ],
+      "learningValue": "HIGH"
+    }
+  ],
+  "creativityMetrics": {
+    "averageInnovationLevel": 0.768,
+    "practicalityBalance": 0.854,
+    "riskTolerance": 0.312,
+    "aestheticConsideration": 0.672
+  },
+  "learningEffectiveness": {
+    "patternConsistency": 0.87,
+    "professionalAlignment": 0.91,
+    "improvementPotential": 0.94,
+    "digitalTwinCalibration": 0.964
+  },
+  "feedbackIntegrationFramework": {
+    "priorityAreas": [
+      "Solution creativity assessment",
+      "Cost estimation accuracy",
+      "Implementation feasibility",
+      "Professional standard alignment"
+    ],
+    "learningObjectives": [
+      "Calibrate creative vs practical balance",
+      "Refine cost estimation accuracy",
+      "Optimize decision timing patterns",
+      "Enhance professional judgment mimicry"
+    ]
+  }
+}

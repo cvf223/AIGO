@@ -1,0 +1,35 @@
+SYNTHETIC CONSTRUCTION PLAN
+Project: Office Building project_001
+Plan Type: elevation
+Plan ID: project_001_elevation_02
+
+{
+  "planId": "project_001_elevation_02",
+  "projectId": "project_001",
+  "planType": "elevation",
+  "fileName": "project_001_elevation_02.txt",
+  "dimensions": {
+    "width": 32.44,
+    "height": 12.39,
+    "unit": "m",
+    "area": 401.93
+  },
+  "elements": {
+    "windows": 14,
+    "doors": 3,
+    "floors": 7,
+    "height": 21
+  },
+  "hasIntentionalError": false,
+  "errorDetails": null,
+  "metadata": {
+    "scale": "1:100",
+    "format": "A1",
+    "revision": "R01",
+    "date": "2024-01-15",
+    "drawnBy": "Synthetic Generator"
+  }
+}
+
+Note: This is a synthetic test plan generated for testing purposes.
+In production, this would be an actual PDF/DWG file with visual content.

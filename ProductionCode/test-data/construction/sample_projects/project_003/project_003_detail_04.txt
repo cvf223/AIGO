@@ -1,0 +1,32 @@
+SYNTHETIC CONSTRUCTION PLAN
+Project: Retail Building project_003
+Plan Type: detail
+Plan ID: project_003_detail_04
+
+{
+  "planId": "project_003_detail_04",
+  "projectId": "project_003",
+  "planType": "detail",
+  "fileName": "project_003_detail_04.txt",
+  "dimensions": {
+    "width": 30.6,
+    "height": 14.25,
+    "unit": "m",
+    "area": 436.04
+  },
+  "elements": {
+    "elementCount": 29
+  },
+  "hasIntentionalError": false,
+  "errorDetails": null,
+  "metadata": {
+    "scale": "1:100",
+    "format": "A1",
+    "revision": "R01",
+    "date": "2024-01-15",
+    "drawnBy": "Synthetic Generator"
+  }
+}
+
+Note: This is a synthetic test plan generated for testing purposes.
+In production, this would be an actual PDF/DWG file with visual content.

@@ -1,0 +1,76 @@
+{
+  "summary": {
+    "totalProcessed": 0,
+    "totalRuntime": "0.01 hours",
+    "totalDiscoveries": 0,
+    "totalErrors": 9,
+    "processingRate": "0.00 newsletters/min"
+  },
+  "discoveries": [],
+  "errors": [
+    {
+      "newsletter": "Original_MilkRoad",
+      "cycle": 1,
+      "timestamp": 1753039803828,
+      "error": "Cannot set properties of undefined (setting 'contentFile')",
+      "stack": "TypeError: Cannot set properties of undefined (setting 'contentFile')\n    at ExtensiveNewsletterProcessor.processNewsletterVariation (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:242:59)\n    at async ExtensiveNewsletterProcessor.startExtensiveProcessing (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:203:21)\n    at async main (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:333:5)"
+    },
+    {
+      "newsletter": "High_Value_Crypto_News",
+      "cycle": 1,
+      "timestamp": 1753039805838,
+      "error": "Cannot set properties of undefined (setting 'contentFile')",
+      "stack": "TypeError: Cannot set properties of undefined (setting 'contentFile')\n    at ExtensiveNewsletterProcessor.processNewsletterVariation (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:242:59)\n    at async ExtensiveNewsletterProcessor.startExtensiveProcessing (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:203:21)\n    at async main (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:333:5)"
+    },
+    {
+      "newsletter": "DeFi_Opportunities",
+      "cycle": 1,
+      "timestamp": 1753039807849,
+      "error": "Cannot set properties of undefined (setting 'contentFile')",
+      "stack": "TypeError: Cannot set properties of undefined (setting 'contentFile')\n    at ExtensiveNewsletterProcessor.processNewsletterVariation (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:242:59)\n    at async ExtensiveNewsletterProcessor.startExtensiveProcessing (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:203:21)\n    at async main (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:333:5)"
+    },
+    {
+      "newsletter": "Arbitrage_Signals",
+      "cycle": 1,
+      "timestamp": 1753039809855,
+      "error": "Cannot set properties of undefined (setting 'contentFile')",
+      "stack": "TypeError: Cannot set properties of undefined (setting 'contentFile')\n    at ExtensiveNewsletterProcessor.processNewsletterVariation (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:242:59)\n    at async ExtensiveNewsletterProcessor.startExtensiveProcessing (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:203:21)\n    at async main (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:333:5)"
+    },
+    {
+      "newsletter": "Technical_Analysis",
+      "cycle": 1,
+      "timestamp": 1753039811861,
+      "error": "Cannot set properties of undefined (setting 'contentFile')",
+      "stack": "TypeError: Cannot set properties of undefined (setting 'contentFile')\n    at ExtensiveNewsletterProcessor.processNewsletterVariation (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:242:59)\n    at async ExtensiveNewsletterProcessor.startExtensiveProcessing (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:203:21)\n    at async main (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:333:5)"
+    },
+    {
+      "newsletter": "Regulatory_Updates",
+      "cycle": 1,
+      "timestamp": 1753039813865,
+      "error": "Cannot set properties of undefined (setting 'contentFile')",
+      "stack": "TypeError: Cannot set properties of undefined (setting 'contentFile')\n    at ExtensiveNewsletterProcessor.processNewsletterVariation (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:242:59)\n    at async ExtensiveNewsletterProcessor.startExtensiveProcessing (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:203:21)\n    at async main (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:333:5)"
+    },
+    {
+      "newsletter": "Original_MilkRoad",
+      "cycle": 2,
+      "timestamp": 1753039820872,
+      "error": "Cannot set properties of undefined (setting 'contentFile')",
+      "stack": "TypeError: Cannot set properties of undefined (setting 'contentFile')\n    at ExtensiveNewsletterProcessor.processNewsletterVariation (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:242:59)\n    at async ExtensiveNewsletterProcessor.startExtensiveProcessing (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:203:21)\n    at async main (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:333:5)"
+    },
+    {
+      "newsletter": "High_Value_Crypto_News",
+      "cycle": 2,
+      "timestamp": 1753039822879,
+      "error": "Cannot set properties of undefined (setting 'contentFile')",
+      "stack": "TypeError: Cannot set properties of undefined (setting 'contentFile')\n    at ExtensiveNewsletterProcessor.processNewsletterVariation (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:242:59)\n    at async ExtensiveNewsletterProcessor.startExtensiveProcessing (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:203:21)\n    at async main (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:333:5)"
+    },
+    {
+      "newsletter": "DeFi_Opportunities",
+      "cycle": 2,
+      "timestamp": 1753039824887,
+      "error": "Cannot set properties of undefined (setting 'contentFile')",
+      "stack": "TypeError: Cannot set properties of undefined (setting 'contentFile')\n    at ExtensiveNewsletterProcessor.processNewsletterVariation (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:242:59)\n    at async ExtensiveNewsletterProcessor.startExtensiveProcessing (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:203:21)\n    at async main (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:333:5)"
+    }
+  ],
+  "generatedAt": "2025-07-20T19:30:26.249Z"
+}

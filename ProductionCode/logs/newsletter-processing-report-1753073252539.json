@@ -1,0 +1,97 @@
+{
+  "summary": {
+    "totalProcessed": 0,
+    "totalRuntime": "0.01 hours",
+    "totalDiscoveries": 0,
+    "totalErrors": 12,
+    "processingRate": "0.00 newsletters/min"
+  },
+  "discoveries": [],
+  "errors": [
+    {
+      "newsletter": "Original_MilkRoad",
+      "cycle": 1,
+      "timestamp": 1753073222161,
+      "error": "runner.runAgent is not a function",
+      "stack": "TypeError: runner.runAgent is not a function\n    at ExtensiveNewsletterProcessor.processNewsletterVariation (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:250:41)\n    at async ExtensiveNewsletterProcessor.startExtensiveProcessing (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:203:21)\n    at async main (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:333:5)"
+    },
+    {
+      "newsletter": "High_Value_Crypto_News",
+      "cycle": 1,
+      "timestamp": 1753073224171,
+      "error": "runner.runAgent is not a function",
+      "stack": "TypeError: runner.runAgent is not a function\n    at ExtensiveNewsletterProcessor.processNewsletterVariation (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:250:41)\n    at async ExtensiveNewsletterProcessor.startExtensiveProcessing (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:203:21)\n    at async main (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:333:5)"
+    },
+    {
+      "newsletter": "DeFi_Opportunities",
+      "cycle": 1,
+      "timestamp": 1753073226186,
+      "error": "runner.runAgent is not a function",
+      "stack": "TypeError: runner.runAgent is not a function\n    at ExtensiveNewsletterProcessor.processNewsletterVariation (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:250:41)\n    at async ExtensiveNewsletterProcessor.startExtensiveProcessing (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:203:21)\n    at async main (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:333:5)"
+    },
+    {
+      "newsletter": "Arbitrage_Signals",
+      "cycle": 1,
+      "timestamp": 1753073228200,
+      "error": "runner.runAgent is not a function",
+      "stack": "TypeError: runner.runAgent is not a function\n    at ExtensiveNewsletterProcessor.processNewsletterVariation (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:250:41)\n    at async ExtensiveNewsletterProcessor.startExtensiveProcessing (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:203:21)\n    at async main (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:333:5)"
+    },
+    {
+      "newsletter": "Technical_Analysis",
+      "cycle": 1,
+      "timestamp": 1753073230209,
+      "error": "runner.runAgent is not a function",
+      "stack": "TypeError: runner.runAgent is not a function\n    at ExtensiveNewsletterProcessor.processNewsletterVariation (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:250:41)\n    at async ExtensiveNewsletterProcessor.startExtensiveProcessing (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:203:21)\n    at async main (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:333:5)"
+    },
+    {
+      "newsletter": "Regulatory_Updates",
+      "cycle": 1,
+      "timestamp": 1753073232219,
+      "error": "runner.runAgent is not a function",
+      "stack": "TypeError: runner.runAgent is not a function\n    at ExtensiveNewsletterProcessor.processNewsletterVariation (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:250:41)\n    at async ExtensiveNewsletterProcessor.startExtensiveProcessing (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:203:21)\n    at async main (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:333:5)"
+    },
+    {
+      "newsletter": "Original_MilkRoad",
+      "cycle": 2,
+      "timestamp": 1753073239234,
+      "error": "runner.runAgent is not a function",
+      "stack": "TypeError: runner.runAgent is not a function\n    at ExtensiveNewsletterProcessor.processNewsletterVariation (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:250:41)\n    at async ExtensiveNewsletterProcessor.startExtensiveProcessing (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:203:21)\n    at async main (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:333:5)"
+    },
+    {
+      "newsletter": "High_Value_Crypto_News",
+      "cycle": 2,
+      "timestamp": 1753073241240,
+      "error": "runner.runAgent is not a function",
+      "stack": "TypeError: runner.runAgent is not a function\n    at ExtensiveNewsletterProcessor.processNewsletterVariation (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:250:41)\n    at async ExtensiveNewsletterProcessor.startExtensiveProcessing (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:203:21)\n    at async main (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:333:5)"
+    },
+    {
+      "newsletter": "DeFi_Opportunities",
+      "cycle": 2,
+      "timestamp": 1753073243245,
+      "error": "runner.runAgent is not a function",
+      "stack": "TypeError: runner.runAgent is not a function\n    at ExtensiveNewsletterProcessor.processNewsletterVariation (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:250:41)\n    at async ExtensiveNewsletterProcessor.startExtensiveProcessing (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:203:21)\n    at async main (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:333:5)"
+    },
+    {
+      "newsletter": "Arbitrage_Signals",
+      "cycle": 2,
+      "timestamp": 1753073245251,
+      "error": "runner.runAgent is not a function",
+      "stack": "TypeError: runner.runAgent is not a function\n    at ExtensiveNewsletterProcessor.processNewsletterVariation (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:250:41)\n    at async ExtensiveNewsletterProcessor.startExtensiveProcessing (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:203:21)\n    at async main (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:333:5)"
+    },
+    {
+      "newsletter": "Technical_Analysis",
+      "cycle": 2,
+      "timestamp": 1753073247256,
+      "error": "runner.runAgent is not a function",
+      "stack": "TypeError: runner.runAgent is not a function\n    at ExtensiveNewsletterProcessor.processNewsletterVariation (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:250:41)\n    at async ExtensiveNewsletterProcessor.startExtensiveProcessing (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:203:21)\n    at async main (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:333:5)"
+    },
+    {
+      "newsletter": "Regulatory_Updates",
+      "cycle": 2,
+      "timestamp": 1753073249262,
+      "error": "runner.runAgent is not a function",
+      "stack": "TypeError: runner.runAgent is not a function\n    at ExtensiveNewsletterProcessor.processNewsletterVariation (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:250:41)\n    at async ExtensiveNewsletterProcessor.startExtensiveProcessing (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:203:21)\n    at async main (file:///Users/epicbattlegods/Desktop/AI-Flash_loan_arbitrage-Syndicate/extensive-newsletter-processor.js:333:5)"
+    }
+  ],
+  "generatedAt": "2025-07-21T04:47:32.538Z"
+}

@@ -1,0 +1,80 @@
+# 📊 PROMETHEUS CONFIGURATION - CONSTRUCTION SYNDICATE
+# ===================================================
+# Production monitoring for 896GB RAM server with AMD EPYC 7502P
+
+global:
+  scrape_interval: 15s     # How often to scrape targets
+  evaluation_interval: 15s # How often to evaluate rules
+  scrape_timeout: 10s      # Timeout for scraping
+
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+            - alertmanager:9093
+
+# Load rules
+rule_files:
+  - "rules/*.yml"
+
+# Scrape configurations
+scrape_configs:
+  # Prometheus self-monitoring
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # Node Exporter - Host metrics
+  - job_name: 'node_exporter'
+    static_configs:
+      - targets: ['localhost:9100']
+    metric_relabel_configs:
+      # Add labels for NUMA nodes
+      - source_labels: [__name__]
+        regex: 'node_memory_numa_.*'
+        target_label: numa_node
+        replacement: '${1}'
+
+  # Construction Syndicate API
+  - job_name: 'construction_syndicate_api'
+    static_configs:
+      - targets: ['localhost:3001']
+    metrics_path: '/metrics'
+    params:
+      format: ['prometheus']
+
+  # PostgreSQL Exporter
+  - job_name: 'postgresql'
+    static_configs:
+      - targets: ['localhost:9187']
+
+  # Custom metrics from syndicate
+  - job_name: 'syndicate_agents'
+    static_configs:
+      - targets: ['localhost:3001']
+    metrics_path: '/api/metrics/agents'
+    scrape_interval: 30s
+
+  # LLM service monitoring
+  - job_name: 'ollama'
+    static_configs:
+      - targets: ['localhost:11434']
+    metrics_path: '/api/metrics'
+
+  # Redis monitoring (if used for caching)
+  - job_name: 'redis'
+    static_configs:
+      - targets: ['localhost:9121']
+
+# Remote write for long-term storage (optional)
+# remote_write:
+#   - url: "http://localhost:9009/api/v1/push"
+#     queue_config:
+#       capacity: 10000
+#       max_shards: 100
+#       min_shards: 10
+#       max_samples_per_send: 5000
+#       batch_send_deadline: 5s
+#       min_backoff: 30ms
+#       max_backoff: 100ms

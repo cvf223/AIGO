@@ -1,0 +1,43 @@
+{
+  "mainTask": "BTC Data & Prediction Analysis",
+  "subtasks": [
+    {
+      "id": "collect_data",
+      "description": "Collect BTC data (volume, hodlers, cold storage, price, 30d EMA) for 2015-2020",
+      "method": "collectMarketData",
+      "assignedAgents": ["blockchain-analyst", "fla-opportunity-bot", "chris-super-dev"],
+      "sendResultTo": "crypto-market-analyst"
+    },
+    {
+      "id": "add_sentiment",
+      "description": "Add social sentiment to table for same dates",
+      "method": "collectSentiment",
+      "assignedAgents": ["blockchain-analyst", "fla-opportunity-bot", "chris-super-dev"],
+      "dependsOn": ["collect_data"],
+      "sendResultTo": "crypto-market-analyst"
+    },
+    {
+      "id": "predict",
+      "description": "Make market predictions for next 4w/3m, with reasoning",
+      "method": "predictMarket",
+      "assignedAgents": ["blockchain-analyst", "fla-opportunity-bot", "chris-super-dev"],
+      "dependsOn": ["add_sentiment"],
+      "sendResultTo": "crypto-market-analyst"
+    },
+    {
+      "id": "evaluate",
+      "description": "Evaluate prediction accuracy and rate",
+      "method": "evaluatePrediction",
+      "assignedAgents": ["blockchain-analyst", "fla-opportunity-bot", "chris-super-dev"],
+      "dependsOn": ["predict"],
+      "sendResultTo": "crypto-market-analyst"
+    },
+    {
+      "id": "review",
+      "description": "Review, compare, and aggregate all agent results, generate best approach and share",
+      "method": "reviewResults",
+      "reviewerAgent": "crypto-market-analyst",
+      "dependsOn": ["evaluate"]
+    }
+  ]
+} 

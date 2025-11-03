@@ -1,0 +1,16 @@
+        // 🎯 SUPERIOR PRODUCTION DETECTION: 896GB server is CLEARLY production!
+        // Auto-detect production based on server specs
+        const isHighSpecServer = this.totalMemoryGB >= 64; // 64GB+ = production server
+        const hasProductionIndicators = (
+            this.totalMemoryGB >= 800 || // 800GB+ is definitely production
+            process.env.HOME?.includes('root') || // Running as root often indicates production
+            process.env.PWD?.includes('LocalBackup') // Production deployment path
+        );
+        
+        // Override environment detection for high-spec servers
+        if (isHighSpecServer || hasProductionIndicators) {
+            console.log('🎯 DETECTED: High-spec production server (overriding NODE_ENV)');
+            this.env = 'production';
+            this.isDevelopment = false;
+            this.isProduction = true;
+        }

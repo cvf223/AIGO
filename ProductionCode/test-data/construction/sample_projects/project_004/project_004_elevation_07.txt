@@ -1,0 +1,35 @@
+SYNTHETIC CONSTRUCTION PLAN
+Project: Hotel Building project_004
+Plan Type: elevation
+Plan ID: project_004_elevation_07
+
+{
+  "planId": "project_004_elevation_07",
+  "projectId": "project_004",
+  "planType": "elevation",
+  "fileName": "project_004_elevation_07.txt",
+  "dimensions": {
+    "width": 27.08,
+    "height": 21.87,
+    "unit": "m",
+    "area": 592.23
+  },
+  "elements": {
+    "windows": 20,
+    "doors": 1,
+    "floors": 6,
+    "height": 18
+  },
+  "hasIntentionalError": false,
+  "errorDetails": null,
+  "metadata": {
+    "scale": "1:100",
+    "format": "A1",
+    "revision": "R01",
+    "date": "2024-01-15",
+    "drawnBy": "Synthetic Generator"
+  }
+}
+
+Note: This is a synthetic test plan generated for testing purposes.
+In production, this would be an actual PDF/DWG file with visual content.

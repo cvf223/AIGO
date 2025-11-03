@@ -1,0 +1,434 @@
+{
+  "suite": "COMPREHENSIVE_TEST_SUITE",
+  "timestamp": "2025-10-22T15:25:01.717Z",
+  "duration": 4471,
+  "summary": {
+    "total": 19,
+    "passed": 2,
+    "failed": 17,
+    "passRate": "10.53%"
+  },
+  "categories": {
+    "unit": {
+      "total": 7,
+      "passed": 2,
+      "failed": 5,
+      "tests": [
+        {
+          "name": "Scale Detection",
+          "status": "failed",
+          "startTime": 2245.82605,
+          "endTime": 3162.560667,
+          "duration": 916.7346170000001
+        },
+        {
+          "name": "Element Boundary Detection",
+          "status": "failed",
+          "startTime": 3162.940273,
+          "error": "Cannot destructure property 'tileSize' of 'config' as it is undefined.",
+          "endTime": 3163.256206,
+          "duration": 0.315932999999859
+        },
+        {
+          "name": "Measurement Calculation",
+          "status": "failed",
+          "startTime": 3163.512874,
+          "details": {
+            "expectedWidth": 2500,
+            "actualWidth": 2500,
+            "difference": 0
+          },
+          "endTime": 3165.116725,
+          "duration": 1.6038509999998496
+        },
+        {
+          "name": "Element Classification",
+          "status": "failed",
+          "startTime": 3165.357191,
+          "endTime": 3169.760392,
+          "duration": 4.403201000000081
+        },
+        {
+          "name": "Material Database Lookup",
+          "status": "passed",
+          "startTime": 3169.973957,
+          "details": {
+            "materialType": "concrete",
+            "specification": "C25/30",
+            "propertiesFound": [
+              "density",
+              "compressiveStrength",
+              "tensileStrength",
+              "elasticModulus",
+              "thermalConductivity"
+            ]
+          },
+          "endTime": 3170.250753,
+          "duration": 0.2767959999996492
+        },
+        {
+          "name": "DIN 276 Cost Mapping",
+          "status": "failed",
+          "startTime": 3170.463206,
+          "details": {
+            "confidence": {
+              "score": 0.844999965162037,
+              "factors": {
+                "priceFreshness": 1.1666665505401235,
+                "sourceReliability": 0.6,
+                "quantityAccuracy": 0.9,
+                "regionalData": 0.6
+              },
+              "level": "medium"
+            }
+          },
+          "endTime": 3171.776804,
+          "duration": 1.3135980000001837
+        },
+        {
+          "name": "STLB-Bau Text Generation",
+          "status": "passed",
+          "startTime": 3171.984597,
+          "details": {
+            "shortTextLength": 33,
+            "longTextLength": 97
+          },
+          "endTime": 3356.764781,
+          "duration": 184.78018399999974
+        }
+      ]
+    },
+    "integration": {
+      "total": 4,
+      "passed": 0,
+      "failed": 4,
+      "tests": [
+        {
+          "name": "Pixel to Measurement Pipeline",
+          "status": "failed",
+          "startTime": 3357.147624,
+          "error": "Cannot read properties of null (reading 'width')",
+          "endTime": 3571.263933,
+          "duration": 214.116309
+        },
+        {
+          "name": "Classification to Costing Pipeline",
+          "status": "failed",
+          "startTime": 3571.512084,
+          "error": "Cannot convert undefined or null to object",
+          "endTime": 3607.36008,
+          "duration": 35.847995999999966
+        },
+        {
+          "name": "Database Connectivity",
+          "status": "failed",
+          "startTime": 3607.596539,
+          "endTime": 3622.451503,
+          "duration": 14.854963999999654
+        },
+        {
+          "name": "External API Integration",
+          "status": "failed",
+          "startTime": 3622.718321,
+          "details": {
+            "apiTested": "STLB-Bau"
+          },
+          "endTime": 3804.075147,
+          "duration": 181.35682600000018
+        }
+      ]
+    },
+    "endToEnd": {
+      "total": 3,
+      "passed": 0,
+      "failed": 3,
+      "tests": [
+        {
+          "name": "Complete Workflow - Small Residential",
+          "scenario": "small",
+          "status": "failed",
+          "startTime": 3804.843838,
+          "error": "Cannot read properties of null (reading 'width')",
+          "endTime": 4020.248605,
+          "duration": 215.40476700000045
+        },
+        {
+          "name": "Complete Workflow - Medium Commercial",
+          "scenario": "medium",
+          "status": "failed",
+          "startTime": 4020.337698,
+          "error": "Cannot read properties of null (reading 'width')",
+          "endTime": 4242.061654,
+          "duration": 221.72395600000027
+        },
+        {
+          "name": "Complete Workflow - Large Industrial",
+          "scenario": "large",
+          "status": "failed",
+          "startTime": 4242.109276,
+          "error": "Cannot read properties of null (reading 'width')",
+          "endTime": 4457.441755,
+          "duration": 215.3324789999997
+        }
+      ]
+    },
+    "performance": {
+      "total": 3,
+      "passed": 0,
+      "failed": 3,
+      "tests": [
+        {
+          "name": "Analysis Speed Performance",
+          "status": "failed",
+          "startTime": 4457.883612,
+          "error": "Cannot read properties of null (reading 'width')",
+          "endTime": 4679.432058,
+          "duration": 221.5484460000007
+        },
+        {
+          "name": "Memory Usage Performance",
+          "status": "failed",
+          "startTime": 4679.707832,
+          "error": "Cannot read properties of null (reading 'width')",
+          "endTime": 4901.293951,
+          "duration": 221.5861189999996
+        },
+        {
+          "name": "Concurrent Processing Performance",
+          "status": "failed",
+          "startTime": 4901.584936,
+          "error": "Cannot read properties of null (reading 'width')",
+          "endTime": 5125.197746,
+          "duration": 223.61280999999963
+        }
+      ]
+    },
+    "stress": {
+      "total": 2,
+      "passed": 0,
+      "failed": 2,
+      "tests": [
+        {
+          "name": "High Load Processing",
+          "status": "failed",
+          "startTime": 5125.761159,
+          "error": "this.systems.pixelAnalyzer.initialize is not a function",
+          "endTime": 5150.585111,
+          "duration": 24.823952000000645
+        },
+        {
+          "name": "Error Recovery",
+          "status": "failed",
+          "startTime": 5150.84789,
+          "error": "Cannot read properties of null (reading 'width')",
+          "endTime": 5580.454665,
+          "duration": 429.6067750000002
+        }
+      ]
+    }
+  },
+  "details": [
+    {
+      "category": "unit",
+      "name": "Scale Detection",
+      "status": "failed",
+      "startTime": 2245.82605,
+      "endTime": 3162.560667,
+      "duration": 916.7346170000001
+    },
+    {
+      "category": "unit",
+      "name": "Element Boundary Detection",
+      "status": "failed",
+      "startTime": 3162.940273,
+      "error": "Cannot destructure property 'tileSize' of 'config' as it is undefined.",
+      "endTime": 3163.256206,
+      "duration": 0.315932999999859
+    },
+    {
+      "category": "unit",
+      "name": "Measurement Calculation",
+      "status": "failed",
+      "startTime": 3163.512874,
+      "details": {
+        "expectedWidth": 2500,
+        "actualWidth": 2500,
+        "difference": 0
+      },
+      "endTime": 3165.116725,
+      "duration": 1.6038509999998496
+    },
+    {
+      "category": "unit",
+      "name": "Element Classification",
+      "status": "failed",
+      "startTime": 3165.357191,
+      "endTime": 3169.760392,
+      "duration": 4.403201000000081
+    },
+    {
+      "category": "unit",
+      "name": "Material Database Lookup",
+      "status": "passed",
+      "startTime": 3169.973957,
+      "details": {
+        "materialType": "concrete",
+        "specification": "C25/30",
+        "propertiesFound": [
+          "density",
+          "compressiveStrength",
+          "tensileStrength",
+          "elasticModulus",
+          "thermalConductivity"
+        ]
+      },
+      "endTime": 3170.250753,
+      "duration": 0.2767959999996492
+    },
+    {
+      "category": "unit",
+      "name": "DIN 276 Cost Mapping",
+      "status": "failed",
+      "startTime": 3170.463206,
+      "details": {
+        "confidence": {
+          "score": 0.844999965162037,
+          "factors": {
+            "priceFreshness": 1.1666665505401235,
+            "sourceReliability": 0.6,
+            "quantityAccuracy": 0.9,
+            "regionalData": 0.6
+          },
+          "level": "medium"
+        }
+      },
+      "endTime": 3171.776804,
+      "duration": 1.3135980000001837
+    },
+    {
+      "category": "unit",
+      "name": "STLB-Bau Text Generation",
+      "status": "passed",
+      "startTime": 3171.984597,
+      "details": {
+        "shortTextLength": 33,
+        "longTextLength": 97
+      },
+      "endTime": 3356.764781,
+      "duration": 184.78018399999974
+    },
+    {
+      "category": "integration",
+      "name": "Pixel to Measurement Pipeline",
+      "status": "failed",
+      "startTime": 3357.147624,
+      "error": "Cannot read properties of null (reading 'width')",
+      "endTime": 3571.263933,
+      "duration": 214.116309
+    },
+    {
+      "category": "integration",
+      "name": "Classification to Costing Pipeline",
+      "status": "failed",
+      "startTime": 3571.512084,
+      "error": "Cannot convert undefined or null to object",
+      "endTime": 3607.36008,
+      "duration": 35.847995999999966
+    },
+    {
+      "category": "integration",
+      "name": "Database Connectivity",
+      "status": "failed",
+      "startTime": 3607.596539,
+      "endTime": 3622.451503,
+      "duration": 14.854963999999654
+    },
+    {
+      "category": "integration",
+      "name": "External API Integration",
+      "status": "failed",
+      "startTime": 3622.718321,
+      "details": {
+        "apiTested": "STLB-Bau"
+      },
+      "endTime": 3804.075147,
+      "duration": 181.35682600000018
+    },
+    {
+      "category": "endToEnd",
+      "name": "Complete Workflow - Small Residential",
+      "scenario": "small",
+      "status": "failed",
+      "startTime": 3804.843838,
+      "error": "Cannot read properties of null (reading 'width')",
+      "endTime": 4020.248605,
+      "duration": 215.40476700000045
+    },
+    {
+      "category": "endToEnd",
+      "name": "Complete Workflow - Medium Commercial",
+      "scenario": "medium",
+      "status": "failed",
+      "startTime": 4020.337698,
+      "error": "Cannot read properties of null (reading 'width')",
+      "endTime": 4242.061654,
+      "duration": 221.72395600000027
+    },
+    {
+      "category": "endToEnd",
+      "name": "Complete Workflow - Large Industrial",
+      "scenario": "large",
+      "status": "failed",
+      "startTime": 4242.109276,
+      "error": "Cannot read properties of null (reading 'width')",
+      "endTime": 4457.441755,
+      "duration": 215.3324789999997
+    },
+    {
+      "category": "performance",
+      "name": "Analysis Speed Performance",
+      "status": "failed",
+      "startTime": 4457.883612,
+      "error": "Cannot read properties of null (reading 'width')",
+      "endTime": 4679.432058,
+      "duration": 221.5484460000007
+    },
+    {
+      "category": "performance",
+      "name": "Memory Usage Performance",
+      "status": "failed",
+      "startTime": 4679.707832,
+      "error": "Cannot read properties of null (reading 'width')",
+      "endTime": 4901.293951,
+      "duration": 221.5861189999996
+    },
+    {
+      "category": "performance",
+      "name": "Concurrent Processing Performance",
+      "status": "failed",
+      "startTime": 4901.584936,
+      "error": "Cannot read properties of null (reading 'width')",
+      "endTime": 5125.197746,
+      "duration": 223.61280999999963
+    },
+    {
+      "category": "stress",
+      "name": "High Load Processing",
+      "status": "failed",
+      "startTime": 5125.761159,
+      "error": "this.systems.pixelAnalyzer.initialize is not a function",
+      "endTime": 5150.585111,
+      "duration": 24.823952000000645
+    },
+    {
+      "category": "stress",
+      "name": "Error Recovery",
+      "status": "failed",
+      "startTime": 5150.84789,
+      "error": "Cannot read properties of null (reading 'width')",
+      "endTime": 5580.454665,
+      "duration": 429.6067750000002
+    }
+  ],
+  "performance": {}
+}
