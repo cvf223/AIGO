@@ -47,3 +47,10 @@ __pycache__/
 # Build outputs
 dist/
 build/
+
+# Configuration files that may contain secrets
+config.json
+**/config.json
+# Example files that might contain API keys
+**/examples/*example*.js
+**/examples/*example*.json
