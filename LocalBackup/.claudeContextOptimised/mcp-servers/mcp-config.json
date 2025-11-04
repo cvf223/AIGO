@@ -1,0 +1,148 @@
+{
+  "name": "aigo-syndicate-mcp",
+  "version": "1.0.0",
+  "description": "Master MCP configuration for AIGO-Syndicate Construction Intelligence",
+  "servers": {
+    "filesystem": {
+      "enabled": true,
+      "config": "./filesystem-mcp.json",
+      "priority": 1,
+      "autoRestart": true,
+      "dependencies": []
+    },
+    "postgres": {
+      "enabled": true,
+      "config": "./postgres-mcp.json",
+      "priority": 1,
+      "autoRestart": true,
+      "dependencies": []
+    },
+    "github": {
+      "enabled": true,
+      "config": "./github-mcp.json",
+      "priority": 2,
+      "autoRestart": true,
+      "dependencies": []
+    },
+    "memory": {
+      "enabled": true,
+      "config": "./memory-mcp.json",
+      "priority": 1,
+      "autoRestart": true,
+      "dependencies": ["postgres"]
+    },
+    "sequential-thinking": {
+      "enabled": true,
+      "config": "./sequential-thinking-mcp.json",
+      "priority": 2,
+      "autoRestart": true,
+      "dependencies": []
+    },
+    "context7": {
+      "enabled": true,
+      "config": "./context7-mcp.json",
+      "priority": 1,
+      "autoRestart": true,
+      "dependencies": ["postgres"]
+    },
+    "hoai-compliance": {
+      "enabled": true,
+      "config": "./hoai-compliance-mcp.json",
+      "priority": 2,
+      "autoRestart": true,
+      "dependencies": ["postgres"]
+    },
+    "quantum-analysis": {
+      "enabled": true,
+      "config": "./quantum-analysis-mcp.json",
+      "priority": 3,
+      "autoRestart": true,
+      "dependencies": []
+    },
+    "vlm-integration": {
+      "enabled": true,
+      "config": "./vlm-integration-mcp.json",
+      "priority": 2,
+      "autoRestart": true,
+      "dependencies": ["filesystem"]
+    },
+    "cot-reasoning": {
+      "enabled": true,
+      "config": "./cot-reasoning-mcp.json",
+      "priority": 2,
+      "autoRestart": true,
+      "dependencies": ["memory"]
+    },
+    "tot-exploration": {
+      "enabled": true,
+      "config": "./tot-exploration-mcp.json",
+      "priority": 2,
+      "autoRestart": true,
+      "dependencies": ["postgres", "cot-reasoning"]
+    },
+    "knowledge-graph": {
+      "enabled": true,
+      "config": "./knowledge-graph-mcp.json",
+      "priority": 1,
+      "autoRestart": true,
+      "dependencies": ["postgres"]
+    },
+    "internet-of-agents": {
+      "enabled": true,
+      "config": "./internet-of-agents-mcp.json",
+      "priority": 1,
+      "autoRestart": true,
+      "dependencies": []
+    }
+  },
+  "global": {
+    "environment": "production",
+    "logLevel": "info",
+    "monitoring": {
+      "enabled": true,
+      "port": 9100,
+      "healthCheckInterval": 60000
+    },
+    "security": {
+      "tlsEnabled": true,
+      "certPath": "/path/to/cert.pem",
+      "keyPath": "/path/to/key.pem",
+      "authRequired": true
+    },
+    "performance": {
+      "maxConcurrentRequests": 1000,
+      "requestTimeout": 30000,
+      "connectionPooling": true
+    }
+  },
+  "orchestration": {
+    "startupOrder": [
+      "filesystem",
+      "postgres",
+      "memory",
+      "github",
+      "knowledge-graph",
+      "context7",
+      "internet-of-agents",
+      "hoai-compliance",
+      "sequential-thinking",
+      "cot-reasoning",
+      "tot-exploration",
+      "vlm-integration",
+      "quantum-analysis"
+    ],
+    "gracefulShutdown": {
+      "enabled": true,
+      "timeout": 30000
+    },
+    "failureHandling": {
+      "restartAttempts": 3,
+      "restartDelay": 5000,
+      "circuitBreaker": {
+        "enabled": true,
+        "threshold": 5,
+        "timeout": 60000
+      }
+    }
+  }
+}

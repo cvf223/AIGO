@@ -1,0 +1,129 @@
+{
+  "version": "1.0.0",
+  "contextOptimized": true,
+  "categories": {
+    "core": {
+      "description": "Core agents",
+      "agents": [
+        {
+          "name": "master-orchestrator",
+          "estimatedSize": "8-15KB",
+          "loadPriority": "HIGH"
+        },
+        {
+          "name": "construction-lead",
+          "estimatedSize": "8-15KB",
+          "loadPriority": "HIGH"
+        },
+        {
+          "name": "quantum-architect",
+          "estimatedSize": "8-15KB",
+          "loadPriority": "HIGH"
+        }
+      ]
+    },
+    "specialists": {
+      "description": "Specialists agents",
+      "agents": [
+        {
+          "name": "creativity-specialist",
+          "estimatedSize": "8-15KB",
+          "loadPriority": "ON_DEMAND"
+        },
+        {
+          "name": "safety-red-team",
+          "estimatedSize": "8-15KB",
+          "loadPriority": "ON_DEMAND"
+        },
+        {
+          "name": "formal-verification-specialist",
+          "estimatedSize": "8-15KB",
+          "loadPriority": "ON_DEMAND"
+        },
+        {
+          "name": "ml-engineer",
+          "estimatedSize": "8-15KB",
+          "loadPriority": "ON_DEMAND"
+        },
+        {
+          "name": "neuromorphic-engineer",
+          "estimatedSize": "8-15KB",
+          "loadPriority": "ON_DEMAND"
+        },
+        {
+          "name": "multimodal-specialist",
+          "estimatedSize": "8-15KB",
+          "loadPriority": "ON_DEMAND"
+        },
+        {
+          "name": "causal-specialist",
+          "estimatedSize": "8-15KB",
+          "loadPriority": "ON_DEMAND"
+        },
+        {
+          "name": "distributed-architect",
+          "estimatedSize": "8-15KB",
+          "loadPriority": "ON_DEMAND"
+        },
+        {
+          "name": "ethics-alignment-officer",
+          "estimatedSize": "8-15KB",
+          "loadPriority": "ON_DEMAND"
+        }
+      ]
+    },
+    "executives": {
+      "description": "Executives agents",
+      "agents": [
+        {
+          "name": "ceo-digital-twin",
+          "estimatedSize": "8-15KB",
+          "loadPriority": "ON_DEMAND"
+        },
+        {
+          "name": "cto-digital-twin",
+          "estimatedSize": "8-15KB",
+          "loadPriority": "ON_DEMAND"
+        },
+        {
+          "name": "cpo-digital-twin",
+          "estimatedSize": "8-15KB",
+          "loadPriority": "ON_DEMAND"
+        },
+        {
+          "name": "cmo-digital-twin",
+          "estimatedSize": "8-15KB",
+          "loadPriority": "ON_DEMAND"
+        },
+        {
+          "name": "hr-digital-twin",
+          "estimatedSize": "8-15KB",
+          "loadPriority": "ON_DEMAND"
+        },
+        {
+          "name": "architect-digital-twin",
+          "estimatedSize": "8-15KB",
+          "loadPriority": "ON_DEMAND"
+        }
+      ]
+    }
+  },
+  "loadingStrategies": {
+    "construction": [
+      "construction-lead",
+      "quantum-architect"
+    ],
+    "ai_development": [
+      "master-orchestrator",
+      "ml-engineer"
+    ],
+    "security": [
+      "safety-red-team",
+      "formal-verification-specialist"
+    ],
+    "strategy": [
+      "ceo-digital-twin",
+      "cto-digital-twin"
+    ]
+  }
+}

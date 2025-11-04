@@ -1,0 +1,224 @@
+{
+  "name": "memory-mcp",
+  "version": "1.0.0",
+  "description": "Memory MCP server for persistent context and knowledge management",
+  "type": "memory",
+  "enabled": true,
+  "config": {
+    "server": {
+      "command": "@modelcontextprotocol/server-memory",
+      "args": ["--config", "memory-config.json"],
+      "env": {
+        "NODE_ENV": "production",
+        "LOG_LEVEL": "info",
+        "MEMORY_BACKEND": "postgres",
+        "ENCRYPTION_KEY": "${MEMORY_ENCRYPTION_KEY}"
+      }
+    },
+    "storage": {
+      "backend": "postgres",
+      "connection": {
+        "host": "localhost",
+        "port": 5432,
+        "database": "construction_syndicate",
+        "schema": "agent_memory",
+        "pool": {
+          "min": 10,
+          "max": 50
+        }
+      },
+      "hierarchy": {
+        "levels": [
+          "hot",
+          "warm",
+          "cold",
+          "distilled"
+        ],
+        "promotion": {
+          "accessCount": 5,
+          "ageThresholdHours": 24
+        },
+        "demotion": {
+          "inactivityHours": 168,
+          "sizeThreshold": "10MB"
+        }
+      }
+    },
+    "features": {
+      "mem1": {
+        "enabled": true,
+        "hierarchicalStorage": true,
+        "compressionLevel": 9,
+        "retrievalOptimization": true
+      },
+      "distillation": {
+        "enabled": true,
+        "triggers": {
+          "memoryPressure": 0.8,
+          "ageThresholdDays": 30,
+          "sizeThreshold": "100MB"
+        },
+        "algorithm": "concept-extraction",
+        "preservationScore": 0.9
+      },
+      "crossSourceVerification": {
+        "enabled": true,
+        "minSources": 2,
+        "consensusThreshold": 0.7,
+        "conflictResolution": "weighted-voting"
+      },
+      "zepEnhancements": {
+        "enabled": true,
+        "longTermRetention": true,
+        "contextualIndexing": true,
+        "semanticClustering": true
+      },
+      "knowledgeGraph": {
+        "enabled": true,
+        "autoLinking": true,
+        "relationshipTypes": [
+          "related",
+          "causes",
+          "prevents",
+          "requires"
+        ],
+        "embeddingModel": "multilingual-e5-large"
+      }
+    },
+    "retrieval": {
+      "searchAlgorithm": "hybrid",
+      "vectorSearch": {
+        "enabled": true,
+        "dimensions": 1024,
+        "similarity": "cosine",
+        "indexType": "hnsw",
+        "efConstruction": 200,
+        "m": 16
+      },
+      "semanticSearch": {
+        "enabled": true,
+        "reranking": true,
+        "maxResults": 100
+      },
+      "filters": {
+        "temporal": true,
+        "agent": true,
+        "confidence": true,
+        "source": true
+      }
+    },
+    "persistence": {
+      "autoSave": {
+        "enabled": true,
+        "interval": 300000,
+        "batchSize": 100
+      },
+      "backup": {
+        "enabled": true,
+        "schedule": "0 */6 * * *",
+        "retention": 30,
+        "encryption": true
+      },
+      "versioning": {
+        "enabled": true,
+        "maxVersions": 10,
+        "deltaStorage": true
+      }
+    },
+    "security": {
+      "encryption": {
+        "atRest": true,
+        "algorithm": "AES-256-GCM",
+        "keyRotation": {
+          "enabled": true,
+          "intervalDays": 90
+        }
+      },
+      "accessControl": {
+        "agentIsolation": true,
+        "permissionModel": "RBAC",
+        "auditLogging": true
+      },
+      "privacy": {
+        "pii": {
+          "detection": true,
+          "masking": true,
+          "encryption": "field-level"
+        },
+        "dataMinimization": true,
+        "retentionPolicies": true
+      }
+    },
+    "performance": {
+      "caching": {
+        "enabled": true,
+        "layers": ["memory", "redis", "disk"],
+        "ttl": {
+          "hot": 3600,
+          "warm": 86400,
+          "cold": 604800
+        }
+      },
+      "compression": {
+        "enabled": true,
+        "algorithm": "zstd",
+        "level": 9,
+        "minSize": "1KB"
+      },
+      "indexing": {
+        "automatic": true,
+        "fields": [
+          "timestamp",
+          "agent_id",
+          "content_hash",
+          "confidence"
+        ]
+      }
+    },
+    "monitoring": {
+      "metrics": {
+        "enabled": true,
+        "track": [
+          "memory_usage",
+          "retrieval_latency",
+          "distillation_rate",
+          "cache_hit_rate"
+        ]
+      },
+      "healthCheck": {
+        "enabled": true,
+        "interval": 60000,
+        "checks": [
+          "storage_connectivity",
+          "memory_pressure",
+          "retrieval_performance"
+        ]
+      },
+      "alerts": {
+        "memoryPressure": 0.9,
+        "retrievalLatency": 1000,
+        "errorRate": 0.05
+      }
+    },
+    "integration": {
+      "sharedMemory": {
+        "enabled": true,
+        "namespace": "construction_syndicate",
+        "permissions": {
+          "read": ["all_agents"],
+          "write": ["authorized_agents"]
+        }
+      },
+      "quantumState": {
+        "enabled": true,
+        "persistence": true,
+        "coherenceTracking": true
+      },
+      "learningIntegration": {
+        "enabled": true,
+        "experienceReplay": true,
+        "knowledgeTransfer": true
+      }
+    }
+  }
+}

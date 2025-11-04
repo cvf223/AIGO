@@ -1,0 +1,208 @@
+{
+  "name": "AIGO-Syndicate Construction Intelligence",
+  "version": "2.0.0",
+  "description": "Advanced Claude Code configuration for Construction Syndicate development",
+  "environment": {
+    "defaultMode": "AcceptEdits",
+    "autoSave": true,
+    "contextWindow": "enhanced",
+    "memoryPersistence": true,
+    "skillAutoLoad": true
+  },
+  "commands": {
+    "enabled": true,
+    "prefix": "/",
+    "customCommands": {
+      "plan": {
+        "skill": "planning-skills/plan-command",
+        "description": "Strategic planning with ZAP Engine",
+        "shortcuts": ["p", "strategize"]
+      },
+      "hoai": {
+        "skill": "compliance-skills/hoai-command",
+        "description": "HOAI compliance validation",
+        "shortcuts": ["h", "compliance"]
+      },
+      "architect": {
+        "skill": "architecture-skills/architect-command",
+        "description": "System architecture design",
+        "shortcuts": ["arc", "design"]
+      },
+      "implement": {
+        "skill": "development-skills/implement-command",
+        "description": "Production code generation",
+        "shortcuts": ["i", "code", "generate"]
+      },
+      "quantum": {
+        "skill": "quantum-skills/quantum-command",
+        "description": "Quantum-inspired optimization",
+        "shortcuts": ["q", "optimize"]
+      },
+      "syndicate": {
+        "skill": "coordination-skills/syndicate-command",
+        "description": "Multi-agent coordination",
+        "shortcuts": ["syn", "coordinate"]
+      },
+      "analyze": {
+        "skill": "analysis-skills/analyze-command",
+        "description": "Deep code analysis",
+        "shortcuts": ["a", "inspect"]
+      },
+      "deploy": {
+        "skill": "deployment-skills/deploy-command",
+        "description": "Deployment automation",
+        "shortcuts": ["d", "ship"]
+      },
+      "test": {
+        "skill": "testing-skills/test-command",
+        "description": "Test generation and execution",
+        "shortcuts": ["t", "verify"]
+      },
+      "document": {
+        "skill": "documentation-skills/document-command",
+        "description": "Documentation generation",
+        "shortcuts": ["doc", "docs"]
+      }
+    }
+  },
+  "skills": {
+    "autoDiscover": true,
+    "searchPaths": [
+      ".claude/skills",
+      "skills",
+      ".claude/custom-skills"
+    ],
+    "preloaded": [
+      "planning-skills/plan-command",
+      "development-skills/implement-command",
+      "analysis-skills/analyze-command"
+    ]
+  },
+  "mcpServers": {
+    "autoStart": true,
+    "servers": [
+      {
+        "name": "filesystem",
+        "enabled": true,
+        "config": ".claude/mcp-servers/filesystem-mcp.json"
+      },
+      {
+        "name": "postgres",
+        "enabled": true,
+        "config": ".claude/mcp-servers/postgres-mcp.json"
+      },
+      {
+        "name": "construction-commands",
+        "enabled": true,
+        "config": ".claude/mcp-servers/commands-server.js"
+      },
+      {
+        "name": "knowledge-graph",
+        "enabled": true,
+        "config": ".claude/mcp-servers/knowledge-graph-mcp.json"
+      }
+    ]
+  },
+  "context": {
+    "primaryContext": ".claude/claude.md",
+    "autoLoad": [
+      ".claude/contexts/construction-architecture.md",
+      ".claude/contexts/ml-architecture.md"
+    ],
+    "contextLimit": 100000,
+    "compressionEnabled": true
+  },
+  "workflow": {
+    "templates": {
+      "newFeature": [
+        "/plan {{feature_name}}",
+        "/architect {{feature_name}}",
+        "/implement {{feature_name}}",
+        "/test {{feature_name}}",
+        "/document {{feature_name}}"
+      ],
+      "bugfix": [
+        "/analyze {{issue}}",
+        "/implement fix --priority=high",
+        "/test regression",
+        "/deploy staging"
+      ],
+      "optimization": [
+        "/analyze performance {{target}}",
+        "/quantum optimize {{bottleneck}}",
+        "/implement improvements",
+        "/test benchmarks"
+      ]
+    }
+  },
+  "integrations": {
+    "notebookLM": {
+      "enabled": true,
+      "autoSync": true,
+      "syncInterval": 3600
+    },
+    "github": {
+      "enabled": true,
+      "autoCommit": false,
+      "prTemplate": true
+    },
+    "monitoring": {
+      "enabled": true,
+      "metricsEndpoint": "http://localhost:9090/metrics"
+    }
+  },
+  "performance": {
+    "parallelToolCalls": true,
+    "maxConcurrentTools": 5,
+    "cacheEnabled": true,
+    "cacheTTL": 3600
+  },
+  "security": {
+    "sandboxEnabled": true,
+    "allowedPaths": [
+      ".",
+      "~/LocalBackup",
+      "/tmp/construction-syndicate"
+    ],
+    "secretsManagement": "environment",
+    "auditLogging": true
+  },
+  "development": {
+    "linting": {
+      "enabled": true,
+      "autoFix": true,
+      "rules": ".eslintrc.json"
+    },
+    "formatting": {
+      "enabled": true,
+      "style": "prettier",
+      "config": ".prettierrc"
+    },
+    "testing": {
+      "framework": "jest",
+      "coverage": true,
+      "watchMode": false
+    }
+  },
+  "customization": {
+    "theme": "construction-dark",
+    "shortcuts": {
+      "ctrl+p": "/plan",
+      "ctrl+i": "/implement",
+      "ctrl+t": "/test",
+      "ctrl+shift+a": "/analyze"
+    },
+    "snippets": {
+      "hoai": "HOAI Phase ${1:LP1-9} - ${2:description}",
+      "agent": "Agent: ${1:name} - ${2:task}",
+      "quantum": "Quantum ${1:operation} with ${2:parameters}"
+    }
+  },
+  "metadata": {
+    "author": "AIGO-Syndicate Team",
+    "created": "2024-01-01",
+    "lastModified": "2024-01-15",
+    "projectType": "construction-ai",
+    "aiModel": "claude-3-opus"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "name": "HOAI Compliance MCP",
+  "id": "hoai-compliance",
+  "version": "2.0.0",
+  "description": "German construction regulation compliance checking and HOAI phase management",
+  "category": "construction",
+  "capabilities": [
+    "hoai-validation",
+    "phase-tracking",
+    "fee-calculation",
+    "compliance-reporting",
+    "regulation-updates"
+  ],
+  "configuration": {
+    "endpoint": {
+      "url": "http://localhost:3012",
+      "protocol": "http"
+    },
+    "authentication": {
+      "type": "certificate",
+      "certPath": "/certs/hoai-compliance.crt",
+      "keyPath": "/certs/hoai-compliance.key"
+    },
+    "regulations": {
+      "version": "HOAI 2021",
+      "autoUpdate": true,
+      "updateInterval": 86400,
+      "fallbackVersion": "HOAI 2013"
+    },
+    "phases": {
+      "LP1": {
+        "name": "Grundlagenermittlung",
+        "percentage": 2
+      },
+      "LP2": {
+        "name": "Vorplanung",
+        "percentage": 7
+      },
+      "LP3": {
+        "name": "Entwurfsplanung",
+        "percentage": 15
+      },
+      "LP4": {
+        "name": "Genehmigungsplanung",
+        "percentage": 3
+      },
+      "LP5": {
+        "name": "Ausführungsplanung",
+        "percentage": 25
+      },
+      "LP6": {
+        "name": "Vorbereitung der Vergabe",
+        "percentage": 10
+      },
+      "LP7": {
+        "name": "Mitwirkung bei der Vergabe",
+        "percentage": 4
+      },
+      "LP8": {
+        "name": "Objektüberwachung",
+        "percentage": 32
+      },
+      "LP9": {
+        "name": "Objektbetreuung",
+        "percentage": 2
+      }
+    }
+  },
+  "methods": [
+    {
+      "name": "validateCompliance",
+      "description": "Check project compliance with HOAI regulations",
+      "parameters": {
+        "projectData": "object",
+        "phase": "string",
+        "strictMode": "boolean"
+      }
+    },
+    {
+      "name": "calculateFees",
+      "description": "Calculate HOAI-compliant fees",
+      "parameters": {
+        "constructionCost": "number",
+        "complexity": "string",
+        "phases": "array",
+        "specialServices": "array"
+      }
+    },
+    {
+      "name": "trackPhase",
+      "description": "Track project progress through HOAI phases",
+      "parameters": {
+        "projectId": "string",
+        "currentPhase": "string",
+        "completion": "number",
+        "deliverables": "array"
+      }
+    },
+    {
+      "name": "generateComplianceReport",
+      "description": "Generate detailed compliance report",
+      "parameters": {
+        "projectId": "string",
+        "format": "string",
+        "includeRecommendations": "boolean"
+      }
+    },
+    {
+      "name": "checkRegulationUpdates",
+      "description": "Check for regulation updates",
+      "parameters": {
+        "currentVersion": "string",
+        "subscribeToUpdates": "boolean"
+      }
+    }
+  ],
+  "integration": {
+    "agents": ["construction-lead", "architect-digital-twin", "security-officer"],
+    "database": "construction_syndicate",
+    "requiredTables": ["hoai_projects", "hoai_phases", "hoai_compliance"],
+    "webhooks": {
+      "onComplianceViolation": "${WEBHOOK_COMPLIANCE_VIOLATION}",
+      "onPhaseComplete": "${WEBHOOK_PHASE_COMPLETE}"
+    }
+  }
+}

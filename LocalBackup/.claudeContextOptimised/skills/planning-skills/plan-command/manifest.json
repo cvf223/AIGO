@@ -1,0 +1,78 @@
+{
+  "name": "plan-command",
+  "version": "1.0.0",
+  "description": "Strategic planning command using ZAP Engine for comprehensive project planning",
+  "author": "AIGO-Syndicate",
+  "category": "planning",
+  "tags": ["planning", "zap", "strategy", "project-management"],
+  "permissions": {
+    "required": ["read:codebase", "write:documentation", "execute:zap"],
+    "optional": ["read:database", "write:tasks"]
+  },
+  "triggers": [
+    "/plan",
+    "/p",
+    "/strategize",
+    "create a plan for",
+    "plan the implementation of"
+  ],
+  "parameters": {
+    "scope": {
+      "type": "string",
+      "description": "What to plan (project, feature, architecture, migration, etc.)",
+      "required": true
+    },
+    "context": {
+      "type": "string",
+      "description": "Additional context for planning",
+      "required": false
+    },
+    "timeframe": {
+      "type": "string",
+      "description": "Target timeframe for completion",
+      "required": false,
+      "default": "flexible"
+    },
+    "constraints": {
+      "type": "array",
+      "description": "List of constraints to consider",
+      "required": false
+    },
+    "includeHOAI": {
+      "type": "boolean",
+      "description": "Include HOAI phase planning",
+      "required": false,
+      "default": true
+    }
+  },
+  "outputs": {
+    "plan": {
+      "type": "object",
+      "description": "Comprehensive plan document"
+    },
+    "tasks": {
+      "type": "array",
+      "description": "Breakdown of tasks with dependencies"
+    },
+    "timeline": {
+      "type": "object",
+      "description": "Visual timeline representation"
+    },
+    "risks": {
+      "type": "array",
+      "description": "Identified risks with mitigation strategies"
+    }
+  },
+  "dependencies": [
+    "ZAPEngine",
+    "TaskDecomposer",
+    "RiskAnalyzer",
+    "HOAIValidator"
+  ],
+  "configuration": {
+    "maxPlanningDepth": 5,
+    "includeAlternatives": true,
+    "riskThreshold": 0.3,
+    "adaptivePlanning": true
+  }
+}

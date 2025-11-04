@@ -1,0 +1,193 @@
+{
+  "name": "github-mcp",
+  "version": "1.0.0",
+  "description": "GitHub MCP server for AIGO-Syndicate version control and collaboration",
+  "type": "github",
+  "enabled": true,
+  "config": {
+    "server": {
+      "command": "@modelcontextprotocol/server-github",
+      "args": ["--config", "github-config.json"],
+      "env": {
+        "NODE_ENV": "production",
+        "LOG_LEVEL": "info",
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}",
+        "GITHUB_ORG": "${GITHUB_ORG}",
+        "GITHUB_REPO": "${GITHUB_REPO}"
+      }
+    },
+    "authentication": {
+      "type": "token",
+      "scope": [
+        "repo",
+        "read:org",
+        "write:packages",
+        "read:packages"
+      ]
+    },
+    "repository": {
+      "owner": "aigo-syndicate",
+      "name": "construction-intelligence",
+      "defaultBranch": "main",
+      "protectedBranches": ["main", "production"],
+      "autoInit": false
+    },
+    "features": {
+      "issues": {
+        "enabled": true,
+        "templates": [
+          "bug_report",
+          "feature_request",
+          "documentation"
+        ],
+        "labels": {
+          "autoCreate": true,
+          "categories": [
+            "construction",
+            "ml",
+            "quantum",
+            "documentation"
+          ]
+        }
+      },
+      "pullRequests": {
+        "enabled": true,
+        "requireReview": true,
+        "reviewers": 2,
+        "autoMerge": {
+          "enabled": true,
+          "strategy": "squash",
+          "deleteAfterMerge": true
+        },
+        "checks": {
+          "required": [
+            "tests",
+            "lint",
+            "security",
+            "hoai-compliance"
+          ]
+        }
+      },
+      "actions": {
+        "enabled": true,
+        "workflows": [
+          "ci",
+          "cd",
+          "security-scan",
+          "documentation"
+        ]
+      },
+      "packages": {
+        "enabled": true,
+        "registry": "npm",
+        "scope": "@aigo-syndicate"
+      },
+      "codeSearch": {
+        "enabled": true,
+        "indexing": true,
+        "languages": [
+          "javascript",
+          "markdown",
+          "json"
+        ]
+      }
+    },
+    "automation": {
+      "branchProtection": {
+        "enabled": true,
+        "rules": {
+          "main": {
+            "requirePullRequest": true,
+            "requireReviews": 2,
+            "dismissStale": true,
+            "requireCodeOwners": true,
+            "requireTests": true
+          }
+        }
+      },
+      "releaseManagement": {
+        "enabled": true,
+        "strategy": "semantic",
+        "changelog": true,
+        "tagPattern": "v{version}",
+        "assets": [
+          "dist/*.js",
+          "docs/*.pdf"
+        ]
+      },
+      "dependencyUpdates": {
+        "enabled": true,
+        "schedule": "weekly",
+        "automerge": {
+          "minor": true,
+          "patch": true,
+          "major": false
+        }
+      }
+    },
+    "collaboration": {
+      "codeOwners": {
+        "enabled": true,
+        "paths": {
+          "/src/construction/": ["@construction-team"],
+          "/src/ml/": ["@ml-team"],
+          "/src/quantum/": ["@quantum-team"],
+          "/.claude/": ["@ai-team"]
+        }
+      },
+      "discussions": {
+        "enabled": true,
+        "categories": [
+          "Architecture",
+          "Research",
+          "Implementation"
+        ]
+      },
+      "wiki": {
+        "enabled": true,
+        "public": false
+      }
+    },
+    "security": {
+      "vulnerabilityAlerts": true,
+      "secretScanning": true,
+      "codeScanningAlerts": true,
+      "dependabotAlerts": true,
+      "auditLog": {
+        "enabled": true,
+        "retention": 365
+      }
+    },
+    "webhooks": {
+      "enabled": true,
+      "events": [
+        "push",
+        "pull_request",
+        "issues",
+        "release"
+      ],
+      "secret": "${WEBHOOK_SECRET}",
+      "url": "https://api.aigo-syndicate.com/webhooks/github"
+    },
+    "monitoring": {
+      "metrics": {
+        "enabled": true,
+        "track": [
+          "commit_frequency",
+          "pr_cycle_time",
+          "issue_resolution_time",
+          "code_coverage"
+        ]
+      },
+      "alerts": {
+        "enabled": true,
+        "channels": ["slack", "email"],
+        "conditions": {
+          "failedBuilds": 3,
+          "openPRs": 20,
+          "staleIssues": 30
+        }
+      }
+    }
+  }
+}

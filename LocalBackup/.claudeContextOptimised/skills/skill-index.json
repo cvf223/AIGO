@@ -1,0 +1,82 @@
+{
+  "version": "1.0.0",
+  "contextOptimized": true,
+  "categories": {
+    "core": [
+      {
+        "name": "hoai-essentials",
+        "source": "hoai-compliance-engine.md"
+      },
+      {
+        "name": "construction-basics",
+        "source": "construction-material-specifications.md"
+      },
+      {
+        "name": "quantum-core",
+        "source": "quantum-neural-network-implementation.md"
+      },
+      {
+        "name": "agent-orchestration",
+        "source": "agent-orchestration-engine.md"
+      }
+    ],
+    "construction": [
+      {
+        "name": "quantity-surveying",
+        "source": "quantity-surveying-engine.md"
+      },
+      {
+        "name": "tender-generation",
+        "source": "tender-document-generator.md"
+      },
+      {
+        "name": "safety-validation",
+        "source": "construction-safety-validator.md"
+      }
+    ],
+    "quantum-ai": [
+      {
+        "name": "reinforcement-learning",
+        "source": "reinforcement-learning-implementation.md"
+      },
+      {
+        "name": "memory-distillation",
+        "source": "memory-distillation-engine.md"
+      },
+      {
+        "name": "formal-reasoning",
+        "source": "formal-reasoning-patterns.md"
+      }
+    ],
+    "infrastructure": [
+      {
+        "name": "deployment-automation",
+        "source": "deployment-automation-patterns.md"
+      },
+      {
+        "name": "monitoring-systems",
+        "source": "monitoring-and-observability.md"
+      },
+      {
+        "name": "security-implementation",
+        "source": "security-implementation-patterns.md"
+      }
+    ]
+  },
+  "sessionConfigs": {
+    "construction": [
+      "hoai-essentials",
+      "construction-basics",
+      "quantity-surveying"
+    ],
+    "quantum-ai": [
+      "quantum-core",
+      "reinforcement-learning",
+      "memory-distillation"
+    ],
+    "infrastructure": [
+      "deployment-automation",
+      "monitoring-systems"
+    ]
+  }
+}

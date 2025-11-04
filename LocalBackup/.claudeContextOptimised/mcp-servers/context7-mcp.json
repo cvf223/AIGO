@@ -1,0 +1,115 @@
+{
+  "name": "Context7 MCP",
+  "id": "context7",
+  "version": "1.0.0",
+  "description": "Advanced context management with 7-dimensional context awareness for enhanced understanding",
+  "category": "context",
+  "capabilities": [
+    "multi-dimensional-context",
+    "context-switching",
+    "context-merging",
+    "temporal-awareness",
+    "context-compression"
+  ],
+  "configuration": {
+    "endpoint": {
+      "url": "http://localhost:3011",
+      "protocol": "websocket"
+    },
+    "authentication": {
+      "type": "oauth2",
+      "clientId": "${CONTEXT7_CLIENT_ID}",
+      "clientSecret": "${CONTEXT7_CLIENT_SECRET}"
+    },
+    "dimensions": {
+      "semantic": {
+        "enabled": true,
+        "weight": 0.2
+      },
+      "temporal": {
+        "enabled": true,
+        "weight": 0.15,
+        "windowSize": 3600
+      },
+      "spatial": {
+        "enabled": true,
+        "weight": 0.15
+      },
+      "causal": {
+        "enabled": true,
+        "weight": 0.2
+      },
+      "intentional": {
+        "enabled": true,
+        "weight": 0.1
+      },
+      "emotional": {
+        "enabled": true,
+        "weight": 0.1
+      },
+      "relational": {
+        "enabled": true,
+        "weight": 0.1
+      }
+    },
+    "storage": {
+      "backend": "postgres",
+      "compression": true,
+      "maxContextSize": "10MB",
+      "ttl": 86400
+    }
+  },
+  "methods": [
+    {
+      "name": "createContext",
+      "description": "Create a new multi-dimensional context",
+      "parameters": {
+        "initialData": "object",
+        "dimensions": "array",
+        "metadata": "object"
+      }
+    },
+    {
+      "name": "updateContext",
+      "description": "Update context with new information",
+      "parameters": {
+        "contextId": "string",
+        "updates": "object",
+        "dimension": "string"
+      }
+    },
+    {
+      "name": "mergeContexts",
+      "description": "Merge multiple contexts into one",
+      "parameters": {
+        "contextIds": "array",
+        "strategy": "string",
+        "weights": "object"
+      }
+    },
+    {
+      "name": "queryContext",
+      "description": "Query context across dimensions",
+      "parameters": {
+        "contextId": "string",
+        "query": "object",
+        "dimensions": "array"
+      }
+    },
+    {
+      "name": "compressContext",
+      "description": "Compress context while preserving key information",
+      "parameters": {
+        "contextId": "string",
+        "targetSize": "number",
+        "preservationStrategy": "string"
+      }
+    }
+  ],
+  "integration": {
+    "agents": "all",
+    "priority": "critical",
+    "sharedMemory": true,
+    "eventDriven": true
+  }
+}

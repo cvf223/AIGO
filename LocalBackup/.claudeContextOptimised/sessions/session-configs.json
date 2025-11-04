@@ -1,0 +1,54 @@
+{
+  "construction": {
+    "agents": [
+      "construction-lead",
+      "quantum-architect"
+    ],
+    "skills": [
+      "hoai-essentials",
+      "construction-basics",
+      "quantity-surveying"
+    ],
+    "estimatedSize": "45KB",
+    "description": "Construction project management and HOAI compliance"
+  },
+  "ai_development": {
+    "agents": [
+      "master-orchestrator",
+      "ml-engineer",
+      "neuromorphic-engineer"
+    ],
+    "skills": [
+      "quantum-core",
+      "reinforcement-learning",
+      "agent-orchestration"
+    ],
+    "estimatedSize": "52KB",
+    "description": "AI system development and enhancement"
+  },
+  "infrastructure": {
+    "agents": [
+      "distributed-architect",
+      "safety-red-team"
+    ],
+    "skills": [
+      "deployment-automation",
+      "monitoring-systems",
+      "security-implementation"
+    ],
+    "estimatedSize": "48KB",
+    "description": "System deployment and infrastructure management"
+  },
+  "strategy": {
+    "agents": [
+      "ceo-digital-twin",
+      "cto-digital-twin"
+    ],
+    "skills": [
+      "formal-reasoning",
+      "agent-orchestration"
+    ],
+    "estimatedSize": "35KB",
+    "description": "Strategic planning and executive decision making"
+  }
+}

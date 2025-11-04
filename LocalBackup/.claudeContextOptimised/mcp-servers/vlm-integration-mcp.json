@@ -1,0 +1,131 @@
+{
+  "name": "VLM Integration MCP",
+  "id": "vlm-integration",
+  "version": "1.0.0",
+  "description": "Visual Language Model integration for construction plan analysis and multi-modal understanding",
+  "category": "vision",
+  "capabilities": [
+    "image-analysis",
+    "blueprint-understanding",
+    "object-detection",
+    "ocr-extraction",
+    "visual-qa",
+    "image-generation"
+  ],
+  "configuration": {
+    "endpoint": {
+      "url": "http://localhost:3014",
+      "protocol": "http"
+    },
+    "authentication": {
+      "type": "api-key",
+      "keyEnvVar": "VLM_API_KEY"
+    },
+    "models": {
+      "primary": {
+        "name": "llava:34b",
+        "endpoint": "http://localhost:11434",
+        "maxImageSize": "4096x4096",
+        "supportedFormats": ["jpg", "png", "pdf", "tiff"]
+      },
+      "backup": {
+        "name": "gpt-4-vision",
+        "endpoint": "https://api.openai.com/v1",
+        "apiKey": "${OPENAI_API_KEY}"
+      },
+      "specialized": {
+        "blueprints": "construction-vision-v2",
+        "materials": "material-classifier-v1",
+        "safety": "safety-hazard-detector-v3"
+      }
+    },
+    "processing": {
+      "preprocessImages": true,
+      "extractText": true,
+      "detectObjects": true,
+      "segmentation": true,
+      "enhanceQuality": true
+    },
+    "construction": {
+      "blueprintMode": true,
+      "scaleDetection": true,
+      "dimensionExtraction": true,
+      "symbolRecognition": true,
+      "layerSeparation": true
+    }
+  },
+  "methods": [
+    {
+      "name": "analyzeConstructionPlan",
+      "description": "Analyze construction blueprints and technical drawings",
+      "parameters": {
+        "image": "base64|url",
+        "planType": "string",
+        "extractDimensions": "boolean",
+        "identifyMaterials": "boolean",
+        "checkCompliance": "boolean"
+      }
+    },
+    {
+      "name": "detectSafetyHazards",
+      "description": "Identify potential safety hazards in construction images",
+      "parameters": {
+        "image": "base64|url",
+        "hazardTypes": "array",
+        "confidenceThreshold": "number"
+      }
+    },
+    {
+      "name": "extractQuantities",
+      "description": "Extract material quantities from visual plans",
+      "parameters": {
+        "image": "base64|url",
+        "materialTypes": "array",
+        "scale": "number",
+        "unit": "string"
+      }
+    },
+    {
+      "name": "visualQA",
+      "description": "Answer questions about visual content",
+      "parameters": {
+        "image": "base64|url",
+        "question": "string",
+        "context": "object"
+      }
+    },
+    {
+      "name": "compareImages",
+      "description": "Compare two construction images for differences",
+      "parameters": {
+        "image1": "base64|url",
+        "image2": "base64|url",
+        "highlightDifferences": "boolean",
+        "categorizeDifferences": "boolean"
+      }
+    },
+    {
+      "name": "generateVisualization",
+      "description": "Generate construction visualizations from descriptions",
+      "parameters": {
+        "description": "string",
+        "style": "string",
+        "dimensions": "object",
+        "includeAnnotations": "boolean"
+      }
+    }
+  ],
+  "integration": {
+    "agents": ["construction-lead", "multimodal-specialist", "architect-digital-twin"],
+    "databases": {
+      "imageCache": "redis",
+      "resultStore": "postgres",
+      "vectorStore": "pgvector"
+    },
+    "pipeline": {
+      "stages": ["preprocess", "analyze", "extract", "validate", "store"],
+      "parallel": true,
+      "errorHandling": "graceful"
+    }
+  }
+}
